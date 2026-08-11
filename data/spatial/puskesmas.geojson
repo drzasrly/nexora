@@ -1,0 +1,1139 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM001",
+        "nama_puskesmas": "Asemrowo",
+        "kecamatan": "Asemrowo",
+        "alamat": "Jl. Asem Raya 8",
+        "telepon": "(031) 5456122",
+        "pelayanan_unggulan": "Poli Umum, KIA, Persalinan, UGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.60418280395373,
+          -7.344541469487584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM002",
+        "nama_puskesmas": "Balongsari",
+        "kecamatan": "Tandes",
+        "alamat": "Jl. Balongsari Tama",
+        "telepon": "(031) 7417404",
+        "pelayanan_unggulan": "Poli Umum, Gigi, KIA, UGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.63325087955107,
+          -7.227574469800604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM003",
+        "nama_puskesmas": "Banyu Urip",
+        "kecamatan": "Sawahan",
+        "alamat": "Jl. Banyu Urip Kidul",
+        "telepon": "(031) 5615292",
+        "pelayanan_unggulan": "Poli Umum, KIA, Lab"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.64709413642493,
+          -7.24759384273058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM004",
+        "nama_puskesmas": "Benowo",
+        "kecamatan": "Pakal",
+        "alamat": "Jl. Raya Benowo",
+        "telepon": "(031) 7405916",
+        "pelayanan_unggulan": "Poli Umum, Gigi, UGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.77176538703115,
+          -7.286739454735127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM005",
+        "nama_puskesmas": "Dr. Soetomo",
+        "kecamatan": "Tegalsari",
+        "alamat": "Jl. Pacar Keling",
+        "telepon": "(031) 5677161",
+        "pelayanan_unggulan": "Poli Umum, Spesialis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.67765765459055,
+          -7.231120384310302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM006",
+        "nama_puskesmas": "Dukuh Kupang",
+        "kecamatan": "Dukuh Pakis",
+        "alamat": "Jl. Dukuh Kupang",
+        "telepon": "5677615",
+        "pelayanan_unggulan": "Poli Umum, KIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.75155913924411,
+          -7.335735153051438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM007",
+        "nama_puskesmas": "Dupak",
+        "kecamatan": "Krembangan",
+        "alamat": "Jl. Dupak Bangunrejo",
+        "telepon": "(031) 3536736",
+        "pelayanan_unggulan": "Poli Umum, UGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.58579607909051,
+          -7.2846879764040775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM008",
+        "nama_puskesmas": "Gading",
+        "kecamatan": "Tambaksari",
+        "alamat": "Jl. Kapasari",
+        "telepon": "(031) 3760000",
+        "pelayanan_unggulan": "Poli Umum, KIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.60449653313339,
+          -7.221676072855607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM009",
+        "nama_puskesmas": "Gayungan",
+        "kecamatan": "Gayungan",
+        "alamat": "Jl. Gayungan Barat",
+        "telepon": "(031) 8290041",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.79161321866121,
+          -7.334196795795608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM010",
+        "nama_puskesmas": "Gundih",
+        "kecamatan": "Bubutan",
+        "alamat": "Jl. Margodadi",
+        "telepon": "5476275",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.68928291370032,
+          -7.344880856072568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM011",
+        "nama_puskesmas": "Gunung Anyar",
+        "kecamatan": "Gunung Anyar",
+        "alamat": "Jl. Gunung Anyar",
+        "telepon": "(031) 8707745",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.68917457755498,
+          -7.303867444425215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM012",
+        "nama_puskesmas": "Jagir",
+        "kecamatan": "Wonokromo",
+        "alamat": "Jl. Bendul Merisi",
+        "telepon": "(031) 8416926",
+        "pelayanan_unggulan": "KIA, Lab, UGD"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.59520751549555,
+          -7.200482875836784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM013",
+        "nama_puskesmas": "Jemursari",
+        "kecamatan": "Wonocolo",
+        "alamat": "Jl. Jemursari Selatan",
+        "telepon": "(031) 8413772",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.8137163921662,
+          -7.2254957666729345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM014",
+        "nama_puskesmas": "Jeruk",
+        "kecamatan": "Lakarsantri",
+        "alamat": "Jl. Raya Menganti",
+        "telepon": "(031) 7521683",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.62778237530141,
+          -7.286560199758053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM015",
+        "nama_puskesmas": "Kalirungkut",
+        "kecamatan": "Rungkut",
+        "alamat": "Jl. Kalirungkut",
+        "telepon": "(031) 8700066",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.81042483099043,
+          -7.277265022758273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM016",
+        "nama_puskesmas": "Kebonsari",
+        "kecamatan": "Jambangan",
+        "alamat": "Jl. Kebonsari",
+        "telepon": "(031) 8290041",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.72921384819821,
+          -7.30328825057728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM017",
+        "nama_puskesmas": "Kedungdoro",
+        "kecamatan": "Tegalsari",
+        "alamat": "Jl. Kedungdoro",
+        "telepon": "(031) 5345981",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.68108684274364,
+          -7.2138262109937115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM018",
+        "nama_puskesmas": "Kedurus",
+        "kecamatan": "Karang Pilang",
+        "alamat": "Jl. Raya Kedurus",
+        "telepon": "(031) 7660337",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.75635603131624,
+          -7.306545921759991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM019",
+        "nama_puskesmas": "Kenjeran",
+        "kecamatan": "Bulak",
+        "alamat": "Jl. Tambak Deres",
+        "telepon": "(031) 3822103",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.72988213992757,
+          -7.333660471206655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM020",
+        "nama_puskesmas": "Ketabang",
+        "kecamatan": "Genteng",
+        "alamat": "Jl. Jaksa Agung",
+        "telepon": "(031) 5999113",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.61085120700933,
+          -7.306081877336959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM021",
+        "nama_puskesmas": "Klampis Ngasem",
+        "kecamatan": "Sukolilo",
+        "alamat": "Jl. Arief Rachman",
+        "telepon": "(031) 5990089",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.80613715508645,
+          -7.259159886299646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM022",
+        "nama_puskesmas": "Krembangan Selatan",
+        "kecamatan": "Krembangan",
+        "alamat": "Jl. Dupak",
+        "telepon": "(031) 3535786",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.59183694826955,
+          -7.283027887333961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM023",
+        "nama_puskesmas": "Lidah Kulon",
+        "kecamatan": "Lakarsantri",
+        "alamat": "Jl. Raya Menganti",
+        "telepon": "(031) 7531544",
+        "pelayanan_unggulan": "Poli Umum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.62739375930771,
+          -7.284065500416714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM024",
+        "nama_puskesmas": "Lontar",
+        "kecamatan": "Sambikerep",
+        "alamat": "Jl. Raya Lontar",
+        "telepon": "(031) 7522871",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.58803004288228,
+          -7.254903817276315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM025",
+        "nama_puskesmas": "Manukan Kulon",
+        "kecamatan": "Tandes",
+        "alamat": "Jl. Manukan",
+        "telepon": "(031) 7405988",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.64407053332793,
+          -7.224978076718881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM026",
+        "nama_puskesmas": "Medokan Ayu",
+        "kecamatan": "Rungkut",
+        "alamat": "Jl. Medokan",
+        "telepon": "(031) 8710080",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.79610542901351,
+          -7.284492371102522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM027",
+        "nama_puskesmas": "Menur",
+        "kecamatan": "Sukolilo",
+        "alamat": "Jl. Menur",
+        "telepon": "(031) 5946732",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.79300933466148,
+          -7.242827999225271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM028",
+        "nama_puskesmas": "Mojo",
+        "kecamatan": "Gubeng",
+        "alamat": "Jl. Mojo",
+        "telepon": "(031) 5931111",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6444410615574,
+          -7.305499264896105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM029",
+        "nama_puskesmas": "Mulyorejo",
+        "kecamatan": "Mulyorejo",
+        "alamat": "Jl. Mulyorejo",
+        "telepon": "(031) 3818585",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.67013415944594,
+          -7.274966008704244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM030",
+        "nama_puskesmas": "Ngagel Rejo",
+        "kecamatan": "Wonokromo",
+        "alamat": "Jl. Ngagel",
+        "telepon": "(031) 5030363",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.58990207481285,
+          -7.196376650234443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM031",
+        "nama_puskesmas": "Pacarkeling",
+        "kecamatan": "Tambaksari",
+        "alamat": "Jl. Pacar Keling",
+        "telepon": "(031) 5023310",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6146857005191,
+          -7.219933337736008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM032",
+        "nama_puskesmas": "Pakis",
+        "kecamatan": "Sawahan",
+        "alamat": "Jl. Pakis",
+        "telepon": "(031) 5632980",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.64170849231324,
+          -7.247448738731852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM033",
+        "nama_puskesmas": "Pegirian",
+        "kecamatan": "Semampir",
+        "alamat": "Jl. Pegirian",
+        "telepon": "(031) 3768179",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.69028555760569,
+          -7.245773334954985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM034",
+        "nama_puskesmas": "Peneleh",
+        "kecamatan": "Genteng",
+        "alamat": "Jl. Peneleh",
+        "telepon": "(031) 5343473",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.59187144215892,
+          -7.316078162195092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM035",
+        "nama_puskesmas": "Perak Timur",
+        "kecamatan": "Pabean Cantian",
+        "alamat": "Jl. Jakarta",
+        "telepon": "(031) 3524247",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.71446359144176,
+          -7.283424750607112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM036",
+        "nama_puskesmas": "Pucangsewu",
+        "kecamatan": "Gubeng",
+        "alamat": "Jl. Pucang",
+        "telepon": "(031) 5028507",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.63132948530759,
+          -7.299379988570523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM037",
+        "nama_puskesmas": "Putat Jaya",
+        "kecamatan": "Sawahan",
+        "alamat": "Jl. Kupang",
+        "telepon": "(031) 5678374",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.65129102879418,
+          -7.254230905518694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM038",
+        "nama_puskesmas": "Rangkah",
+        "kecamatan": "Tambaksari",
+        "alamat": "Jl. Rangkah",
+        "telepon": "(031) 3710061",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.60466315995885,
+          -7.224413415147221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM039",
+        "nama_puskesmas": "Sawahan",
+        "kecamatan": "Sawahan",
+        "alamat": "Jl. Raya Sawahan",
+        "telepon": "(031) 5342375",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.65243642769222,
+          -7.251587716035897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM040",
+        "nama_puskesmas": "Sememi",
+        "kecamatan": "Benowo",
+        "alamat": "Jl. Raya Kendung",
+        "telepon": "(031) 7413611",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.63294640499494,
+          -7.340478495692277
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM041",
+        "nama_puskesmas": "Sidosermo",
+        "kecamatan": "Wonocolo",
+        "alamat": "Jl. Sidosermo",
+        "telepon": "(031) 8466797",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.8018410440249,
+          -7.226849737177079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM042",
+        "nama_puskesmas": "Sidotopo",
+        "kecamatan": "Semampir",
+        "alamat": "Jl. Sidotopo",
+        "telepon": "(031) 3767706",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6825375797067,
+          -7.243539913800621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM043",
+        "nama_puskesmas": "Sidotopo Wetan",
+        "kecamatan": "Kenjeran",
+        "alamat": "Jl. Randu",
+        "telepon": "(031) 3767706",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.79698201515421,
+          -7.312645786082117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM044",
+        "nama_puskesmas": "Simolawang",
+        "kecamatan": "Simokerto",
+        "alamat": "Jl. Simolawang",
+        "telepon": "(031) 3717433",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.73492612819484,
+          -7.2506586846159315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM045",
+        "nama_puskesmas": "Simomulyo",
+        "kecamatan": "Suko Manunggal",
+        "alamat": "Jl. Gresik",
+        "telepon": "(031) 5312311",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.7477272823652,
+          -7.25913619978388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM046",
+        "nama_puskesmas": "Tambakrejo",
+        "kecamatan": "Simokerto",
+        "alamat": "Jl. Ngagel",
+        "telepon": "(031) 3715530",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.7082894739105,
+          -7.248496822568776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM047",
+        "nama_puskesmas": "Tanah Kali Kedinding",
+        "kecamatan": "Kenjeran",
+        "alamat": "Jl. Kedung Cowek",
+        "telepon": "(031) 3710347",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.80876238093089,
+          -7.308927067275339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM048",
+        "nama_puskesmas": "Tanjungsari",
+        "kecamatan": "Suko Manunggal",
+        "alamat": "Jl. Tanjung",
+        "telepon": "(031) 7397585",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.74690583118455,
+          -7.253003646414046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM049",
+        "nama_puskesmas": "Tembok Dukuh",
+        "kecamatan": "Bubutan",
+        "alamat": "Jl. Klibunian",
+        "telepon": "(031) 5343410",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6948836414072,
+          -7.335299570339849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM050",
+        "nama_puskesmas": "Tenggilis",
+        "kecamatan": "Tenggilis Mejoyo",
+        "alamat": "Jl. Raya Tenggilis",
+        "telepon": "(031) 849349",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.7341323513284,
+          -7.2158857054590335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM051",
+        "nama_puskesmas": "Wiyung",
+        "kecamatan": "Wiyung",
+        "alamat": "Jl. Raya Menganti",
+        "telepon": "(031) 7532853",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.74534443065828,
+          -7.21845343331173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM052",
+        "nama_puskesmas": "Wonokromo",
+        "kecamatan": "Wonokromo",
+        "alamat": "Jl. Karang Rejo",
+        "telepon": "(031) 828454",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6054513110708,
+          -7.193488877275838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM053",
+        "nama_puskesmas": "Wonokusumo",
+        "kecamatan": "Semampir",
+        "alamat": "Jl. Wonokusumo",
+        "telepon": "(031) 3717317",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.67300475569857,
+          -7.248249033692703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM054",
+        "nama_puskesmas": "Balas Klumprik",
+        "kecamatan": "Wiyung",
+        "alamat": "Jl. Balas Klumprik",
+        "telepon": "7665219",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.74834656520787,
+          -7.2236959704044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM055",
+        "nama_puskesmas": "Siwalankerto",
+        "kecamatan": "Wonocolo",
+        "alamat": "Jl. Siwalankerto",
+        "telepon": "8442847",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.79861171118988,
+          -7.21418004132878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM056",
+        "nama_puskesmas": "Made",
+        "kecamatan": "Sambikerep",
+        "alamat": "Jl. Made",
+        "telepon": "7440628",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.61127558821136,
+          -7.25517120073623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM057",
+        "nama_puskesmas": "Bangkingan",
+        "kecamatan": "Lakarsantri",
+        "alamat": "Jl. Raya Menganti",
+        "telepon": "7685218",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.64001758339151,
+          -7.285058048856947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM058",
+        "nama_puskesmas": "Keputih",
+        "kecamatan": "Sukolilo",
+        "alamat": "Jl. Keputih",
+        "telepon": "(031) 7251157",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.81237883518034,
+          -7.244040492886326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM059",
+        "nama_puskesmas": "Morokrembangan",
+        "kecamatan": "Krembangan",
+        "alamat": "Jl. Tambak Asri",
+        "telepon": "32519",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.59395334374345,
+          -7.27661925926079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM060",
+        "nama_puskesmas": "Tambak Wedi",
+        "kecamatan": "Kenjeran",
+        "alamat": "Jl. Tambak Wedi",
+        "telepon": "3741187",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.80326910634314,
+          -7.313864613409923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM061",
+        "nama_puskesmas": "Bulak Banteng",
+        "kecamatan": "Kenjeran",
+        "alamat": "Jl. Bulak Banteng",
+        "telepon": "3741186",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.80787532400225,
+          -7.306778051114473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM062",
+        "nama_puskesmas": "Kalijudan",
+        "kecamatan": "Mulyorejo",
+        "alamat": "Jl. Kalijudan",
+        "telepon": "7403259",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6883587943589,
+          -7.278610182676421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "puskesmas_id": "PKM063",
+        "nama_puskesmas": "Sawah Pulo",
+        "kecamatan": "Semampir",
+        "alamat": "Jl. Sawah Pulo",
+        "telepon": "-",
+        "pelayanan_unggulan": "-"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.66501715688383,
+          -7.254057138954914
+        ]
+      }
+    }
+  ]
+}

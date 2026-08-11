@@ -1,0 +1,635 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD001",
+        "road_name": "Jalan Penghubung Asemrowo-Benowo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.6,
+            -7.335833333333333
+          ],
+          [
+            112.64,
+            -7.335833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD002",
+        "road_name": "Jalan Penghubung Benowo-Bubutan",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.64,
+            -7.335833333333333
+          ],
+          [
+            112.67999999999999,
+            -7.335833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD003",
+        "road_name": "Jalan Penghubung Bubutan-Bulak",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.67999999999999,
+            -7.335833333333333
+          ],
+          [
+            112.71999999999998,
+            -7.335833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD004",
+        "road_name": "Jalan Penghubung Bulak-Dukuh Pakis",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.71999999999998,
+            -7.335833333333333
+          ],
+          [
+            112.75999999999999,
+            -7.335833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD005",
+        "road_name": "Jalan Penghubung Dukuh Pakis-Gayungan",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.75999999999999,
+            -7.335833333333333
+          ],
+          [
+            112.8,
+            -7.335833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD006",
+        "road_name": "Jalan Penghubung Gayungan-Genteng",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.8,
+            -7.335833333333333
+          ],
+          [
+            112.6,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD007",
+        "road_name": "Jalan Penghubung Genteng-Gubeng",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.6,
+            -7.307499999999999
+          ],
+          [
+            112.64,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD008",
+        "road_name": "Jalan Penghubung Gubeng-Gunung Anyar",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.64,
+            -7.307499999999999
+          ],
+          [
+            112.67999999999999,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD009",
+        "road_name": "Jalan Penghubung Gunung Anyar-Jambangan",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.67999999999999,
+            -7.307499999999999
+          ],
+          [
+            112.71999999999998,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD010",
+        "road_name": "Jalan Penghubung Jambangan-Karang Pilang",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.71999999999998,
+            -7.307499999999999
+          ],
+          [
+            112.75999999999999,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD011",
+        "road_name": "Jalan Penghubung Karang Pilang-Kenjeran",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.75999999999999,
+            -7.307499999999999
+          ],
+          [
+            112.8,
+            -7.307499999999999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD012",
+        "road_name": "Jalan Penghubung Kenjeran-Krembangan",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.8,
+            -7.307499999999999
+          ],
+          [
+            112.6,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD013",
+        "road_name": "Jalan Penghubung Krembangan-Lakarsantri",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.6,
+            -7.279166666666667
+          ],
+          [
+            112.64,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD014",
+        "road_name": "Jalan Penghubung Lakarsantri-Mulyorejo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.64,
+            -7.279166666666667
+          ],
+          [
+            112.67999999999999,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD015",
+        "road_name": "Jalan Penghubung Mulyorejo-Pabean Cantian",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.67999999999999,
+            -7.279166666666667
+          ],
+          [
+            112.71999999999998,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD016",
+        "road_name": "Jalan Penghubung Pabean Cantian-Pakal",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.71999999999998,
+            -7.279166666666667
+          ],
+          [
+            112.75999999999999,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD017",
+        "road_name": "Jalan Penghubung Pakal-Rungkut",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.75999999999999,
+            -7.279166666666667
+          ],
+          [
+            112.8,
+            -7.279166666666667
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD018",
+        "road_name": "Jalan Penghubung Rungkut-Sambikerep",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.8,
+            -7.279166666666667
+          ],
+          [
+            112.6,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD019",
+        "road_name": "Jalan Penghubung Sambikerep-Sawahan",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.6,
+            -7.250833333333333
+          ],
+          [
+            112.64,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD020",
+        "road_name": "Jalan Penghubung Sawahan-Semampir",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.64,
+            -7.250833333333333
+          ],
+          [
+            112.67999999999999,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD021",
+        "road_name": "Jalan Penghubung Semampir-Simokerto",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.67999999999999,
+            -7.250833333333333
+          ],
+          [
+            112.71999999999998,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD022",
+        "road_name": "Jalan Penghubung Simokerto-Suko Manunggal",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.71999999999998,
+            -7.250833333333333
+          ],
+          [
+            112.75999999999999,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD023",
+        "road_name": "Jalan Penghubung Suko Manunggal-Sukolilo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.75999999999999,
+            -7.250833333333333
+          ],
+          [
+            112.8,
+            -7.250833333333333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD024",
+        "road_name": "Jalan Penghubung Sukolilo-Tambaksari",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.8,
+            -7.250833333333333
+          ],
+          [
+            112.6,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD025",
+        "road_name": "Jalan Penghubung Tambaksari-Tandes",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.6,
+            -7.2225
+          ],
+          [
+            112.64,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD026",
+        "road_name": "Jalan Penghubung Tandes-Tegalsari",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.64,
+            -7.2225
+          ],
+          [
+            112.67999999999999,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD027",
+        "road_name": "Jalan Penghubung Tegalsari-Tenggilis Mejoyo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.67999999999999,
+            -7.2225
+          ],
+          [
+            112.71999999999998,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD028",
+        "road_name": "Jalan Penghubung Tenggilis Mejoyo-Wiyung",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.71999999999998,
+            -7.2225
+          ],
+          [
+            112.75999999999999,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD029",
+        "road_name": "Jalan Penghubung Wiyung-Wonocolo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.75999999999999,
+            -7.2225
+          ],
+          [
+            112.8,
+            -7.2225
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "road_id": "RD030",
+        "road_name": "Jalan Penghubung Wonocolo-Wonokromo",
+        "type": "Kolektor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            112.8,
+            -7.2225
+          ],
+          [
+            112.6,
+            -7.194166666666666
+          ]
+        ]
+      }
+    }
+  ]
+}

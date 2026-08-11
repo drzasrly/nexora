@@ -1,0 +1,6 @@
+root_cause_code,root_cause_name,trigger,interpretation,recommended_analysis
+HIGH_DEMAND,High Demand Score,demand_score is the highest among components or >= 0.80,Relative demographic volume or visits load is high,Examine population density and visits_per_1000 pressure
+WORKFORCE_SHORTAGE,Workforce Shortage Gap,workforce_gap is the highest among components or >= 0.80,Normalized nakes-to-population ratio is low,Examine perawat_per_1000 and nakes_per_1000 breakdowns
+FACILITY_SHORTAGE,Facility Capacity Gap,facility_gap is the highest among components or >= 0.80,Standardized faskes/pkm/pustu counts or beds per 1k pop is low,"Examine faskes_per_100k, puskesmas_per_100k, and beds_per_1000"
+DISEASE_BURDEN,Disease Burden Need,disease_need_score is the highest among components or >= 0.80,Cases per 1k pop is high,Examine detailed disease profiles to identify dominant illness drivers
+ACCESSIBILITY,Accessibility Gap,accessibility_gap >= 0.80 (placeholder),Travel time or distance to nearest facility is high,Integrate spatial GIS network analyst buffers when coordinates are loaded

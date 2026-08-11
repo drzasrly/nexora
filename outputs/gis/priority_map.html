@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae2983769cb3df13c3db01ca75085c9b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae2983769cb3df13c3db01ca75085c9b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae2983769cb3df13c3db01ca75085c9b = L.map(
+                "map_ae2983769cb3df13c3db01ca75085c9b",
+                {
+                    center: [-7.26, 112.75],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2c27eabd41a04450a820b082adfa1f6f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2c27eabd41a04450a820b082adfa1f6f.addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var choropleth_13886061284ab14e1312174d1156ca15 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_47ef381943653959c03cd83bcd4bc3cd_styler(feature) {
+            switch(feature.properties.kecamatan) {
+                default:
+                    return {"color": "black", "fillColor": "black", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+            }
+        }
+
+        function geo_json_47ef381943653959c03cd83bcd4bc3cd_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_47ef381943653959c03cd83bcd4bc3cd = L.geoJson(null, {
+                onEachFeature: geo_json_47ef381943653959c03cd83bcd4bc3cd_onEachFeature,
+            
+                style: geo_json_47ef381943653959c03cd83bcd4bc3cd_styler,
+            ...{
+}
+        });
+
+        function geo_json_47ef381943653959c03cd83bcd4bc3cd_add (data) {
+            geo_json_47ef381943653959c03cd83bcd4bc3cd
+                .addData(data);
+        }
+            geo_json_47ef381943653959c03cd83bcd4bc3cd_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[112.58, -7.35], [112.62, -7.35], [112.62, -7.321666666666666], [112.58, -7.321666666666666], [112.58, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.3616939818123988, "disease_issue": "Penyakit pada sistem pernafasan (10733 cases)", "disease_need_score": 0.6827682422162238, "explanation": "Kecamatan Asemrowo memiliki Healthcare Gap Score sebesar 70.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.81), 3. Disease Burden Need (0.68). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.811640693516832, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 70.15513989743894, "kecamatan": "ASEMROWO", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 4, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16889736409669664, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9805380576135286, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.62, -7.35], [112.66, -7.35], [112.66, -7.321666666666666], [112.62, -7.321666666666666], [112.62, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.19849637638781195, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15690 cases)", "disease_need_score": 0.3679134903898293, "explanation": "Kecamatan Benowo memiliki Healthcare Gap Score sebesar 51.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.73), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.8132185997506384, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 51.35474354261422, "kecamatan": "BENOWO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 19, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.08731158481162127, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.7259070149390171, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.66, -7.35], [112.7, -7.35], [112.7, -7.321666666666666], [112.66, -7.321666666666666], [112.66, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.31957924002615035, "disease_issue": "Penyakit pada sistem pernafasan (14858 cases)", "disease_need_score": 0.3871488687893865, "explanation": "Kecamatan Bubutan memiliki Healthcare Gap Score sebesar 60.7 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.75), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7451892816953024, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 60.67386178995369, "kecamatan": "BUBUTAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 11, "root_cause_confidence": "HIGH", "root_cause_margin": 0.20280143762054437, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9479907193158468, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.7, -7.35], [112.74, -7.35], [112.74, -7.321666666666666], [112.7, -7.321666666666666], [112.7, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.13024992102563587, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (5902 cases)", "disease_need_score": 0.26975677606494536, "explanation": "Kecamatan Bulak memiliki Healthcare Gap Score sebesar 51.7 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.93), 2. Facility Capacity Gap (0.73), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.93. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7304348140652591, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 51.68150591971501, "kecamatan": "BULAK", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 18, "root_cause_confidence": "HIGH", "root_cause_margin": 0.195237735479469, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9256725495447281, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.74, -7.35], [112.78, -7.35], [112.78, -7.321666666666666], [112.74, -7.321666666666666], [112.74, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.2448495662967851, "disease_issue": "Penyakit pada sistem pencernaan (6492 cases)", "disease_need_score": 0.09852829207749217, "explanation": "Kecamatan Dukuh Pakis memiliki Healthcare Gap Score sebesar 40.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.70), 2. Facility Capacity Gap (0.49), 3. High Demand Score (0.24). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.48826143395997645, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 40.00357255422035, "kecamatan": "DUKUH PAKIS", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 28, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.20914826752560445, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.6974097014855809, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.78, -7.35], [112.82, -7.35], [112.82, -7.321666666666666], [112.78, -7.321666666666666], [112.78, -7.35]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.4866478365533732, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (10213 cases)", "disease_need_score": 0.6432905221837185, "explanation": "Kecamatan Gayungan memiliki Healthcare Gap Score sebesar 47.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.64), 2. High Demand Score (0.49), 3. Facility Capacity Gap (0.47). Indikator paling menonjol dalam model adalah High caseload of Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan, dengan sub-skor 0.64. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.4742402357956895, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 47.14156707275817, "kecamatan": "GAYUNGAN", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Tinggi", "priority_rank": 24, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.15664268563034534, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "FACILITY_SHORTAGE", "workforce_gap": 0.3397172272189605, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.58, -7.321666666666666], [112.62, -7.321666666666666], [112.62, -7.293333333333333], [112.58, -7.293333333333333], [112.58, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.7055417411935954, "disease_issue": "Penyakit pada sistem pernafasan (16565 cases)", "disease_need_score": 1.0, "explanation": "Kecamatan Genteng memiliki Healthcare Gap Score sebesar 59.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (1.00), 2. High Demand Score (0.71), 3. Workforce Shortage Gap (0.40). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 1.00. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.3389029487931825, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.85690447198707, "kecamatan": "GENTENG", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Tinggi", "priority_rank": 12, "root_cause_confidence": "HIGH", "root_cause_margin": 0.29445825880640464, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.39708644201051857, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.62, -7.321666666666666], [112.66, -7.321666666666666], [112.66, -7.293333333333333], [112.62, -7.293333333333333], [112.62, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4294838984779567, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (29273 cases)", "disease_need_score": 0.5784471062483251, "explanation": "Kecamatan Gubeng memiliki Healthcare Gap Score sebesar 37.0 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Disease Burden Need (0.58), 2. Facility Capacity Gap (0.56), 3. High Demand Score (0.43). Indikator paling menonjol dalam model adalah High caseload of Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan, dengan sub-skor 0.58. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.558972543909532, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 37.01887111627209, "kecamatan": "GUBENG", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Sedang", "priority_rank": 30, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.019474562338793078, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.0461987052925416, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.66, -7.321666666666666], [112.7, -7.321666666666666], [112.7, -7.293333333333333], [112.66, -7.293333333333333], [112.66, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.12027547887004464, "disease_issue": "Penyakit pada sistem pernafasan (7543 cases)", "disease_need_score": 0.2999357301490571, "explanation": "Kecamatan Gunung Anyar memiliki Healthcare Gap Score sebesar 52.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.97), 2. Facility Capacity Gap (0.70), 3. Disease Burden Need (0.30). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.97. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6990080242381551, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 52.762495604462224, "kecamatan": "GUNUNG ANYAR", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 15, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2735038474490661, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9725118716872212, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.7, -7.321666666666666], [112.74, -7.321666666666666], [112.74, -7.293333333333333], [112.7, -7.293333333333333], [112.7, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.21959302339564915, "disease_issue": "Penyakit pada sistem pencernaan (5315 cases)", "disease_need_score": 0.11557884539152101, "explanation": "Kecamatan Jambangan memiliki Healthcare Gap Score sebesar 50.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.72), 3. High Demand Score (0.22). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7161926518743044, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.17480408166324, "kecamatan": "JAMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "HIGH", "root_cause_margin": 0.18219346260827107, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.8983861144825754, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.74, -7.321666666666666], [112.78, -7.321666666666666], [112.78, -7.293333333333333], [112.74, -7.293333333333333], [112.74, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.27153885243559417, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8154350343632506, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 63.385980255825494, "kecamatan": "KARANG PILANG", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16198486758339636, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.977419901946647, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.78, -7.321666666666666], [112.82, -7.321666666666666], [112.82, -7.293333333333333], [112.78, -7.293333333333333], [112.78, -7.321666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.7054179289127723, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (29064 cases)", "disease_need_score": 0.5760790744673342, "explanation": "Kecamatan Kenjeran memiliki Healthcare Gap Score sebesar 78.1 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (1.00), 2. Facility Capacity Gap (0.77), 3. High Demand Score (0.71). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 1.00. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7688923852954576, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 78.061967062639, "kecamatan": "KENJERAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 1, "root_cause_confidence": "HIGH", "root_cause_margin": 0.23110761470454244, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 1.0, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.58, -7.293333333333333], [112.62, -7.293333333333333], [112.62, -7.265], [112.58, -7.265], [112.58, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6260376157768076, "disease_issue": "Penyakit pada sistem pernafasan (26794 cases)", "disease_need_score": 0.6613702893538563, "explanation": "Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 72.9 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.91), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.91. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6765408796607464, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 72.91006326851985, "kecamatan": "KREMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 2, "root_cause_confidence": "HIGH", "root_cause_margin": 0.23581616750337275, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9123570471641191, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.62, -7.293333333333333], [112.66, -7.293333333333333], [112.66, -7.265], [112.62, -7.265], [112.62, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6259753860107978, "disease_issue": "Penyakit pada sistem pernafasan (14667 cases)", "disease_need_score": 0.719760897321064, "explanation": "Kecamatan Lakarsantri memiliki Healthcare Gap Score sebesar 67.8 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.96), 2. Disease Burden Need (0.72), 3. High Demand Score (0.63). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.96. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.2941868900238589, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 67.79072943736185, "kecamatan": "LAKARSANTRI", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 6, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2379895063502515, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.9577504036713155, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.66, -7.293333333333333], [112.7, -7.293333333333333], [112.7, -7.265], [112.66, -7.265], [112.66, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.25255558160722347, "disease_issue": "Penyakit pada sistem pernafasan (11632 cases)", "disease_need_score": 0.3512736331932913, "explanation": "Kecamatan Mulyorejo memiliki Healthcare Gap Score sebesar 32.1 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.39), 2. Disease Burden Need (0.35), 3. Workforce Shortage Gap (0.33). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.39. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.38511893097431027, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 32.11770005186354, "kecamatan": "MULYOREJO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 31, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.03384529778101897, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.3271060440098267, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.7, -7.293333333333333], [112.74, -7.293333333333333], [112.74, -7.265], [112.7, -7.265], [112.7, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.232052398926224, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (6820 cases)", "disease_need_score": 0.15990347279397957, "explanation": "Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 38.5 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.23). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7050227054341729, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 38.49117741831966, "kecamatan": "PABEAN CANTIAN", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 29, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.23065330923517668, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.4743693961989962, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.74, -7.293333333333333], [112.78, -7.293333333333333], [112.78, -7.265], [112.74, -7.265], [112.74, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.12790427762607437, "disease_issue": "Penyakit pada sistem pencernaan (7971 cases)", "disease_need_score": 0.1455947216650936, "explanation": "Kecamatan Pakal memiliki Healthcare Gap Score sebesar 49.5 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.87), 2. Facility Capacity Gap (0.83), 3. Disease Burden Need (0.15). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.87. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.832056419317515, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 49.46829337150855, "kecamatan": "PAKAL", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 22, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.03721498811829016, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.8692714074358051, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.78, -7.293333333333333], [112.82, -7.293333333333333], [112.82, -7.265], [112.78, -7.265], [112.78, -7.293333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4862806451649574, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (20131 cases)", "disease_need_score": 0.5557296280929925, "explanation": "Kecamatan Rungkut memiliki Healthcare Gap Score sebesar 63.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.84), 2. Facility Capacity Gap (0.64), 3. Disease Burden Need (0.56). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.84. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6379237535016832, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 63.64514006441413, "kecamatan": "RUNGKUT", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 8, "root_cause_confidence": "HIGH", "root_cause_margin": 0.20153134908404668, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.8394551025857299, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.58, -7.265], [112.62, -7.265], [112.62, -7.236666666666666], [112.58, -7.236666666666666], [112.58, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.22727752726274947, "disease_issue": "Penyakit pada sistem pernafasan (9185 cases)", "disease_need_score": 0.3379416056512982, "explanation": "Kecamatan Sambikerep memiliki Healthcare Gap Score sebesar 44.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.68), 2. Facility Capacity Gap (0.52), 3. Disease Burden Need (0.34). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.68. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.5172774614987363, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 44.23578796673905, "kecamatan": "SAMBIKEREP", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 25, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.15982523202979304, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.6771026935285294, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.62, -7.265], [112.66, -7.265], [112.66, -7.236666666666666], [112.62, -7.236666666666666], [112.62, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.5550616418122404, "disease_issue": "Penyakit pada sistem pernafasan (25591 cases)", "disease_need_score": 0.36096317245734877, "explanation": "Kecamatan Sawahan memiliki Healthcare Gap Score sebesar 66.9 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.73), 3. High Demand Score (0.56). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7333692966892101, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 66.91292944299865, "kecamatan": "SAWAHAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 7, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2124450635007985, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.9458143601900086, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.66, -7.265], [112.7, -7.265], [112.7, -7.236666666666666], [112.66, -7.236666666666666], [112.66, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.5419391976074723, "disease_issue": "Penyakit pada sistem pernafasan (36331 cases)", "disease_need_score": 0.46358681670637, "explanation": "Kecamatan Semampir memiliki Healthcare Gap Score sebesar 69.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.96), 2. Facility Capacity Gap (0.75), 3. High Demand Score (0.54). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.96. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7513325732317738, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 69.209390185286, "kecamatan": "SEMAMPIR", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 5, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2037616420448577, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.9550942152766315, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.7, -7.265], [112.74, -7.265], [112.74, -7.236666666666666], [112.7, -7.236666666666666], [112.7, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.38865391111706193, "disease_issue": "Penyakit pada sistem pernafasan (15444 cases)", "disease_need_score": 0.4330704646156655, "explanation": "Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 52.3 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.59), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Faskes Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7111041986887711, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 52.2651502154146, "kecamatan": "SIMOKERTO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 17, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.12036954482830431, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.5907346538604668, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.74, -7.265], [112.78, -7.265], [112.78, -7.236666666666666], [112.74, -7.236666666666666], [112.74, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.3948261301754178, "disease_issue": "Penyakit pada sistem pernafasan (14969 cases)", "disease_need_score": 0.4109389249100609, "explanation": "Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.82), 2. Facility Capacity Gap (0.72), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.82. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7158515805985569, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.00097019187951, "kecamatan": "SUKO MANUNGGAL", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 13, "root_cause_confidence": "HIGH", "root_cause_margin": 0.10482762528293021, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.8206792058814871, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.78, -7.265], [112.82, -7.265], [112.82, -7.236666666666666], [112.78, -7.236666666666666], [112.78, -7.265]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4344073595454221, "disease_issue": "Penyakit pada sistem pernafasan (17373 cases)", "disease_need_score": 0.49999379853797876, "explanation": "Kecamatan Sukolilo memiliki Healthcare Gap Score sebesar 48.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.52), 2. Disease Burden Need (0.50), 3. Workforce Shortage Gap (0.50). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.52. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.5203313758863792, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 48.40413716206836, "kecamatan": "SUKOLILO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 23, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.02033757734840047, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.49884709624061807, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.58, -7.236666666666666], [112.62, -7.236666666666666], [112.62, -7.208333333333333], [112.58, -7.208333333333333], [112.58, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.3206309445288489, "disease_issue": "Penyakit pada sistem pernafasan (14845 cases)", "disease_need_score": 0.0, "explanation": "Kecamatan Tambaksari memiliki Healthcare Gap Score sebesar 53.5 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.91), 2. Facility Capacity Gap (0.82), 3. High Demand Score (0.32). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.91. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8205770864558177, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 53.46319892080861, "kecamatan": "TAMBAKSARI", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 14, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.09384720873840857, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.9144242951942263, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.62, -7.236666666666666], [112.66, -7.236666666666666], [112.66, -7.208333333333333], [112.62, -7.208333333333333], [112.62, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5672533560599609, "disease_issue": "Penyakit pada sistem pernafasan (14979 cases)", "disease_need_score": 0.6152163725782765, "explanation": "Kecamatan Tandes memiliki Healthcare Gap Score sebesar 70.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.92), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.62). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.92. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6762347561967095, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 70.56631087915024, "kecamatan": "TANDES", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 3, "root_cause_confidence": "HIGH", "root_cause_margin": 0.24775483119834685, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9239895873950563, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.66, -7.236666666666666], [112.7, -7.236666666666666], [112.7, -7.208333333333333], [112.66, -7.208333333333333], [112.66, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.35767704302887565, "disease_issue": "Penyakit pada sistem pernafasan (12548 cases)", "disease_need_score": 0.31458136636492834, "explanation": "Kecamatan Tegalsari memiliki Healthcare Gap Score sebesar 52.6 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.79), 2. Facility Capacity Gap (0.59), 3. High Demand Score (0.36). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.79. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.5897430670250227, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 52.56546494559555, "kecamatan": "TEGALSARI", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 16, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.20187909920598612, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.7916221662310088, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.7, -7.236666666666666], [112.74, -7.236666666666666], [112.74, -7.208333333333333], [112.7, -7.208333333333333], [112.7, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.2202218128184301, "disease_issue": "Penyakit pada sistem pernafasan (7490 cases)", "disease_need_score": 0.26952828370916404, "explanation": "Kecamatan Tenggilis Mejoyo memiliki Healthcare Gap Score sebesar 44.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.68), 2. Workforce Shortage Gap (0.61), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.68. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6763156547106218, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 43.953046025736754, "kecamatan": "TENGGILIS MEJOYO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 26, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.06199855895101736, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.6143170957596045, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.74, -7.236666666666666], [112.78, -7.236666666666666], [112.78, -7.208333333333333], [112.74, -7.208333333333333], [112.74, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.4876610966349888, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15180 cases)", "disease_need_score": 0.5156932267910367, "explanation": "Kecamatan Wiyung memiliki Healthcare Gap Score sebesar 50.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.57), 2. Disease Burden Need (0.52), 3. High Demand Score (0.49). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.57. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.5661582820329901, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.860254823063066, "kecamatan": "WIYUNG", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 20, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.05046505524195344, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.48644639158442865, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.78, -7.236666666666666], [112.82, -7.236666666666666], [112.82, -7.208333333333333], [112.78, -7.208333333333333], [112.78, -7.236666666666666]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6703267673588551, "disease_issue": "Penyakit pada sistem pernafasan (18158 cases)", "disease_need_score": 0.703490971254408, "explanation": "Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 62.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.68), 3. High Demand Score (0.67). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.385923525479702, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 62.31903500571049, "kecamatan": "WONOCOLO", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Sangat Tinggi", "priority_rank": 10, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.022792902912319946, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.680698068342088, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}, {"geometry": {"coordinates": [[[112.58, -7.208333333333333], [112.62, -7.208333333333333], [112.62, -7.18], [112.58, -7.18], [112.58, -7.208333333333333]]], "type": "Polygon"}, "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5599074669253064, "disease_issue": "Penyakit pada sistem pencernaan (19746 cases)", "disease_need_score": 0.3915121082304355, "explanation": "Kecamatan Wonokromo memiliki Healthcare Gap Score sebesar 41.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.66), 2. High Demand Score (0.56), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.66. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6573234185733988, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 41.79133082319709, "kecamatan": "WONOKROMO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.09741595164809247, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.13391320931204065, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "name": "heal_city_gap", "type": "FeatureCollection"});
+
+        
+    
+            geo_json_47ef381943653959c03cd83bcd4bc3cd.addTo(choropleth_13886061284ab14e1312174d1156ca15);
+        
+    
+    var color_map_715fff98ad513d7bf49111a63da3753e = {};
+
+    
+    color_map_715fff98ad513d7bf49111a63da3753e.color = d3.scale.threshold()
+              .domain([32.11770005186354, 32.209772731243845, 32.30184541062416, 32.39391809000447, 32.485990769384784, 32.57806344876509, 32.67013612814541, 32.76220880752572, 32.85428148690603, 32.94635416628634, 33.03842684566665, 33.130499525046964, 33.22257220442727, 33.31464488380759, 33.4067175631879, 33.49879024256821, 33.59086292194852, 33.682935601328836, 33.775008280709145, 33.86708096008945, 33.95915363946977, 34.05122631885008, 34.14329899823039, 34.2353716776107, 34.327444356991016, 34.419517036371325, 34.51158971575164, 34.60366239513195, 34.69573507451226, 34.78780775389257, 34.87988043327288, 34.971953112653196, 35.064025792033505, 35.15609847141382, 35.24817115079413, 35.340243830174444, 35.43231650955475, 35.52438918893506, 35.616461868315376, 35.708534547695685, 35.800607227076, 35.89267990645631, 35.984752585836624, 36.07682526521693, 36.16889794459725, 36.260970623977556, 36.353043303357865, 36.44511598273818, 36.53718866211849, 36.629261341498804, 36.72133402087911, 36.81340670025943, 36.905479379639736, 36.99755205902005, 37.08962473840036, 37.18169741778067, 37.273770097160984, 37.36584277654129, 37.45791545592161, 37.549988135301916, 37.64206081468223, 37.73413349406254, 37.826206173442856, 37.918278852823164, 38.01035153220347, 38.10242421158379, 38.194496890964096, 38.28656957034441, 38.37864224972472, 38.470714929105036, 38.562787608485344, 38.65486028786566, 38.74693296724597, 38.839005646626276, 38.93107832600659, 39.0231510053869, 39.115223684767216, 39.207296364147524, 39.29936904352784, 39.39144172290815, 39.48351440228846, 39.57558708166877, 39.66765976104908, 39.759732440429396, 39.851805119809704, 39.94387779919002, 40.03595047857033, 40.12802315795064, 40.22009583733095, 40.31216851671127, 40.404241196091576, 40.496313875471884, 40.5883865548522, 40.68045923423251, 40.77253191361282, 40.86460459299313, 40.95667727237345, 41.048749951753756, 41.14082263113407, 41.23289531051438, 41.32496798989469, 41.417040669275, 41.50911334865531, 41.60118602803563, 41.693258707415936, 41.78533138679625, 41.87740406617656, 41.969476745556875, 42.06154942493718, 42.15362210431749, 42.24569478369781, 42.33776746307812, 42.42984014245843, 42.52191282183874, 42.613985501219055, 42.70605818059936, 42.79813085997968, 42.89020353935999, 42.982276218740296, 43.07434889812061, 43.16642157750093, 43.258494256881235, 43.350566936261544, 43.44263961564185, 43.53471229502217, 43.62678497440248, 43.71885765378279, 43.8109303331631, 43.903003012543415, 43.99507569192373, 44.08714837130404, 44.17922105068435, 44.27129373006466, 44.36336640944497, 44.45543908882529, 44.547511768205595, 44.639584447585904, 44.73165712696622, 44.823729806346535, 44.91580248572684, 45.00787516510715, 45.09994784448747, 45.192020523867775, 45.28409320324809, 45.3761658826284, 45.46823856200871, 45.56031124138902, 45.65238392076933, 45.74445660014965, 45.836529279529955, 45.92860195891027, 46.02067463829058, 46.112747317670895, 46.2048199970512, 46.29689267643152, 46.38896535581183, 46.481038035192135, 46.57311071457245, 46.66518339395276, 46.757256073333075, 46.84932875271338, 46.9414014320937, 47.03347411147401, 47.125546790854315, 47.21761947023463, 47.309692149614946, 47.401764828995255, 47.49383750837556, 47.58591018775588, 47.67798286713619, 47.7700555465165, 47.86212822589681, 47.95420090527712, 48.046273584657435, 48.13834626403775, 48.23041894341806, 48.32249162279837, 48.414564302178675, 48.50663698155899, 48.598709660939306, 48.690782340319615, 48.78285501969992, 48.87492769908023, 48.967000378460554, 49.05907305784086, 49.15114573722117, 49.24321841660148, 49.3352910959818, 49.42736377536211, 49.51943645474242, 49.61150913412273, 49.70358181350304, 49.79565449288336, 49.887727172263666, 49.979799851643975, 50.07187253102428, 50.163945210404606, 50.256017889784914, 50.34809056916522, 50.44016324854553, 50.532235927925846, 50.62430860730616, 50.71638128668647, 50.80845396606678, 50.90052664544709, 50.99259932482741, 51.08467200420772, 51.176744683588026, 51.268817362968335, 51.36089004234865, 51.452962721728966, 51.545035401109274, 51.63710808048958, 51.7291807598699, 51.821253439250206, 51.91332611863052, 52.00539879801083, 52.09747147739114, 52.189544156771454, 52.28161683615177, 52.37368951553208, 52.46576219491239, 52.5578348742927, 52.64990755367301, 52.741980233053326, 52.834052912433634, 52.92612559181394, 53.01819827119426, 53.110270950574574, 53.20234362995488, 53.29441630933519, 53.386488988715506, 53.478561668095814, 53.57063434747613, 53.66270702685644, 53.75477970623675, 53.84685238561706, 53.93892506499737, 54.030997744377686, 54.123070423757994, 54.21514310313831, 54.30721578251862, 54.399288461898934, 54.49136114127924, 54.58343382065956, 54.675506500039866, 54.767579179420174, 54.85965185880049, 54.9517245381808, 55.043797217561114, 55.13586989694142, 55.22794257632174, 55.320015255702046, 55.412087935082354, 55.50416061446267, 55.596233293842985, 55.688305973223294, 55.7803786526036, 55.87245133198392, 55.964524011364226, 56.05659669074454, 56.14866937012485, 56.24074204950516, 56.332814728885474, 56.42488740826579, 56.5169600876461, 56.609032767026406, 56.70110544640672, 56.79317812578703, 56.885250805167345, 56.977323484547654, 57.06939616392796, 57.16146884330828, 57.25354152268859, 57.3456142020689, 57.43768688144921, 57.529759560829525, 57.62183224020984, 57.71390491959015, 57.80597759897046, 57.898050278350766, 57.99012295773108, 58.0821956371114, 58.174268316491705, 58.266340995872014, 58.35841367525232, 58.450486354632645, 58.54255903401295, 58.63463171339326, 58.72670439277357, 58.818777072153885, 58.9108497515342, 59.00292243091451, 59.09499511029482, 59.187067789675126, 59.27914046905545, 59.37121314843576, 59.463285827816065, 59.555358507196374, 59.64743118657669, 59.739503865957005, 59.83157654533731, 59.92364922471762, 60.01572190409793, 60.10779458347825, 60.19986726285856, 60.29193994223887, 60.38401262161918, 60.4760853009995, 60.56815798037981, 60.66023065976012, 60.752303339140425, 60.844376018520734, 60.93644869790106, 61.028521377281365, 61.12059405666167, 61.21266673604198, 61.3047394154223, 61.39681209480261, 61.48888477418292, 61.58095745356323, 61.67303013294354, 61.76510281232386, 61.85717549170417, 61.94924817108448, 62.041320850464786, 62.1333935298451, 62.22546620922542, 62.317538888605725, 62.40961156798603, 62.50168424736635, 62.593756926746664, 62.68582960612697, 62.77790228550728, 62.86997496488759, 62.962047644267905, 63.05412032364822, 63.14619300302853, 63.23826568240884, 63.33033836178915, 63.42241104116946, 63.51448372054978, 63.606556399930085, 63.69862907931039, 63.79070175869071, 63.882774438071024, 63.97484711745133, 64.06691979683164, 64.15899247621195, 64.25106515559227, 64.34313783497258, 64.43521051435289, 64.52728319373321, 64.6193558731135, 64.71142855249383, 64.80350123187414, 64.89557391125444, 64.98764659063477, 65.07971927001506, 65.17179194939538, 65.2638646287757, 65.355937308156, 65.44800998753632, 65.54008266691662, 65.63215534629694, 65.72422802567726, 65.81630070505756, 65.90837338443788, 66.00044606381817, 66.0925187431985, 66.18459142257882, 66.27666410195911, 66.36873678133944, 66.46080946071974, 66.55288214010005, 66.64495481948038, 66.73702749886067, 66.82910017824099, 66.92117285762131, 67.01324553700161, 67.10531821638193, 67.19739089576223, 67.28946357514255, 67.38153625452287, 67.47360893390317, 67.56568161328349, 67.65775429266378, 67.7498269720441, 67.84189965142443, 67.93397233080472, 68.02604501018504, 68.11811768956535, 68.21019036894566, 68.30226304832598, 68.39433572770628, 68.4864084070866, 68.57848108646691, 68.67055376584722, 68.76262644522754, 68.85469912460783, 68.94677180398816, 69.03884448336848, 69.13091716274877, 69.2229898421291, 69.3150625215094, 69.40713520088971, 69.49920788027003, 69.59128055965033, 69.68335323903065, 69.77542591841096, 69.86749859779127, 69.95957127717159, 70.05164395655189, 70.14371663593221, 70.23578931531252, 70.32786199469282, 70.41993467407315, 70.51200735345344, 70.60408003283376, 70.69615271221407, 70.78822539159438, 70.8802980709747, 70.97237075035501, 71.06444342973532, 71.15651610911564, 71.24858878849594, 71.34066146787626, 71.43273414725657, 71.52480682663688, 71.6168795060172, 71.7089521853975, 71.80102486477782, 71.89309754415812, 71.98517022353843, 72.07724290291875, 72.16931558229906, 72.26138826167937, 72.35346094105968, 72.44553362043999, 72.53760629982031, 72.62967897920062, 72.72175165858093, 72.81382433796124, 72.90589701734154, 72.99796969672187, 73.09004237610218, 73.18211505548248, 73.2741877348628, 73.36626041424311, 73.45833309362342, 73.55040577300373, 73.64247845238404, 73.73455113176436, 73.82662381114467, 73.91869649052498, 74.01076916990529, 74.1028418492856, 74.19491452866592, 74.28698720804623, 74.37905988742654, 74.47113256680684, 74.56320524618715, 74.65527792556747, 74.74735060494778, 74.83942328432809, 74.93149596370841, 75.02356864308872, 75.11564132246903, 75.20771400184934, 75.29978668122965, 75.39185936060997, 75.48393203999028, 75.57600471937059, 75.6680773987509, 75.7601500781312, 75.85222275751153, 75.94429543689184, 76.03636811627214, 76.12844079565245, 76.22051347503277, 76.31258615441308, 76.40465883379339, 76.4967315131737, 76.58880419255401, 76.68087687193433, 76.77294955131464, 76.86502223069495, 76.95709491007526, 77.04916758945558, 77.14124026883589, 77.2333129482162, 77.3253856275965, 77.41745830697681, 77.50953098635713, 77.60160366573744, 77.69367634511775, 77.78574902449806, 77.87782170387838, 77.96989438325869, 78.061967062639])
+              .range(['#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fef0d9ff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdd49eff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fdbb84ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#fc8d59ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#e34a33ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff', '#b30000ff']);
+    
+
+    color_map_715fff98ad513d7bf49111a63da3753e.x = d3.scale.linear()
+              .domain([32.11770005186354, 78.061967062639])
+              .range([0, 450 - 50]);
+
+    color_map_715fff98ad513d7bf49111a63da3753e.legend = L.control({position: 'topright'});
+    color_map_715fff98ad513d7bf49111a63da3753e.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_715fff98ad513d7bf49111a63da3753e.legend.addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+
+    color_map_715fff98ad513d7bf49111a63da3753e.xAxis = d3.svg.axis()
+        .scale(color_map_715fff98ad513d7bf49111a63da3753e.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([32.11770005186354, 39.77507788699278, 47.43245572212202, 55.08983355725127, 62.74721139238051, 70.40458922750975, 78.061967062639]);
+
+    color_map_715fff98ad513d7bf49111a63da3753e.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_715fff98ad513d7bf49111a63da3753e.g = color_map_715fff98ad513d7bf49111a63da3753e.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_715fff98ad513d7bf49111a63da3753e.g.selectAll("rect")
+        .data(color_map_715fff98ad513d7bf49111a63da3753e.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_715fff98ad513d7bf49111a63da3753e.x(color_map_715fff98ad513d7bf49111a63da3753e.color.domain()[i - 1]) : color_map_715fff98ad513d7bf49111a63da3753e.x.range()[0],
+            x1: i < color_map_715fff98ad513d7bf49111a63da3753e.color.domain().length ? color_map_715fff98ad513d7bf49111a63da3753e.x(color_map_715fff98ad513d7bf49111a63da3753e.color.domain()[i]) : color_map_715fff98ad513d7bf49111a63da3753e.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_715fff98ad513d7bf49111a63da3753e.g.call(color_map_715fff98ad513d7bf49111a63da3753e.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Priority Classification Map");
+    
+            choropleth_13886061284ab14e1312174d1156ca15.addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var marker_04de64646ab2325d4bf8af1ee1129da0 = L.marker(
+                [-7.3358333333333325, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_872de1c2ded404c5fffb15648c9572c6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#4\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_70f2774e48074d950f1eb7c4179090ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ee1cc3da4e9c623a21fb9d5947f53fc = $(`<div id="html_4ee1cc3da4e9c623a21fb9d5947f53fc" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Asemrowo<br><b>Rank:</b> #4<br><b>Score:</b> 70.2<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_70f2774e48074d950f1eb7c4179090ef.setContent(html_4ee1cc3da4e9c623a21fb9d5947f53fc);
+            
+        
+
+        marker_04de64646ab2325d4bf8af1ee1129da0.bindPopup(popup_70f2774e48074d950f1eb7c4179090ef)
+        ;
+
+        
+    
+    
+                marker_04de64646ab2325d4bf8af1ee1129da0.setIcon(div_icon_872de1c2ded404c5fffb15648c9572c6);
+            
+    
+            var marker_448f87e1fd1438e2dd145b83102296eb = L.marker(
+                [-7.3358333333333325, 112.64],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_980f68f2909a443ac27756ee71a23e07 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#19\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_dcaaa03e772a4e099885438291dfb4c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d0c4f20174cb69f3823df5b5bc32e9f5 = $(`<div id="html_d0c4f20174cb69f3823df5b5bc32e9f5" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Benowo<br><b>Rank:</b> #19<br><b>Score:</b> 51.4<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_dcaaa03e772a4e099885438291dfb4c4.setContent(html_d0c4f20174cb69f3823df5b5bc32e9f5);
+            
+        
+
+        marker_448f87e1fd1438e2dd145b83102296eb.bindPopup(popup_dcaaa03e772a4e099885438291dfb4c4)
+        ;
+
+        
+    
+    
+                marker_448f87e1fd1438e2dd145b83102296eb.setIcon(div_icon_980f68f2909a443ac27756ee71a23e07);
+            
+    
+            var marker_35d8b48684ad099066bff38fe1e6fb00 = L.marker(
+                [-7.3358333333333325, 112.67999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_970d1d0b6f3aec42add6371a009f45b7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#11\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_95bd6fe6cb9b88959112b5ae04498bda = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd12d18e2c814e818a50a4b6a9bf65b9 = $(`<div id="html_fd12d18e2c814e818a50a4b6a9bf65b9" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Bubutan<br><b>Rank:</b> #11<br><b>Score:</b> 60.7<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_95bd6fe6cb9b88959112b5ae04498bda.setContent(html_fd12d18e2c814e818a50a4b6a9bf65b9);
+            
+        
+
+        marker_35d8b48684ad099066bff38fe1e6fb00.bindPopup(popup_95bd6fe6cb9b88959112b5ae04498bda)
+        ;
+
+        
+    
+    
+                marker_35d8b48684ad099066bff38fe1e6fb00.setIcon(div_icon_970d1d0b6f3aec42add6371a009f45b7);
+            
+    
+            var marker_951e0bf08c2ff724f60473dea20459ed = L.marker(
+                [-7.3358333333333325, 112.71999999999997],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_cd46650d216a736132147443c50f7f59 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#18\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8ce0ca2950bfeb0457310c9b2604c4c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_216bfab2b33c62a97aa051956c6522a6 = $(`<div id="html_216bfab2b33c62a97aa051956c6522a6" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Bulak<br><b>Rank:</b> #18<br><b>Score:</b> 51.7<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_8ce0ca2950bfeb0457310c9b2604c4c4.setContent(html_216bfab2b33c62a97aa051956c6522a6);
+            
+        
+
+        marker_951e0bf08c2ff724f60473dea20459ed.bindPopup(popup_8ce0ca2950bfeb0457310c9b2604c4c4)
+        ;
+
+        
+    
+    
+                marker_951e0bf08c2ff724f60473dea20459ed.setIcon(div_icon_cd46650d216a736132147443c50f7f59);
+            
+    
+            var marker_cee9161a3e388e69f3af64881156af58 = L.marker(
+                [-7.3358333333333325, 112.75999999999999],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_3e5748ea1a0751e8f6c27d3f077de902 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#28\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8093555b552e6db90747a7e333cddd45 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d273c23d9df7c3401770a8a23551fe3 = $(`<div id="html_3d273c23d9df7c3401770a8a23551fe3" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Dukuh Pakis<br><b>Rank:</b> #28<br><b>Score:</b> 40.0<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_8093555b552e6db90747a7e333cddd45.setContent(html_3d273c23d9df7c3401770a8a23551fe3);
+            
+        
+
+        marker_cee9161a3e388e69f3af64881156af58.bindPopup(popup_8093555b552e6db90747a7e333cddd45)
+        ;
+
+        
+    
+    
+                marker_cee9161a3e388e69f3af64881156af58.setIcon(div_icon_3e5748ea1a0751e8f6c27d3f077de902);
+            
+    
+            var marker_7b596424e7a8a34c5198c4afbf4560b2 = L.marker(
+                [-7.3358333333333325, 112.80000000000001],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_2644e96b3c20e4fafc3c69d03414efee = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#24\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_ebf3c1c9cca337249718a4700cbbe2a7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0252aa8d5d689604c798c4b8d0af23ec = $(`<div id="html_0252aa8d5d689604c798c4b8d0af23ec" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Gayungan<br><b>Rank:</b> #24<br><b>Score:</b> 47.1<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_ebf3c1c9cca337249718a4700cbbe2a7.setContent(html_0252aa8d5d689604c798c4b8d0af23ec);
+            
+        
+
+        marker_7b596424e7a8a34c5198c4afbf4560b2.bindPopup(popup_ebf3c1c9cca337249718a4700cbbe2a7)
+        ;
+
+        
+    
+    
+                marker_7b596424e7a8a34c5198c4afbf4560b2.setIcon(div_icon_2644e96b3c20e4fafc3c69d03414efee);
+            
+    
+            var marker_099d206c7290ccb0f8a6a9f906047f09 = L.marker(
+                [-7.307500000000001, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_df7deeacff09f306bcef490875a6d94b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#12\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_1da601662eef0aa7c7b3afb997b91319 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42b91c06205e652a7baabee051c1de96 = $(`<div id="html_42b91c06205e652a7baabee051c1de96" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Genteng<br><b>Rank:</b> #12<br><b>Score:</b> 59.9<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_1da601662eef0aa7c7b3afb997b91319.setContent(html_42b91c06205e652a7baabee051c1de96);
+            
+        
+
+        marker_099d206c7290ccb0f8a6a9f906047f09.bindPopup(popup_1da601662eef0aa7c7b3afb997b91319)
+        ;
+
+        
+    
+    
+                marker_099d206c7290ccb0f8a6a9f906047f09.setIcon(div_icon_df7deeacff09f306bcef490875a6d94b);
+            
+    
+            var marker_5a3811d40b2635e02ef3638051d8d5d9 = L.marker(
+                [-7.307499999999999, 112.64],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_34643f4e787572ae329d00454e897528 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#30\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_00195e89224eb8644033218000c80ae5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3dc602aa20cbab2699b3ef2d8687e6a = $(`<div id="html_b3dc602aa20cbab2699b3ef2d8687e6a" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Gubeng<br><b>Rank:</b> #30<br><b>Score:</b> 37.0<br><b>Category:</b> Sedang</div>`)[0];
+                popup_00195e89224eb8644033218000c80ae5.setContent(html_b3dc602aa20cbab2699b3ef2d8687e6a);
+            
+        
+
+        marker_5a3811d40b2635e02ef3638051d8d5d9.bindPopup(popup_00195e89224eb8644033218000c80ae5)
+        ;
+
+        
+    
+    
+                marker_5a3811d40b2635e02ef3638051d8d5d9.setIcon(div_icon_34643f4e787572ae329d00454e897528);
+            
+    
+            var marker_6fe00296011142cfc6050f8863db72c2 = L.marker(
+                [-7.307499999999999, 112.67999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_8fda721c3ca93ea7a52ec429985c170e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#15\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8cf69a7c24f8763e97f64101022a4358 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8a4e166f2018757fc19107b1f49d6265 = $(`<div id="html_8a4e166f2018757fc19107b1f49d6265" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Gunung Anyar<br><b>Rank:</b> #15<br><b>Score:</b> 52.8<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_8cf69a7c24f8763e97f64101022a4358.setContent(html_8a4e166f2018757fc19107b1f49d6265);
+            
+        
+
+        marker_6fe00296011142cfc6050f8863db72c2.bindPopup(popup_8cf69a7c24f8763e97f64101022a4358)
+        ;
+
+        
+    
+    
+                marker_6fe00296011142cfc6050f8863db72c2.setIcon(div_icon_8fda721c3ca93ea7a52ec429985c170e);
+            
+    
+            var marker_ab2b671960c282137976c12fa0b5cf80 = L.marker(
+                [-7.307499999999999, 112.71999999999997],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_f17888ba80e1986ff15682c64702fb71 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#21\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_29dcc8844369d48f2d4eb4264b42c7e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c23dfdc3882e4ea7d4d9d274498e9f1c = $(`<div id="html_c23dfdc3882e4ea7d4d9d274498e9f1c" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Jambangan<br><b>Rank:</b> #21<br><b>Score:</b> 50.2<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_29dcc8844369d48f2d4eb4264b42c7e2.setContent(html_c23dfdc3882e4ea7d4d9d274498e9f1c);
+            
+        
+
+        marker_ab2b671960c282137976c12fa0b5cf80.bindPopup(popup_29dcc8844369d48f2d4eb4264b42c7e2)
+        ;
+
+        
+    
+    
+                marker_ab2b671960c282137976c12fa0b5cf80.setIcon(div_icon_f17888ba80e1986ff15682c64702fb71);
+            
+    
+            var marker_d51231de94b91d9dce1e8baeb82c7f6f = L.marker(
+                [-7.307500000000001, 112.75999999999999],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_b85791eb50572b8ae40ad5e91f4fcb2e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#9\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_4fd3f9bdb049fce43c0fe1bafbb133a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4b8c6fccf4b09275ec752b886e6ff48 = $(`<div id="html_e4b8c6fccf4b09275ec752b886e6ff48" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Karang Pilang<br><b>Rank:</b> #9<br><b>Score:</b> 63.4<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_4fd3f9bdb049fce43c0fe1bafbb133a8.setContent(html_e4b8c6fccf4b09275ec752b886e6ff48);
+            
+        
+
+        marker_d51231de94b91d9dce1e8baeb82c7f6f.bindPopup(popup_4fd3f9bdb049fce43c0fe1bafbb133a8)
+        ;
+
+        
+    
+    
+                marker_d51231de94b91d9dce1e8baeb82c7f6f.setIcon(div_icon_b85791eb50572b8ae40ad5e91f4fcb2e);
+            
+    
+            var marker_bd542ab31ab064bccf08e41801f8be30 = L.marker(
+                [-7.307499999999999, 112.80000000000001],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_b6fbfc1aaf76fe2272ec5cb46bb59877 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2869994f5735f3d04ac5ca95fe7060fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a566f9bce9f5709d7e4e67d92067274 = $(`<div id="html_5a566f9bce9f5709d7e4e67d92067274" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Kenjeran<br><b>Rank:</b> #1<br><b>Score:</b> 78.1<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_2869994f5735f3d04ac5ca95fe7060fe.setContent(html_5a566f9bce9f5709d7e4e67d92067274);
+            
+        
+
+        marker_bd542ab31ab064bccf08e41801f8be30.bindPopup(popup_2869994f5735f3d04ac5ca95fe7060fe)
+        ;
+
+        
+    
+    
+                marker_bd542ab31ab064bccf08e41801f8be30.setIcon(div_icon_b6fbfc1aaf76fe2272ec5cb46bb59877);
+            
+    
+            var marker_3843ee0daec9cb26dfeec3bbc4647909 = L.marker(
+                [-7.279166666666667, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_7606423b68b8c568cb78cbe91c8a16bf = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_4eec81f22d9681d938fb41bf1a1b7991 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51037e90032d5a6063a5b02e46317a9f = $(`<div id="html_51037e90032d5a6063a5b02e46317a9f" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Krembangan<br><b>Rank:</b> #2<br><b>Score:</b> 72.9<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_4eec81f22d9681d938fb41bf1a1b7991.setContent(html_51037e90032d5a6063a5b02e46317a9f);
+            
+        
+
+        marker_3843ee0daec9cb26dfeec3bbc4647909.bindPopup(popup_4eec81f22d9681d938fb41bf1a1b7991)
+        ;
+
+        
+    
+    
+                marker_3843ee0daec9cb26dfeec3bbc4647909.setIcon(div_icon_7606423b68b8c568cb78cbe91c8a16bf);
+            
+    
+            var marker_5489f9f19ad1280a767d8d82fc0b1567 = L.marker(
+                [-7.279166666666667, 112.64],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_20588510f8a709fb2fbec6a76aa8bc88 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#6\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0301485cb3556366024e0dfdeecd35b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a98be5b7faf0ed3f9b3844e5be6c0b9 = $(`<div id="html_7a98be5b7faf0ed3f9b3844e5be6c0b9" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Lakarsantri<br><b>Rank:</b> #6<br><b>Score:</b> 67.8<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_0301485cb3556366024e0dfdeecd35b3.setContent(html_7a98be5b7faf0ed3f9b3844e5be6c0b9);
+            
+        
+
+        marker_5489f9f19ad1280a767d8d82fc0b1567.bindPopup(popup_0301485cb3556366024e0dfdeecd35b3)
+        ;
+
+        
+    
+    
+                marker_5489f9f19ad1280a767d8d82fc0b1567.setIcon(div_icon_20588510f8a709fb2fbec6a76aa8bc88);
+            
+    
+            var marker_2550d43c111fefa5f1c5cf192a6f42c3 = L.marker(
+                [-7.279166666666667, 112.67999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_3d765d0201226c82745bc9eb360986a0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#31\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_ea90fce4190d9f1923170b57ed8ff41d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ce069593606c46f1cce5d548633ed636 = $(`<div id="html_ce069593606c46f1cce5d548633ed636" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Mulyorejo<br><b>Rank:</b> #31<br><b>Score:</b> 32.1<br><b>Category:</b> Sedang</div>`)[0];
+                popup_ea90fce4190d9f1923170b57ed8ff41d.setContent(html_ce069593606c46f1cce5d548633ed636);
+            
+        
+
+        marker_2550d43c111fefa5f1c5cf192a6f42c3.bindPopup(popup_ea90fce4190d9f1923170b57ed8ff41d)
+        ;
+
+        
+    
+    
+                marker_2550d43c111fefa5f1c5cf192a6f42c3.setIcon(div_icon_3d765d0201226c82745bc9eb360986a0);
+            
+    
+            var marker_1dbcff917710102565fb3843fe0d3cc9 = L.marker(
+                [-7.279166666666667, 112.71999999999997],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_be9d024128920b3febaf6c6df42ad88d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#29\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_9d5440a6c38c9408e8572958bbcfb1d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07915366332d8d789a9d665ddd67f166 = $(`<div id="html_07915366332d8d789a9d665ddd67f166" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Pabean Cantian<br><b>Rank:</b> #29<br><b>Score:</b> 38.5<br><b>Category:</b> Sedang</div>`)[0];
+                popup_9d5440a6c38c9408e8572958bbcfb1d5.setContent(html_07915366332d8d789a9d665ddd67f166);
+            
+        
+
+        marker_1dbcff917710102565fb3843fe0d3cc9.bindPopup(popup_9d5440a6c38c9408e8572958bbcfb1d5)
+        ;
+
+        
+    
+    
+                marker_1dbcff917710102565fb3843fe0d3cc9.setIcon(div_icon_be9d024128920b3febaf6c6df42ad88d);
+            
+    
+            var marker_ea74c6dac0d27cbba19265764a10f056 = L.marker(
+                [-7.279166666666667, 112.75999999999999],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_ff42338fb97123d3a2dc6115bce85008 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#22\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2b48ac8c876fcd9640e5d4cd52e96d44 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c23e4e35c986fa99aa8b76b3547e579 = $(`<div id="html_6c23e4e35c986fa99aa8b76b3547e579" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Pakal<br><b>Rank:</b> #22<br><b>Score:</b> 49.5<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_2b48ac8c876fcd9640e5d4cd52e96d44.setContent(html_6c23e4e35c986fa99aa8b76b3547e579);
+            
+        
+
+        marker_ea74c6dac0d27cbba19265764a10f056.bindPopup(popup_2b48ac8c876fcd9640e5d4cd52e96d44)
+        ;
+
+        
+    
+    
+                marker_ea74c6dac0d27cbba19265764a10f056.setIcon(div_icon_ff42338fb97123d3a2dc6115bce85008);
+            
+    
+            var marker_fc246dadb3cf967aa1a66d4dfc21cfd1 = L.marker(
+                [-7.279166666666667, 112.80000000000001],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_4dab8c50bc3578bbb520c983f481d063 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#8\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_011b655fbc263266d7d4f7dbe58ba207 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f7598944a6a8ac5c5ad8260acf84891 = $(`<div id="html_1f7598944a6a8ac5c5ad8260acf84891" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Rungkut<br><b>Rank:</b> #8<br><b>Score:</b> 63.6<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_011b655fbc263266d7d4f7dbe58ba207.setContent(html_1f7598944a6a8ac5c5ad8260acf84891);
+            
+        
+
+        marker_fc246dadb3cf967aa1a66d4dfc21cfd1.bindPopup(popup_011b655fbc263266d7d4f7dbe58ba207)
+        ;
+
+        
+    
+    
+                marker_fc246dadb3cf967aa1a66d4dfc21cfd1.setIcon(div_icon_4dab8c50bc3578bbb520c983f481d063);
+            
+    
+            var marker_969db6924f9c3886be144473f309db32 = L.marker(
+                [-7.250833333333332, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_593415b07031fea458639a38d4f0055c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#25\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2358116006dbc2899de22281a77c5e78 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_072a3440bb0d56224f51f27792810c1c = $(`<div id="html_072a3440bb0d56224f51f27792810c1c" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Sambikerep<br><b>Rank:</b> #25<br><b>Score:</b> 44.2<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_2358116006dbc2899de22281a77c5e78.setContent(html_072a3440bb0d56224f51f27792810c1c);
+            
+        
+
+        marker_969db6924f9c3886be144473f309db32.bindPopup(popup_2358116006dbc2899de22281a77c5e78)
+        ;
+
+        
+    
+    
+                marker_969db6924f9c3886be144473f309db32.setIcon(div_icon_593415b07031fea458639a38d4f0055c);
+            
+    
+            var marker_7b5ca47d1278b4963a9c606335d65832 = L.marker(
+                [-7.250833333333332, 112.64],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_eb0a05556f5a6fbd8452a3f4ea44a253 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#7\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_51b05b9caff13972aa0673c8230fec94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70964e56de71e3869d9e546b74b4c819 = $(`<div id="html_70964e56de71e3869d9e546b74b4c819" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Sawahan<br><b>Rank:</b> #7<br><b>Score:</b> 66.9<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_51b05b9caff13972aa0673c8230fec94.setContent(html_70964e56de71e3869d9e546b74b4c819);
+            
+        
+
+        marker_7b5ca47d1278b4963a9c606335d65832.bindPopup(popup_51b05b9caff13972aa0673c8230fec94)
+        ;
+
+        
+    
+    
+                marker_7b5ca47d1278b4963a9c606335d65832.setIcon(div_icon_eb0a05556f5a6fbd8452a3f4ea44a253);
+            
+    
+            var marker_05bd0e475e94d905b722be5239395c15 = L.marker(
+                [-7.250833333333332, 112.67999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_587632d67332b97ced84434be2352970 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#5\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_244b2fff4e322a393f4cb1e6f4522227 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36d48ddc0e7cedbd9f20b31c1c8a6416 = $(`<div id="html_36d48ddc0e7cedbd9f20b31c1c8a6416" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Semampir<br><b>Rank:</b> #5<br><b>Score:</b> 69.2<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_244b2fff4e322a393f4cb1e6f4522227.setContent(html_36d48ddc0e7cedbd9f20b31c1c8a6416);
+            
+        
+
+        marker_05bd0e475e94d905b722be5239395c15.bindPopup(popup_244b2fff4e322a393f4cb1e6f4522227)
+        ;
+
+        
+    
+    
+                marker_05bd0e475e94d905b722be5239395c15.setIcon(div_icon_587632d67332b97ced84434be2352970);
+            
+    
+            var marker_1eca08517bbf2836703d308b5aef44d5 = L.marker(
+                [-7.250833333333332, 112.71999999999997],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_da6cb2f1c6dc09e923c4e9ca16b46f0f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#17\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_b7800adba10d796e7da35480d1c0f981 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7ef183ad8ced5475f832d2536a3de14 = $(`<div id="html_e7ef183ad8ced5475f832d2536a3de14" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Simokerto<br><b>Rank:</b> #17<br><b>Score:</b> 52.3<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_b7800adba10d796e7da35480d1c0f981.setContent(html_e7ef183ad8ced5475f832d2536a3de14);
+            
+        
+
+        marker_1eca08517bbf2836703d308b5aef44d5.bindPopup(popup_b7800adba10d796e7da35480d1c0f981)
+        ;
+
+        
+    
+    
+                marker_1eca08517bbf2836703d308b5aef44d5.setIcon(div_icon_da6cb2f1c6dc09e923c4e9ca16b46f0f);
+            
+    
+            var marker_db84c9e0289edd527816b44547dd021c = L.marker(
+                [-7.250833333333332, 112.75999999999999],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_9c9a653ae524448e2913d0be95a4c97e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#13\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_abf45edbb70de3a2ea8954c70230acb0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36e865720130536e2cb3c5b9ba5aadac = $(`<div id="html_36e865720130536e2cb3c5b9ba5aadac" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Suko Manunggal<br><b>Rank:</b> #13<br><b>Score:</b> 59.0<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_abf45edbb70de3a2ea8954c70230acb0.setContent(html_36e865720130536e2cb3c5b9ba5aadac);
+            
+        
+
+        marker_db84c9e0289edd527816b44547dd021c.bindPopup(popup_abf45edbb70de3a2ea8954c70230acb0)
+        ;
+
+        
+    
+    
+                marker_db84c9e0289edd527816b44547dd021c.setIcon(div_icon_9c9a653ae524448e2913d0be95a4c97e);
+            
+    
+            var marker_29eab4142821bde47c4a8e39410aa232 = L.marker(
+                [-7.250833333333332, 112.80000000000001],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_b753f1a3dda23262233d5f9ed41935c2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#23\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_6a25033072f8bec52b31a356f230beb1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9817cd06ab39c705dc9f4be3195a0826 = $(`<div id="html_9817cd06ab39c705dc9f4be3195a0826" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Sukolilo<br><b>Rank:</b> #23<br><b>Score:</b> 48.4<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_6a25033072f8bec52b31a356f230beb1.setContent(html_9817cd06ab39c705dc9f4be3195a0826);
+            
+        
+
+        marker_29eab4142821bde47c4a8e39410aa232.bindPopup(popup_6a25033072f8bec52b31a356f230beb1)
+        ;
+
+        
+    
+    
+                marker_29eab4142821bde47c4a8e39410aa232.setIcon(div_icon_b753f1a3dda23262233d5f9ed41935c2);
+            
+    
+            var marker_11d515db3a27d879ff474426d187ed22 = L.marker(
+                [-7.2225, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_f87756deda2b6f80b748bcda2554e295 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#14\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_df5976053618c8b5f60caf0f71cd218d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6afe03e63b49d08c89ef3ee3334fdb22 = $(`<div id="html_6afe03e63b49d08c89ef3ee3334fdb22" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Tambaksari<br><b>Rank:</b> #14<br><b>Score:</b> 53.5<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_df5976053618c8b5f60caf0f71cd218d.setContent(html_6afe03e63b49d08c89ef3ee3334fdb22);
+            
+        
+
+        marker_11d515db3a27d879ff474426d187ed22.bindPopup(popup_df5976053618c8b5f60caf0f71cd218d)
+        ;
+
+        
+    
+    
+                marker_11d515db3a27d879ff474426d187ed22.setIcon(div_icon_f87756deda2b6f80b748bcda2554e295);
+            
+    
+            var marker_ed02b110354d0426b0837d49304bf527 = L.marker(
+                [-7.222499999999999, 112.64],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_0da15f8165c1c11862326dac0eee1a02 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_7705b59f4370fe4175c6d9cae2280162 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b7badbc1284e24091c418d124612387 = $(`<div id="html_1b7badbc1284e24091c418d124612387" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Tandes<br><b>Rank:</b> #3<br><b>Score:</b> 70.6<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_7705b59f4370fe4175c6d9cae2280162.setContent(html_1b7badbc1284e24091c418d124612387);
+            
+        
+
+        marker_ed02b110354d0426b0837d49304bf527.bindPopup(popup_7705b59f4370fe4175c6d9cae2280162)
+        ;
+
+        
+    
+    
+                marker_ed02b110354d0426b0837d49304bf527.setIcon(div_icon_0da15f8165c1c11862326dac0eee1a02);
+            
+    
+            var marker_c0a5125651acf535bf0b660179cdb923 = L.marker(
+                [-7.222499999999999, 112.67999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_0ffdf6dd49d35dc213eb3117e157119c = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#16\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a900c98fadee0c50d88e33036a77a40a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_088753e575fae1f2a86f47e814cb3614 = $(`<div id="html_088753e575fae1f2a86f47e814cb3614" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Tegalsari<br><b>Rank:</b> #16<br><b>Score:</b> 52.6<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_a900c98fadee0c50d88e33036a77a40a.setContent(html_088753e575fae1f2a86f47e814cb3614);
+            
+        
+
+        marker_c0a5125651acf535bf0b660179cdb923.bindPopup(popup_a900c98fadee0c50d88e33036a77a40a)
+        ;
+
+        
+    
+    
+                marker_c0a5125651acf535bf0b660179cdb923.setIcon(div_icon_0ffdf6dd49d35dc213eb3117e157119c);
+            
+    
+            var marker_0b2f03bff1b1b145b0180cb01378ee86 = L.marker(
+                [-7.222499999999999, 112.71999999999997],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_3d72813873b4c6815545e1ad96e38382 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#26\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_c99e0006cf5b3ced16d1f00823a5269b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f779ad691c0c14fb8b6811118380296d = $(`<div id="html_f779ad691c0c14fb8b6811118380296d" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Tenggilis Mejoyo<br><b>Rank:</b> #26<br><b>Score:</b> 44.0<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_c99e0006cf5b3ced16d1f00823a5269b.setContent(html_f779ad691c0c14fb8b6811118380296d);
+            
+        
+
+        marker_0b2f03bff1b1b145b0180cb01378ee86.bindPopup(popup_c99e0006cf5b3ced16d1f00823a5269b)
+        ;
+
+        
+    
+    
+                marker_0b2f03bff1b1b145b0180cb01378ee86.setIcon(div_icon_3d72813873b4c6815545e1ad96e38382);
+            
+    
+            var marker_5bdbaf50478b629a91f6d230b48f1fe4 = L.marker(
+                [-7.2225, 112.75999999999999],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_b23ee21a273aea08717e787faf26d883 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#20\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_c819bd53d3aa921e1e15f5c02690b816 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76b988caace0e05ebb68f82d05cf399b = $(`<div id="html_76b988caace0e05ebb68f82d05cf399b" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Wiyung<br><b>Rank:</b> #20<br><b>Score:</b> 50.9<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_c819bd53d3aa921e1e15f5c02690b816.setContent(html_76b988caace0e05ebb68f82d05cf399b);
+            
+        
+
+        marker_5bdbaf50478b629a91f6d230b48f1fe4.bindPopup(popup_c819bd53d3aa921e1e15f5c02690b816)
+        ;
+
+        
+    
+    
+                marker_5bdbaf50478b629a91f6d230b48f1fe4.setIcon(div_icon_b23ee21a273aea08717e787faf26d883);
+            
+    
+            var marker_0527825d09791e23eb61a948978d78ed = L.marker(
+                [-7.222499999999999, 112.80000000000001],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_c27a4aed0f767bb93c34321a9240052b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#10\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2f29f3ab8e842fd1219fafa6802f6760 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1988db3d63d9539ad103c2de06cb8137 = $(`<div id="html_1988db3d63d9539ad103c2de06cb8137" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Wonocolo<br><b>Rank:</b> #10<br><b>Score:</b> 62.3<br><b>Category:</b> Sangat Tinggi</div>`)[0];
+                popup_2f29f3ab8e842fd1219fafa6802f6760.setContent(html_1988db3d63d9539ad103c2de06cb8137);
+            
+        
+
+        marker_0527825d09791e23eb61a948978d78ed.bindPopup(popup_2f29f3ab8e842fd1219fafa6802f6760)
+        ;
+
+        
+    
+    
+                marker_0527825d09791e23eb61a948978d78ed.setIcon(div_icon_c27a4aed0f767bb93c34321a9240052b);
+            
+    
+            var marker_f137ac4547e689d4364c0abc4a727a28 = L.marker(
+                [-7.194166666666666, 112.59999999999998],
+                {
+}
+            ).addTo(map_ae2983769cb3df13c3db01ca75085c9b);
+        
+    
+            var div_icon_bbcf4efc4a60566a061520fab63688c5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 10pt; font-weight: bold; color: black; background-color: white; border: 1px solid black; padding: 2px; border-radius: 3px;\"\u003e#27\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_50b2003958b340c72d46d9e22ab32a1c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_921e8967a58ddb52fe920839da44fe6f = $(`<div id="html_921e8967a58ddb52fe920839da44fe6f" style="width: 100.0%; height: 100.0%;"><b>Kecamatan:</b> Wonokromo<br><b>Rank:</b> #27<br><b>Score:</b> 41.8<br><b>Category:</b> Tinggi</div>`)[0];
+                popup_50b2003958b340c72d46d9e22ab32a1c.setContent(html_921e8967a58ddb52fe920839da44fe6f);
+            
+        
+
+        marker_f137ac4547e689d4364c0abc4a727a28.bindPopup(popup_50b2003958b340c72d46d9e22ab32a1c)
+        ;
+
+        
+    
+    
+                marker_f137ac4547e689d4364c0abc4a727a28.setIcon(div_icon_bbcf4efc4a60566a061520fab63688c5);
+            
+</script>
+</html>

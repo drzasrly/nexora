@@ -1,0 +1,10 @@
+finding,value
+Kecamatan dengan populasi tertinggi,Tambaksari (227.0 Ribu)
+Kecamatan dengan service pressure tertinggi,Wonocolo (1235.5 kunjungan/1.000 pop)
+Kecamatan dengan workforce ratio terendah,Kenjeran (1.36 nakes/1.000 pop)
+Kecamatan dengan facility ratio terendah,Asemrowo (6.1 faskes/100k pop)
+Kecamatan dengan disease burden tertinggi,Genteng (1133.5 kasus/1.000 pop)
+Variabel dengan missing value terbanyak di master,None (all master aggregated values are populated)
+Outlier penting yang dideteksi,13 outliers across indicators (e.g. Kenjeran population)
+Hubungan korelasi terkuat,total_tempat_tidur <-> beds_per_1000 (0.945)
+Kecamatan prioritas investigasi awal (mismatch),"Kenjeran, Krembangan, Lakarsantri, Rungkut, Sawahan"

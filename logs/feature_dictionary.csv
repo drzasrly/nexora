@@ -1,0 +1,29 @@
+feature_name,category,unit,purpose
+kecamatan,Geographic,Name,Primary key
+jumlah_penduduk,Demand,Ribu,Kecamatan demographic scale size
+kepadatan_penduduk,Demand,km2,Population concentration
+total_kunjungan,Demand,visits,Cumulative visits volume
+visits_per_1000,Demand,visits/1k pop,Service pressure indicator
+total_tenaga_kesehatan,Capacity,nakes,Workforce absolute size
+nakes_per_1000,Capacity,nakes/1k pop,Healthcare workforce capacity ratio
+perawat_per_1000,Capacity,nurses/1k pop,Nursing labor capacity ratio
+bidan_per_1000,Capacity,midwives/1k pop,Midwife capacity ratio
+total_faskes,Capacity,facilities,Healthcare facilities absolute size
+faskes_per_100k,Capacity,faskes/100k pop,Total facility capacity ratio
+jumlah_puskesmas,Capacity,facilities,Primary care facility count
+puskesmas_per_100k,Capacity,pkm/100k pop,Primary care facility density
+jumlah_pustu,Capacity,facilities,Auxiliary primary care facility count
+pustu_per_100k,Capacity,pustu/100k pop,Auxiliary care density
+total_tempat_tidur,Capacity,beds,Absolute inpatient capacity size
+beds_per_1000,Capacity,beds/1k pop,Inpatient bed capacity ratio
+total_kasus_penyakit,Demand,cases,Absolute disease caseload volume
+disease_per_1000,Demand,cases/1k pop,Disease burden index
+workforce_growth,Mismatch,percentage,Workforce growth (NaN)
+demand_growth,Mismatch,percentage,Demand growth (NaN)
+workforce_demand_mismatch,Mismatch,percentage,Growth mismatch (NaN)
+jenis_penyakit_dominan,Disease Highlight,Name,Primary disease driver
+kasus_penyakit_tertinggi,Disease Highlight,cases,Highest caseload of dominant disease
+jumlah_jenis_penyakit,Disease Highlight,diseases,Disease diversity
+distance_to_facility,Accessibility,km,Distance gap placeholder
+travel_time,Accessibility,minutes,Travel duration placeholder
+accessibility_gap,Accessibility,index,Accessibility gap score

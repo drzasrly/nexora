@@ -1,0 +1,64 @@
+puskesmas_id,nama_puskesmas,kecamatan,alamat,telepon,pelayanan_unggulan
+PKM001,Asemrowo,Asemrowo,Jl. Asem Raya 8,(031) 5456122,"Poli Umum, KIA, Persalinan, UGD"
+PKM002,Balongsari,Tandes,Jl. Balongsari Tama,(031) 7417404,"Poli Umum, Gigi, KIA, UGD"
+PKM003,Banyu Urip,Sawahan,Jl. Banyu Urip Kidul,(031) 5615292,"Poli Umum, KIA, Lab"
+PKM004,Benowo,Pakal,Jl. Raya Benowo,(031) 7405916,"Poli Umum, Gigi, UGD"
+PKM005,Dr. Soetomo,Tegalsari,Jl. Pacar Keling,(031) 5677161,"Poli Umum, Spesialis"
+PKM006,Dukuh Kupang,Dukuh Pakis,Jl. Dukuh Kupang,5677615,"Poli Umum, KIA"
+PKM007,Dupak,Krembangan,Jl. Dupak Bangunrejo,(031) 3536736,"Poli Umum, UGD"
+PKM008,Gading,Tambaksari,Jl. Kapasari,(031) 3760000,"Poli Umum, KIA"
+PKM009,Gayungan,Gayungan,Jl. Gayungan Barat,(031) 8290041,Poli Umum
+PKM010,Gundih,Bubutan,Jl. Margodadi,5476275,Poli Umum
+PKM011,Gunung Anyar,Gunung Anyar,Jl. Gunung Anyar,(031) 8707745,Poli Umum
+PKM012,Jagir,Wonokromo,Jl. Bendul Merisi,(031) 8416926,"KIA, Lab, UGD"
+PKM013,Jemursari,Wonocolo,Jl. Jemursari Selatan,(031) 8413772,Poli Umum
+PKM014,Jeruk,Lakarsantri,Jl. Raya Menganti,(031) 7521683,Poli Umum
+PKM015,Kalirungkut,Rungkut,Jl. Kalirungkut,(031) 8700066,Poli Umum
+PKM016,Kebonsari,Jambangan,Jl. Kebonsari,(031) 8290041,Poli Umum
+PKM017,Kedungdoro,Tegalsari,Jl. Kedungdoro,(031) 5345981,Poli Umum
+PKM018,Kedurus,Karang Pilang,Jl. Raya Kedurus,(031) 7660337,Poli Umum
+PKM019,Kenjeran,Bulak,Jl. Tambak Deres,(031) 3822103,Poli Umum
+PKM020,Ketabang,Genteng,Jl. Jaksa Agung,(031) 5999113,Poli Umum
+PKM021,Klampis Ngasem,Sukolilo,Jl. Arief Rachman,(031) 5990089,Poli Umum
+PKM022,Krembangan Selatan,Krembangan,Jl. Dupak,(031) 3535786,Poli Umum
+PKM023,Lidah Kulon,Lakarsantri,Jl. Raya Menganti,(031) 7531544,Poli Umum
+PKM024,Lontar,Sambikerep,Jl. Raya Lontar,(031) 7522871,-
+PKM025,Manukan Kulon,Tandes,Jl. Manukan,(031) 7405988,-
+PKM026,Medokan Ayu,Rungkut,Jl. Medokan,(031) 8710080,-
+PKM027,Menur,Sukolilo,Jl. Menur,(031) 5946732,-
+PKM028,Mojo,Gubeng,Jl. Mojo,(031) 5931111,-
+PKM029,Mulyorejo,Mulyorejo,Jl. Mulyorejo,(031) 3818585,-
+PKM030,Ngagel Rejo,Wonokromo,Jl. Ngagel,(031) 5030363,-
+PKM031,Pacarkeling,Tambaksari,Jl. Pacar Keling,(031) 5023310,-
+PKM032,Pakis,Sawahan,Jl. Pakis,(031) 5632980,-
+PKM033,Pegirian,Semampir,Jl. Pegirian,(031) 3768179,-
+PKM034,Peneleh,Genteng,Jl. Peneleh,(031) 5343473,-
+PKM035,Perak Timur,Pabean Cantian,Jl. Jakarta,(031) 3524247,-
+PKM036,Pucangsewu,Gubeng,Jl. Pucang,(031) 5028507,-
+PKM037,Putat Jaya,Sawahan,Jl. Kupang,(031) 5678374,-
+PKM038,Rangkah,Tambaksari,Jl. Rangkah,(031) 3710061,-
+PKM039,Sawahan,Sawahan,Jl. Raya Sawahan,(031) 5342375,-
+PKM040,Sememi,Benowo,Jl. Raya Kendung,(031) 7413611,-
+PKM041,Sidosermo,Wonocolo,Jl. Sidosermo,(031) 8466797,-
+PKM042,Sidotopo,Semampir,Jl. Sidotopo,(031) 3767706,-
+PKM043,Sidotopo Wetan,Kenjeran,Jl. Randu,(031) 3767706,-
+PKM044,Simolawang,Simokerto,Jl. Simolawang,(031) 3717433,-
+PKM045,Simomulyo,Suko Manunggal,Jl. Gresik,(031) 5312311,-
+PKM046,Tambakrejo,Simokerto,Jl. Ngagel,(031) 3715530,-
+PKM047,Tanah Kali Kedinding,Kenjeran,Jl. Kedung Cowek,(031) 3710347,-
+PKM048,Tanjungsari,Suko Manunggal,Jl. Tanjung,(031) 7397585,-
+PKM049,Tembok Dukuh,Bubutan,Jl. Klibunian,(031) 5343410,-
+PKM050,Tenggilis,Tenggilis Mejoyo,Jl. Raya Tenggilis,(031) 849349,-
+PKM051,Wiyung,Wiyung,Jl. Raya Menganti,(031) 7532853,-
+PKM052,Wonokromo,Wonokromo,Jl. Karang Rejo,(031) 828454,-
+PKM053,Wonokusumo,Semampir,Jl. Wonokusumo,(031) 3717317,-
+PKM054,Balas Klumprik,Wiyung,Jl. Balas Klumprik,7665219,-
+PKM055,Siwalankerto,Wonocolo,Jl. Siwalankerto,8442847,-
+PKM056,Made,Sambikerep,Jl. Made,7440628,-
+PKM057,Bangkingan,Lakarsantri,Jl. Raya Menganti,7685218,-
+PKM058,Keputih,Sukolilo,Jl. Keputih,(031) 7251157,-
+PKM059,Morokrembangan,Krembangan,Jl. Tambak Asri,32519,-
+PKM060,Tambak Wedi,Kenjeran,Jl. Tambak Wedi,3741187,-
+PKM061,Bulak Banteng,Kenjeran,Jl. Bulak Banteng,3741186,-
+PKM062,Kalijudan,Mulyorejo,Jl. Kalijudan,7403259,-
+PKM063,Sawah Pulo,Semampir,Jl. Sawah Pulo,-,-

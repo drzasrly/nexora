@@ -1,0 +1,51 @@
+project:
+  name: HEAL-CITY
+  city: Surabaya
+
+data:
+  raw_excel: dataset/data smart city.xlsx
+  cleaned_dir: data/cleaned
+  processed_dir: data/processed
+  spatial_dir: data/spatial
+
+spatial:
+  kecamatan: data/spatial/kecamatan_surabaya.geojson
+  puskesmas: data/spatial/puskesmas.geojson
+  facilities: data/spatial/fasilitas_kesehatan.geojson
+  roads: data/spatial/roads.geojson
+  geojson_output: dataset/spatial/output/heal_city_gap.geojson
+
+output:
+  tables: outputs/tables
+  figures: outputs/figures
+  gis: outputs/gis
+  reports: outputs/reports
+
+model:
+  random_state: 42
+
+gap_engine:
+  # Demand Sub-weights
+  demand_population_weight: 0.30
+  demand_service_weight: 0.40
+  demand_disease_weight: 0.30
+  
+  # Capacity Sub-weights (Workforce)
+  workforce_nakes_weight: 0.40
+  workforce_nurse_weight: 0.40
+  workforce_midwife_weight: 0.20
+  
+  # Capacity Sub-weights (Facility)
+  facility_faskes_weight: 0.40
+  facility_pkm_weight: 0.40
+  facility_pustu_weight: 0.20
+  
+  # Composite Gap weights
+  demand_weight: 0.30
+  workforce_weight: 0.30
+  facility_weight: 0.20
+  disease_weight: 0.20
+
+root_cause:
+  threshold_high: 0.80
+  threshold_medium: 0.60

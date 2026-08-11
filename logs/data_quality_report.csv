@@ -1,0 +1,8 @@
+dataset,total_rows,duplicate_rows,missing_values,invalid_values,unmatched_kecamatan,unmatched_puskesmas,outlier_count,status
+penduduk,31,0,0,0,0,0,0,READY
+tenaga kesehatan,31,0,12,0,0,0,0,READY
+puskesmas,63,0,0,0,0,0,0,READY
+kunjungan,756,0,309,0,0,0,0,READY
+faskes,1086,0,41,0,0,0,0,READY
+tempat tidur,123,0,164,0,0,0,0,READY
+data penyakit,15876,0,0,0,0,0,0,READY

@@ -1,0 +1,757 @@
+puskesmas_id,kecamatan,bulan,pasien_baru,pasien_lama,total_kunjungan
+PKM001,Asemrowo,Agustus,442.0,4227.0,4669.0
+PKM001,Asemrowo,April,388.0,3582.0,3970.0
+PKM001,Asemrowo,Desember,408.0,4372.0,4780.0
+PKM001,Asemrowo,Februari,405.0,2929.0,3334.0
+PKM001,Asemrowo,Januari,686.0,4317.0,5003.0
+PKM001,Asemrowo,Juli,483.0,4272.0,4755.0
+PKM001,Asemrowo,Juni,431.0,3373.0,3804.0
+PKM001,Asemrowo,Maret,388.0,3582.0,3970.0
+PKM001,Asemrowo,Mei,371.0,3242.0,3613.0
+PKM001,Asemrowo,November,22.0,139.0,161.0
+PKM001,Asemrowo,Oktober,22.0,139.0,161.0
+PKM001,Asemrowo,September,393.0,3902.0,4295.0
+PKM002,Tandes,Agustus,430.0,3601.0,4031.0
+PKM002,Tandes,April,379.0,3391.0,3770.0
+PKM002,Tandes,Desember,385.0,3545.0,3930.0
+PKM002,Tandes,Februari,415.0,2689.0,3104.0
+PKM002,Tandes,Januari,579.0,3719.0,4298.0
+PKM002,Tandes,Juli,524.0,3744.0,4268.0
+PKM002,Tandes,Juni,461.0,2944.0,3405.0
+PKM002,Tandes,Maret,379.0,3391.0,3770.0
+PKM002,Tandes,Mei,353.0,2952.0,3305.0
+PKM002,Tandes,November,375.0,3360.0,3735.0
+PKM002,Tandes,Oktober,19.0,133.0,152.0
+PKM002,Tandes,September,,,
+PKM003,Sawahan,Agustus,516.0,5689.0,6205.0
+PKM003,Sawahan,April,522.0,5218.0,5740.0
+PKM003,Sawahan,Desember,438.0,5520.0,5958.0
+PKM003,Sawahan,Februari,569.0,3844.0,4413.0
+PKM003,Sawahan,Januari,789.0,5807.0,6596.0
+PKM003,Sawahan,Juli,606.0,6155.0,6761.0
+PKM003,Sawahan,Juni,515.0,5007.0,5522.0
+PKM003,Sawahan,Maret,522.0,5218.0,5740.0
+PKM003,Sawahan,Mei,471.0,5075.0,5546.0
+PKM003,Sawahan,November,,,
+PKM003,Sawahan,Oktober,26.0,206.0,232.0
+PKM003,Sawahan,September,,,
+PKM004,Pakal,Agustus,692.0,5478.0,6170.0
+PKM004,Pakal,April,399.0,4230.0,4629.0
+PKM004,Pakal,Desember,437.0,4908.0,5345.0
+PKM004,Pakal,Februari,541.0,4457.0,4998.0
+PKM004,Pakal,Januari,651.0,4930.0,5581.0
+PKM004,Pakal,Juli,710.0,5578.0,6288.0
+PKM004,Pakal,Juni,506.0,4214.0,4720.0
+PKM004,Pakal,Maret,399.0,4230.0,4629.0
+PKM004,Pakal,Mei,367.0,4045.0,4412.0
+PKM004,Pakal,November,,,
+PKM004,Pakal,Oktober,22.0,204.0,226.0
+PKM004,Pakal,September,,,
+PKM005,Tegalsari,Agustus,492.0,4339.0,4831.0
+PKM005,Tegalsari,April,425.0,3931.0,4356.0
+PKM005,Tegalsari,Desember,512.0,3906.0,4418.0
+PKM005,Tegalsari,Februari,455.0,2811.0,3266.0
+PKM005,Tegalsari,Januari,693.0,3510.0,4203.0
+PKM005,Tegalsari,Juli,506.0,4428.0,4934.0
+PKM005,Tegalsari,Juni,399.0,3661.0,4060.0
+PKM005,Tegalsari,Maret,425.0,3931.0,4356.0
+PKM005,Tegalsari,Mei,399.0,3423.0,3822.0
+PKM005,Tegalsari,November,,,
+PKM005,Tegalsari,Oktober,11.0,162.0,173.0
+PKM005,Tegalsari,September,,,
+PKM006,Dukuh Pakis,Agustus,1258.0,5530.0,6788.0
+PKM006,Dukuh Pakis,April,756.0,4995.0,5751.0
+PKM006,Dukuh Pakis,Desember,944.0,5957.0,6901.0
+PKM006,Dukuh Pakis,Februari,832.0,4120.0,4952.0
+PKM006,Dukuh Pakis,Januari,1351.0,5647.0,6998.0
+PKM006,Dukuh Pakis,Juli,1170.0,5643.0,6813.0
+PKM006,Dukuh Pakis,Juni,854.0,4788.0,5642.0
+PKM006,Dukuh Pakis,Maret,756.0,4995.0,5751.0
+PKM006,Dukuh Pakis,Mei,795.0,4574.0,5369.0
+PKM006,Dukuh Pakis,November,,,
+PKM006,Dukuh Pakis,Oktober,24.0,218.0,242.0
+PKM006,Dukuh Pakis,September,,,
+PKM007,Krembangan,Agustus,316.0,3885.0,4201.0
+PKM007,Krembangan,April,345.0,3671.0,4016.0
+PKM007,Krembangan,Desember,316.0,3779.0,4095.0
+PKM007,Krembangan,Februari,373.0,3392.0,3765.0
+PKM007,Krembangan,Januari,434.0,4289.0,4723.0
+PKM007,Krembangan,Juli,376.0,3944.0,4320.0
+PKM007,Krembangan,Juni,342.0,3286.0,3628.0
+PKM007,Krembangan,Maret,345.0,3671.0,4016.0
+PKM007,Krembangan,Mei,306.0,3442.0,3748.0
+PKM007,Krembangan,November,,,
+PKM007,Krembangan,Oktober,5.0,147.0,152.0
+PKM007,Krembangan,September,,,
+PKM008,Tambaksari,Agustus,671.0,6620.0,7291.0
+PKM008,Tambaksari,April,676.0,5997.0,6673.0
+PKM008,Tambaksari,Desember,615.0,6869.0,7484.0
+PKM008,Tambaksari,Februari,649.0,4371.0,5020.0
+PKM008,Tambaksari,Januari,1403.0,7247.0,8650.0
+PKM008,Tambaksari,Juli,742.0,7232.0,7974.0
+PKM008,Tambaksari,Juni,759.0,6533.0,7292.0
+PKM008,Tambaksari,Maret,676.0,5997.0,6673.0
+PKM008,Tambaksari,Mei,587.0,5235.0,5822.0
+PKM008,Tambaksari,November,,,
+PKM008,Tambaksari,Oktober,29.0,292.0,321.0
+PKM008,Tambaksari,September,29.0,292.0,321.0
+PKM009,Gayungan,Agustus,634.0,4913.0,5547.0
+PKM009,Gayungan,April,589.0,5056.0,5645.0
+PKM009,Gayungan,Desember,502.0,4865.0,5367.0
+PKM009,Gayungan,Februari,572.0,3682.0,4254.0
+PKM009,Gayungan,Januari,704.0,5328.0,6032.0
+PKM009,Gayungan,Juli,559.0,4789.0,5348.0
+PKM009,Gayungan,Juni,563.0,4245.0,4808.0
+PKM009,Gayungan,Maret,589.0,5056.0,5645.0
+PKM009,Gayungan,Mei,403.0,4126.0,4529.0
+PKM009,Gayungan,November,,,
+PKM009,Gayungan,Oktober,21.0,168.0,189.0
+PKM009,Gayungan,September,,,
+PKM010,Bubutan,Agustus,133.0,4309.0,4442.0
+PKM010,Bubutan,April,88.0,3732.0,3820.0
+PKM010,Bubutan,Desember,97.0,3871.0,3968.0
+PKM010,Bubutan,Februari,138.0,3137.0,3275.0
+PKM010,Bubutan,Januari,205.0,4510.0,4715.0
+PKM010,Bubutan,Juli,129.0,3904.0,4033.0
+PKM010,Bubutan,Juni,99.0,3352.0,3451.0
+PKM010,Bubutan,Maret,88.0,3732.0,3820.0
+PKM010,Bubutan,Mei,106.0,3338.0,3444.0
+PKM010,Bubutan,November,1.0,165.0,166.0
+PKM010,Bubutan,Oktober,1.0,165.0,166.0
+PKM010,Bubutan,September,118.0,4192.0,4310.0
+PKM011,Gunung Anyar,Agustus,743.0,4109.0,4852.0
+PKM011,Gunung Anyar,April,689.0,3789.0,4478.0
+PKM011,Gunung Anyar,Desember,544.0,3833.0,4377.0
+PKM011,Gunung Anyar,Februari,701.0,2917.0,3618.0
+PKM011,Gunung Anyar,Januari,1027.0,4563.0,5590.0
+PKM011,Gunung Anyar,Juli,792.0,4242.0,5034.0
+PKM011,Gunung Anyar,Juni,691.0,3573.0,4264.0
+PKM011,Gunung Anyar,Maret,689.0,3789.0,4478.0
+PKM011,Gunung Anyar,Mei,563.0,3384.0,3947.0
+PKM011,Gunung Anyar,November,,,
+PKM011,Gunung Anyar,Oktober,32.0,180.0,212.0
+PKM011,Gunung Anyar,September,,,
+PKM012,Wonokromo,Agustus,752.0,6820.0,7572.0
+PKM012,Wonokromo,April,795.0,6341.0,7136.0
+PKM012,Wonokromo,Desember,775.0,6459.0,7234.0
+PKM012,Wonokromo,Februari,994.0,6072.0,7066.0
+PKM012,Wonokromo,Januari,1163.0,7619.0,8782.0
+PKM012,Wonokromo,Juli,841.0,6490.0,7331.0
+PKM012,Wonokromo,Juni,734.0,5670.0,6404.0
+PKM012,Wonokromo,Maret,795.0,6341.0,7136.0
+PKM012,Wonokromo,Mei,727.0,5166.0,5893.0
+PKM012,Wonokromo,November,879.0,6656.0,7535.0
+PKM012,Wonokromo,Oktober,32.0,247.0,279.0
+PKM012,Wonokromo,September,,,
+PKM013,Wonocolo,Agustus,314.0,3195.0,3509.0
+PKM013,Wonocolo,April,276.0,2577.0,2853.0
+PKM013,Wonocolo,Desember,280.0,2871.0,3151.0
+PKM013,Wonocolo,Februari,336.0,2414.0,2750.0
+PKM013,Wonocolo,Januari,382.0,3175.0,3557.0
+PKM013,Wonocolo,Juli,305.0,3071.0,3376.0
+PKM013,Wonocolo,Juni,293.0,2545.0,2838.0
+PKM013,Wonocolo,Maret,276.0,2577.0,2853.0
+PKM013,Wonocolo,Mei,284.0,2448.0,2732.0
+PKM013,Wonocolo,November,,,
+PKM013,Wonocolo,Oktober,12.0,101.0,113.0
+PKM013,Wonocolo,September,,,
+PKM014,Lakarsantri,Agustus,305.0,2808.0,3113.0
+PKM014,Lakarsantri,April,284.0,2592.0,2876.0
+PKM014,Lakarsantri,Desember,273.0,2828.0,3101.0
+PKM014,Lakarsantri,Februari,409.0,2457.0,2866.0
+PKM014,Lakarsantri,Januari,370.0,2863.0,3233.0
+PKM014,Lakarsantri,Juli,300.0,2709.0,3009.0
+PKM014,Lakarsantri,Juni,208.0,2341.0,2549.0
+PKM014,Lakarsantri,Maret,284.0,2592.0,2876.0
+PKM014,Lakarsantri,Mei,233.0,2341.0,2574.0
+PKM014,Lakarsantri,November,,,
+PKM014,Lakarsantri,Oktober,6.0,104.0,110.0
+PKM014,Lakarsantri,September,,,
+PKM015,Rungkut,Agustus,526.0,5772.0,6298.0
+PKM015,Rungkut,April,485.0,5340.0,5825.0
+PKM015,Rungkut,Desember,499.0,5368.0,5867.0
+PKM015,Rungkut,Februari,579.0,4437.0,5016.0
+PKM015,Rungkut,Januari,858.0,6288.0,7146.0
+PKM015,Rungkut,Juli,582.0,5839.0,6421.0
+PKM015,Rungkut,Juni,567.0,4911.0,5478.0
+PKM015,Rungkut,Maret,485.0,5340.0,5825.0
+PKM015,Rungkut,Mei,467.0,4702.0,5169.0
+PKM015,Rungkut,November,,,
+PKM015,Rungkut,Oktober,23.0,231.0,254.0
+PKM015,Rungkut,September,,,
+PKM016,Jambangan,Agustus,626.0,5458.0,6084.0
+PKM016,Jambangan,April,525.0,4417.0,4942.0
+PKM016,Jambangan,Desember,474.0,5056.0,5530.0
+PKM016,Jambangan,Februari,657.0,4595.0,5252.0
+PKM016,Jambangan,Januari,782.0,5317.0,6099.0
+PKM016,Jambangan,Juli,653.0,5162.0,5815.0
+PKM016,Jambangan,Juni,550.0,4516.0,5066.0
+PKM016,Jambangan,Maret,525.0,4417.0,4942.0
+PKM016,Jambangan,Mei,507.0,4278.0,4785.0
+PKM016,Jambangan,November,,,
+PKM016,Jambangan,Oktober,26.0,188.0,214.0
+PKM016,Jambangan,September,,,
+PKM017,Tegalsari,Agustus,552.0,5961.0,6513.0
+PKM017,Tegalsari,April,424.0,4735.0,5159.0
+PKM017,Tegalsari,Desember,445.0,5738.0,6183.0
+PKM017,Tegalsari,Februari,507.0,4019.0,4526.0
+PKM017,Tegalsari,Januari,582.0,5483.0,6065.0
+PKM017,Tegalsari,Juli,548.0,6028.0,6576.0
+PKM017,Tegalsari,Juni,454.0,4682.0,5136.0
+PKM017,Tegalsari,Maret,424.0,4735.0,5159.0
+PKM017,Tegalsari,Mei,379.0,4375.0,4754.0
+PKM017,Tegalsari,November,,,
+PKM017,Tegalsari,Oktober,22.0,203.0,225.0
+PKM017,Tegalsari,September,,,
+PKM018,Karang Pilang,Agustus,687.0,6261.0,6948.0
+PKM018,Karang Pilang,April,656.0,5539.0,6195.0
+PKM018,Karang Pilang,Desember,629.0,5967.0,6596.0
+PKM018,Karang Pilang,Februari,737.0,4961.0,5698.0
+PKM018,Karang Pilang,Januari,1055.0,6849.0,7904.0
+PKM018,Karang Pilang,Juli,716.0,6003.0,6719.0
+PKM018,Karang Pilang,Juni,547.0,5141.0,5688.0
+PKM018,Karang Pilang,Maret,656.0,5539.0,6195.0
+PKM018,Karang Pilang,Mei,616.0,4949.0,5565.0
+PKM018,Karang Pilang,November,,,
+PKM018,Karang Pilang,Oktober,20.0,240.0,260.0
+PKM018,Karang Pilang,September,,,
+PKM019,Bulak,Agustus,411.0,4223.0,4634.0
+PKM019,Bulak,April,400.0,3246.0,3646.0
+PKM019,Bulak,Desember,276.0,3328.0,3604.0
+PKM019,Bulak,Februari,307.0,2671.0,2978.0
+PKM019,Bulak,Januari,572.0,4059.0,4631.0
+PKM019,Bulak,Juli,401.0,3902.0,4303.0
+PKM019,Bulak,Juni,390.0,3113.0,3503.0
+PKM019,Bulak,Maret,400.0,3246.0,3646.0
+PKM019,Bulak,Mei,288.0,2787.0,3075.0
+PKM019,Bulak,November,,,
+PKM019,Bulak,Oktober,8.0,135.0,143.0
+PKM019,Bulak,September,8.0,135.0,143.0
+PKM020,Genteng,Agustus,517.0,3631.0,4148.0
+PKM020,Genteng,April,318.0,2852.0,3170.0
+PKM020,Genteng,Desember,388.0,3487.0,3875.0
+PKM020,Genteng,Februari,354.0,2423.0,2777.0
+PKM020,Genteng,Januari,436.0,3184.0,3620.0
+PKM020,Genteng,Juli,610.0,3578.0,4188.0
+PKM020,Genteng,Juni,429.0,2842.0,3271.0
+PKM020,Genteng,Maret,318.0,2852.0,3170.0
+PKM020,Genteng,Mei,297.0,2804.0,3101.0
+PKM020,Genteng,November,17.0,102.0,119.0
+PKM020,Genteng,Oktober,17.0,102.0,119.0
+PKM020,Genteng,September,383.0,3565.0,3948.0
+PKM021,Sukolilo,Agustus,536.0,3529.0,4065.0
+PKM021,Sukolilo,April,500.0,2918.0,3418.0
+PKM021,Sukolilo,Desember,466.0,3353.0,3819.0
+PKM021,Sukolilo,Februari,345.0,2293.0,2638.0
+PKM021,Sukolilo,Januari,499.0,3269.0,3768.0
+PKM021,Sukolilo,Juli,468.0,3591.0,4059.0
+PKM021,Sukolilo,Juni,431.0,2842.0,3273.0
+PKM021,Sukolilo,Maret,500.0,2918.0,3418.0
+PKM021,Sukolilo,Mei,359.0,2764.0,3123.0
+PKM021,Sukolilo,November,,,
+PKM021,Sukolilo,Oktober,21.0,115.0,136.0
+PKM021,Sukolilo,September,,,
+PKM022,Krembangan,Agustus,638.0,4959.0,5597.0
+PKM022,Krembangan,April,610.0,4602.0,5212.0
+PKM022,Krembangan,Desember,379.0,4975.0,5354.0
+PKM022,Krembangan,Februari,415.0,3256.0,3671.0
+PKM022,Krembangan,Januari,685.0,4770.0,5455.0
+PKM022,Krembangan,Juli,567.0,4711.0,5278.0
+PKM022,Krembangan,Juni,535.0,4181.0,4716.0
+PKM022,Krembangan,Maret,610.0,4602.0,5212.0
+PKM022,Krembangan,Mei,544.0,4240.0,4784.0
+PKM022,Krembangan,November,476.0,5126.0,5602.0
+PKM022,Krembangan,Oktober,7.0,159.0,166.0
+PKM022,Krembangan,September,,,
+PKM023,Lakarsantri,Agustus,399.0,3469.0,3868.0
+PKM023,Lakarsantri,April,358.0,2968.0,3326.0
+PKM023,Lakarsantri,Desember,419.0,3510.0,3929.0
+PKM023,Lakarsantri,Februari,384.0,2634.0,3018.0
+PKM023,Lakarsantri,Januari,503.0,3515.0,4018.0
+PKM023,Lakarsantri,Juli,362.0,3423.0,3785.0
+PKM023,Lakarsantri,Juni,336.0,2728.0,3064.0
+PKM023,Lakarsantri,Maret,358.0,2968.0,3326.0
+PKM023,Lakarsantri,Mei,334.0,2768.0,3102.0
+PKM023,Lakarsantri,November,,,
+PKM023,Lakarsantri,Oktober,22.0,124.0,146.0
+PKM023,Lakarsantri,September,,,
+PKM024,Sambikerep,Agustus,503.0,2999.0,3502.0
+PKM024,Sambikerep,April,508.0,2758.0,3266.0
+PKM024,Sambikerep,Desember,477.0,3096.0,3573.0
+PKM024,Sambikerep,Februari,459.0,2329.0,2788.0
+PKM024,Sambikerep,Januari,911.0,3358.0,4269.0
+PKM024,Sambikerep,Juli,497.0,3154.0,3651.0
+PKM024,Sambikerep,Juni,474.0,2739.0,3213.0
+PKM024,Sambikerep,Maret,508.0,2758.0,3266.0
+PKM024,Sambikerep,Mei,377.0,2553.0,2930.0
+PKM024,Sambikerep,November,,,
+PKM024,Sambikerep,Oktober,14.0,119.0,133.0
+PKM024,Sambikerep,September,,,
+PKM025,Tandes,Agustus,719.0,6426.0,7145.0
+PKM025,Tandes,April,742.0,6308.0,7050.0
+PKM025,Tandes,Desember,616.0,6558.0,7174.0
+PKM025,Tandes,Februari,842.0,5137.0,5979.0
+PKM025,Tandes,Januari,1062.0,7199.0,8261.0
+PKM025,Tandes,Juli,775.0,6520.0,7295.0
+PKM025,Tandes,Juni,844.0,5552.0,6396.0
+PKM025,Tandes,Maret,742.0,6308.0,7050.0
+PKM025,Tandes,Mei,718.0,5596.0,6314.0
+PKM025,Tandes,November,,,
+PKM025,Tandes,Oktober,22.0,203.0,225.0
+PKM025,Tandes,September,,,
+PKM026,Rungkut,Agustus,1016.0,6585.0,7601.0
+PKM026,Rungkut,April,730.0,5630.0,6360.0
+PKM026,Rungkut,Desember,742.0,6414.0,7156.0
+PKM026,Rungkut,Februari,1071.0,4836.0,5907.0
+PKM026,Rungkut,Januari,1108.0,6699.0,7807.0
+PKM026,Rungkut,Juli,931.0,6631.0,7562.0
+PKM026,Rungkut,Juni,901.0,5676.0,6577.0
+PKM026,Rungkut,Maret,730.0,5630.0,6360.0
+PKM026,Rungkut,Mei,758.0,5321.0,6079.0
+PKM026,Rungkut,November,,,
+PKM026,Rungkut,Oktober,28.0,213.0,241.0
+PKM026,Rungkut,September,,,
+PKM027,Sukolilo,Agustus,566.0,4566.0,5132.0
+PKM027,Sukolilo,April,395.0,3928.0,4323.0
+PKM027,Sukolilo,Desember,438.0,4251.0,4689.0
+PKM027,Sukolilo,Februari,507.0,3262.0,3769.0
+PKM027,Sukolilo,Januari,663.0,4801.0,5464.0
+PKM027,Sukolilo,Juli,552.0,4595.0,5147.0
+PKM027,Sukolilo,Juni,438.0,3796.0,4234.0
+PKM027,Sukolilo,Maret,395.0,3928.0,4323.0
+PKM027,Sukolilo,Mei,412.0,3676.0,4088.0
+PKM027,Sukolilo,November,,,
+PKM027,Sukolilo,Oktober,17.0,198.0,215.0
+PKM027,Sukolilo,September,,,
+PKM028,Gubeng,Agustus,655.0,5380.0,6035.0
+PKM028,Gubeng,April,501.0,8124.0,8625.0
+PKM028,Gubeng,Desember,521.0,5200.0,5721.0
+PKM028,Gubeng,Februari,592.0,4125.0,4717.0
+PKM028,Gubeng,Januari,829.0,8063.0,8892.0
+PKM028,Gubeng,Juli,569.0,4507.0,5076.0
+PKM028,Gubeng,Juni,676.0,3926.0,4602.0
+PKM028,Gubeng,Maret,501.0,8124.0,8625.0
+PKM028,Gubeng,Mei,467.0,7221.0,7688.0
+PKM028,Gubeng,November,,,
+PKM028,Gubeng,Oktober,12.0,196.0,208.0
+PKM028,Gubeng,September,,,
+PKM029,Mulyorejo,Agustus,660.0,3728.0,4388.0
+PKM029,Mulyorejo,April,579.0,3528.0,4107.0
+PKM029,Mulyorejo,Desember,494.0,3468.0,3962.0
+PKM029,Mulyorejo,Februari,612.0,2994.0,3606.0
+PKM029,Mulyorejo,Januari,977.0,4165.0,5142.0
+PKM029,Mulyorejo,Juli,616.0,3659.0,4275.0
+PKM029,Mulyorejo,Juni,624.0,3147.0,3771.0
+PKM029,Mulyorejo,Maret,579.0,3528.0,4107.0
+PKM029,Mulyorejo,Mei,590.0,3151.0,3741.0
+PKM029,Mulyorejo,November,,,
+PKM029,Mulyorejo,Oktober,17.0,123.0,140.0
+PKM029,Mulyorejo,September,,,
+PKM030,Wonokromo,Agustus,505.0,5184.0,5689.0
+PKM030,Wonokromo,April,472.0,4484.0,4956.0
+PKM030,Wonokromo,Desember,473.0,5127.0,5600.0
+PKM030,Wonokromo,Februari,398.0,3382.0,3780.0
+PKM030,Wonokromo,Januari,728.0,6078.0,6806.0
+PKM030,Wonokromo,Juli,551.0,5309.0,5860.0
+PKM030,Wonokromo,Juni,506.0,4370.0,4876.0
+PKM030,Wonokromo,Maret,472.0,4484.0,4956.0
+PKM030,Wonokromo,Mei,420.0,4277.0,4697.0
+PKM030,Wonokromo,November,12.0,170.0,182.0
+PKM030,Wonokromo,Oktober,12.0,170.0,182.0
+PKM030,Wonokromo,September,562.0,4994.0,5556.0
+PKM031,Tambaksari,Agustus,478.0,3936.0,4414.0
+PKM031,Tambaksari,April,396.0,3553.0,3949.0
+PKM031,Tambaksari,Desember,311.0,3782.0,4093.0
+PKM031,Tambaksari,Februari,393.0,3236.0,3629.0
+PKM031,Tambaksari,Januari,819.0,4565.0,5384.0
+PKM031,Tambaksari,Juli,407.0,3678.0,4085.0
+PKM031,Tambaksari,Juni,407.0,3216.0,3623.0
+PKM031,Tambaksari,Maret,396.0,3553.0,3949.0
+PKM031,Tambaksari,Mei,352.0,3326.0,3678.0
+PKM031,Tambaksari,November,,,
+PKM031,Tambaksari,Oktober,8.0,172.0,180.0
+PKM031,Tambaksari,September,,,
+PKM032,Sawahan,Agustus,365.0,4583.0,4948.0
+PKM032,Sawahan,April,421.0,4089.0,4510.0
+PKM032,Sawahan,Desember,266.0,4877.0,5143.0
+PKM032,Sawahan,Februari,348.0,3282.0,3630.0
+PKM032,Sawahan,Januari,448.0,4610.0,5058.0
+PKM032,Sawahan,Juli,273.0,4026.0,4299.0
+PKM032,Sawahan,Juni,289.0,3322.0,3611.0
+PKM032,Sawahan,Maret,421.0,4089.0,4510.0
+PKM032,Sawahan,Mei,253.0,3274.0,3527.0
+PKM032,Sawahan,November,332.0,4567.0,4899.0
+PKM032,Sawahan,Oktober,8.0,124.0,132.0
+PKM032,Sawahan,September,,,
+PKM033,Semampir,Agustus,302.0,4246.0,4548.0
+PKM033,Semampir,April,341.0,4084.0,4425.0
+PKM033,Semampir,Desember,316.0,4194.0,4510.0
+PKM033,Semampir,Februari,398.0,3237.0,3635.0
+PKM033,Semampir,Januari,458.0,4556.0,5014.0
+PKM033,Semampir,Juli,345.0,4266.0,4611.0
+PKM033,Semampir,Juni,280.0,3424.0,3704.0
+PKM033,Semampir,Maret,341.0,4084.0,4425.0
+PKM033,Semampir,Mei,232.0,2946.0,3178.0
+PKM033,Semampir,November,,,
+PKM033,Semampir,Oktober,9.0,165.0,174.0
+PKM033,Semampir,September,,,
+PKM034,Genteng,Agustus,393.0,4013.0,4406.0
+PKM034,Genteng,April,271.0,3196.0,3467.0
+PKM034,Genteng,Desember,410.0,3964.0,4374.0
+PKM034,Genteng,Februari,309.0,2765.0,3074.0
+PKM034,Genteng,Januari,461.0,4077.0,4538.0
+PKM034,Genteng,Juli,417.0,3984.0,4401.0
+PKM034,Genteng,Juni,337.0,3403.0,3740.0
+PKM034,Genteng,Maret,271.0,3196.0,3467.0
+PKM034,Genteng,Mei,253.0,2993.0,3246.0
+PKM034,Genteng,November,,,
+PKM034,Genteng,Oktober,19.0,147.0,166.0
+PKM034,Genteng,September,,,
+PKM035,Pabean Cantian,Agustus,780.0,7604.0,8384.0
+PKM035,Pabean Cantian,April,658.0,6096.0,6754.0
+PKM035,Pabean Cantian,Desember,598.0,6943.0,7541.0
+PKM035,Pabean Cantian,Februari,691.0,4906.0,5597.0
+PKM035,Pabean Cantian,Januari,1037.0,6788.0,7825.0
+PKM035,Pabean Cantian,Juli,729.0,6821.0,7550.0
+PKM035,Pabean Cantian,Juni,577.0,5544.0,6121.0
+PKM035,Pabean Cantian,Maret,658.0,6096.0,6754.0
+PKM035,Pabean Cantian,Mei,576.0,5465.0,6041.0
+PKM035,Pabean Cantian,November,,,
+PKM035,Pabean Cantian,Oktober,28.0,300.0,328.0
+PKM035,Pabean Cantian,September,,,
+PKM036,Gubeng,Agustus,541.0,5244.0,5785.0
+PKM036,Gubeng,April,482.0,4514.0,4996.0
+PKM036,Gubeng,Desember,466.0,5541.0,6007.0
+PKM036,Gubeng,Februari,481.0,3994.0,4475.0
+PKM036,Gubeng,Januari,780.0,5508.0,6288.0
+PKM036,Gubeng,Juli,569.0,5366.0,5935.0
+PKM036,Gubeng,Juni,476.0,4275.0,4751.0
+PKM036,Gubeng,Maret,482.0,4514.0,4996.0
+PKM036,Gubeng,Mei,410.0,4018.0,4428.0
+PKM036,Gubeng,November,,,
+PKM036,Gubeng,Oktober,15.0,226.0,241.0
+PKM036,Gubeng,September,,,
+PKM037,Sawahan,Agustus,386.0,4617.0,5003.0
+PKM037,Sawahan,April,375.0,3886.0,4261.0
+PKM037,Sawahan,Desember,396.0,4205.0,4601.0
+PKM037,Sawahan,Februari,405.0,3339.0,3744.0
+PKM037,Sawahan,Januari,650.0,4600.0,5250.0
+PKM037,Sawahan,Juli,404.0,4444.0,4848.0
+PKM037,Sawahan,Juni,380.0,3734.0,4114.0
+PKM037,Sawahan,Maret,375.0,3886.0,4261.0
+PKM037,Sawahan,Mei,329.0,3583.0,3912.0
+PKM037,Sawahan,November,,,
+PKM037,Sawahan,Oktober,13.0,191.0,204.0
+PKM037,Sawahan,September,,,
+PKM038,Tambaksari,Agustus,587.0,5978.0,6565.0
+PKM038,Tambaksari,April,597.0,5372.0,5969.0
+PKM038,Tambaksari,Desember,471.0,5693.0,6164.0
+PKM038,Tambaksari,Februari,632.0,4134.0,4766.0
+PKM038,Tambaksari,Januari,1041.0,6456.0,7497.0
+PKM038,Tambaksari,Juli,691.0,5924.0,6615.0
+PKM038,Tambaksari,Juni,636.0,5201.0,5837.0
+PKM038,Tambaksari,Maret,597.0,5372.0,5969.0
+PKM038,Tambaksari,Mei,555.0,4930.0,5485.0
+PKM038,Tambaksari,November,,,
+PKM038,Tambaksari,Oktober,22.0,238.0,260.0
+PKM038,Tambaksari,September,,,
+PKM039,Sawahan,Agustus,480.0,5449.0,5929.0
+PKM039,Sawahan,April,387.0,4620.0,5007.0
+PKM039,Sawahan,Desember,438.0,5512.0,5950.0
+PKM039,Sawahan,Februari,435.0,3945.0,4380.0
+PKM039,Sawahan,Januari,652.0,5389.0,6041.0
+PKM039,Sawahan,Juli,545.0,5517.0,6062.0
+PKM039,Sawahan,Juni,567.0,4702.0,5269.0
+PKM039,Sawahan,Maret,387.0,4620.0,5007.0
+PKM039,Sawahan,Mei,375.0,4414.0,4789.0
+PKM039,Sawahan,November,,,
+PKM039,Sawahan,Oktober,11.0,193.0,204.0
+PKM039,Sawahan,September,,,
+PKM040,Benowo,Agustus,754.0,5508.0,6262.0
+PKM040,Benowo,April,597.0,4765.0,5362.0
+PKM040,Benowo,Desember,592.0,5535.0,6127.0
+PKM040,Benowo,Februari,637.0,4487.0,5124.0
+PKM040,Benowo,Januari,1102.0,6087.0,7189.0
+PKM040,Benowo,Juli,917.0,5791.0,6708.0
+PKM040,Benowo,Juni,735.0,4922.0,5657.0
+PKM040,Benowo,Maret,597.0,4765.0,5362.0
+PKM040,Benowo,Mei,578.0,4536.0,5114.0
+PKM040,Benowo,November,,,
+PKM040,Benowo,Oktober,26.0,219.0,245.0
+PKM040,Benowo,September,,,
+PKM041,Wonocolo,Agustus,388.0,3752.0,4140.0
+PKM041,Wonocolo,April,307.0,3299.0,3606.0
+PKM041,Wonocolo,Desember,374.0,3611.0,3985.0
+PKM041,Wonocolo,Februari,437.0,2661.0,3098.0
+PKM041,Wonocolo,Januari,567.0,3945.0,4512.0
+PKM041,Wonocolo,Juli,417.0,3727.0,4144.0
+PKM041,Wonocolo,Juni,366.0,3123.0,3489.0
+PKM041,Wonocolo,Maret,307.0,3299.0,3606.0
+PKM041,Wonocolo,Mei,319.0,3036.0,3355.0
+PKM041,Wonocolo,November,17.0,109.0,126.0
+PKM041,Wonocolo,Oktober,17.0,109.0,126.0
+PKM041,Wonocolo,September,373.0,3846.0,4219.0
+PKM042,Semampir,Agustus,488.0,4669.0,5157.0
+PKM042,Semampir,April,507.0,4276.0,4783.0
+PKM042,Semampir,Desember,424.0,4641.0,5065.0
+PKM042,Semampir,Februari,537.0,3726.0,4263.0
+PKM042,Semampir,Januari,695.0,5168.0,5863.0
+PKM042,Semampir,Juli,505.0,4555.0,5060.0
+PKM042,Semampir,Juni,420.0,4010.0,4430.0
+PKM042,Semampir,Maret,507.0,4276.0,4783.0
+PKM042,Semampir,Mei,391.0,3535.0,3926.0
+PKM042,Semampir,November,,,
+PKM042,Semampir,Oktober,17.0,181.0,198.0
+PKM042,Semampir,September,,,
+PKM043,Kenjeran,Agustus,636.0,7365.0,8001.0
+PKM043,Kenjeran,April,818.0,7215.0,8033.0
+PKM043,Kenjeran,Desember,484.0,6354.0,6838.0
+PKM043,Kenjeran,Februari,896.0,5804.0,6700.0
+PKM043,Kenjeran,Januari,1100.0,7680.0,8780.0
+PKM043,Kenjeran,Juli,611.0,7173.0,7784.0
+PKM043,Kenjeran,Juni,698.0,6324.0,7022.0
+PKM043,Kenjeran,Maret,818.0,7215.0,8033.0
+PKM043,Kenjeran,Mei,686.0,6297.0,6983.0
+PKM043,Kenjeran,November,551.0,6828.0,7379.0
+PKM043,Kenjeran,Oktober,11.0,241.0,252.0
+PKM043,Kenjeran,September,,,
+PKM044,Simokerto,Agustus,301.0,4669.0,4970.0
+PKM044,Simokerto,April,288.0,4289.0,4577.0
+PKM044,Simokerto,Desember,269.0,4466.0,4735.0
+PKM044,Simokerto,Februari,292.0,3644.0,3936.0
+PKM044,Simokerto,Januari,427.0,5217.0,5644.0
+PKM044,Simokerto,Juli,281.0,4805.0,5086.0
+PKM044,Simokerto,Juni,250.0,3765.0,4015.0
+PKM044,Simokerto,Maret,288.0,4289.0,4577.0
+PKM044,Simokerto,Mei,229.0,3449.0,3678.0
+PKM044,Simokerto,November,,,
+PKM044,Simokerto,Oktober,10.0,179.0,189.0
+PKM044,Simokerto,September,,,
+PKM045,Suko Manunggal,Agustus,1174.0,7586.0,8760.0
+PKM045,Suko Manunggal,April,658.0,6711.0,7369.0
+PKM045,Suko Manunggal,Desember,922.0,7976.0,8898.0
+PKM045,Suko Manunggal,Februari,689.0,5131.0,5820.0
+PKM045,Suko Manunggal,Januari,1119.0,7635.0,8754.0
+PKM045,Suko Manunggal,Juli,1080.0,7099.0,8179.0
+PKM045,Suko Manunggal,Juni,715.0,6055.0,6770.0
+PKM045,Suko Manunggal,Maret,658.0,6711.0,7369.0
+PKM045,Suko Manunggal,Mei,586.0,6030.0,6616.0
+PKM045,Suko Manunggal,November,,,
+PKM045,Suko Manunggal,Oktober,43.0,223.0,266.0
+PKM045,Suko Manunggal,September,,,
+PKM046,Simokerto,Agustus,782.0,4840.0,5622.0
+PKM046,Simokerto,April,394.0,4064.0,4458.0
+PKM046,Simokerto,Desember,323.0,4817.0,5140.0
+PKM046,Simokerto,Februari,336.0,3526.0,3862.0
+PKM046,Simokerto,Januari,605.0,4862.0,5467.0
+PKM046,Simokerto,Juli,690.0,4498.0,5188.0
+PKM046,Simokerto,Juni,438.0,3949.0,4387.0
+PKM046,Simokerto,Maret,394.0,4064.0,4458.0
+PKM046,Simokerto,Mei,364.0,3851.0,4215.0
+PKM046,Simokerto,November,,,
+PKM046,Simokerto,Oktober,14.0,154.0,168.0
+PKM046,Simokerto,September,,,
+PKM047,Kenjeran,Agustus,777.0,6550.0,7327.0
+PKM047,Kenjeran,April,734.0,5898.0,6632.0
+PKM047,Kenjeran,Desember,657.0,6314.0,6971.0
+PKM047,Kenjeran,Februari,662.0,4635.0,5297.0
+PKM047,Kenjeran,Januari,1430.0,6173.0,7603.0
+PKM047,Kenjeran,Juli,725.0,6278.0,7003.0
+PKM047,Kenjeran,Juni,729.0,5409.0,6138.0
+PKM047,Kenjeran,Maret,734.0,5898.0,6632.0
+PKM047,Kenjeran,Mei,620.0,5044.0,5664.0
+PKM047,Kenjeran,November,,,
+PKM047,Kenjeran,Oktober,20.0,205.0,225.0
+PKM047,Kenjeran,September,,,
+PKM048,Suko Manunggal,Agustus,454.0,2700.0,3154.0
+PKM048,Suko Manunggal,April,376.0,2258.0,2634.0
+PKM048,Suko Manunggal,Desember,385.0,2580.0,2965.0
+PKM048,Suko Manunggal,Februari,416.0,1893.0,2309.0
+PKM048,Suko Manunggal,Januari,693.0,2568.0,3261.0
+PKM048,Suko Manunggal,Juli,512.0,2722.0,3234.0
+PKM048,Suko Manunggal,Juni,405.0,2334.0,2739.0
+PKM048,Suko Manunggal,Maret,376.0,2258.0,2634.0
+PKM048,Suko Manunggal,Mei,343.0,2193.0,2536.0
+PKM048,Suko Manunggal,November,,,
+PKM048,Suko Manunggal,Oktober,14.0,118.0,132.0
+PKM048,Suko Manunggal,September,,,
+PKM049,Bubutan,Agustus,637.0,4361.0,4998.0
+PKM049,Bubutan,April,520.0,3692.0,4212.0
+PKM049,Bubutan,Desember,457.0,4129.0,4586.0
+PKM049,Bubutan,Februari,518.0,3320.0,3838.0
+PKM049,Bubutan,Januari,773.0,4279.0,5052.0
+PKM049,Bubutan,Juli,536.0,4424.0,4960.0
+PKM049,Bubutan,Juni,495.0,3546.0,4041.0
+PKM049,Bubutan,Maret,520.0,3692.0,4212.0
+PKM049,Bubutan,Mei,458.0,3402.0,3860.0
+PKM049,Bubutan,November,,,
+PKM049,Bubutan,Oktober,26.0,179.0,205.0
+PKM049,Bubutan,September,26.0,179.0,205.0
+PKM050,Tenggilis Mejoyo,Agustus,601.0,5297.0,5898.0
+PKM050,Tenggilis Mejoyo,April,642.0,4814.0,5456.0
+PKM050,Tenggilis Mejoyo,Desember,554.0,4997.0,5551.0
+PKM050,Tenggilis Mejoyo,Februari,768.0,4074.0,4842.0
+PKM050,Tenggilis Mejoyo,Januari,700.0,4948.0,5648.0
+PKM050,Tenggilis Mejoyo,Juli,608.0,5254.0,5862.0
+PKM050,Tenggilis Mejoyo,Juni,544.0,4189.0,4733.0
+PKM050,Tenggilis Mejoyo,Maret,642.0,4814.0,5456.0
+PKM050,Tenggilis Mejoyo,Mei,540.0,4216.0,4756.0
+PKM050,Tenggilis Mejoyo,November,,,
+PKM050,Tenggilis Mejoyo,Oktober,18.0,188.0,206.0
+PKM050,Tenggilis Mejoyo,September,,,
+PKM051,Wiyung,Agustus,743.0,6365.0,7108.0
+PKM051,Wiyung,April,600.0,5147.0,5747.0
+PKM051,Wiyung,Desember,557.0,5775.0,6332.0
+PKM051,Wiyung,Februari,567.0,4219.0,4786.0
+PKM051,Wiyung,Januari,910.0,6059.0,6969.0
+PKM051,Wiyung,Juli,653.0,5772.0,6425.0
+PKM051,Wiyung,Juni,569.0,4942.0,5511.0
+PKM051,Wiyung,Maret,600.0,5147.0,5747.0
+PKM051,Wiyung,Mei,615.0,4817.0,5432.0
+PKM051,Wiyung,November,19.0,216.0,235.0
+PKM051,Wiyung,Oktober,19.0,216.0,235.0
+PKM051,Wiyung,September,667.0,6117.0,6784.0
+PKM052,Wonokromo,Agustus,357.0,3638.0,3995.0
+PKM052,Wonokromo,April,338.0,3199.0,3537.0
+PKM052,Wonokromo,Desember,368.0,3879.0,4247.0
+PKM052,Wonokromo,Februari,367.0,2856.0,3223.0
+PKM052,Wonokromo,Januari,609.0,3848.0,4457.0
+PKM052,Wonokromo,Juli,390.0,3658.0,4048.0
+PKM052,Wonokromo,Juni,324.0,2991.0,3315.0
+PKM052,Wonokromo,Maret,338.0,3199.0,3537.0
+PKM052,Wonokromo,Mei,318.0,2852.0,3170.0
+PKM052,Wonokromo,November,,,
+PKM052,Wonokromo,Oktober,14.0,143.0,157.0
+PKM052,Wonokromo,September,,,
+PKM053,Semampir,Agustus,504.0,5455.0,5959.0
+PKM053,Semampir,April,418.0,4692.0,5110.0
+PKM053,Semampir,Desember,655.0,5895.0,6550.0
+PKM053,Semampir,Februari,546.0,3838.0,4384.0
+PKM053,Semampir,Januari,640.0,5382.0,6022.0
+PKM053,Semampir,Juli,436.0,5147.0,5583.0
+PKM053,Semampir,Juni,386.0,4161.0,4547.0
+PKM053,Semampir,Maret,418.0,4692.0,5110.0
+PKM053,Semampir,Mei,302.0,3774.0,4076.0
+PKM053,Semampir,November,834.0,5272.0,6106.0
+PKM053,Semampir,Oktober,23.0,181.0,204.0
+PKM053,Semampir,September,,,
+PKM054,Wiyung,Agustus,300.0,2133.0,2433.0
+PKM054,Wiyung,April,251.0,1763.0,2014.0
+PKM054,Wiyung,Desember,287.0,2256.0,2543.0
+PKM054,Wiyung,Februari,311.0,1597.0,1908.0
+PKM054,Wiyung,Januari,348.0,2092.0,2440.0
+PKM054,Wiyung,Juli,304.0,2084.0,2388.0
+PKM054,Wiyung,Juni,279.0,1790.0,2069.0
+PKM054,Wiyung,Maret,251.0,1763.0,2014.0
+PKM054,Wiyung,Mei,242.0,1703.0,1945.0
+PKM054,Wiyung,November,,,
+PKM054,Wiyung,Oktober,15.0,64.0,79.0
+PKM054,Wiyung,September,,,
+PKM055,Wonocolo,Agustus,368.0,3536.0,3904.0
+PKM055,Wonocolo,April,368.0,3122.0,3490.0
+PKM055,Wonocolo,Desember,361.0,3592.0,3953.0
+PKM055,Wonocolo,Februari,399.0,3035.0,3434.0
+PKM055,Wonocolo,Januari,449.0,3540.0,3989.0
+PKM055,Wonocolo,Juli,411.0,3534.0,3945.0
+PKM055,Wonocolo,Juni,354.0,2816.0,3170.0
+PKM055,Wonocolo,Maret,368.0,3122.0,3490.0
+PKM055,Wonocolo,Mei,294.0,2910.0,3204.0
+PKM055,Wonocolo,November,,,
+PKM055,Wonocolo,Oktober,17.0,107.0,124.0
+PKM055,Wonocolo,September,,,
+PKM056,Sambikerep,Agustus,254.0,2376.0,2630.0
+PKM056,Sambikerep,April,276.0,2302.0,2578.0
+PKM056,Sambikerep,Desember,242.0,2420.0,2662.0
+PKM056,Sambikerep,Februari,242.0,2108.0,2350.0
+PKM056,Sambikerep,Januari,314.0,2609.0,2923.0
+PKM056,Sambikerep,Juli,298.0,2447.0,2745.0
+PKM056,Sambikerep,Juni,249.0,2147.0,2396.0
+PKM056,Sambikerep,Maret,276.0,2302.0,2578.0
+PKM056,Sambikerep,Mei,236.0,1972.0,2208.0
+PKM056,Sambikerep,November,,,
+PKM056,Sambikerep,Oktober,14.0,94.0,108.0
+PKM056,Sambikerep,September,,,
+PKM057,Lakarsantri,Agustus,222.0,2252.0,2474.0
+PKM057,Lakarsantri,April,172.0,1913.0,2085.0
+PKM057,Lakarsantri,Desember,150.0,2090.0,2240.0
+PKM057,Lakarsantri,Februari,230.0,1990.0,2220.0
+PKM057,Lakarsantri,Januari,220.0,2385.0,2605.0
+PKM057,Lakarsantri,Juli,202.0,2158.0,2360.0
+PKM057,Lakarsantri,Juni,146.0,1883.0,2029.0
+PKM057,Lakarsantri,Maret,172.0,1913.0,2085.0
+PKM057,Lakarsantri,Mei,172.0,1745.0,1917.0
+PKM057,Lakarsantri,November,,,
+PKM057,Lakarsantri,Oktober,3.0,77.0,80.0
+PKM057,Lakarsantri,September,,,
+PKM058,Sukolilo,Agustus,682.0,3093.0,3775.0
+PKM058,Sukolilo,April,560.0,2613.0,3173.0
+PKM058,Sukolilo,Desember,664.0,3376.0,4040.0
+PKM058,Sukolilo,Februari,389.0,2024.0,2413.0
+PKM058,Sukolilo,Januari,620.0,2891.0,3511.0
+PKM058,Sukolilo,Juli,683.0,3412.0,4095.0
+PKM058,Sukolilo,Juni,672.0,2913.0,3585.0
+PKM058,Sukolilo,Maret,560.0,2613.0,3173.0
+PKM058,Sukolilo,Mei,472.0,2475.0,2947.0
+PKM058,Sukolilo,November,,,
+PKM058,Sukolilo,Oktober,17.0,111.0,128.0
+PKM058,Sukolilo,September,,,
+PKM059,Krembangan,Agustus,398.0,4081.0,4479.0
+PKM059,Krembangan,April,417.0,4138.0,4555.0
+PKM059,Krembangan,Desember,359.0,4251.0,4610.0
+PKM059,Krembangan,Februari,372.0,2941.0,3313.0
+PKM059,Krembangan,Januari,574.0,4459.0,5033.0
+PKM059,Krembangan,Juli,432.0,3999.0,4431.0
+PKM059,Krembangan,Juni,401.0,3722.0,4123.0
+PKM059,Krembangan,Maret,417.0,4138.0,4555.0
+PKM059,Krembangan,Mei,343.0,3647.0,3990.0
+PKM059,Krembangan,November,,,
+PKM059,Krembangan,Oktober,35.0,150.0,185.0
+PKM059,Krembangan,September,35.0,150.0,185.0
+PKM060,Kenjeran,Agustus,256.0,2502.0,2758.0
+PKM060,Kenjeran,April,215.0,2153.0,2368.0
+PKM060,Kenjeran,Desember,189.0,2269.0,2458.0
+PKM060,Kenjeran,Februari,328.0,2208.0,2536.0
+PKM060,Kenjeran,Januari,221.0,2266.0,2487.0
+PKM060,Kenjeran,Juli,249.0,2488.0,2737.0
+PKM060,Kenjeran,Juni,183.0,2037.0,2220.0
+PKM060,Kenjeran,Maret,215.0,2153.0,2368.0
+PKM060,Kenjeran,Mei,187.0,2032.0,2219.0
+PKM060,Kenjeran,November,,,
+PKM060,Kenjeran,Oktober,5.0,81.0,86.0
+PKM060,Kenjeran,September,,,
+PKM061,Kenjeran,Agustus,634.0,4852.0,5486.0
+PKM061,Kenjeran,April,453.0,4214.0,4667.0
+PKM061,Kenjeran,Desember,504.0,5984.0,6488.0
+PKM061,Kenjeran,Februari,457.0,3130.0,3587.0
+PKM061,Kenjeran,Januari,603.0,5036.0,5639.0
+PKM061,Kenjeran,Juli,462.0,4860.0,5322.0
+PKM061,Kenjeran,Juni,397.0,4119.0,4516.0
+PKM061,Kenjeran,Maret,453.0,4214.0,4667.0
+PKM061,Kenjeran,Mei,358.0,3829.0,4187.0
+PKM061,Kenjeran,November,,,
+PKM061,Kenjeran,Oktober,18.0,206.0,224.0
+PKM061,Kenjeran,September,,,
+PKM062,Mulyorejo,Agustus,451.0,3143.0,3594.0
+PKM062,Mulyorejo,April,315.0,2832.0,3147.0
+PKM062,Mulyorejo,Desember,394.0,3048.0,3442.0
+PKM062,Mulyorejo,Februari,411.0,2510.0,2921.0
+PKM062,Mulyorejo,Januari,674.0,3259.0,3933.0
+PKM062,Mulyorejo,Juli,411.0,3264.0,3675.0
+PKM062,Mulyorejo,Juni,389.0,2820.0,3209.0
+PKM062,Mulyorejo,Maret,315.0,2832.0,3147.0
+PKM062,Mulyorejo,Mei,354.0,2550.0,2904.0
+PKM062,Mulyorejo,November,,,
+PKM062,Mulyorejo,Oktober,8.0,134.0,142.0
+PKM062,Mulyorejo,September,,,
+PKM063,Semampir,Agustus,264.0,3278.0,3542.0
+PKM063,Semampir,April,320.0,3071.0,3391.0
+PKM063,Semampir,Desember,266.0,3345.0,3611.0
+PKM063,Semampir,Februari,427.0,2935.0,3362.0
+PKM063,Semampir,Januari,517.0,3736.0,4253.0
+PKM063,Semampir,Juli,276.0,3309.0,3585.0
+PKM063,Semampir,Juni,233.0,2729.0,2962.0
+PKM063,Semampir,Maret,320.0,3071.0,3391.0
+PKM063,Semampir,Mei,246.0,2546.0,2792.0
+PKM063,Semampir,November,,,
+PKM063,Semampir,Oktober,5.0,116.0,121.0
+PKM063,Semampir,September,5.0,116.0,121.0
