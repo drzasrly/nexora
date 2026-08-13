@@ -1,0 +1,133 @@
+========================================================================
+NEXORA HEAL-CITY — METADATA, DATASET, DAN SPESIFIKASI OUTPUT
+========================================================================
+
+Dokumen ini berisi rangkuman mengenai metodologi analisis, rincian dataset
+yang digunakan, serta daftar file output yang dihasilkan oleh sistem
+HEAL-CITY (Smart Decision Support System for Healthcare Gap Analysis).
+
+------------------------------------------------------------------------
+1. METODOLOGI ANALISIS
+------------------------------------------------------------------------
+Sistem HEAL-CITY memproses data kesehatan Kota Surabaya menggunakan
+pipeline modular dengan metodologi sebagai berikut:
+
+A. Preprocessing & Standardisasi Data:
+   - Melakukan standarisasi penamaan kolom (lowercase, underscore).
+   - Melakukan pembersihan data duplikat dan konversi tipe data numerik.
+   - Standardisasi nama Kecamatan ke dalam format resmi (UPPERCASE) 
+     untuk menyelesaikan inkonsistensi nama (misal: "Asem Rowo" -> "Asemrowo").
+
+B. Feature Engineering (Penyusunan Indikator):
+   - Menghitung rasio fasilitas kesehatan per 100.000 penduduk.
+   - Menghitung rasio tenaga kesehatan (Nakes, Perawat, Bidan) per 1.000 penduduk.
+   - Menghitung kunjungan pasien per 1.000 penduduk dan beban penyakit per 1.000 penduduk.
+   - Melakukan normalisasi fitur menggunakan Min-Max Scaling (0 hingga 1).
+
+C. Composite Healthcare Gap Score (0 - 100):
+   - Mengintegrasikan sub-indeks kesenjangan menggunakan weighted sum model:
+     * Kebutuhan Demografis & Layanan (Demand Score): 30%
+     * Kesenjangan Tenaga Kesehatan (Workforce Gap): 30%
+     * Kesenjangan Fisik Fasilitas (Facility Gap): 20%
+     * Beban Kasus Penyakit (Disease Need Score): 20%
+   - Klasifikasi Kategori Prioritas:
+     * 0.0 - 20.0  : Rendah
+     * 20.1 - 40.0 : Sedang
+     * 40.1 - 60.0 : Tinggi
+     * 60.1 - 80.0 : Sangat Tinggi
+     * 80.1 - 100.0: Kritis
+
+D. Root Cause Analysis (RCA):
+   - Menganalisis pemicu utama (Primary Driver) dari tingginya Gap Score di setiap
+     kecamatan menggunakan rule engine berbasis batas ambang (thresholds).
+   - Mengklasifikasikan faktor pemicu ke dalam: WORKFORCE_SHORTAGE,
+     FACILITY_SHORTAGE, DISEASE_BURDEN, HIGH_DEMAND, atau MULTI_FACTOR.
+   - Menghitung tingkat kepercayaan diagnosis (Confidence Level: HIGH, MEDIUM, LOW)
+     berdasarkan selisih margin sub-skor.
+
+E. What-If Simulation Engine:
+   - Memproyeksikan penurunan Gap Score secara real-time berdasarkan sensitivitas
+     intervensi (contoh: koefisien reduksi 0.09 per penambahan dokter).
+
+F. AI Resource-Constrained Optimizer:
+   - Merekomendasikan paket intervensi terbaik (alokasi anggaran, redistribusi nakes)
+     yang memaksimalkan pemerataan kesehatan di bawah batasan anggaran (budget constraint)
+     dan ketersediaan sumber daya pemerintah.
+
+------------------------------------------------------------------------
+2. 8 INDIKATOR KESENJANGAN & PARAMETER INPUT USER
+------------------------------------------------------------------------
+Sistem HEAL-CITY memetakan kesenjangan suplai fisik (supply-side gaps)
+dan memberikan kontrol interaktif bagi pengguna di dashboard:
+
+A. 8 Indikator Kesenjangan Utama (Supply-Side Gaps):
+   1. Kesenjangan Dokter/Tenaga Medis (Rasio dokter per 1.000 penduduk)
+   2. Kesenjangan Perawat (Rasio perawat per 1.000 penduduk)
+   3. Kesenjangan Bidan (Rasio bidan per 1.000 penduduk)
+   4. Kesenjangan Fasilitas Kesehatan Total (Rasio faskes per 100.000 penduduk)
+   5. Kesenjangan Puskesmas Induk (Rasio puskesmas per 100.000 penduduk)
+   6. Kesenjangan Puskesmas Pembantu (Pustu) (Rasio pustu per 100.000 penduduk)
+   7. Kesenjangan Tempat Tidur (Rasio kapasitas bed rawat inap per 1.000 penduduk)
+   8. Kesenjangan Aksesibilitas Geografis (Jarak/waktu tempuh ke faskes terdekat)
+
+B. Parameter Input / Kontrol User pada Dashboard:
+   - AI Optimizer Constraints (Kendala Anggaran & Sumber Daya):
+     * Kecamatan Target (Kecamatan terpilih untuk analisis rekomendasi)
+     * Anggaran Maksimal (Maksimal dana intervensi dalam Rupiah)
+     * Batas Redistribusi Dokter (Ketersediaan dokter untuk dialokasikan)
+     * Batas Redistribusi Perawat (Ketersediaan perawat untuk dialokasikan)
+   - What-If Simulation Parameters (Slider Penambahan Sumber Daya):
+     * Tambah Dokter (Jumlah dokter tambahan, rentang 0 - 20)
+     * Tambah Perawat (Jumlah perawat tambahan, rentang 0 - 50)
+     * Tambah Bidan (Jumlah bidan tambahan, rentang 0 - 30)
+     * Tambah Faskes (Jumlah fasilitas baru yang dibangun, rentang 0 - 10)
+     * Tambah Tempat Tidur (Jumlah unit bed tambahan, rentang 0 - 200)
+   - GIS Map Filter & Controls (Pencarian & Layer Kontrol):
+     * Kotak Pencarian Nama Kecamatan
+     * Filter Level Prioritas (Dropdown: Sangat Tinggi, Tinggi, Sedang, Rendah)
+     * Filter Akar Masalah (Dropdown: Workforce, Facility, Disease, dll.)
+     * Pilihan Mode Warna Peta (Mode: Gap Score vs Priority Category)
+     * Toggles Overlay Marker Faskes (Rumah Sakit, Puskesmas, Klinik)
+
+------------------------------------------------------------------------
+3. DATASET YANG DIGUNAKAN
+------------------------------------------------------------------------
+HEAL-CITY memadukan data statistik tabular (Excel) dengan data spasial (GeoJSON):
+
+A. Dataset Tabular ("dataset/data smart city.xlsx"):
+   - Sheet 'kunjungan puskesmas' : Data jumlah kunjungan pasien per faskes.
+   - Sheet 'tenaga kesehatan'    : Data jumlah dokter (tenaga medis), perawat, dan bidan.
+   - Sheet 'penduduk'            : Data populasi (ribu jiwa) dan kepadatan penduduk per km2.
+   - Sheet 'puskemas' & 'faskes' : Koordinat spasial (lat, lon) faskes.
+   - Sheet 'tempat tidur'        : Kapasitas tempat tidur rumah sakit dan puskesmas.
+   - Sheet 'data penyakit'       : Jumlah kasus per kategori penyakit di Surabaya.
+
+B. Dataset Spasial ("data/spatial/"):
+   - "kecamatan_surabaya.geojson": Batas wilayah poligon 31 Kecamatan Surabaya.
+   - "puskesmas.geojson"         : Titik koordinat Puskesmas Induk.
+   - "fasilitas_kesehatan.geojson": Titik koordinat RS, Puskesmas, Pustu, dan Klinik.
+   - "roads.geojson"             : Jaringan jalan perkotaan Surabaya.
+
+------------------------------------------------------------------------
+4. RINCIAN FILE OUTPUT (DIHASILKAN PIPELINE)
+------------------------------------------------------------------------
+
+A. File Data Bersih & Fitur (CSV):
+   - "data/processed/master_heal_city.csv"    : Gabungan data awal kecamatan.
+   - "data/processed/heal_city_features.csv"  : Fitur hasil rasio & analisis statistik.
+   - "data/processed/healthcare_gap_scores.csv": Nilai Gap Score, Rapor Prioritas, & Ranking.
+   - "data/processed/root_cause_analysis.csv"  : Klasifikasi pemicu masalah utama & confidence.
+   - "data/processed/heal_city_gis.csv"       : Data ringkas atribut GIS beserta koordinat centroid.
+
+B. File Spasial & Visualisasi (GeoJSON & HTML):
+   - "dataset/spatial/output/heal_city_gap.geojson":
+     File spasial final yang menggabungkan batas poligon 31 kecamatan dengan
+     seluruh atribut analisis (skor gap, nakes, populasi, dan rekomendasi).
+   - "outputs/gis/healthcare_gap_map.html"    : Peta interaktif gradasi Healthcare Gap Score.
+   - "outputs/gis/priority_map.html"          : Peta interaktif urutan prioritas kecamatan.
+   - "outputs/gis/root_cause_map.html"        : Peta interaktif klasifikasi pemicu utama.
+
+C. Laporan & Manifest Sistem:
+   - "outputs/reports/run_manifest.json"      : Catatan status eksekusi dan konfigurasi bobot.
+   - "logs/heal_city.log"                     : Log sistem selama pipeline berjalan.
+   - "logs/healthcare_gap_weights.csv"        : Log konfigurasi bobot parameter.
