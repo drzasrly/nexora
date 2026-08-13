@@ -1,3 +1,4 @@
+# Project metadata
 project:
   name: HEAL-CITY
   city: Surabaya
@@ -7,9 +8,14 @@ data:
   cleaned_dir: data/cleaned
   processed_dir: data/processed
   spatial_dir: data/spatial
+  master: data/processed/master_heal_city.csv
+  features: data/processed/heal_city_features.csv
+  gap: data/processed/healthcare_gap_scores.csv
+  root_cause: data/processed/root_cause_analysis.csv
 
 spatial:
   kecamatan: data/spatial/kecamatan_surabaya.geojson
+  district: data/spatial/kecamatan_surabaya.geojson
   puskesmas: data/spatial/puskesmas.geojson
   facilities: data/spatial/fasilitas_kesehatan.geojson
   roads: data/spatial/roads.geojson
@@ -46,6 +52,19 @@ gap_engine:
   facility_weight: 0.20
   disease_weight: 0.20
 
+weights:
+  demand: 0.30
+  workforce: 0.30
+  facility: 0.20
+  disease: 0.20
+
 root_cause:
   threshold_high: 0.80
   threshold_medium: 0.60
+  high_threshold: 0.80
+  medium_threshold: 0.60
+
+simulation:
+  max_budget: 5000000000
+  random_state: 42
+

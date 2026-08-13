@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_04ef7d29ffc2083314482b2eede85291 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Jambangan
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #21
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">50.2</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Jambangan memiliki Healthcare Gap Score sebesar 50.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.72), 3. High Demand Score (0.22). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 1<br>
+                     🛣️ Road network segments: 2
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_04ef7d29ffc2083314482b2eede85291" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_04ef7d29ffc2083314482b2eede85291 = L.map(
+                "map_04ef7d29ffc2083314482b2eede85291",
+                {
+                    center: [-7.321903875782391, 112.71388458805214],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fbaf6a4b0501d615420d6df872756b40 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fbaf6a4b0501d615420d6df872756b40.addTo(map_04ef7d29ffc2083314482b2eede85291);
+        
+    
+        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fdea84e404e3480b4c75e0af4b3e97c1 = L.geoJson(null, {
+                onEachFeature: geo_json_fdea84e404e3480b4c75e0af4b3e97c1_onEachFeature,
+            
+                style: geo_json_fdea84e404e3480b4c75e0af4b3e97c1_styler,
+            ...{
+}
+        });
+
+        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_add (data) {
+            geo_json_fdea84e404e3480b4c75e0af4b3e97c1
+                .addData(data);
+        }
+            geo_json_fdea84e404e3480b4c75e0af4b3e97c1_add({"bbox": [112.7137032, -7.3220738, 112.714066, -7.321734], "features": [{"bbox": [112.7137032, -7.3220738, 112.714066, -7.321734], "geometry": {"coordinates": [[[112.7137032, -7.3219679], [112.7139725, -7.3220738], [112.714066, -7.3218398], [112.7137966, -7.321734], [112.7137032, -7.3219679]]], "type": "Polygon"}, "id": "9", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.21959302339564915, "disease_issue": "Penyakit pada sistem pencernaan (5315 cases)", "disease_need_score": 0.11557884539152101, "explanation": "Kecamatan Jambangan memiliki Healthcare Gap Score sebesar 50.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.72), 3. High Demand Score (0.22). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7161926518743044, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.17480408166324, "kecamatan": "JAMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "HIGH", "root_cause_margin": 0.18219346260827107, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.8983861144825754, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_fdea84e404e3480b4c75e0af4b3e97c1.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_fdea84e404e3480b4c75e0af4b3e97c1.addTo(map_04ef7d29ffc2083314482b2eede85291);
+        
+    
+            var marker_6a31c7aa0a6fce289c653dd00b15ec91 = L.marker(
+                [-7.3218583964999455, 112.71381153468342],
+                {
+}
+            ).addTo(map_04ef7d29ffc2083314482b2eede85291);
+        
+    
+            var icon_a0142e28e6449fef96f6a079363ac7ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e68bb12269f6909c22e5af1e32b29883 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_db9aec79c776254f1869ee220bbec6ab = $(`<div id="html_db9aec79c776254f1869ee220bbec6ab" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Cempaka Putih Permata<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_e68bb12269f6909c22e5af1e32b29883.setContent(html_db9aec79c776254f1869ee220bbec6ab);
+            
+        
+
+        marker_6a31c7aa0a6fce289c653dd00b15ec91.bindPopup(popup_e68bb12269f6909c22e5af1e32b29883)
+        ;
+
+        
+    
+    
+                marker_6a31c7aa0a6fce289c653dd00b15ec91.setIcon(icon_a0142e28e6449fef96f6a079363ac7ae);
+            
+    
+            var feature_group_d1cea94cff149c7f49b36659794ea894 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_088d7cff59dd333014fa01cd4028c007 = L.polyline(
+                [[-7.3219039, 112.7138846], [-7.321984533009334, 112.71416078516732]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_d1cea94cff149c7f49b36659794ea894);
+        
+    
+        var popup_faccc0a5867c5589997d23bffa9f86bb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_67013e8712e9ab298fc5ed3fd7d81f4e = $(`<div id="html_67013e8712e9ab298fc5ed3fd7d81f4e" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Jambangan-Karang Pilang</div>`)[0];
+                popup_faccc0a5867c5589997d23bffa9f86bb.setContent(html_67013e8712e9ab298fc5ed3fd7d81f4e);
+            
+        
+
+        poly_line_088d7cff59dd333014fa01cd4028c007.bindPopup(popup_faccc0a5867c5589997d23bffa9f86bb)
+        ;
+
+        
+    
+    
+            var poly_line_5ca32452d560f7f6cae14e9eea2e4fac = L.polyline(
+                [[-7.322820771923497, 112.71409818629667], [-7.320915665204842, 112.71322146148631]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_d1cea94cff149c7f49b36659794ea894);
+        
+    
+        var popup_90493e4aec414be2ba00260c2d4d10f3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3d2e19bbf7d05672b0448cae5136e3bc = $(`<div id="html_3d2e19bbf7d05672b0448cae5136e3bc" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Kenjeran-Krembangan</div>`)[0];
+                popup_90493e4aec414be2ba00260c2d4d10f3.setContent(html_3d2e19bbf7d05672b0448cae5136e3bc);
+            
+        
+
+        poly_line_5ca32452d560f7f6cae14e9eea2e4fac.bindPopup(popup_90493e4aec414be2ba00260c2d4d10f3)
+        ;
+
+        
+    
+    
+            feature_group_d1cea94cff149c7f49b36659794ea894.addTo(map_04ef7d29ffc2083314482b2eede85291);
+        
+</script>
+</html>

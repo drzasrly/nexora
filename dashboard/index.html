@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA — HEAL-CITY Surabaya Healthcare Analytics</title>
+    <meta name="description" content="HEAL-CITY: Smart Decision Support System for Healthcare Gap Analysis in Surabaya, Indonesia. Powered by NEXORA.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="logo-area">
+                <i class="fa-solid fa-square-poll-vertical logo-icon"></i>
+                <div class="logo-text">
+                    <h1>NEXORA</h1>
+                    <span>HEAL-CITY • Smart Decision Support System</span>
+                </div>
+            </div>
+            <!-- TAB NAVIGATION -->
+            <nav class="tab-nav" id="tab-nav">
+                <button class="tab-btn active" data-page="overview" id="tab-overview">
+                    <i class="fa-solid fa-city"></i> Overview
+                </button>
+                <button class="tab-btn" data-page="map" id="tab-map">
+                    <i class="fa-solid fa-map-location-dot"></i> GIS Map
+                </button>
+                <button class="tab-btn" data-page="analytics" id="tab-analytics">
+                    <i class="fa-solid fa-chart-bar"></i> Analytics
+                </button>
+                <button class="tab-btn" data-page="simulation" id="tab-simulation">
+                    <i class="fa-solid fa-flask"></i> Simulation
+                </button>
+                <button class="tab-btn" data-page="optimizer" id="tab-optimizer">
+                    <i class="fa-solid fa-brain"></i> AI Optimizer
+                </button>
+            </nav>
+            <div class="header-stats">
+                <div class="stat-pill">
+                    <span class="pill-label">City</span>
+                    <span class="pill-value"><i class="fa-solid fa-location-dot"></i> Surabaya</span>
+                </div>
+                <div class="stat-pill">
+                    <span class="pill-label">Data Engine</span>
+                    <span class="pill-value live-indicator"><span class="pulse-dot"></span> Active</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============================================================ -->
+        <!-- PAGE: OVERVIEW                                                 -->
+        <!-- ============================================================ -->
+        <main class="page-content" id="page-overview">
+            <!-- City Stats Row -->
+            <div class="overview-stats-row">
+                <div class="stat-card stat-card-gradient-blue">
+                    <div class="stat-card-icon"><i class="fa-solid fa-map"></i></div>
+                    <div class="stat-card-body">
+                        <span class="stat-card-value" id="ov-districts">31</span>
+                        <span class="stat-card-label">Districts</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-card-gradient-green">
+                    <div class="stat-card-icon"><i class="fa-solid fa-hospital"></i></div>
+                    <div class="stat-card-body">
+                        <span class="stat-card-value" id="ov-facilities">—</span>
+                        <span class="stat-card-label">Health Facilities</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-card-gradient-purple">
+                    <div class="stat-card-icon"><i class="fa-solid fa-user-nurse"></i></div>
+                    <div class="stat-card-body">
+                        <span class="stat-card-value" id="ov-workers">—</span>
+                        <span class="stat-card-label">Health Workers</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-card-gradient-rose">
+                    <div class="stat-card-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="stat-card-body">
+                        <span class="stat-card-value" id="ov-critical">—</span>
+                        <span class="stat-card-label">Critical Districts</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-card-gradient-amber">
+                    <div class="stat-card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <div class="stat-card-body">
+                        <span class="stat-card-value" id="ov-equity">—</span>
+                        <span class="stat-card-label">Avg. Gap Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Bottom Row -->
+            <div class="overview-bottom-row">
+                <!-- Mini GIS Map -->
+                <div class="card overview-map-card">
+                    <div class="card-title-row">
+                        <h3 class="card-title"><i class="fa-solid fa-map"></i> Healthcare Gap Map</h3>
+                        <button class="btn-secondary" onclick="switchPage('map')">
+                            <i class="fa-solid fa-expand"></i> Full Map
+                        </button>
+                    </div>
+                    <div id="overview-map"></div>
+                </div>
+
+                <!-- Top Priority Table -->
+                <div class="card overview-priority-card">
+                    <div class="card-title-row">
+                        <h3 class="card-title"><i class="fa-solid fa-fire"></i> Top Priority Districts</h3>
+                        <button class="btn-secondary" onclick="switchPage('analytics')">
+                            <i class="fa-solid fa-table"></i> Full Ranking
+                        </button>
+                    </div>
+                    <table class="priority-table" id="overview-priority-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Kecamatan</th>
+                                <th>Gap Score</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="overview-priority-body">
+                            <tr><td colspan="4" class="table-loading">Loading data...</td></tr>
+                        </tbody>
+                    </table>
+                    <!-- City Summary Donut -->
+                    <div class="overview-donut-row">
+                        <div class="overview-donut-label">Priority Distribution</div>
+                        <div class="overview-donut-container">
+                            <canvas id="overview-donut-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ============================================================ -->
+        <!-- PAGE: GIS MAP                                                  -->
+        <!-- ============================================================ -->
+        <main class="page-content hidden" id="page-map">
+            <div class="dashboard-grid">
+                <!-- SIDEBAR -->
+                <section class="sidebar-panel">
+                    <!-- CONTROLS CARD -->
+                    <div class="card controls-card">
+                        <h2 class="card-title"><i class="fa-solid fa-sliders"></i> Control Panel</h2>
+                        <div class="control-group">
+                            <label for="search-kecamatan">Search Kecamatan</label>
+                            <div class="search-input-wrapper">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input type="text" id="search-kecamatan" placeholder="Type subdistrict name...">
+                                <button id="clear-search" class="clear-btn" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="control-row">
+                            <div class="control-group half-width">
+                                <label for="filter-priority">Priority Level</label>
+                                <select id="filter-priority">
+                                    <option value="ALL">All Categories</option>
+                                    <option value="Sangat Tinggi">Sangat Tinggi</option>
+                                    <option value="Tinggi">Tinggi</option>
+                                    <option value="Sedang">Sedang</option>
+                                    <option value="Rendah">Rendah</option>
+                                </select>
+                            </div>
+                            <div class="control-group half-width">
+                                <label for="filter-cause">Primary Driver</label>
+                                <select id="filter-cause">
+                                    <option value="ALL">All Drivers</option>
+                                    <option value="WORKFORCE_SHORTAGE">Workforce Shortage</option>
+                                    <option value="FACILITY_SHORTAGE">Facility Shortage</option>
+                                    <option value="DISEASE_BURDEN">Disease Burden</option>
+                                    <option value="HIGH_DEMAND">High Demand</option>
+                                    <option value="MULTI_FACTOR">Multi-Factor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- MAP MODE TOGGLE -->
+                        <div class="control-group">
+                            <label>Map Color Mode</label>
+                            <div class="map-mode-toggle">
+                                <button class="mode-btn active" id="mode-gap" data-mode="gap">
+                                    <i class="fa-solid fa-thermometer-half"></i> Gap Score
+                                </button>
+                                <button class="mode-btn" id="mode-priority" data-mode="priority">
+                                    <i class="fa-solid fa-palette"></i> Priority
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label>Overlay Facility Markers</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="toggle-hospitals" checked>
+                                    <span class="checkmark chk-hospital"></span>
+                                    <span class="chk-label"><i class="fa-solid fa-hospital red-icon"></i> Hospitals <span class="facility-count" id="count-rs">(60)</span></span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="toggle-puskesmas" checked>
+                                    <span class="checkmark chk-puskesmas"></span>
+                                    <span class="chk-label"><i class="fa-solid fa-house-medical blue-icon"></i> Puskesmas <span class="facility-count" id="count-pkm">(122)</span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DETAILS CARD -->
+                    <div class="card details-card" id="details-panel">
+                        <div class="details-placeholder" id="details-placeholder">
+                            <i class="fa-solid fa-circle-info placeholder-icon"></i>
+                            <h3>Select a Kecamatan</h3>
+                            <p>Hover or click on a subdistrict on the map to load deep diagnostic analytics, root cause classifications, and demographic breakdowns.</p>
+                        </div>
+                        
+                        <div class="details-content" id="details-content" style="display: none;">
+                            <div class="kecamatan-header">
+                                <div class="kec-title-wrap">
+                                    <h2 id="detail-name">Kecamatan</h2>
+                                    <span class="badge" id="detail-priority-badge">Priority</span>
+                                </div>
+                                <div class="rank-badge">
+                                    <span class="rank-label">RANK</span>
+                                    <span class="rank-value" id="detail-rank">#0</span>
+                                </div>
+                            </div>
+
+                            <div class="score-summary-row">
+                                <div class="score-circle-container">
+                                    <svg class="progress-ring" width="80" height="80">
+                                        <circle class="progress-ring__background" stroke="rgba(255,255,255,0.05)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                        <circle class="progress-ring__circle" id="detail-score-ring" stroke="#EF4444" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                    </svg>
+                                    <div class="score-display">
+                                        <span class="score-val" id="detail-score">00.0</span>
+                                        <span class="score-max">/100</span>
+                                    </div>
+                                </div>
+                                <div class="score-label-wrap">
+                                    <h3>Healthcare Gap Score</h3>
+                                    <p id="detail-score-desc">Priority score based on supply deficits & caseload demand.</p>
+                                </div>
+                            </div>
+
+                            <div class="explanation-box">
+                                <h4><i class="fa-solid fa-message"></i> Analysis Narrative</h4>
+                                <p id="detail-explanation">Explanation text in Indonesian goes here...</p>
+                            </div>
+
+                            <div class="metrics-section">
+                                <h4><i class="fa-solid fa-chart-bar"></i> Diagnostic Gap Sub-scores</h4>
+                                
+                                <div class="metric-progress-item">
+                                    <div class="metric-meta">
+                                        <span>Workforce Shortage Gap (30%)</span>
+                                        <span class="metric-val" id="val-workforce">0.00</span>
+                                    </div>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="fill-workforce" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="issue-tag" id="issue-workforce">Issue tag</span>
+                                </div>
+
+                                <div class="metric-progress-item">
+                                    <div class="metric-meta">
+                                        <span>Facility Capacity Gap (20%)</span>
+                                        <span class="metric-val" id="val-facility">0.00</span>
+                                    </div>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="fill-facility" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="issue-tag" id="issue-facility">Issue tag</span>
+                                </div>
+
+                                <div class="metric-progress-item">
+                                    <div class="metric-meta">
+                                        <span>Demographic Demand Burden (30%)</span>
+                                        <span class="metric-val" id="val-demand">0.00</span>
+                                    </div>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="fill-demand" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="issue-tag" id="issue-demand">Issue tag</span>
+                                </div>
+
+                                <div class="metric-progress-item">
+                                    <div class="metric-meta">
+                                        <span>Disease Need Caseload (20%)</span>
+                                        <span class="metric-val" id="val-disease">0.00</span>
+                                    </div>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" id="fill-disease" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="issue-tag" id="issue-disease">Issue tag</span>
+                                </div>
+                            </div>
+
+                            <div class="causes-grid">
+                                <div class="cause-card">
+                                    <span class="cause-label">Primary Driver</span>
+                                    <span class="cause-val badge-cause" id="detail-cause-primary">WORKFORCE</span>
+                                </div>
+                                <div class="cause-card">
+                                    <span class="cause-label">Model Confidence</span>
+                                    <span class="cause-val" id="detail-confidence">HIGH</span>
+                                </div>
+                            </div>
+
+                            <button class="btn-primary btn-full mt-16" onclick="switchPage('optimizer'); setTimeout(() => prefillOptimizer(currentSelectedKec), 300);">
+                                <i class="fa-solid fa-brain"></i> Run AI Optimizer →
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RIGHT PANEL: MAP + CHARTS -->
+                <section class="main-map-panel">
+                    <div class="card map-card">
+                        <div id="map"></div>
+                        
+                        <!-- MAP LEGEND (dynamic) -->
+                        <div class="map-legend" id="map-legend">
+                            <h4 id="legend-title">Healthcare Gap Score</h4>
+                            <div class="legend-scale" id="legend-scale-gap">
+                                <div class="legend-color" style="background: #FFF5F0;"></div>
+                                <div class="legend-color" style="background: #FEE0D2;"></div>
+                                <div class="legend-color" style="background: #FCBBA1;"></div>
+                                <div class="legend-color" style="background: #FC9272;"></div>
+                                <div class="legend-color" style="background: #FB6A4A;"></div>
+                                <div class="legend-color" style="background: #EF3B2C;"></div>
+                                <div class="legend-color" style="background: #CB181D;"></div>
+                                <div class="legend-color" style="background: #99000D;"></div>
+                            </div>
+                            <div class="legend-labels" id="legend-labels-gap">
+                                <span>0 (Low Gap)</span>
+                                <span>100 (Critical)</span>
+                            </div>
+                            <!-- Priority Legend (hidden by default) -->
+                            <div class="legend-priority" id="legend-priority" style="display:none;">
+                                <div class="legend-priority-item"><span class="legend-dot" style="background:#dc2626;"></span> Sangat Tinggi</div>
+                                <div class="legend-priority-item"><span class="legend-dot" style="background:#ea580c;"></span> Tinggi</div>
+                                <div class="legend-priority-item"><span class="legend-dot" style="background:#ca8a04;"></span> Sedang</div>
+                                <div class="legend-priority-item"><span class="legend-dot" style="background:#16a34a;"></span> Rendah</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts-row">
+                        <div class="card chart-card gap-chart-container">
+                            <div class="chart-header">
+                                <h3><i class="fa-solid fa-chart-simple"></i> Healthcare Gap Rankings</h3>
+                                <span class="chart-subtitle">All 31 Kecamatan sorted from highest to lowest</span>
+                            </div>
+                            <div class="chart-canvas-wrapper">
+                                <canvas id="gap-rankings-chart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card chart-card driver-chart-container">
+                            <div class="chart-header">
+                                <h3><i class="fa-solid fa-chart-pie"></i> Primary Drivers</h3>
+                                <span class="chart-subtitle">Root cause distribution across districts</span>
+                            </div>
+                            <div class="chart-canvas-wrapper">
+                                <canvas id="driver-distribution-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- ============================================================ -->
+        <!-- PAGE: ANALYTICS (Priority Ranking + RCA)                      -->
+        <!-- ============================================================ -->
+        <main class="page-content hidden" id="page-analytics">
+            <div class="analytics-grid">
+                <!-- Full Priority Ranking Table -->
+                <div class="card analytics-table-card">
+                    <div class="card-title-row">
+                        <h3 class="card-title"><i class="fa-solid fa-ranking-star"></i> Priority Ranking — All 31 Kecamatan</h3>
+                        <div class="analytics-filter-row">
+                            <input type="text" class="analytics-search" id="analytics-search" placeholder="Search district...">
+                            <select id="analytics-filter-priority" class="analytics-select">
+                                <option value="ALL">All Priority</option>
+                                <option value="Sangat Tinggi">Sangat Tinggi</option>
+                                <option value="Tinggi">Tinggi</option>
+                                <option value="Sedang">Sedang</option>
+                                <option value="Rendah">Rendah</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="analytics-table-wrapper">
+                        <table class="full-ranking-table" id="full-ranking-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Kecamatan</th>
+                                    <th>Gap Score</th>
+                                    <th>Priority</th>
+                                    <th>Primary Driver</th>
+                                    <th>Workforce Gap</th>
+                                    <th>Facility Gap</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="full-ranking-body">
+                                <tr><td colspan="8" class="table-loading">Loading data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- RCA Summary Charts -->
+                <div class="analytics-charts-col">
+                    <div class="card analytics-chart-card">
+                        <div class="card-title-row">
+                            <h3 class="card-title"><i class="fa-solid fa-magnifying-glass-chart"></i> Root Cause Analysis</h3>
+                        </div>
+                        <div class="rca-chart-wrapper">
+                            <canvas id="analytics-rca-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card analytics-chart-card">
+                        <div class="card-title-row">
+                            <h3 class="card-title"><i class="fa-solid fa-chart-area"></i> Gap Score Distribution</h3>
+                        </div>
+                        <div class="rca-chart-wrapper">
+                            <canvas id="analytics-dist-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ============================================================ -->
+        <!-- PAGE: WHAT-IF SIMULATION                                       -->
+        <!-- ============================================================ -->
+        <main class="page-content hidden" id="page-simulation">
+            <div class="simulation-grid">
+                <!-- Left: Controls -->
+                <div class="simulation-controls-col">
+                    <div class="card simulation-controls-card">
+                        <h3 class="card-title"><i class="fa-solid fa-flask"></i> What-If Simulation</h3>
+                        <p class="card-subtitle">Adjust healthcare resources to project the impact on Gap Score.</p>
+                        
+                        <div class="control-group mt-16">
+                            <label for="sim-kecamatan">Select Kecamatan</label>
+                            <select id="sim-kecamatan" class="sim-select">
+                                <option value="">— Choose District —</option>
+                            </select>
+                        </div>
+
+                        <div class="sim-sliders">
+                            <div class="sim-slider-item">
+                                <div class="sim-slider-label">
+                                    <span><i class="fa-solid fa-user-doctor"></i> Add Doctors</span>
+                                    <span class="sim-val-badge" id="val-sim-doctors">+0</span>
+                                </div>
+                                <input type="range" id="sim-doctors" min="0" max="20" value="0" class="sim-range">
+                            </div>
+                            <div class="sim-slider-item">
+                                <div class="sim-slider-label">
+                                    <span><i class="fa-solid fa-user-nurse"></i> Add Nurses</span>
+                                    <span class="sim-val-badge" id="val-sim-nurses">+0</span>
+                                </div>
+                                <input type="range" id="sim-nurses" min="0" max="50" value="0" class="sim-range">
+                            </div>
+                            <div class="sim-slider-item">
+                                <div class="sim-slider-label">
+                                    <span><i class="fa-solid fa-baby"></i> Add Midwives</span>
+                                    <span class="sim-val-badge" id="val-sim-midwives">+0</span>
+                                </div>
+                                <input type="range" id="sim-midwives" min="0" max="30" value="0" class="sim-range">
+                            </div>
+                            <div class="sim-slider-item">
+                                <div class="sim-slider-label">
+                                    <span><i class="fa-solid fa-hospital"></i> Add Facilities</span>
+                                    <span class="sim-val-badge" id="val-sim-facilities">+0</span>
+                                </div>
+                                <input type="range" id="sim-facilities" min="0" max="10" value="0" class="sim-range">
+                            </div>
+                            <div class="sim-slider-item">
+                                <div class="sim-slider-label">
+                                    <span><i class="fa-solid fa-bed"></i> Add Bed Capacity</span>
+                                    <span class="sim-val-badge" id="val-sim-beds">+0</span>
+                                </div>
+                                <input type="range" id="sim-beds" min="0" max="200" value="0" class="sim-range">
+                            </div>
+                        </div>
+
+                        <button class="btn-primary btn-full mt-16" id="btn-simulate">
+                            <i class="fa-solid fa-play"></i> SIMULATE
+                        </button>
+                        <button class="btn-secondary btn-full mt-8" id="btn-sim-reset">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Results -->
+                <div class="simulation-results-col">
+                    <!-- Before / After Score Cards -->
+                    <div class="sim-score-row" id="sim-results" style="display:none;">
+                        <div class="sim-score-card sim-before">
+                            <div class="sim-score-label">BEFORE</div>
+                            <div class="sim-score-tag">Healthcare Gap</div>
+                            <div class="sim-score-value" id="sim-before-score">—</div>
+                            <div class="sim-score-priority" id="sim-before-priority">—</div>
+                        </div>
+                        <div class="sim-arrow-col">
+                            <i class="fa-solid fa-arrow-right sim-arrow"></i>
+                            <div class="sim-improvement" id="sim-improvement-pct">—</div>
+                            <div class="sim-improvement-label">Improvement</div>
+                        </div>
+                        <div class="sim-score-card sim-after">
+                            <div class="sim-score-label">AFTER</div>
+                            <div class="sim-score-tag">Projected Gap</div>
+                            <div class="sim-score-value" id="sim-after-score">—</div>
+                            <div class="sim-score-priority" id="sim-after-priority">—</div>
+                        </div>
+                    </div>
+
+                    <!-- Before / After Map -->
+                    <div class="sim-maps-row" id="sim-maps" style="display:none;">
+                        <div class="card sim-map-card">
+                            <h4 class="sim-map-title"><span class="before-label">BEFORE</span> — Current State</h4>
+                            <div id="sim-map-before" class="sim-map-container"></div>
+                        </div>
+                        <div class="card sim-map-card">
+                            <h4 class="sim-map-title"><span class="after-label">AFTER</span> — Projected State</h4>
+                            <div id="sim-map-after" class="sim-map-container"></div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder when no simulation run yet -->
+                    <div class="sim-placeholder" id="sim-placeholder">
+                        <i class="fa-solid fa-flask-vial placeholder-icon"></i>
+                        <h3>No Simulation Yet</h3>
+                        <p>Select a Kecamatan, adjust the sliders, and click <strong>SIMULATE</strong> to see projected outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ============================================================ -->
+        <!-- PAGE: AI OPTIMIZER                                             -->
+        <!-- ============================================================ -->
+        <main class="page-content hidden" id="page-optimizer">
+            <div class="optimizer-grid">
+                <!-- Left: Intervention Options -->
+                <div class="optimizer-left">
+                    <div class="card optimizer-card">
+                        <h3 class="card-title"><i class="fa-solid fa-bullseye"></i> Intervention Optimizer</h3>
+                        <p class="card-subtitle">Select a district to see recommended intervention strategies.</p>
+
+                        <div class="control-group mt-16">
+                            <label for="opt-kecamatan">Select Kecamatan</label>
+                            <select id="opt-kecamatan" class="sim-select">
+                                <option value="">— Choose District —</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary btn-full mt-8" id="btn-analyze-kec">
+                            <i class="fa-solid fa-magnifying-glass"></i> Analyze District
+                        </button>
+
+                        <!-- 4 Intervention Option Cards -->
+                        <div class="intervention-options" id="intervention-options" style="display:none;">
+                            <h4 class="interventions-title">Recommended Interventions</h4>
+                            <div class="intervention-cards-grid">
+                                <div class="intervention-card" id="opt-card-a">
+                                    <div class="opt-badge">OPTION A</div>
+                                    <div class="opt-icon"><i class="fa-solid fa-hospital"></i></div>
+                                    <div class="opt-title">Build New Facility</div>
+                                    <div class="opt-detail" id="opt-a-detail">—</div>
+                                    <div class="opt-impact" id="opt-a-impact">—</div>
+                                </div>
+                                <div class="intervention-card" id="opt-card-b">
+                                    <div class="opt-badge">OPTION B</div>
+                                    <div class="opt-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                                    <div class="opt-title">Redistribute Workers</div>
+                                    <div class="opt-detail" id="opt-b-detail">—</div>
+                                    <div class="opt-impact" id="opt-b-impact">—</div>
+                                </div>
+                                <div class="intervention-card" id="opt-card-c">
+                                    <div class="opt-badge">OPTION C</div>
+                                    <div class="opt-icon"><i class="fa-solid fa-road"></i></div>
+                                    <div class="opt-title">Improve Accessibility</div>
+                                    <div class="opt-detail" id="opt-c-detail">—</div>
+                                    <div class="opt-impact" id="opt-c-impact">—</div>
+                                </div>
+                                <div class="intervention-card" id="opt-card-d">
+                                    <div class="opt-badge opt-badge-gold">OPTION D</div>
+                                    <div class="opt-icon"><i class="fa-solid fa-layer-group"></i></div>
+                                    <div class="opt-title">Combined Intervention</div>
+                                    <div class="opt-detail" id="opt-d-detail">—</div>
+                                    <div class="opt-impact" id="opt-d-impact">—</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resource Constraint Engine -->
+                    <div class="card optimizer-card mt-16">
+                        <h3 class="card-title"><i class="fa-solid fa-coins"></i> Resource Constraint Engine</h3>
+                        <p class="card-subtitle">Set available budget and workforce to find the optimal city-wide allocation.</p>
+
+                        <div class="resource-inputs">
+                            <div class="resource-input-item">
+                                <label>Budget (Rp Juta)</label>
+                                <input type="number" id="res-budget" value="5000" min="100" max="100000" class="resource-input">
+                            </div>
+                            <div class="resource-input-item">
+                                <label>Available Doctors</label>
+                                <input type="number" id="res-doctors" value="10" min="0" max="200" class="resource-input">
+                            </div>
+                            <div class="resource-input-item">
+                                <label>Available Nurses</label>
+                                <input type="number" id="res-nurses" value="20" min="0" max="500" class="resource-input">
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-full mt-16" id="btn-optimize">
+                            <i class="fa-solid fa-gears"></i> OPTIMIZE ALLOCATION
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: AI Recommendation Output -->
+                <div class="optimizer-right">
+                    <!-- Allocation Result Table -->
+                    <div class="card optimizer-result-card" id="allocation-result" style="display:none;">
+                        <h3 class="card-title"><i class="fa-solid fa-table-list"></i> Optimal Allocation Plan</h3>
+                        <p class="allocation-summary" id="allocation-summary">—</p>
+                        <div class="analytics-table-wrapper">
+                            <table class="full-ranking-table" id="allocation-table">
+                                <thead>
+                                    <tr>
+                                        <th>Priority</th>
+                                        <th>Kecamatan</th>
+                                        <th>Current Gap</th>
+                                        <th>Doctors</th>
+                                        <th>Nurses</th>
+                                        <th>Budget (Rp Juta)</th>
+                                        <th>Projected Gap</th>
+                                        <th>Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="allocation-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- AI Recommendation Box -->
+                    <div class="card ai-rec-card" id="ai-rec-box" style="display:none;">
+                        <div class="ai-rec-header">
+                            <i class="fa-solid fa-robot ai-rec-icon"></i>
+                            <h3>AI RECOMMENDATION</h3>
+                        </div>
+                        <div class="ai-rec-body">
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Priority Area</span>
+                                <span class="ai-rec-value" id="rec-area">—</span>
+                            </div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Primary Problem</span>
+                                <span class="ai-rec-value" id="rec-problem">—</span>
+                            </div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Recommended Action</span>
+                                <span class="ai-rec-value rec-highlight" id="rec-action">—</span>
+                            </div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Resources Required</span>
+                                <span class="ai-rec-value" id="rec-resources">—</span>
+                            </div>
+                            <div class="ai-rec-divider"></div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Projected Gap Reduction</span>
+                                <span class="ai-rec-value rec-improvement" id="rec-reduction">—</span>
+                            </div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Estimated Cost</span>
+                                <span class="ai-rec-value" id="rec-cost">—</span>
+                            </div>
+                            <div class="ai-rec-row">
+                                <span class="ai-rec-label">Confidence</span>
+                                <span class="ai-rec-value rec-confidence" id="rec-confidence">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder -->
+                    <div class="sim-placeholder" id="optimizer-placeholder">
+                        <i class="fa-solid fa-brain placeholder-icon"></i>
+                        <h3>AI Optimizer Ready</h3>
+                        <p>Select a district to analyze intervention options, or set resource constraints and click <strong>Optimize Allocation</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div><!-- end .app-container -->
+
+    <!-- Leaflet.js Script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Chart.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>

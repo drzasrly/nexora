@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4a00edd514393473c00a5ed5e44e868c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Wonokromo
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #27
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">41.8</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Wonokromo memiliki Healthcare Gap Score sebesar 41.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.66), 2. High Demand Score (0.56), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.66. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 5<br>
+                     🛣️ Road network segments: 0
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_4a00edd514393473c00a5ed5e44e868c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4a00edd514393473c00a5ed5e44e868c = L.map(
+                "map_4a00edd514393473c00a5ed5e44e868c",
+                {
+                    center: [-7.291577170235624, 112.7320364222299],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_62f1c7334c269b07a0cd6025557901de = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_62f1c7334c269b07a0cd6025557901de.addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c0ade0ae8d4759df91d35d50ea7364b2 = L.geoJson(null, {
+                onEachFeature: geo_json_c0ade0ae8d4759df91d35d50ea7364b2_onEachFeature,
+            
+                style: geo_json_c0ade0ae8d4759df91d35d50ea7364b2_styler,
+            ...{
+}
+        });
+
+        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_add (data) {
+            geo_json_c0ade0ae8d4759df91d35d50ea7364b2
+                .addData(data);
+        }
+            geo_json_c0ade0ae8d4759df91d35d50ea7364b2_add({"bbox": [112.7318964, -7.2917117, 112.7321764, -7.2914426], "features": [{"bbox": [112.7318964, -7.2917117, 112.7321764, -7.2914426], "geometry": {"coordinates": [[[112.7318964, -7.2916222], [112.7319793, -7.2917117], [112.7321764, -7.2915322], [112.7320936, -7.2914426], [112.7318964, -7.2916222]]], "type": "Polygon"}, "id": "29", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5599074669253064, "disease_issue": "Penyakit pada sistem pencernaan (19746 cases)", "disease_need_score": 0.3915121082304355, "explanation": "Kecamatan Wonokromo memiliki Healthcare Gap Score sebesar 41.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.66), 2. High Demand Score (0.56), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.66. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6573234185733988, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 41.79133082319709, "kecamatan": "WONOKROMO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.09741595164809247, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.13391320931204065, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c0ade0ae8d4759df91d35d50ea7364b2.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_c0ade0ae8d4759df91d35d50ea7364b2.addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var marker_3eb19819da36c750a73afff63de72cdc = L.marker(
+                [-7.291517504904925, 112.7320180023667],
+                {
+}
+            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var icon_f2395229ddc57256cb23e14eaf5e9a04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33e92c673d7adc0da10a6e1fb31e475d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_009186e13f9be03cb9d7603d3d4bf68c = $(`<div id="html_009186e13f9be03cb9d7603d3d4bf68c" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Katholik Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_33e92c673d7adc0da10a6e1fb31e475d.setContent(html_009186e13f9be03cb9d7603d3d4bf68c);
+            
+        
+
+        marker_3eb19819da36c750a73afff63de72cdc.bindPopup(popup_33e92c673d7adc0da10a6e1fb31e475d)
+        ;
+
+        
+    
+    
+                marker_3eb19819da36c750a73afff63de72cdc.setIcon(icon_f2395229ddc57256cb23e14eaf5e9a04);
+            
+    
+            var marker_77337c8aec22b9cf366864846cf3ade8 = L.marker(
+                [-7.29155663211284, 112.73200977214546],
+                {
+}
+            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var icon_18a6667d93df8dbb1bcaf2f3087d7871 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c7dff18e0a6dbd5fee9389bb7a82e8a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_01091e21e802e5be6c1a6aa122b04381 = $(`<div id="html_01091e21e802e5be6c1a6aa122b04381" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Lombok Dua Dua<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_0c7dff18e0a6dbd5fee9389bb7a82e8a.setContent(html_01091e21e802e5be6c1a6aa122b04381);
+            
+        
+
+        marker_77337c8aec22b9cf366864846cf3ade8.bindPopup(popup_0c7dff18e0a6dbd5fee9389bb7a82e8a)
+        ;
+
+        
+    
+    
+                marker_77337c8aec22b9cf366864846cf3ade8.setIcon(icon_18a6667d93df8dbb1bcaf2f3087d7871);
+            
+    
+            var marker_d32ab58be0b93ced3a892ef0c3fe3543 = L.marker(
+                [-7.291556861237603, 112.7320714184932],
+                {
+}
+            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var icon_ae769e0d41c6be5fa8c7d364b9bc70a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_718fe60c00f5157b1de0380e014fff1e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_91868381a486457051876549453d69ee = $(`<div id="html_91868381a486457051876549453d69ee" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gigi dan Mulut Nala Husada<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_718fe60c00f5157b1de0380e014fff1e.setContent(html_91868381a486457051876549453d69ee);
+            
+        
+
+        marker_d32ab58be0b93ced3a892ef0c3fe3543.bindPopup(popup_718fe60c00f5157b1de0380e014fff1e)
+        ;
+
+        
+    
+    
+                marker_d32ab58be0b93ced3a892ef0c3fe3543.setIcon(icon_ae769e0d41c6be5fa8c7d364b9bc70a3);
+            
+    
+            var marker_a6a404703a5a46d5c4dac330c1228e7e = L.marker(
+                [-7.291549173240386, 112.7320741359202],
+                {
+}
+            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var icon_5b349095a673b5de36565c0d939ddbfe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b670cd1fee5ebabd6deeb5220f29edc8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d686d0773e619c0694f0eee0dd916efb = $(`<div id="html_d686d0773e619c0694f0eee0dd916efb" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Soemitro Lanud Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_b670cd1fee5ebabd6deeb5220f29edc8.setContent(html_d686d0773e619c0694f0eee0dd916efb);
+            
+        
+
+        marker_a6a404703a5a46d5c4dac330c1228e7e.bindPopup(popup_b670cd1fee5ebabd6deeb5220f29edc8)
+        ;
+
+        
+    
+    
+                marker_a6a404703a5a46d5c4dac330c1228e7e.setIcon(icon_5b349095a673b5de36565c0d939ddbfe);
+            
+    
+            var marker_3b7655b81b4d12d61c9ab5fef878a837 = L.marker(
+                [-7.2915400427901425, 112.7320989915865],
+                {
+}
+            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+        
+    
+            var icon_f7d36b65730d2cd082f999729502c7d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05b0bd088e8ee28b46abdda8d6b40854 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5343a03c9b82feb85e3c2339075e3982 = $(`<div id="html_5343a03c9b82feb85e3c2339075e3982" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Tk. III Brawijaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_05b0bd088e8ee28b46abdda8d6b40854.setContent(html_5343a03c9b82feb85e3c2339075e3982);
+            
+        
+
+        marker_3b7655b81b4d12d61c9ab5fef878a837.bindPopup(popup_05b0bd088e8ee28b46abdda8d6b40854)
+        ;
+
+        
+    
+    
+                marker_3b7655b81b4d12d61c9ab5fef878a837.setIcon(icon_f7d36b65730d2cd082f999729502c7d5);
+            
+</script>
+</html>

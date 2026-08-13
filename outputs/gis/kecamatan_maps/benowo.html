@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f819f302e1b01daa21113999d5f6507c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Benowo
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #19
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">51.4</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Benowo memiliki Healthcare Gap Score sebesar 51.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.73), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_f819f302e1b01daa21113999d5f6507c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f819f302e1b01daa21113999d5f6507c = L.map(
+                "map_f819f302e1b01daa21113999d5f6507c",
+                {
+                    center: [-7.248784955469739, 112.63541420392231],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_21472f8aa399c45ba848985385de3a27 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_21472f8aa399c45ba848985385de3a27.addTo(map_f819f302e1b01daa21113999d5f6507c);
+        
+    
+        function geo_json_dadb4d48e160485fbef2d3cf7a740207_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_dadb4d48e160485fbef2d3cf7a740207_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_dadb4d48e160485fbef2d3cf7a740207 = L.geoJson(null, {
+                onEachFeature: geo_json_dadb4d48e160485fbef2d3cf7a740207_onEachFeature,
+            
+                style: geo_json_dadb4d48e160485fbef2d3cf7a740207_styler,
+            ...{
+}
+        });
+
+        function geo_json_dadb4d48e160485fbef2d3cf7a740207_add (data) {
+            geo_json_dadb4d48e160485fbef2d3cf7a740207
+                .addData(data);
+        }
+            geo_json_dadb4d48e160485fbef2d3cf7a740207_add({"bbox": [112.6351356, -7.2490526, 112.6356814, -7.2485251], "features": [{"bbox": [112.6351356, -7.2490526, 112.6356814, -7.2485251], "geometry": {"coordinates": [[[112.6351356, -7.2489821], [112.6356297, -7.2490526], [112.6356814, -7.248573], [112.6352039, -7.2485251], [112.6351356, -7.2489821]]], "type": "Polygon"}, "id": "1", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.19849637638781195, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15690 cases)", "disease_need_score": 0.3679134903898293, "explanation": "Kecamatan Benowo memiliki Healthcare Gap Score sebesar 51.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.73), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.8132185997506384, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 51.35474354261422, "kecamatan": "BENOWO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 19, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.08731158481162127, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.7259070149390171, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_dadb4d48e160485fbef2d3cf7a740207.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_dadb4d48e160485fbef2d3cf7a740207.addTo(map_f819f302e1b01daa21113999d5f6507c);
+        
+    
+            var marker_45c1b8fb68fbbbfe6880ea78e5a78e6e = L.marker(
+                [-7.2487936317845065, 112.6352388872406],
+                {
+}
+            ).addTo(map_f819f302e1b01daa21113999d5f6507c);
+        
+    
+            var icon_ba6b79a030df9db327c9969fed2bb1eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d69a633c3c692283b27c4fa6bb7dc03b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a3c701669cf7f79edb87f68a7c8ab9a5 = $(`<div id="html_a3c701669cf7f79edb87f68a7c8ab9a5" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah Bhakti Dharma Husada<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_d69a633c3c692283b27c4fa6bb7dc03b.setContent(html_a3c701669cf7f79edb87f68a7c8ab9a5);
+            
+        
+
+        marker_45c1b8fb68fbbbfe6880ea78e5a78e6e.bindPopup(popup_d69a633c3c692283b27c4fa6bb7dc03b)
+        ;
+
+        
+    
+    
+                marker_45c1b8fb68fbbbfe6880ea78e5a78e6e.setIcon(icon_ba6b79a030df9db327c9969fed2bb1eb);
+            
+    
+            var marker_764f7f579f329e82a719f8de3f2959c6 = L.marker(
+                [-7.248661729839947, 112.63531232593105],
+                {
+}
+            ).addTo(map_f819f302e1b01daa21113999d5f6507c);
+        
+    
+            var icon_bb5bf98a8e59354f44c39ae62a9c977b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_21a1c973a7997dce84f3cbf99fbe3400 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_66237f0cfcbb9ae24aba7f7421f34b71 = $(`<div id="html_66237f0cfcbb9ae24aba7f7421f34b71" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bunda<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_21a1c973a7997dce84f3cbf99fbe3400.setContent(html_66237f0cfcbb9ae24aba7f7421f34b71);
+            
+        
+
+        marker_764f7f579f329e82a719f8de3f2959c6.bindPopup(popup_21a1c973a7997dce84f3cbf99fbe3400)
+        ;
+
+        
+    
+    
+                marker_764f7f579f329e82a719f8de3f2959c6.setIcon(icon_bb5bf98a8e59354f44c39ae62a9c977b);
+            
+    
+            var feature_group_e523ae480b9fd9147eeadec5c7c946da = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_d28ad28f41e2b506cb91ed1fadb1561c = L.polyline(
+                [[-7.24878885, 112.6354085], [-7.248532298951449, 112.63492409027036]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_e523ae480b9fd9147eeadec5c7c946da);
+        
+    
+        var popup_fd15a91e97f9a2dba4a39d0ba10a9514 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5d2b4c81142b4e6f92a846f3767a5fcc = $(`<div id="html_5d2b4c81142b4e6f92a846f3767a5fcc" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Benowo-Bubutan</div>`)[0];
+                popup_fd15a91e97f9a2dba4a39d0ba10a9514.setContent(html_5d2b4c81142b4e6f92a846f3767a5fcc);
+            
+        
+
+        poly_line_d28ad28f41e2b506cb91ed1fadb1561c.bindPopup(popup_fd15a91e97f9a2dba4a39d0ba10a9514)
+        ;
+
+        
+    
+    
+            feature_group_e523ae480b9fd9147eeadec5c7c946da.addTo(map_f819f302e1b01daa21113999d5f6507c);
+        
+</script>
+</html>

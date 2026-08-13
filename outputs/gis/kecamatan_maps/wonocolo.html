@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4a3365fba930dd2844fa074e731308c3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Wonocolo
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #10
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">62.3</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Disease Burden</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 62.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.68), 3. High Demand Score (0.67). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 0
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_4a3365fba930dd2844fa074e731308c3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4a3365fba930dd2844fa074e731308c3 = L.map(
+                "map_4a3365fba930dd2844fa074e731308c3",
+                {
+                    center: [-7.32017102155588, 112.74123979048063],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_19dd06cf0d26b42edeb907f87e81354e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_19dd06cf0d26b42edeb907f87e81354e.addTo(map_4a3365fba930dd2844fa074e731308c3);
+        
+    
+        function geo_json_b940b2a404ad448351091debf875f03c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_b940b2a404ad448351091debf875f03c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b940b2a404ad448351091debf875f03c = L.geoJson(null, {
+                onEachFeature: geo_json_b940b2a404ad448351091debf875f03c_onEachFeature,
+            
+                style: geo_json_b940b2a404ad448351091debf875f03c_styler,
+            ...{
+}
+        });
+
+        function geo_json_b940b2a404ad448351091debf875f03c_add (data) {
+            geo_json_b940b2a404ad448351091debf875f03c
+                .addData(data);
+        }
+            geo_json_b940b2a404ad448351091debf875f03c_add({"bbox": [112.740952, -7.3204764, 112.7415059, -7.3198625], "features": [{"bbox": [112.740952, -7.3204764, 112.7415059, -7.3198625], "geometry": {"coordinates": [[[112.740952, -7.3203966], [112.7414486, -7.3204764], [112.7414774, -7.3203254], [112.7415059, -7.3199303], [112.7410359, -7.3198625], [112.7409936, -7.3202057], [112.7409728, -7.3202017], [112.740952, -7.3203966]]], "type": "Polygon"}, "id": "28", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6703267673588551, "disease_issue": "Penyakit pada sistem pernafasan (18158 cases)", "disease_need_score": 0.703490971254408, "explanation": "Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 62.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.68), 3. High Demand Score (0.67). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.385923525479702, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 62.31903500571049, "kecamatan": "WONOCOLO", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Sangat Tinggi", "priority_rank": 10, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.022792902912319946, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.680698068342088, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_b940b2a404ad448351091debf875f03c.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_b940b2a404ad448351091debf875f03c.addTo(map_4a3365fba930dd2844fa074e731308c3);
+        
+    
+            var marker_76a3165f8dc145153acc884007f7ea69 = L.marker(
+                [-7.320292399804641, 112.74132224810411],
+                {
+}
+            ).addTo(map_4a3365fba930dd2844fa074e731308c3);
+        
+    
+            var icon_a2cfa6be26d8d5e669db7bbff0ca28e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00c6aad8fb95d97bac3cb5fb47cdbf74 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_880354b305df132c7209f8f0f259d513 = $(`<div id="html_880354b305df132c7209f8f0f259d513" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Islam Surabaya Jemursari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_00c6aad8fb95d97bac3cb5fb47cdbf74.setContent(html_880354b305df132c7209f8f0f259d513);
+            
+        
+
+        marker_76a3165f8dc145153acc884007f7ea69.bindPopup(popup_00c6aad8fb95d97bac3cb5fb47cdbf74)
+        ;
+
+        
+    
+    
+                marker_76a3165f8dc145153acc884007f7ea69.setIcon(icon_a2cfa6be26d8d5e669db7bbff0ca28e7);
+            
+    
+            var marker_739376022ee00ed083c031b2552ed6cb = L.marker(
+                [-7.320100462405127, 112.74113276315514],
+                {
+}
+            ).addTo(map_4a3365fba930dd2844fa074e731308c3);
+        
+    
+            var icon_76d5c251f36e27f67b3b216dcb429ef6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67348291e892572654211544db1ba2c0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4e5559e44418ab18ff03b732cf3b4a65 = $(`<div id="html_4e5559e44418ab18ff03b732cf3b4a65" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Perdana Medica<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_67348291e892572654211544db1ba2c0.setContent(html_4e5559e44418ab18ff03b732cf3b4a65);
+            
+        
+
+        marker_739376022ee00ed083c031b2552ed6cb.bindPopup(popup_67348291e892572654211544db1ba2c0)
+        ;
+
+        
+    
+    
+                marker_739376022ee00ed083c031b2552ed6cb.setIcon(icon_76d5c251f36e27f67b3b216dcb429ef6);
+            
+</script>
+</html>

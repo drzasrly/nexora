@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dcbe78e0fd6af21f536f42914db758f0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Simokerto
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #17
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">52.3</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 52.3 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.59), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Faskes Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_dcbe78e0fd6af21f536f42914db758f0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dcbe78e0fd6af21f536f42914db758f0 = L.map(
+                "map_dcbe78e0fd6af21f536f42914db758f0",
+                {
+                    center: [-7.2437504042595675, 112.75792231605494],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7b30d0bf1bf3b94edf52beaf5166092d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7b30d0bf1bf3b94edf52beaf5166092d.addTo(map_dcbe78e0fd6af21f536f42914db758f0);
+        
+    
+        function geo_json_756232d79c6783be021fd4d91db4a34a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_756232d79c6783be021fd4d91db4a34a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_756232d79c6783be021fd4d91db4a34a = L.geoJson(null, {
+                onEachFeature: geo_json_756232d79c6783be021fd4d91db4a34a_onEachFeature,
+            
+                style: geo_json_756232d79c6783be021fd4d91db4a34a_styler,
+            ...{
+}
+        });
+
+        function geo_json_756232d79c6783be021fd4d91db4a34a_add (data) {
+            geo_json_756232d79c6783be021fd4d91db4a34a
+                .addData(data);
+        }
+            geo_json_756232d79c6783be021fd4d91db4a34a_add({"bbox": [112.7576674, -7.2439339, 112.7581355, -7.243576], "features": [{"bbox": [112.7576674, -7.2439339, 112.7581355, -7.243576], "geometry": {"coordinates": [[[112.7576674, -7.2438288], [112.7577962, -7.2438647], [112.7580684, -7.2439339], [112.7581355, -7.2436346], [112.7578176, -7.243576], [112.7576674, -7.2438288]]], "type": "Polygon"}, "id": "21", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.38865391111706193, "disease_issue": "Penyakit pada sistem pernafasan (15444 cases)", "disease_need_score": 0.4330704646156655, "explanation": "Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 52.3 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.59), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Faskes Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7111041986887711, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 52.2651502154146, "kecamatan": "SIMOKERTO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 17, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.12036954482830431, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.5907346538604668, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_756232d79c6783be021fd4d91db4a34a.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_756232d79c6783be021fd4d91db4a34a.addTo(map_dcbe78e0fd6af21f536f42914db758f0);
+        
+    
+            var marker_2d28e5dae1e0c056fa851a37dc15553e = L.marker(
+                [-7.243802785055385, 112.75788659235765],
+                {
+}
+            ).addTo(map_dcbe78e0fd6af21f536f42914db758f0);
+        
+    
+            var icon_643b61dd35c940593aa9091284a32995 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9adbc4f28b3d2a6d5dd09d0d2e78cf5d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7b9085f812a2e01026b1e8c36533d6a4 = $(`<div id="html_7b9085f812a2e01026b1e8c36533d6a4" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah dr. Mohamad Soewandhie<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_9adbc4f28b3d2a6d5dd09d0d2e78cf5d.setContent(html_7b9085f812a2e01026b1e8c36533d6a4);
+            
+        
+
+        marker_2d28e5dae1e0c056fa851a37dc15553e.bindPopup(popup_9adbc4f28b3d2a6d5dd09d0d2e78cf5d)
+        ;
+
+        
+    
+    
+                marker_2d28e5dae1e0c056fa851a37dc15553e.setIcon(icon_643b61dd35c940593aa9091284a32995);
+            
+    
+            var marker_1fcf3665ad1efaa5a8dc160873016c65 = L.marker(
+                [-7.243781201071284, 112.75803999735854],
+                {
+}
+            ).addTo(map_dcbe78e0fd6af21f536f42914db758f0);
+        
+    
+            var icon_01f6b41be855746095f3d831e5a28f42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57debe9cc2ab407e1d5a370155eb139a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fac036e6644eff718cdddc264ad85263 = $(`<div id="html_fac036e6644eff718cdddc264ad85263" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Adi Husada Kapasari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_57debe9cc2ab407e1d5a370155eb139a.setContent(html_fac036e6644eff718cdddc264ad85263);
+            
+        
+
+        marker_1fcf3665ad1efaa5a8dc160873016c65.bindPopup(popup_57debe9cc2ab407e1d5a370155eb139a)
+        ;
+
+        
+    
+    
+                marker_1fcf3665ad1efaa5a8dc160873016c65.setIcon(icon_01f6b41be855746095f3d831e5a28f42);
+            
+    
+            var feature_group_c6d189f4ef190e19bfe95d74f49bf251 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_c88d533ab8b3b56c0d28b831d8d2805b = L.polyline(
+                [[-7.24375495, 112.75790144999999], [-7.243614841331616, 112.75811632665885]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_c6d189f4ef190e19bfe95d74f49bf251);
+        
+    
+        var popup_ebec0605f731dc682075fc4c724e7308 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a9fdc9f568271e812c76d31658dea9fc = $(`<div id="html_a9fdc9f568271e812c76d31658dea9fc" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Simokerto-Suko Manunggal</div>`)[0];
+                popup_ebec0605f731dc682075fc4c724e7308.setContent(html_a9fdc9f568271e812c76d31658dea9fc);
+            
+        
+
+        poly_line_c88d533ab8b3b56c0d28b831d8d2805b.bindPopup(popup_ebec0605f731dc682075fc4c724e7308)
+        ;
+
+        
+    
+    
+            feature_group_c6d189f4ef190e19bfe95d74f49bf251.addTo(map_dcbe78e0fd6af21f536f42914db758f0);
+        
+</script>
+</html>

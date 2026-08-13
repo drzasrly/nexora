@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7ea6ca806c6857724fac9f389e505703 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Gunung Anyar
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #15
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">52.8</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Gunung Anyar memiliki Healthcare Gap Score sebesar 52.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.97), 2. Facility Capacity Gap (0.70), 3. Disease Burden Need (0.30). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.97. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 1<br>
+                     🔴 Hospitals: 0<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_7ea6ca806c6857724fac9f389e505703" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7ea6ca806c6857724fac9f389e505703 = L.map(
+                "map_7ea6ca806c6857724fac9f389e505703",
+                {
+                    center: [-7.337692506607383, 112.79594585584736],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f3a1ffc35ae62e07761ee238ee640d9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f3a1ffc35ae62e07761ee238ee640d9.addTo(map_7ea6ca806c6857724fac9f389e505703);
+        
+    
+        function geo_json_82d63f8b23bb10ccab332da6f1e8caef_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_82d63f8b23bb10ccab332da6f1e8caef_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_82d63f8b23bb10ccab332da6f1e8caef = L.geoJson(null, {
+                onEachFeature: geo_json_82d63f8b23bb10ccab332da6f1e8caef_onEachFeature,
+            
+                style: geo_json_82d63f8b23bb10ccab332da6f1e8caef_styler,
+            ...{
+}
+        });
+
+        function geo_json_82d63f8b23bb10ccab332da6f1e8caef_add (data) {
+            geo_json_82d63f8b23bb10ccab332da6f1e8caef
+                .addData(data);
+        }
+            geo_json_82d63f8b23bb10ccab332da6f1e8caef_add({"bbox": [112.75472, -7.3465765, 112.8303223, -7.3303207], "features": [{"bbox": [112.75472, -7.3465765, 112.8303223, -7.3303207], "geometry": {"coordinates": [[[112.75472, -7.33632], [112.75482, -7.3366], [112.7550259, -7.3367777], [112.7552256, -7.3367082], [112.7554092, -7.3367432], [112.7559432, -7.3368772], [112.7568868, -7.3370719], [112.7601852, -7.3377712], [112.7606811, -7.3378342], [112.7618452, -7.3382268], [112.7624892, -7.3384669], [112.7632787, -7.3385687], [112.7645371, -7.3384592], [112.7648391, -7.3383868], [112.7649706, -7.3382749], [112.7652246, -7.3383289], [112.7656125, -7.3385145], [112.765749, -7.3385059], [112.7665046, -7.3383017], [112.7665328, -7.3386081], [112.7666625, -7.3389276], [112.7667236, -7.3392222], [112.7668304, -7.341029], [112.7668914, -7.3414548], [112.7669525, -7.3415406], [112.7670745, -7.3415926], [112.7680105, -7.341879], [112.7679347, -7.3415943], [112.7682584, -7.3416542], [112.7684703, -7.3415124], [112.7685704, -7.3413561], [112.7686463, -7.3408463], [112.7686997, -7.3407136], [112.7687516, -7.3405594], [112.7690512, -7.3405958], [112.7691552, -7.3399976], [112.7691773, -7.3399712], [112.7694572, -7.339637], [112.7695531, -7.3395831], [112.7697903, -7.3395591], [112.7699383, -7.339454], [112.7700638, -7.3392828], [112.7702655, -7.3392785], [112.7706142, -7.3394381], [112.7708224, -7.3394782], [112.7709276, -7.3393618], [112.7710791, -7.3391857], [112.7711595, -7.3391484], [112.7713044, -7.3391378], [112.771417, -7.3391963], [112.7718086, -7.3396166], [112.7720688, -7.3396725], [112.7722405, -7.3396033], [112.7724631, -7.3395022], [112.7726589, -7.3395049], [112.7729003, -7.3396299], [112.7732141, -7.3397177], [112.7736279, -7.3397703], [112.7736808, -7.3397869], [112.7740724, -7.3398773], [112.7743675, -7.3398933], [112.7749951, -7.3400449], [112.7759446, -7.3401513], [112.7766527, -7.3400955], [112.7770608, -7.340127], [112.7774439, -7.3402652], [112.7775087, -7.3402898], [112.7775198, -7.3403292], [112.7773762, -7.3416604], [112.7773774, -7.3418948], [112.7774486, -7.3420922], [112.7776555, -7.3422058], [112.779141, -7.3425133], [112.7793858, -7.3426152], [112.7794601, -7.3427554], [112.7794011, -7.3432129], [112.7793555, -7.3439046], [112.779365, -7.3444706], [112.7793958, -7.3446228], [112.7795513, -7.3447571], [112.7798232, -7.344817], [112.7827614, -7.3454117], [112.7837129, -7.3455605], [112.7844083, -7.3456006], [112.7847894, -7.345521], [112.7852401, -7.3451484], [112.7854307, -7.3450964], [112.7858331, -7.3452028], [112.7860762, -7.3451837], [112.7863051, -7.344982], [112.7864453, -7.3447223], [112.7866286, -7.3445891], [112.7883714, -7.344134], [112.7887719, -7.3440066], [112.7890014, -7.3439673], [112.789566, -7.3440931], [112.7910613, -7.3447288], [112.7912826, -7.3448671], [112.7915033, -7.3450937], [112.7916965, -7.3453504], [112.7925381, -7.3459876], [112.7930315, -7.3462205], [112.7934921, -7.3464496], [112.7946839, -7.3464425], [112.7955832, -7.3465765], [112.795834, -7.346533], [112.7959718, -7.3464637], [112.796055, -7.3460221], [112.7961883, -7.3458341], [112.796524, -7.3457277], [112.7969283, -7.3453801], [112.7973316, -7.3452661], [112.7977501, -7.3451935], [112.7981593, -7.3450708], [112.7984851, -7.3449329], [112.7986831, -7.3449062], [112.7989491, -7.3449274], [112.7991485, -7.345074], [112.7994376, -7.3454916], [112.7995984, -7.3455834], [112.7998826, -7.345551], [112.8004531, -7.3453062], [112.8007998, -7.3452201], [112.8011165, -7.3452445], [112.8014144, -7.3453196], [112.80222, -7.3454741], [112.8029708, -7.3455108], [112.8034591, -7.3455103], [112.8044346, -7.3457175], [112.8048708, -7.3458243], [112.8058527, -7.3460887], [112.8061583, -7.3461113], [112.8066281, -7.3459084], [112.8067691, -7.3459062], [112.8070469, -7.3458813], [112.8075613, -7.3458352], [112.808372, -7.3458074], [112.8091254, -7.345917], [112.8107179, -7.3462228], [112.8120687, -7.346391], [112.812223, -7.3464072], [112.8125715, -7.3463995], [112.8131073, -7.3462725], [112.8136663, -7.3461272], [112.8142191, -7.3458693], [112.8147811, -7.3454049], [112.8156204, -7.3448933], [112.8164748, -7.3445752], [112.8172912, -7.3440988], [112.8182234, -7.3437303], [112.8190045, -7.3435236], [112.8199386, -7.3433822], [112.8211898, -7.3432849], [112.8232345, -7.3434642], [112.824829, -7.3434728], [112.8252868, -7.3434132], [112.8260366, -7.3431957], [112.8260342, -7.3431508], [112.8260507, -7.3431056], [112.8260889, -7.3430903], [112.8261311, -7.343085], [112.8264979, -7.3430916], [112.826626, -7.3430504], [112.8268325, -7.342944], [112.8269988, -7.3428456], [112.827149, -7.3426753], [112.8271893, -7.3425742], [112.8272617, -7.3422949], [112.8277499, -7.3411218], [112.8282327, -7.3405046], [112.8287638, -7.3386582], [112.8288066, -7.3385094], [112.8290159, -7.3377592], [112.8291715, -7.337291], [112.8294664, -7.3368387], [112.8293698, -7.3364823], [112.8293511, -7.3361391], [112.8296113, -7.3358039], [112.8300619, -7.3352958], [112.8303223, -7.3350146], [112.82672, -7.33253], [112.8265, -7.33222], [112.8259736, -7.3307853], [112.8255346, -7.3307536], [112.8249, -7.33083], [112.8242323, -7.33092], [112.82355, -7.33092], [112.82228, -7.33034], [112.82213, -7.33034], [112.82167, -7.3305], [112.82019, -7.3305], [112.81962, -7.33056], [112.81842, -7.33079], [112.81749, -7.33057], [112.81631, -7.33063], [112.81527, -7.33061], [112.81489, -7.33053], [112.8140083, -7.3306447], [112.81377, -7.33068], [112.81344, -7.33074], [112.81244, -7.33087], [112.81148, -7.33093], [112.810915, -7.3310236], [112.8101129, -7.3310176], [112.80992, -7.33103], [112.80978, -7.33104], [112.8091437, -7.3310633], [112.8088907, -7.3310999], [112.8085871, -7.3311179], [112.80772, -7.33123], [112.8069932, -7.3313549], [112.8066785, -7.3314148], [112.8057446, -7.3315804], [112.8054495, -7.331683], [112.8049419, -7.331891], [112.8045, -7.332], [112.80415, -7.33207], [112.8034633, -7.3322095], [112.8031788, -7.3322704], [112.8025836, -7.3323605], [112.80161, -7.33247], [112.8010678, -7.3325417], [112.8002499, -7.3326847], [112.7997242, -7.3327858], [112.7967964, -7.3331932], [112.7960552, -7.3332877], [112.7954232, -7.3333838], [112.7947305, -7.3334152], [112.79419, -7.3333319], [112.7936199, -7.33326], [112.7929792, -7.3331666], [112.7922222, -7.3331138], [112.7918713, -7.3330904], [112.7916135, -7.3330019], [112.79131, -7.33295], [112.79054, -7.33278], [112.7904, -7.33275], [112.78898, -7.33241], [112.7879185, -7.3320798], [112.7875397, -7.3319615], [112.785919, -7.3318789], [112.7852418, -7.3318688], [112.78301, -7.33182], [112.7818659, -7.3317232], [112.7811445, -7.331706], [112.7807977, -7.3316828], [112.7788219, -7.3316047], [112.7787696, -7.3316054], [112.7773557, -7.3315226], [112.77594, -7.33149], [112.7753926, -7.33148], [112.7749473, -7.3314434], [112.7735922, -7.3313696], [112.7722836, -7.3313281], [112.771946, -7.3312988], [112.7714652, -7.3312977], [112.7706847, -7.3312179], [112.7705173, -7.3312386], [112.76965, -7.33132], [112.7687781, -7.3312846], [112.76842, -7.33127], [112.7683041, -7.3313846], [112.7680299, -7.3317539], [112.7678899, -7.3318625], [112.7674659, -7.3319005], [112.7670778, -7.3320257], [112.7669244, -7.3320493], [112.7666177, -7.3319907], [112.7662424, -7.3318812], [112.7658874, -7.3316921], [112.7648475, -7.3312566], [112.7643996, -7.3311822], [112.76418, -7.33112], [112.7638309, -7.3309931], [112.7635627, -7.3309771], [112.7633427, -7.3309904], [112.76312, -7.33079], [112.76168, -7.33072], [112.75928, -7.33046], [112.7575275, -7.3303207], [112.75707, -7.33117], [112.7555926, -7.33442], [112.75474, -7.3362], [112.75472, -7.33632]]], "type": "Polygon"}, "id": "8", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.12027547887004464, "disease_issue": "Penyakit pada sistem pernafasan (7543 cases)", "disease_need_score": 0.2999357301490571, "explanation": "Kecamatan Gunung Anyar memiliki Healthcare Gap Score sebesar 52.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.97), 2. Facility Capacity Gap (0.70), 3. Disease Burden Need (0.30). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.97. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6990080242381551, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 52.762495604462224, "kecamatan": "GUNUNG ANYAR", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 15, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2735038474490661, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9725118716872212, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_82d63f8b23bb10ccab332da6f1e8caef.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_82d63f8b23bb10ccab332da6f1e8caef.addTo(map_7ea6ca806c6857724fac9f389e505703);
+        
+    
+            var feature_group_ff5770f43a0848a5f87ba2b646fb29fa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_7eb89a911ef6f2089b7b1de65b8fe328 = L.marker(
+                [-7.3408615, 112.7839286],
+                {
+}
+            ).addTo(feature_group_ff5770f43a0848a5f87ba2b646fb29fa);
+        
+    
+            var icon_22bb7da1dcd81118e98ef4d9f8ab7f9b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f0972b558780ea71d6f475e2aebbcae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b02791659ed29db7a2235edb3a681bb4 = $(`<div id="html_b02791659ed29db7a2235edb3a681bb4" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Gunung Anyar<br><b>ID:</b> PKM011</div>`)[0];
+                popup_3f0972b558780ea71d6f475e2aebbcae.setContent(html_b02791659ed29db7a2235edb3a681bb4);
+            
+        
+
+        marker_7eb89a911ef6f2089b7b1de65b8fe328.bindPopup(popup_3f0972b558780ea71d6f475e2aebbcae)
+        ;
+
+        
+    
+    
+                marker_7eb89a911ef6f2089b7b1de65b8fe328.setIcon(icon_22bb7da1dcd81118e98ef4d9f8ab7f9b);
+            
+    
+            feature_group_ff5770f43a0848a5f87ba2b646fb29fa.addTo(map_7ea6ca806c6857724fac9f389e505703);
+        
+    
+            var feature_group_08185d6f62ae2c9995e1ed057364e34d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_a2931d0795a9a05ac0cd1a171ae9d55b = L.polyline(
+                [[-7.3384485999999995, 112.79252115], [-7.337825799150903, 112.79810377728839]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_08185d6f62ae2c9995e1ed057364e34d);
+        
+    
+        var popup_9d963ec7ec36c74db02316f174e210a9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_685ec94e84f2ca2c0665fed52763cec6 = $(`<div id="html_685ec94e84f2ca2c0665fed52763cec6" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Gunung Anyar-Jambangan</div>`)[0];
+                popup_9d963ec7ec36c74db02316f174e210a9.setContent(html_685ec94e84f2ca2c0665fed52763cec6);
+            
+        
+
+        poly_line_a2931d0795a9a05ac0cd1a171ae9d55b.bindPopup(popup_9d963ec7ec36c74db02316f174e210a9)
+        ;
+
+        
+    
+    
+            feature_group_08185d6f62ae2c9995e1ed057364e34d.addTo(map_7ea6ca806c6857724fac9f389e505703);
+        
+</script>
+</html>

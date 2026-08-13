@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_55ad7279f9edae2caeabe8e85d1319f6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Dukuh Pakis
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #28
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">40.0</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Dukuh Pakis memiliki Healthcare Gap Score sebesar 40.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.70), 2. Facility Capacity Gap (0.49), 3. High Demand Score (0.24). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 0<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_55ad7279f9edae2caeabe8e85d1319f6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_55ad7279f9edae2caeabe8e85d1319f6 = L.map(
+                "map_55ad7279f9edae2caeabe8e85d1319f6",
+                {
+                    center: [-7.282088901913944, 112.7081323874733],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a4accdae9ac791b376501c028ae734b2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a4accdae9ac791b376501c028ae734b2.addTo(map_55ad7279f9edae2caeabe8e85d1319f6);
+        
+    
+        function geo_json_96577b0655b5faa204c94de005094cb2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_96577b0655b5faa204c94de005094cb2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_96577b0655b5faa204c94de005094cb2 = L.geoJson(null, {
+                onEachFeature: geo_json_96577b0655b5faa204c94de005094cb2_onEachFeature,
+            
+                style: geo_json_96577b0655b5faa204c94de005094cb2_styler,
+            ...{
+}
+        });
+
+        function geo_json_96577b0655b5faa204c94de005094cb2_add (data) {
+            geo_json_96577b0655b5faa204c94de005094cb2
+                .addData(data);
+        }
+            geo_json_96577b0655b5faa204c94de005094cb2_add({"bbox": [112.7080167, -7.2822493, 112.7082742, -7.2819505], "features": [{"bbox": [112.7080167, -7.2822493, 112.7082742, -7.2819505], "geometry": {"coordinates": [[[112.7080167, -7.2822152], [112.7081404, -7.2822493], [112.7081949, -7.282055], [112.7082454, -7.2820692], [112.7082742, -7.2819691], [112.7082085, -7.2819505], [112.7081979, -7.2819872], [112.7080891, -7.2819571], [112.7080167, -7.2822152]]], "type": "Polygon"}, "id": "4", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.2448495662967851, "disease_issue": "Penyakit pada sistem pencernaan (6492 cases)", "disease_need_score": 0.09852829207749217, "explanation": "Kecamatan Dukuh Pakis memiliki Healthcare Gap Score sebesar 40.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.70), 2. Facility Capacity Gap (0.49), 3. High Demand Score (0.24). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.48826143395997645, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 40.00357255422035, "kecamatan": "DUKUH PAKIS", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 28, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.20914826752560445, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.6974097014855809, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_96577b0655b5faa204c94de005094cb2.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_96577b0655b5faa204c94de005094cb2.addTo(map_55ad7279f9edae2caeabe8e85d1319f6);
+        
+    
+            var feature_group_df55db98fd2d278535fe746183b20ed5 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_e86dffcda6298de3806784b0d9f86453 = L.polyline(
+                [[-7.2820999, 112.70814545], [-7.282811808793246, 112.70861371801988]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_df55db98fd2d278535fe746183b20ed5);
+        
+    
+        var popup_0528936a2388ef67160354e3d8d6a06d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_02295f98b5b00e94e641f5f5507ccf87 = $(`<div id="html_02295f98b5b00e94e641f5f5507ccf87" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Dukuh Pakis-Gayungan</div>`)[0];
+                popup_0528936a2388ef67160354e3d8d6a06d.setContent(html_02295f98b5b00e94e641f5f5507ccf87);
+            
+        
+
+        poly_line_e86dffcda6298de3806784b0d9f86453.bindPopup(popup_0528936a2388ef67160354e3d8d6a06d)
+        ;
+
+        
+    
+    
+            feature_group_df55db98fd2d278535fe746183b20ed5.addTo(map_55ad7279f9edae2caeabe8e85d1319f6);
+        
+</script>
+</html>

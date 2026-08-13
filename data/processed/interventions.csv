@@ -1,0 +1,6 @@
+intervention_id,intervention_name,target_component,unit,cost_per_unit,max_units,impact_per_unit
+I01,Redistribute Healthcare Workers,workforce,person,50000000,20,0.015
+I02,Add Healthcare Workers,workforce,person,150000000,30,0.02
+I03,Add Facility Capacity,facility,bed,250000000,15,0.04
+I04,Improve Accessibility,accessibility,road_km,500000000,5,0.05
+I05,Combined Intervention,combined,package,750000000,4,0.08

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a025da99ede6ce9bf5cd14b167708ec7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Asemrowo
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #4
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">70.2</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Asemrowo memiliki Healthcare Gap Score sebesar 70.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.81), 3. Disease Burden Need (0.68). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 0<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_a025da99ede6ce9bf5cd14b167708ec7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a025da99ede6ce9bf5cd14b167708ec7 = L.map(
+                "map_a025da99ede6ce9bf5cd14b167708ec7",
+                {
+                    center: [-7.252032428661655, 112.7152580491232],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_90c04c2a159a2c2de4d11fec7f1acead = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_90c04c2a159a2c2de4d11fec7f1acead.addTo(map_a025da99ede6ce9bf5cd14b167708ec7);
+        
+    
+        function geo_json_f164b617425090a98bc9c8a1c79f55ce_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_f164b617425090a98bc9c8a1c79f55ce_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f164b617425090a98bc9c8a1c79f55ce = L.geoJson(null, {
+                onEachFeature: geo_json_f164b617425090a98bc9c8a1c79f55ce_onEachFeature,
+            
+                style: geo_json_f164b617425090a98bc9c8a1c79f55ce_styler,
+            ...{
+}
+        });
+
+        function geo_json_f164b617425090a98bc9c8a1c79f55ce_add (data) {
+            geo_json_f164b617425090a98bc9c8a1c79f55ce
+                .addData(data);
+        }
+            geo_json_f164b617425090a98bc9c8a1c79f55ce_add({"bbox": [112.7151323, -7.2521091, 112.7153838, -7.2519558], "features": [{"bbox": [112.7151323, -7.2521091, 112.7153838, -7.2519558], "geometry": {"coordinates": [[[112.7151323, -7.2520505], [112.7153589, -7.2521091], [112.7153838, -7.2520143], [112.7151571, -7.2519558], [112.7151323, -7.2520505]]], "type": "Polygon"}, "id": "0", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.3616939818123988, "disease_issue": "Penyakit pada sistem pernafasan (10733 cases)", "disease_need_score": 0.6827682422162238, "explanation": "Kecamatan Asemrowo memiliki Healthcare Gap Score sebesar 70.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.81), 3. Disease Burden Need (0.68). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.811640693516832, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 70.15513989743894, "kecamatan": "ASEMROWO", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 4, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16889736409669664, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9805380576135286, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_f164b617425090a98bc9c8a1c79f55ce.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_f164b617425090a98bc9c8a1c79f55ce.addTo(map_a025da99ede6ce9bf5cd14b167708ec7);
+        
+    
+            var feature_group_291b54f3b9dd69b4f627ffab81ea9f9c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_ccaa29da43b014dac131a681b2e845db = L.polyline(
+                [[-7.252032450000001, 112.71525804999999], [-7.252445538814555, 112.71613354113384]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_291b54f3b9dd69b4f627ffab81ea9f9c);
+        
+    
+        var popup_2f2ebabed63ba8a2b1e092f9c33c96f7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_285e0f7165a8d37204c96252df566666 = $(`<div id="html_285e0f7165a8d37204c96252df566666" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Asemrowo-Benowo</div>`)[0];
+                popup_2f2ebabed63ba8a2b1e092f9c33c96f7.setContent(html_285e0f7165a8d37204c96252df566666);
+            
+        
+
+        poly_line_ccaa29da43b014dac131a681b2e845db.bindPopup(popup_2f2ebabed63ba8a2b1e092f9c33c96f7)
+        ;
+
+        
+    
+    
+            feature_group_291b54f3b9dd69b4f627ffab81ea9f9c.addTo(map_a025da99ede6ce9bf5cd14b167708ec7);
+        
+</script>
+</html>

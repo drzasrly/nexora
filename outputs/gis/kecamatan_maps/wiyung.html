@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce1f0b97cbca82338d5d527e8eb1cfe8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Wiyung
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #20
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">50.9</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Wiyung memiliki Healthcare Gap Score sebesar 50.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.57), 2. Disease Burden Need (0.52), 3. High Demand Score (0.49). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.57. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_ce1f0b97cbca82338d5d527e8eb1cfe8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ce1f0b97cbca82338d5d527e8eb1cfe8 = L.map(
+                "map_ce1f0b97cbca82338d5d527e8eb1cfe8",
+                {
+                    center: [-7.314306561060723, 112.69514762408096],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0e4664792040ef2a6721a0be2c831238 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0e4664792040ef2a6721a0be2c831238.addTo(map_ce1f0b97cbca82338d5d527e8eb1cfe8);
+        
+    
+        function geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7e9ad0a02ff6607cdbdc97acb70404d0 = L.geoJson(null, {
+                onEachFeature: geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_onEachFeature,
+            
+                style: geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_styler,
+            ...{
+}
+        });
+
+        function geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_add (data) {
+            geo_json_7e9ad0a02ff6607cdbdc97acb70404d0
+                .addData(data);
+        }
+            geo_json_7e9ad0a02ff6607cdbdc97acb70404d0_add({"bbox": [112.6949258, -7.3145935, 112.6953694, -7.3140196], "features": [{"bbox": [112.6949258, -7.3145935, 112.6953694, -7.3140196], "geometry": {"coordinates": [[[112.6949258, -7.3145717], [112.69534, -7.3145935], [112.6953694, -7.3140414], [112.6949553, -7.3140196], [112.6949258, -7.3145717]]], "type": "Polygon"}, "id": "27", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.4876610966349888, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15180 cases)", "disease_need_score": 0.5156932267910367, "explanation": "Kecamatan Wiyung memiliki Healthcare Gap Score sebesar 50.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.57), 2. Disease Burden Need (0.52), 3. High Demand Score (0.49). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.57. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.5661582820329901, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.860254823063066, "kecamatan": "WIYUNG", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 20, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.05046505524195344, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.48644639158442865, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7e9ad0a02ff6607cdbdc97acb70404d0.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_7e9ad0a02ff6607cdbdc97acb70404d0.addTo(map_ce1f0b97cbca82338d5d527e8eb1cfe8);
+        
+    
+            var marker_8911325cfa7cd05a14e075c2c0d016fe = L.marker(
+                [-7.314144118948893, 112.69507295866444],
+                {
+}
+            ).addTo(map_ce1f0b97cbca82338d5d527e8eb1cfe8);
+        
+    
+            var icon_dfdc28454966c8afaa2951ac5195179a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41e02ec833ccd0d689c45fbcd3d64ec0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3383033d966365ef98babdb792c95b3f = $(`<div id="html_3383033d966365ef98babdb792c95b3f" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS National Hospital<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_41e02ec833ccd0d689c45fbcd3d64ec0.setContent(html_3383033d966365ef98babdb792c95b3f);
+            
+        
+
+        marker_8911325cfa7cd05a14e075c2c0d016fe.bindPopup(popup_41e02ec833ccd0d689c45fbcd3d64ec0)
+        ;
+
+        
+    
+    
+                marker_8911325cfa7cd05a14e075c2c0d016fe.setIcon(icon_dfdc28454966c8afaa2951ac5195179a);
+            
+    
+            var marker_300220315b442214cdc9c7b4beb9406c = L.marker(
+                [-7.314450319004702, 112.6952224654668],
+                {
+}
+            ).addTo(map_ce1f0b97cbca82338d5d527e8eb1cfe8);
+        
+    
+            var icon_f8e546222e8624086e16a1a041deaabd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c2a734d4c2189f370f66a88f0135088 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9cf528b9b94227c39a763d0c5e2d81e1 = $(`<div id="html_9cf528b9b94227c39a763d0c5e2d81e1" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Graha Medika<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_5c2a734d4c2189f370f66a88f0135088.setContent(html_9cf528b9b94227c39a763d0c5e2d81e1);
+            
+        
+
+        marker_300220315b442214cdc9c7b4beb9406c.bindPopup(popup_5c2a734d4c2189f370f66a88f0135088)
+        ;
+
+        
+    
+    
+                marker_300220315b442214cdc9c7b4beb9406c.setIcon(icon_f8e546222e8624086e16a1a041deaabd);
+            
+    
+            var feature_group_a959eb19f48c6c6b536afaa290d94705 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_5673ca932fbf50f766a376c86ab60373 = L.polyline(
+                [[-7.31430655, 112.6951476], [-7.314425435429943, 112.69607105054054]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_a959eb19f48c6c6b536afaa290d94705);
+        
+    
+        var popup_522905e1daf5df15cd3a910345eaa011 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fbd4224cd1bb96f2e852364c247015f1 = $(`<div id="html_fbd4224cd1bb96f2e852364c247015f1" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Wiyung-Wonocolo</div>`)[0];
+                popup_522905e1daf5df15cd3a910345eaa011.setContent(html_fbd4224cd1bb96f2e852364c247015f1);
+            
+        
+
+        poly_line_5673ca932fbf50f766a376c86ab60373.bindPopup(popup_522905e1daf5df15cd3a910345eaa011)
+        ;
+
+        
+    
+    
+            feature_group_a959eb19f48c6c6b536afaa290d94705.addTo(map_ce1f0b97cbca82338d5d527e8eb1cfe8);
+        
+</script>
+</html>

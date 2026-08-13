@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7318c444bb8512fa601260aa6cdf160e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Suko Manunggal
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #13
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">59.0</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.82), 2. Facility Capacity Gap (0.72), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.82. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 1<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_7318c444bb8512fa601260aa6cdf160e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7318c444bb8512fa601260aa6cdf160e = L.map(
+                "map_7318c444bb8512fa601260aa6cdf160e",
+                {
+                    center: [-7.2609360857080025, 112.71228807628206],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8df48aeb99319e205a8433f25ece094e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8df48aeb99319e205a8433f25ece094e.addTo(map_7318c444bb8512fa601260aa6cdf160e);
+        
+    
+        function geo_json_26fbb6aa1385b557a555864cf7eb6070_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_26fbb6aa1385b557a555864cf7eb6070_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_26fbb6aa1385b557a555864cf7eb6070 = L.geoJson(null, {
+                onEachFeature: geo_json_26fbb6aa1385b557a555864cf7eb6070_onEachFeature,
+            
+                style: geo_json_26fbb6aa1385b557a555864cf7eb6070_styler,
+            ...{
+}
+        });
+
+        function geo_json_26fbb6aa1385b557a555864cf7eb6070_add (data) {
+            geo_json_26fbb6aa1385b557a555864cf7eb6070
+                .addData(data);
+        }
+            geo_json_26fbb6aa1385b557a555864cf7eb6070_add({"bbox": [112.7120741, -7.2611446, 112.7124947, -7.2607367], "features": [{"bbox": [112.7120741, -7.2611446, 112.7124947, -7.2607367], "geometry": {"coordinates": [[[112.7120741, -7.2610841], [112.7121703, -7.2610997], [112.7124529, -7.2611446], [112.7124947, -7.2607753], [112.7121205, -7.2607367], [112.7120945, -7.2609554], [112.7120741, -7.2610841]]], "type": "Polygon"}, "id": "30", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.3948261301754178, "disease_issue": "Penyakit pada sistem pernafasan (14969 cases)", "disease_need_score": 0.4109389249100609, "explanation": "Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.82), 2. Facility Capacity Gap (0.72), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.82. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7158515805985569, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.00097019187951, "kecamatan": "SUKO MANUNGGAL", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 13, "root_cause_confidence": "HIGH", "root_cause_margin": 0.10482762528293021, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.8206792058814871, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_26fbb6aa1385b557a555864cf7eb6070.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_26fbb6aa1385b557a555864cf7eb6070.addTo(map_7318c444bb8512fa601260aa6cdf160e);
+        
+    
+            var marker_f93100f2bc0e3774a2406a8c0a2a2268 = L.marker(
+                [-7.260860232042402, 112.71227901994288],
+                {
+}
+            ).addTo(map_7318c444bb8512fa601260aa6cdf160e);
+        
+    
+            var icon_1e81cba089c3692d83fcc40eb8a2c0d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0b5a37241eceea3ce68cbc4f90b5e20 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_edbd48fec53c4fe2ec987f866e57c469 = $(`<div id="html_edbd48fec53c4fe2ec987f866e57c469" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Mitra Keluarga Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_f0b5a37241eceea3ce68cbc4f90b5e20.setContent(html_edbd48fec53c4fe2ec987f866e57c469);
+            
+        
+
+        marker_f93100f2bc0e3774a2406a8c0a2a2268.bindPopup(popup_f0b5a37241eceea3ce68cbc4f90b5e20)
+        ;
+
+        
+    
+    
+                marker_f93100f2bc0e3774a2406a8c0a2a2268.setIcon(icon_1e81cba089c3692d83fcc40eb8a2c0d2);
+            
+    
+            var feature_group_74b6ed572ab4db79c32b0da3f5cbadd3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_fc43ec0812d89d47c79c24846efec210 = L.polyline(
+                [[-7.260940649999999, 112.71228439999999], [-7.25992382215478, 112.71204599359612]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_74b6ed572ab4db79c32b0da3f5cbadd3);
+        
+    
+        var popup_e5e9fcda1b3cf9cd022cc51d94cf3a3c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5fbc055e507a4c9d9260e9f85ca36542 = $(`<div id="html_5fbc055e507a4c9d9260e9f85ca36542" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Suko Manunggal-Sukolilo</div>`)[0];
+                popup_e5e9fcda1b3cf9cd022cc51d94cf3a3c.setContent(html_5fbc055e507a4c9d9260e9f85ca36542);
+            
+        
+
+        poly_line_fc43ec0812d89d47c79c24846efec210.bindPopup(popup_e5e9fcda1b3cf9cd022cc51d94cf3a3c)
+        ;
+
+        
+    
+    
+            feature_group_74b6ed572ab4db79c32b0da3f5cbadd3.addTo(map_7318c444bb8512fa601260aa6cdf160e);
+        
+</script>
+</html>

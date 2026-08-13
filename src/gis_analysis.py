@@ -283,4 +283,151 @@ Based on visual inspection of the choropleth maps:
     with open(os.path.join(gis_output, "spatial_analysis_report.md"), "w", encoding="utf-8") as f:
         f.write(report_content)
         
+    # Generate individual focused maps for all 31 Kecamatan
+    generate_individual_kecamatan_maps(gdf_gis, gdf_pkm, gdf_fask, gdf_roads, gis_output)
+        
     print("GIS mapping analysis completed successfully.")
+
+def generate_individual_kecamatan_maps(gdf_gis, gdf_pkm, gdf_fask, gdf_roads, gis_output):
+    """Generate focused individual GIS maps for each of the 31 Kecamatan."""
+    kec_maps_dir = os.path.join(gis_output, "kecamatan_maps")
+    os.makedirs(kec_maps_dir, exist_ok=True)
+    
+    print("Generating individual Kecamatan maps...")
+    
+    # Priority color map matching CSS styles
+    priority_colors = {
+        "Sangat Tinggi": "#ef4444",  # rose
+        "Tinggi": "#f97316",         # amber
+        "Sedang": "#eab308",         # yellow
+        "Rendah": "#10b981"          # green
+    }
+    
+    for idx, row in gdf_gis.iterrows():
+        kec_name = row["kecamatan"]
+        kec_name_title = str(kec_name).title()
+        kec_name_lower = str(kec_name).lower().replace(" ", "_")
+        
+        # Calculate centroid for centering map
+        centroid = row.geometry.centroid
+        c_lat, c_lon = centroid.y, centroid.x
+        
+        # Create base map focused on current kecamatan
+        m = folium.Map(location=[c_lat, c_lon], zoom_start=13, tiles="cartodbpositron")
+        
+        # 1. Overlay Kecamatan polygon boundary
+        gdf_single = gdf_gis.iloc[[idx]]
+        priority_cat = row["priority_category"]
+        p_color = priority_colors.get(priority_cat, "#3b82f6")
+        
+        GeoJson(
+            gdf_single,
+            style_function=lambda x, color=p_color: {
+                'fillColor': color,
+                'fillOpacity': 0.15,
+                'color': color,
+                'weight': 3.0
+            },
+            tooltip=GeoJsonTooltip(fields=["kecamatan", "healthcare_gap_score"], aliases=["Kecamatan:", "Gap Score:"])
+        ).add_to(m)
+        
+        # Infrastructure counters
+        pkm_count = 0
+        hosp_count = 0
+        road_count = 0
+        
+        kec_poly = row.geometry
+        
+        # 2. Add local Puskesmas pins
+        if gdf_pkm is not None and not gdf_pkm.empty:
+            pkm_in_kec = gdf_pkm[gdf_pkm.geometry.within(kec_poly)]
+            pkm_count = len(pkm_in_kec)
+            if pkm_count > 0:
+                pkm_group = folium.FeatureGroup(name="Local Puskesmas").add_to(m)
+                for p_idx, p_row in pkm_in_kec.iterrows():
+                    p_coords = p_row.geometry.coords[0]
+                    folium.Marker(
+                        location=[p_coords[1], p_coords[0]],
+                        icon=folium.Icon(color="blue", icon="plus-sign"),
+                        popup=Popup(f"<b>Puskesmas:</b> {p_row['nama_puskesmas']}<br><b>ID:</b> {p_row['puskesmas_id']}", max_width=200)
+                    ).add_to(pkm_group)
+                    
+        # 3. Add local Hospital pins
+        if gdf_fask is not None and not gdf_fask.empty:
+            fask_in_kec = gdf_fask[gdf_fask.geometry.within(kec_poly)]
+            for f_idx, f_row in fask_in_kec.iterrows():
+                f_coords = f_row.geometry.coords[0]
+                jenis = f_row.get("jenis_faskes", "")
+                name = f_row.get("nama_faskes", f_row.get("nama_puskesmas", "Fasilitas Kesehatan"))
+                
+                # Check for hospital keyword to avoid cluttering map with small clinics
+                if isinstance(jenis, str) and "Rumah Sakit" in jenis:
+                    hosp_count += 1
+                    folium.Marker(
+                        location=[f_coords[1], f_coords[0]],
+                        icon=folium.Icon(color="red", icon="plus-sign"),
+                        popup=Popup(f"<b>Rumah Sakit:</b> {name}<br><b>Tipe:</b> {jenis}", max_width=200)
+                    ).add_to(m)
+                    
+        # 4. Add local Roads overlay
+        if gdf_roads is not None and not gdf_roads.empty:
+            roads_in_kec = gdf_roads[gdf_roads.geometry.intersects(kec_poly)]
+            road_count = len(roads_in_kec)
+            if road_count > 0:
+                road_group = folium.FeatureGroup(name="Local Roads").add_to(m)
+                for r_idx, r_row in roads_in_kec.iterrows():
+                    r_coords = r_row.geometry.coords
+                    fol_coords = [[c[1], c[0]] for c in r_coords]
+                    folium.PolyLine(
+                        locations=fol_coords, color="#e63946", weight=2.0, opacity=0.8,
+                        popup=Popup(f"<b>Road:</b> {r_row['road_name']}", max_width=200)
+                    ).add_to(road_group)
+                    
+        # 5. Add custom UI overlay card for Kecamatan diagnostic summary
+        priority_rank = row.get("priority_rank", 0)
+        gap_score = row.get("healthcare_gap_score", 0.0)
+        primary_driver = str(row.get("primary_root_cause", "UNKNOWN")).replace("_", " ").title()
+        explanation = row.get("explanation", "Data analisis belum tersedia untuk kecamatan ini.")
+        
+        overlay_html = f'''
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan {kec_name_title}
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: {p_color}; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         {priority_cat}
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #{priority_rank}
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">{gap_score:.1f}</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">{primary_driver}</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     {explanation}
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: {pkm_count}<br>
+                     🔴 Hospitals: {hosp_count}<br>
+                     🛣️ Road network segments: {road_count}
+                 </div>
+             </div>
+             '''
+        m.get_root().html.add_child(folium.Element(overlay_html))
+        
+        # Save focused HTML map
+        map_path = os.path.join(kec_maps_dir, f"{kec_name_lower}.html")
+        m.save(map_path)
+

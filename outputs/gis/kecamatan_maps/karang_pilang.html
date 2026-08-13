@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19acf03e587edb0b08ac3bc5c98026c6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Karang Pilang
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #9
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">63.4</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 0<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_19acf03e587edb0b08ac3bc5c98026c6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19acf03e587edb0b08ac3bc5c98026c6 = L.map(
+                "map_19acf03e587edb0b08ac3bc5c98026c6",
+                {
+                    center: [-7.333398709988485, 112.69938428414059],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_739794734aff43efa38b871ae4ad1660 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_739794734aff43efa38b871ae4ad1660.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+        
+    
+        function geo_json_4ee8224846d16adca7a515781d3e65dc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_4ee8224846d16adca7a515781d3e65dc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4ee8224846d16adca7a515781d3e65dc = L.geoJson(null, {
+                onEachFeature: geo_json_4ee8224846d16adca7a515781d3e65dc_onEachFeature,
+            
+                style: geo_json_4ee8224846d16adca7a515781d3e65dc_styler,
+            ...{
+}
+        });
+
+        function geo_json_4ee8224846d16adca7a515781d3e65dc_add (data) {
+            geo_json_4ee8224846d16adca7a515781d3e65dc
+                .addData(data);
+        }
+            geo_json_4ee8224846d16adca7a515781d3e65dc_add({"bbox": [112.6991756, -7.3336521, 112.699593, -7.3331453], "features": [{"bbox": [112.6991756, -7.3336521, 112.699593, -7.3331453], "geometry": {"coordinates": [[[112.6991756, -7.3335556], [112.6994417, -7.3336521], [112.699593, -7.3332419], [112.6993269, -7.3331453], [112.6992928, -7.3332376], [112.6991756, -7.3335556]]], "type": "Polygon"}, "id": "10", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.27153885243559417, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8154350343632506, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 63.385980255825494, "kecamatan": "KARANG PILANG", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16198486758339636, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.977419901946647, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_4ee8224846d16adca7a515781d3e65dc.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_4ee8224846d16adca7a515781d3e65dc.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+        
+    
+            var feature_group_6ef8939ea88f9082eeccf6a4e4b921f0 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_58b5f2da3315013cf58e992b674e9d57 = L.polyline(
+                [[-7.3333987, 112.69938429999999], [-7.33356448372812, 112.69854218026197]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_6ef8939ea88f9082eeccf6a4e4b921f0);
+        
+    
+        var popup_582089d3a39535196c2d3364fce5e348 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ffb8295278b246177ebf7c173feb27ca = $(`<div id="html_ffb8295278b246177ebf7c173feb27ca" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Karang Pilang-Kenjeran</div>`)[0];
+                popup_582089d3a39535196c2d3364fce5e348.setContent(html_ffb8295278b246177ebf7c173feb27ca);
+            
+        
+
+        poly_line_58b5f2da3315013cf58e992b674e9d57.bindPopup(popup_582089d3a39535196c2d3364fce5e348)
+        ;
+
+        
+    
+    
+            feature_group_6ef8939ea88f9082eeccf6a4e4b921f0.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+        
+</script>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0f2ed58271770c4679b9e92e8767ad95 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Tegalsari
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #16
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">52.6</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Tegalsari memiliki Healthcare Gap Score sebesar 52.6 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.79), 2. Facility Capacity Gap (0.59), 3. High Demand Score (0.36). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.79. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_0f2ed58271770c4679b9e92e8767ad95" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0f2ed58271770c4679b9e92e8767ad95 = L.map(
+                "map_0f2ed58271770c4679b9e92e8767ad95",
+                {
+                    center: [-7.287942334051577, 112.74053292946175],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f24eb929aa9ea650dc46c8c3067d9fa = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2f24eb929aa9ea650dc46c8c3067d9fa.addTo(map_0f2ed58271770c4679b9e92e8767ad95);
+        
+    
+        function geo_json_33c01cdb8a5c84b3d7b320730ac7610e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_33c01cdb8a5c84b3d7b320730ac7610e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_33c01cdb8a5c84b3d7b320730ac7610e = L.geoJson(null, {
+                onEachFeature: geo_json_33c01cdb8a5c84b3d7b320730ac7610e_onEachFeature,
+            
+                style: geo_json_33c01cdb8a5c84b3d7b320730ac7610e_styler,
+            ...{
+}
+        });
+
+        function geo_json_33c01cdb8a5c84b3d7b320730ac7610e_add (data) {
+            geo_json_33c01cdb8a5c84b3d7b320730ac7610e
+                .addData(data);
+        }
+            geo_json_33c01cdb8a5c84b3d7b320730ac7610e_add({"bbox": [112.7404449, -7.2880787, 112.740621, -7.287806], "features": [{"bbox": [112.7404449, -7.2880787, 112.740621, -7.287806], "geometry": {"coordinates": [[[112.7404449, -7.2880521], [112.740566, -7.2880787], [112.740621, -7.2878326], [112.7404998, -7.287806], [112.7404449, -7.2880521]]], "type": "Polygon"}, "id": "25", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.35767704302887565, "disease_issue": "Penyakit pada sistem pernafasan (12548 cases)", "disease_need_score": 0.31458136636492834, "explanation": "Kecamatan Tegalsari memiliki Healthcare Gap Score sebesar 52.6 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.79), 2. Facility Capacity Gap (0.59), 3. High Demand Score (0.36). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.79. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.5897430670250227, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 52.56546494559555, "kecamatan": "TEGALSARI", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 16, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.20187909920598612, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.7916221662310088, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_33c01cdb8a5c84b3d7b320730ac7610e.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_33c01cdb8a5c84b3d7b320730ac7610e.addTo(map_0f2ed58271770c4679b9e92e8767ad95);
+        
+    
+            var marker_fe94c74e0358f67fc3a2db3eb8134aab = L.marker(
+                [-7.287999558036117, 112.74058343500484],
+                {
+}
+            ).addTo(map_0f2ed58271770c4679b9e92e8767ad95);
+        
+    
+            var icon_67c0761671bbd944f94d20e8aaf819b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4360f967a36e17d28ad023a9847ade5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_addb7c551f32fd1391c1d9c6f794320b = $(`<div id="html_addb7c551f32fd1391c1d9c6f794320b" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Surabaya Medical Service<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_a4360f967a36e17d28ad023a9847ade5.setContent(html_addb7c551f32fd1391c1d9c6f794320b);
+            
+        
+
+        marker_fe94c74e0358f67fc3a2db3eb8134aab.bindPopup(popup_a4360f967a36e17d28ad023a9847ade5)
+        ;
+
+        
+    
+    
+                marker_fe94c74e0358f67fc3a2db3eb8134aab.setIcon(icon_67c0761671bbd944f94d20e8aaf819b4);
+            
+    
+            var marker_59baa759dd8cafa92d892567dc291074 = L.marker(
+                [-7.287854622573075, 112.74058837326778],
+                {
+}
+            ).addTo(map_0f2ed58271770c4679b9e92e8767ad95);
+        
+    
+            var icon_8cbdac4ec2dd98f5d5e2e4c6b0fce179 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46553addc5512919e030575b2066d0f7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7fc62bef3cd4de22e75b7c11d75a6936 = $(`<div id="html_7fc62bef3cd4de22e75b7c11d75a6936" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Pusura Tegalsari<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_46553addc5512919e030575b2066d0f7.setContent(html_7fc62bef3cd4de22e75b7c11d75a6936);
+            
+        
+
+        marker_59baa759dd8cafa92d892567dc291074.bindPopup(popup_46553addc5512919e030575b2066d0f7)
+        ;
+
+        
+    
+    
+                marker_59baa759dd8cafa92d892567dc291074.setIcon(icon_8cbdac4ec2dd98f5d5e2e4c6b0fce179);
+            
+    
+            var feature_group_33690796e757c13d3d4047e2edbd0752 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_702053dc3b4408a786d15675f732e6e6 = L.polyline(
+                [[-7.28794235, 112.74053295], [-7.2884926237141325, 112.74123589894417]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_33690796e757c13d3d4047e2edbd0752);
+        
+    
+        var popup_51c340e60d56d0100ea65c05d3050ae3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_87ce8aeb16edbc4951c73374386ba58c = $(`<div id="html_87ce8aeb16edbc4951c73374386ba58c" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Tegalsari-Tenggilis Mejoyo</div>`)[0];
+                popup_51c340e60d56d0100ea65c05d3050ae3.setContent(html_87ce8aeb16edbc4951c73374386ba58c);
+            
+        
+
+        poly_line_702053dc3b4408a786d15675f732e6e6.bindPopup(popup_51c340e60d56d0100ea65c05d3050ae3)
+        ;
+
+        
+    
+    
+            feature_group_33690796e757c13d3d4047e2edbd0752.addTo(map_0f2ed58271770c4679b9e92e8767ad95);
+        
+</script>
+</html>

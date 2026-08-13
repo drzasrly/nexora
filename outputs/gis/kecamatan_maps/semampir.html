@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e6c800948723ee30b07f33167959e393 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Semampir
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #5
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">69.2</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Semampir memiliki Healthcare Gap Score sebesar 69.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.96), 2. Facility Capacity Gap (0.75), 3. High Demand Score (0.54). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.96. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 1<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_e6c800948723ee30b07f33167959e393" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e6c800948723ee30b07f33167959e393 = L.map(
+                "map_e6c800948723ee30b07f33167959e393",
+                {
+                    center: [-7.225924458411628, 112.74582879992062],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c544dbae9caa63e81df8402703cb46f3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c544dbae9caa63e81df8402703cb46f3.addTo(map_e6c800948723ee30b07f33167959e393);
+        
+    
+        function geo_json_5c876b13e7a670c6f142aa3967f10bb5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_5c876b13e7a670c6f142aa3967f10bb5_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5c876b13e7a670c6f142aa3967f10bb5 = L.geoJson(null, {
+                onEachFeature: geo_json_5c876b13e7a670c6f142aa3967f10bb5_onEachFeature,
+            
+                style: geo_json_5c876b13e7a670c6f142aa3967f10bb5_styler,
+            ...{
+}
+        });
+
+        function geo_json_5c876b13e7a670c6f142aa3967f10bb5_add (data) {
+            geo_json_5c876b13e7a670c6f142aa3967f10bb5
+                .addData(data);
+        }
+            geo_json_5c876b13e7a670c6f142aa3967f10bb5_add({"bbox": [112.7456553, -7.2261132, 112.7459745, -7.2257373], "features": [{"bbox": [112.7456553, -7.2261132, 112.7459745, -7.2257373], "geometry": {"coordinates": [[[112.7456553, -7.225889], [112.745888, -7.2261132], [112.7459745, -7.2260147], [112.7458853, -7.2258165], [112.7458216, -7.2257373], [112.7456855, -7.2258617], [112.7456553, -7.225889]]], "type": "Polygon"}, "id": "20", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.5419391976074723, "disease_issue": "Penyakit pada sistem pernafasan (36331 cases)", "disease_need_score": 0.46358681670637, "explanation": "Kecamatan Semampir memiliki Healthcare Gap Score sebesar 69.2 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.96), 2. Facility Capacity Gap (0.75), 3. High Demand Score (0.54). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.96. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7513325732317738, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 69.209390185286, "kecamatan": "SEMAMPIR", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 5, "root_cause_confidence": "HIGH", "root_cause_margin": 0.2037616420448577, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.9550942152766315, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_5c876b13e7a670c6f142aa3967f10bb5.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_5c876b13e7a670c6f142aa3967f10bb5.addTo(map_e6c800948723ee30b07f33167959e393);
+        
+    
+            var marker_54921f309acd6e9360743e776793baef = L.marker(
+                [-7.225901720219521, 112.74591189216443],
+                {
+}
+            ).addTo(map_e6c800948723ee30b07f33167959e393);
+        
+    
+            var icon_2afa91563c1a5433dbd1b995f2c8cb51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_728d6a0e7b7bcf46ff1edc412b67d9ab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7ed503394a4af1f8211e61b926f0a168 = $(`<div id="html_7ed503394a4af1f8211e61b926f0a168" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Husada Prima<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_728d6a0e7b7bcf46ff1edc412b67d9ab.setContent(html_7ed503394a4af1f8211e61b926f0a168);
+            
+        
+
+        marker_54921f309acd6e9360743e776793baef.bindPopup(popup_728d6a0e7b7bcf46ff1edc412b67d9ab)
+        ;
+
+        
+    
+    
+                marker_54921f309acd6e9360743e776793baef.setIcon(icon_2afa91563c1a5433dbd1b995f2c8cb51);
+            
+    
+            var feature_group_cce51e63f6bd3f16a456896dbb8c8e8b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_e88ce96367ce32c802d13c53b0362308 = L.polyline(
+                [[-7.2259252499999995, 112.7458149], [-7.226174408086806, 112.7457047422539]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_cce51e63f6bd3f16a456896dbb8c8e8b);
+        
+    
+        var popup_f5d54d1069e73d02587d68201439cf19 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_93896ec1974520ce288d08532af5b8cd = $(`<div id="html_93896ec1974520ce288d08532af5b8cd" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Semampir-Simokerto</div>`)[0];
+                popup_f5d54d1069e73d02587d68201439cf19.setContent(html_93896ec1974520ce288d08532af5b8cd);
+            
+        
+
+        poly_line_e88ce96367ce32c802d13c53b0362308.bindPopup(popup_f5d54d1069e73d02587d68201439cf19)
+        ;
+
+        
+    
+    
+            feature_group_cce51e63f6bd3f16a456896dbb8c8e8b.addTo(map_e6c800948723ee30b07f33167959e393);
+        
+</script>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9592219d45d11b9669254ebf385dc0d3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Krembangan
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #2
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">72.9</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 72.9 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.91), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.91. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 0<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_9592219d45d11b9669254ebf385dc0d3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9592219d45d11b9669254ebf385dc0d3 = L.map(
+                "map_9592219d45d11b9669254ebf385dc0d3",
+                {
+                    center: [-7.232909295903357, 112.7226025783538],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef78a4c840ff8e078a5cfeb4fc48cc31 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ef78a4c840ff8e078a5cfeb4fc48cc31.addTo(map_9592219d45d11b9669254ebf385dc0d3);
+        
+    
+        function geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab = L.geoJson(null, {
+                onEachFeature: geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_onEachFeature,
+            
+                style: geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_styler,
+            ...{
+}
+        });
+
+        function geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_add (data) {
+            geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab
+                .addData(data);
+        }
+            geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab_add({"bbox": [112.7225076, -7.2329731, 112.7226976, -7.2328455], "features": [{"bbox": [112.7225076, -7.2329731, 112.7226976, -7.2328455], "geometry": {"coordinates": [[[112.7225076, -7.2329426], [112.7226801, -7.2329731], [112.7226976, -7.232876], [112.722525, -7.2328455], [112.7225076, -7.2329426]]], "type": "Polygon"}, "id": "12", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6260376157768076, "disease_issue": "Penyakit pada sistem pernafasan (26794 cases)", "disease_need_score": 0.6613702893538563, "explanation": "Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 72.9 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.91), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.91. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6765408796607464, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 72.91006326851985, "kecamatan": "KREMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 2, "root_cause_confidence": "HIGH", "root_cause_margin": 0.23581616750337275, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9123570471641191, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_2b4a2a23e59ebe00713eb2d9b9c8efab.addTo(map_9592219d45d11b9669254ebf385dc0d3);
+        
+    
+            var feature_group_70196d497193ebac382688a7eed0f55b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_25078cb5a52237a1890a98e40f3e1bb7 = L.polyline(
+                [[-7.2329093, 112.7226026], [-7.233211546462716, 112.72273446586492]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_70196d497193ebac382688a7eed0f55b);
+        
+    
+        var popup_1a017acfcbae8454092de6a286695a5c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5077f231917a19291382222c380368b = $(`<div id="html_b5077f231917a19291382222c380368b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Krembangan-Lakarsantri</div>`)[0];
+                popup_1a017acfcbae8454092de6a286695a5c.setContent(html_b5077f231917a19291382222c380368b);
+            
+        
+
+        poly_line_25078cb5a52237a1890a98e40f3e1bb7.bindPopup(popup_1a017acfcbae8454092de6a286695a5c)
+        ;
+
+        
+    
+    
+            feature_group_70196d497193ebac382688a7eed0f55b.addTo(map_9592219d45d11b9669254ebf385dc0d3);
+        
+</script>
+</html>

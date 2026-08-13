@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0b8d9b7eb63f8f156c79480cac894b69 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Gayungan
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #24
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">47.1</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Disease Burden</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Gayungan memiliki Healthcare Gap Score sebesar 47.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.64), 2. High Demand Score (0.49), 3. Facility Capacity Gap (0.47). Indikator paling menonjol dalam model adalah High caseload of Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan, dengan sub-skor 0.64. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 2<br>
+                     🛣️ Road network segments: 0
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_0b8d9b7eb63f8f156c79480cac894b69" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0b8d9b7eb63f8f156c79480cac894b69 = L.map(
+                "map_0b8d9b7eb63f8f156c79480cac894b69",
+                {
+                    center: [-7.338019443476067, 112.71676037734623],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_677e844be5f48e551ec5a7c1397273c5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_677e844be5f48e551ec5a7c1397273c5.addTo(map_0b8d9b7eb63f8f156c79480cac894b69);
+        
+    
+        function geo_json_2f6cc66f95841ad86e348957faa1d2bc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_2f6cc66f95841ad86e348957faa1d2bc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_2f6cc66f95841ad86e348957faa1d2bc = L.geoJson(null, {
+                onEachFeature: geo_json_2f6cc66f95841ad86e348957faa1d2bc_onEachFeature,
+            
+                style: geo_json_2f6cc66f95841ad86e348957faa1d2bc_styler,
+            ...{
+}
+        });
+
+        function geo_json_2f6cc66f95841ad86e348957faa1d2bc_add (data) {
+            geo_json_2f6cc66f95841ad86e348957faa1d2bc
+                .addData(data);
+        }
+            geo_json_2f6cc66f95841ad86e348957faa1d2bc_add({"bbox": [112.7164966, -7.3382467, 112.7170242, -7.3377922], "features": [{"bbox": [112.7164966, -7.3382467, 112.7170242, -7.3377922], "geometry": {"coordinates": [[[112.7164966, -7.3381806], [112.7169689, -7.3382467], [112.7170242, -7.3378583], [112.7165518, -7.3377922], [112.7164966, -7.3381806]]], "type": "Polygon"}, "id": "5", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.4866478365533732, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (10213 cases)", "disease_need_score": 0.6432905221837185, "explanation": "Kecamatan Gayungan memiliki Healthcare Gap Score sebesar 47.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.64), 2. High Demand Score (0.49), 3. Facility Capacity Gap (0.47). Indikator paling menonjol dalam model adalah High caseload of Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan, dengan sub-skor 0.64. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.4742402357956895, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 47.14156707275817, "kecamatan": "GAYUNGAN", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Tinggi", "priority_rank": 24, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.15664268563034534, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "FACILITY_SHORTAGE", "workforce_gap": 0.3397172272189605, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_2f6cc66f95841ad86e348957faa1d2bc.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_2f6cc66f95841ad86e348957faa1d2bc.addTo(map_0b8d9b7eb63f8f156c79480cac894b69);
+        
+    
+            var marker_362d2f50f7dacc72d98d984cb8bb7775 = L.marker(
+                [-7.337949879171968, 112.7165723579634],
+                {
+}
+            ).addTo(map_0b8d9b7eb63f8f156c79480cac894b69);
+        
+    
+            var icon_f7c782e73c8605381e898a576675d075 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f03cc1a140cc43d717dcdc179d82dc17 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0a6bdfb1b9d42a1164a1de8fe4ebf701 = $(`<div id="html_0a6bdfb1b9d42a1164a1de8fe4ebf701" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bhakti Rahayu<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_f03cc1a140cc43d717dcdc179d82dc17.setContent(html_0a6bdfb1b9d42a1164a1de8fe4ebf701);
+            
+        
+
+        marker_362d2f50f7dacc72d98d984cb8bb7775.bindPopup(popup_f03cc1a140cc43d717dcdc179d82dc17)
+        ;
+
+        
+    
+    
+                marker_362d2f50f7dacc72d98d984cb8bb7775.setIcon(icon_f7c782e73c8605381e898a576675d075);
+            
+    
+            var marker_542407f0a893332637cb498a4ffb16f4 = L.marker(
+                [-7.337894293350593, 112.7165632192388],
+                {
+}
+            ).addTo(map_0b8d9b7eb63f8f156c79480cac894b69);
+        
+    
+            var icon_02b02edd44ccce0f4e6c76ce607a7a88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9631ee4ab93a39d49de5569ea2fedb7b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cdc71d0742a44bf136bd82b700d378a9 = $(`<div id="html_cdc71d0742a44bf136bd82b700d378a9" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bhayangkara TK II HS. Samsoeri Mertojoso<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_9631ee4ab93a39d49de5569ea2fedb7b.setContent(html_cdc71d0742a44bf136bd82b700d378a9);
+            
+        
+
+        marker_542407f0a893332637cb498a4ffb16f4.bindPopup(popup_9631ee4ab93a39d49de5569ea2fedb7b)
+        ;
+
+        
+    
+    
+                marker_542407f0a893332637cb498a4ffb16f4.setIcon(icon_02b02edd44ccce0f4e6c76ce607a7a88);
+            
+</script>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_382b3b34084bb458a551e9d962405f5c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Mulyorejo
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #eab308; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sedang
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #31
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">32.1</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Mulyorejo memiliki Healthcare Gap Score sebesar 32.1 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.39), 2. Disease Burden Need (0.35), 3. Workforce Shortage Gap (0.33). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.39. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 1<br>
+                     🛣️ Road network segments: 1
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_382b3b34084bb458a551e9d962405f5c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_382b3b34084bb458a551e9d962405f5c = L.map(
+                "map_382b3b34084bb458a551e9d962405f5c",
+                {
+                    center: [-7.261242263101723, 112.78482060561969],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_831d30414e07c882c6b64b1d934a9a64 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_831d30414e07c882c6b64b1d934a9a64.addTo(map_382b3b34084bb458a551e9d962405f5c);
+        
+    
+        function geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#eab308", "fillColor": "#eab308", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa = L.geoJson(null, {
+                onEachFeature: geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_onEachFeature,
+            
+                style: geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_styler,
+            ...{
+}
+        });
+
+        function geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_add (data) {
+            geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa
+                .addData(data);
+        }
+            geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa_add({"bbox": [112.7846712, -7.2614983, 112.7849783, -7.2609742], "features": [{"bbox": [112.7846712, -7.2614983, 112.7849783, -7.2609742], "geometry": {"coordinates": [[[112.7846712, -7.2610234], [112.784753, -7.2614983], [112.7849783, -7.2614597], [112.7848751, -7.2609742], [112.7846712, -7.2610234]]], "type": "Polygon"}, "id": "14", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.25255558160722347, "disease_issue": "Penyakit pada sistem pernafasan (11632 cases)", "disease_need_score": 0.3512736331932913, "explanation": "Kecamatan Mulyorejo memiliki Healthcare Gap Score sebesar 32.1 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.39), 2. Disease Burden Need (0.35), 3. Workforce Shortage Gap (0.33). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.39. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.38511893097431027, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 32.11770005186354, "kecamatan": "MULYOREJO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 31, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.03384529778101897, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.3271060440098267, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_abcdc29068e13bc9a5a6ff4f8da8dfaa.addTo(map_382b3b34084bb458a551e9d962405f5c);
+        
+    
+            var marker_304bd8597ffa05d1e76ebde86b55694d = L.marker(
+                [-7.26121389191908, 112.78477280719358],
+                {
+}
+            ).addTo(map_382b3b34084bb458a551e9d962405f5c);
+        
+    
+            var icon_1af7f69d57c738b0e782b075d882ac7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e644d1a6054df0119351ff03b3c2ab9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_aff39a67df83e6393c8118c582051a78 = $(`<div id="html_aff39a67df83e6393c8118c582051a78" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Kendangsari Merr<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_7e644d1a6054df0119351ff03b3c2ab9.setContent(html_aff39a67df83e6393c8118c582051a78);
+            
+        
+
+        marker_304bd8597ffa05d1e76ebde86b55694d.bindPopup(popup_7e644d1a6054df0119351ff03b3c2ab9)
+        ;
+
+        
+    
+    
+                marker_304bd8597ffa05d1e76ebde86b55694d.setIcon(icon_1af7f69d57c738b0e782b075d882ac7b);
+            
+    
+            var feature_group_7c8f3c51faf151a6f8be8572bfcea3a2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_13e532b42f2b1fc0e2c232fee70bd35a = L.polyline(
+                [[-7.2612362500000005, 112.78482475000001], [-7.26102405826284, 112.78502737253723]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_7c8f3c51faf151a6f8be8572bfcea3a2);
+        
+    
+        var popup_5907408d513206782a30120f22e91f36 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bf5986b9cc1af62b07b8e2fe22123fd3 = $(`<div id="html_bf5986b9cc1af62b07b8e2fe22123fd3" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Mulyorejo-Pabean Cantian</div>`)[0];
+                popup_5907408d513206782a30120f22e91f36.setContent(html_bf5986b9cc1af62b07b8e2fe22123fd3);
+            
+        
+
+        poly_line_13e532b42f2b1fc0e2c232fee70bd35a.bindPopup(popup_5907408d513206782a30120f22e91f36)
+        ;
+
+        
+    
+    
+            feature_group_7c8f3c51faf151a6f8be8572bfcea3a2.addTo(map_382b3b34084bb458a551e9d962405f5c);
+        
+</script>
+</html>

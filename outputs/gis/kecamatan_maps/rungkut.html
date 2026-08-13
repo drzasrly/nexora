@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6deb27b11f2072c7c5afe1ea4bb19c48 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+             <div style="position: fixed; 
+             top: 20px; right: 20px; width: 320px; z-index: 9999; 
+             background: rgba(17, 24, 39, 0.95); color: #f3f4f6;
+             font-family: 'Inter', sans-serif; font-size: 13px; 
+             border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+             border: 1px solid rgba(255, 255, 255, 0.1); padding: 16px;
+             ">
+                 <h3 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #fff; font-family: 'Outfit', sans-serif; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                     Kecamatan Rungkut
+                 </h3>
+                 <div style="margin-bottom: 12px;">
+                     <span style="background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Sangat Tinggi
+                     </span>
+                     <span style="float: right; font-weight: bold; color: #9ca3af;">
+                         Priority Rank: #8
+                     </span>
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">63.6</span> / 100
+                 </div>
+                 <div style="margin-bottom: 8px;">
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                 </div>
+                 <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
+                     Kecamatan Rungkut memiliki Healthcare Gap Score sebesar 63.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.84), 2. Facility Capacity Gap (0.64), 3. Disease Burden Need (0.56). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.84. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                 </div>
+                 <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
+                     <b>Local Infrastructures:</b><br>
+                     🏥 Puskesmas: 0<br>
+                     🔴 Hospitals: 1<br>
+                     🛣️ Road network segments: 0
+                 </div>
+             </div>
+             
+    
+            <div class="folium-map" id="map_6deb27b11f2072c7c5afe1ea4bb19c48" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6deb27b11f2072c7c5afe1ea4bb19c48 = L.map(
+                "map_6deb27b11f2072c7c5afe1ea4bb19c48",
+                {
+                    center: [-7.323161330109799, 112.77104453957081],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e039b9621562ca0dd58709bc85872c67 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e039b9621562ca0dd58709bc85872c67.addTo(map_6deb27b11f2072c7c5afe1ea4bb19c48);
+        
+    
+        function geo_json_b2847d619503e78881752df50eb31f00_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
+            }
+        }
+
+        function geo_json_b2847d619503e78881752df50eb31f00_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b2847d619503e78881752df50eb31f00 = L.geoJson(null, {
+                onEachFeature: geo_json_b2847d619503e78881752df50eb31f00_onEachFeature,
+            
+                style: geo_json_b2847d619503e78881752df50eb31f00_styler,
+            ...{
+}
+        });
+
+        function geo_json_b2847d619503e78881752df50eb31f00_add (data) {
+            geo_json_b2847d619503e78881752df50eb31f00
+                .addData(data);
+        }
+            geo_json_b2847d619503e78881752df50eb31f00_add({"bbox": [112.7708332, -7.3232817, 112.7712558, -7.323041], "features": [{"bbox": [112.7708332, -7.3232817, 112.7712558, -7.323041], "geometry": {"coordinates": [[[112.7708332, -7.3232705], [112.7712496, -7.3232817], [112.7712558, -7.3230521], [112.7708395, -7.323041], [112.7708332, -7.3232705]]], "type": "Polygon"}, "id": "17", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4862806451649574, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (20131 cases)", "disease_need_score": 0.5557296280929925, "explanation": "Kecamatan Rungkut memiliki Healthcare Gap Score sebesar 63.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.84), 2. Facility Capacity Gap (0.64), 3. Disease Burden Need (0.56). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.84. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6379237535016832, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 63.64514006441413, "kecamatan": "RUNGKUT", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 8, "root_cause_confidence": "HIGH", "root_cause_margin": 0.20153134908404668, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.8394551025857299, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_b2847d619503e78881752df50eb31f00.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["kecamatan", "healthcare_gap_score"];
+    let aliases = ["Kecamatan:", "Gap Score:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_b2847d619503e78881752df50eb31f00.addTo(map_6deb27b11f2072c7c5afe1ea4bb19c48);
+        
+    
+            var marker_a3d5f0133865438aab35c038a454cc6d = L.marker(
+                [-7.323151020684553, 112.77116172798485],
+                {
+}
+            ).addTo(map_6deb27b11f2072c7c5afe1ea4bb19c48);
+        
+    
+            var icon_fda6f402d8e2db87b94cc66b2ddc9bec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_046e3cf3c43e0ea9c275cc323945ef3d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c1dfc42aef7706563e4d987c44caac2f = $(`<div id="html_c1dfc42aef7706563e4d987c44caac2f" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Royal Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_046e3cf3c43e0ea9c275cc323945ef3d.setContent(html_c1dfc42aef7706563e4d987c44caac2f);
+            
+        
+
+        marker_a3d5f0133865438aab35c038a454cc6d.bindPopup(popup_046e3cf3c43e0ea9c275cc323945ef3d)
+        ;
+
+        
+    
+    
+                marker_a3d5f0133865438aab35c038a454cc6d.setIcon(icon_fda6f402d8e2db87b94cc66b2ddc9bec);
+            
+</script>
+</html>
