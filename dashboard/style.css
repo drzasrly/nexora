@@ -770,6 +770,7 @@ body {
 }
 .custom-marker-hospital { background: #ef4444; color: #fff; border: 2px solid #fca5a5; }
 .custom-marker-puskesmas { background: #3b82f6; color: #fff; border: 2px solid #93c5fd; }
+.custom-marker-clinic { background: #a855f7; color: #fff; border: 2px solid #c084fc; }
 
 /* ============================================================ ANALYTICS PAGE */
 .analytics-grid {
@@ -1067,3 +1068,208 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+/* ============================================================ RESPONSIVENESS */
+@media (max-width: 1024px) {
+    /* Overview Page */
+    .overview-stats-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .overview-bottom-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* GIS Map Page */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-row {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .chart-card {
+        height: 220px;
+    }
+    
+    /* Analytics Page */
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Simulation Page */
+    .simulation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sim-score-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .sim-arrow-col {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        margin: 10px 0;
+    }
+    
+    .sim-arrow-col i.sim-arrow {
+        transform: rotate(90deg);
+    }
+    
+    /* Optimizer Page */
+    .optimizer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .app-container {
+        height: auto;
+        overflow: visible;
+        padding: 8px;
+        gap: 12px;
+    }
+    
+    .app-header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .logo-area {
+        justify-content: center;
+    }
+    
+    .tab-nav {
+        overflow-x: auto;
+        padding: 4px;
+        width: 100%;
+        justify-content: flex-start;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .tab-btn {
+        padding: 8px 16px;
+    }
+    
+    .header-stats {
+        justify-content: center;
+    }
+    
+    /* Pages Layouts */
+    .page-content {
+        height: auto;
+        overflow: visible;
+    }
+    
+    /* Overview Page */
+    .overview-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #overview-map {
+        height: 350px;
+        min-height: 350px;
+    }
+    
+    /* GIS Map Page */
+    .sidebar-panel {
+        overflow: visible;
+        height: auto;
+    }
+    
+    .main-map-panel {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .map-card {
+        height: 450px;
+        min-height: 450px;
+    }
+    
+    .map-legend {
+        bottom: 12px;
+        right: 12px;
+        padding: 8px 10px;
+        min-width: 120px;
+    }
+    
+    /* Analytics Page */
+    .analytics-table-wrapper {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    .analytics-charts-col {
+        height: auto;
+    }
+    
+    .analytics-chart-card {
+        height: 250px;
+    }
+    
+    /* Simulation Page */
+    .simulation-controls-col {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .simulation-results-col {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .sim-maps-row {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .sim-map-card {
+        height: 350px;
+        min-height: 350px;
+    }
+    
+    /* Optimizer Page */
+    .optimizer-left {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .optimizer-right {
+        height: auto;
+        overflow: visible;
+    }
+    
+    .optimizer-result-card {
+        height: 350px;
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-stats-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .intervention-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,10 +1,10 @@
-2026-08-13 08:10:50,973 [INFO] HEAL-CITY Pipeline Execution Started.
-2026-08-13 08:10:50,978 [INFO] Configuration loaded successfully.
-2026-08-13 08:10:52,870 [INFO] Pre-processing complete. Intermediate datasets generated.
-2026-08-13 08:10:52,875 [INFO] Baseline master validations passed.
-2026-08-13 08:10:53,000 [INFO] Feature engineering complete.
-2026-08-13 08:10:53,017 [INFO] Healthcare gap calculations and rankings complete.
-2026-08-13 08:10:55,826 [INFO] Root Cause Analysis (RCA) complete.
-2026-08-13 08:10:56,180 [INFO] Created 31 records
-2026-08-13 08:10:57,851 [INFO] GIS mapping overlays completed successfully.
-2026-08-13 08:10:57,852 [INFO] Pipeline finished with status: SUCCESS in 6.88 seconds.
+2026-08-13 08:39:31,981 [INFO] HEAL-CITY Pipeline Execution Started.
+2026-08-13 08:39:31,986 [INFO] Configuration loaded successfully.
+2026-08-13 08:39:33,771 [INFO] Pre-processing complete. Intermediate datasets generated.
+2026-08-13 08:39:33,779 [INFO] Baseline master validations passed.
+2026-08-13 08:39:33,933 [INFO] Feature engineering complete.
+2026-08-13 08:39:33,942 [INFO] Healthcare gap calculations and rankings complete.
+2026-08-13 08:39:38,172 [INFO] Root Cause Analysis (RCA) complete.
+2026-08-13 08:39:39,447 [INFO] Created 31 records
+2026-08-13 08:39:41,607 [INFO] GIS mapping overlays completed successfully.
+2026-08-13 08:39:41,608 [INFO] Pipeline finished with status: SUCCESS in 9.63 seconds.

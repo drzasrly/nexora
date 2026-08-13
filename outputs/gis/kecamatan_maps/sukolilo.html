@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d19f0f7d90de09aa316f40c1ce1106be {
+                #map_c4dbea480777f5a663e88f462eae42ba {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_d19f0f7d90de09aa316f40c1ce1106be" ></div>
+            <div class="folium-map" id="map_c4dbea480777f5a663e88f462eae42ba" ></div>
         
 </body>
 <script>
     
     
-            var map_d19f0f7d90de09aa316f40c1ce1106be = L.map(
-                "map_d19f0f7d90de09aa316f40c1ce1106be",
+            var map_c4dbea480777f5a663e88f462eae42ba = L.map(
+                "map_c4dbea480777f5a663e88f462eae42ba",
                 {
                     center: [-7.292679690588746, 112.80565085800092],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_1a4cbfd18979172e2357e10c8acc5498 = L.tileLayer(
+            var tile_layer_0fd55c258d908039553f104f1ec823b0 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_1a4cbfd18979172e2357e10c8acc5498.addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            tile_layer_0fd55c258d908039553f104f1ec823b0.addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-        function geo_json_c39e033fd052f463e56f10773b237a48_styler(feature) {
+        function geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_c39e033fd052f463e56f10773b237a48_onEachFeature(feature, layer) {
+        function geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_c39e033fd052f463e56f10773b237a48 = L.geoJson(null, {
-                onEachFeature: geo_json_c39e033fd052f463e56f10773b237a48_onEachFeature,
+        var geo_json_8796ad3bfb6ac1003e2a63ca88be35ec = L.geoJson(null, {
+                onEachFeature: geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_onEachFeature,
             
-                style: geo_json_c39e033fd052f463e56f10773b237a48_styler,
+                style: geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_styler,
             ...{
 }
         });
 
-        function geo_json_c39e033fd052f463e56f10773b237a48_add (data) {
-            geo_json_c39e033fd052f463e56f10773b237a48
+        function geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_add (data) {
+            geo_json_8796ad3bfb6ac1003e2a63ca88be35ec
                 .addData(data);
         }
-            geo_json_c39e033fd052f463e56f10773b237a48_add({"bbox": [112.762, -7.3108, 112.8469, -7.2695], "features": [{"bbox": [112.762, -7.3108, 112.8469, -7.2695], "geometry": {"coordinates": [[[[112.762, -7.3056], [112.763, -7.2892], [112.7654, -7.2849], [112.7696, -7.2841], [112.7705, -7.2811], [112.7814, -7.282], [112.7818, -7.2845], [112.7852, -7.2842], [112.7857, -7.28], [112.7844, -7.2801], [112.7839, -7.2769], [112.7994, -7.2743], [112.8012, -7.2807], [112.8005, -7.2845], [112.8038, -7.2851], [112.8117, -7.2809], [112.8181, -7.2723], [112.8279, -7.2695], [112.8294, -7.273], [112.8398, -7.2777], [112.8443, -7.2867], [112.845, -7.2933], [112.8469, -7.2967], [112.8457, -7.3042], [112.8391, -7.3102], [112.822, -7.3068], [112.8169, -7.3018], [112.8104, -7.2988], [112.8061, -7.3023], [112.8084, -7.3072], [112.8069, -7.3087], [112.7916, -7.3075], [112.7793, -7.3108], [112.762, -7.3056]], [[112.7713, -7.2865], [112.7708, -7.2894], [112.7724, -7.2893], [112.7737, -7.2853], [112.7715, -7.285], [112.7713, -7.2865]]]], "type": "MultiPolygon"}, "id": "23", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4344073595454221, "disease_issue": "Penyakit pada sistem pernafasan (17373 cases)", "disease_need_score": 0.49999379853797876, "explanation": "Kecamatan Sukolilo memiliki Healthcare Gap Score sebesar 48.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.52), 2. Disease Burden Need (0.50), 3. Workforce Shortage Gap (0.50). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.52. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.5203313758863792, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 48.40413716206836, "kecamatan": "SUKOLILO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 23, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.02033757734840047, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.49884709624061807, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_8796ad3bfb6ac1003e2a63ca88be35ec_add({"bbox": [112.762, -7.3108, 112.8469, -7.2695], "features": [{"bbox": [112.762, -7.3108, 112.8469, -7.2695], "geometry": {"coordinates": [[[[112.762, -7.3056], [112.763, -7.2892], [112.7654, -7.2849], [112.7696, -7.2841], [112.7705, -7.2811], [112.7814, -7.282], [112.7818, -7.2845], [112.7852, -7.2842], [112.7857, -7.28], [112.7844, -7.2801], [112.7839, -7.2769], [112.7994, -7.2743], [112.8012, -7.2807], [112.8005, -7.2845], [112.8038, -7.2851], [112.8117, -7.2809], [112.8181, -7.2723], [112.8279, -7.2695], [112.8294, -7.273], [112.8398, -7.2777], [112.8443, -7.2867], [112.845, -7.2933], [112.8469, -7.2967], [112.8457, -7.3042], [112.8391, -7.3102], [112.822, -7.3068], [112.8169, -7.3018], [112.8104, -7.2988], [112.8061, -7.3023], [112.8084, -7.3072], [112.8069, -7.3087], [112.7916, -7.3075], [112.7793, -7.3108], [112.762, -7.3056]], [[112.7713, -7.2865], [112.7708, -7.2894], [112.7724, -7.2893], [112.7737, -7.2853], [112.7715, -7.285], [112.7713, -7.2865]]]], "type": "MultiPolygon"}, "id": "23", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.4344073595454221, "disease_issue": "Penyakit pada sistem pernafasan (17373 cases)", "disease_need_score": 0.49999379853797876, "explanation": "Kecamatan Sukolilo memiliki Healthcare Gap Score sebesar 48.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.52), 2. Disease Burden Need (0.50), 3. Workforce Shortage Gap (0.50). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.52. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.5203313758863792, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 48.40413716206836, "jumlah_bidan": 199, "jumlah_penduduk": 115.9, "jumlah_perawat": 1107, "jumlah_tenaga_medis": 1040, "kecamatan": "SUKOLILO", "kepadatan_penduduk": 3845, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 23, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.02033757734840047, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "total_tempat_tidur": 711.0, "total_tenaga_kesehatan": 3199.0, "workforce_gap": 0.49884709624061807, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_c39e033fd052f463e56f10773b237a48.bindTooltip(
+    geo_json_8796ad3bfb6ac1003e2a63ca88be35ec.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_c39e033fd052f463e56f10773b237a48.addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            geo_json_8796ad3bfb6ac1003e2a63ca88be35ec.addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var feature_group_d015dc97db3e2fff0cb5fd2aebcedb24 = L.featureGroup(
+            var feature_group_0776a28faadb4be4153cce9593bb1fb8 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_25be52f43a6913114c50278ac24265f4 = L.marker(
+            var marker_426fbe98010d44948e626c4abe249da5 = L.marker(
                 [-7.289156, 112.778522],
                 {
 }
-            ).addTo(feature_group_d015dc97db3e2fff0cb5fd2aebcedb24);
+            ).addTo(feature_group_0776a28faadb4be4153cce9593bb1fb8);
         
     
-            var icon_aa54e2484b37a42c767369d836b25f36 = L.AwesomeMarkers.icon(
+            var icon_632f418f661a2eca87efa03e187d9573 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_e4cc18de88731adac87e3027f022657d = L.popup({
+        var popup_335373c6e10488fea2f37703c9844b22 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_e84e7bb7ba13f465464bb01134c2005d = $(`<div id="html_e84e7bb7ba13f465464bb01134c2005d" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Klampis Ngasem<br><b>ID:</b> PKM021</div>`)[0];
-                popup_e4cc18de88731adac87e3027f022657d.setContent(html_e84e7bb7ba13f465464bb01134c2005d);
+                var html_c0b13f0d7e24eb7825baa82b9fe44d6a = $(`<div id="html_c0b13f0d7e24eb7825baa82b9fe44d6a" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Klampis Ngasem<br><b>ID:</b> PKM021</div>`)[0];
+                popup_335373c6e10488fea2f37703c9844b22.setContent(html_c0b13f0d7e24eb7825baa82b9fe44d6a);
             
         
 
-        marker_25be52f43a6913114c50278ac24265f4.bindPopup(popup_e4cc18de88731adac87e3027f022657d)
+        marker_426fbe98010d44948e626c4abe249da5.bindPopup(popup_335373c6e10488fea2f37703c9844b22)
         ;
 
         
     
     
-                marker_25be52f43a6913114c50278ac24265f4.setIcon(icon_aa54e2484b37a42c767369d836b25f36);
+                marker_426fbe98010d44948e626c4abe249da5.setIcon(icon_632f418f661a2eca87efa03e187d9573);
             
     
-            var marker_19af815a019cc210a1933e0c66d41be8 = L.marker(
+            var marker_30f750a29b9ebe82798cc97ee2739b3c = L.marker(
                 [-7.296878, 112.764248],
                 {
 }
-            ).addTo(feature_group_d015dc97db3e2fff0cb5fd2aebcedb24);
+            ).addTo(feature_group_0776a28faadb4be4153cce9593bb1fb8);
         
     
-            var icon_2371f981717e79e4ae18511929eb21b3 = L.AwesomeMarkers.icon(
+            var icon_31f46c9295e028784702cdd39c4aea9b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,34 +278,34 @@
             );
         
     
-        var popup_253e5bb7b15e9fa9d05562454fd805c7 = L.popup({
+        var popup_fa5d953d3d48676f8cbaa865c91de841 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_0427e9dec012bd89ecf91c7859f14082 = $(`<div id="html_0427e9dec012bd89ecf91c7859f14082" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Menur<br><b>ID:</b> PKM027</div>`)[0];
-                popup_253e5bb7b15e9fa9d05562454fd805c7.setContent(html_0427e9dec012bd89ecf91c7859f14082);
+                var html_60654349b98fe867cc9c048a53a1f493 = $(`<div id="html_60654349b98fe867cc9c048a53a1f493" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Menur<br><b>ID:</b> PKM027</div>`)[0];
+                popup_fa5d953d3d48676f8cbaa865c91de841.setContent(html_60654349b98fe867cc9c048a53a1f493);
             
         
 
-        marker_19af815a019cc210a1933e0c66d41be8.bindPopup(popup_253e5bb7b15e9fa9d05562454fd805c7)
+        marker_30f750a29b9ebe82798cc97ee2739b3c.bindPopup(popup_fa5d953d3d48676f8cbaa865c91de841)
         ;
 
         
     
     
-                marker_19af815a019cc210a1933e0c66d41be8.setIcon(icon_2371f981717e79e4ae18511929eb21b3);
+                marker_30f750a29b9ebe82798cc97ee2739b3c.setIcon(icon_31f46c9295e028784702cdd39c4aea9b);
             
     
-            var marker_4327da20bcdda52342f1aa6c32b9f6b6 = L.marker(
+            var marker_28cc7a13b5b91b7ccb79e1a0ea30b9e4 = L.marker(
                 [-7.294051, 112.801889],
                 {
 }
-            ).addTo(feature_group_d015dc97db3e2fff0cb5fd2aebcedb24);
+            ).addTo(feature_group_0776a28faadb4be4153cce9593bb1fb8);
         
     
-            var icon_5486d57e86594c5f20d33acda44a9edb = L.AwesomeMarkers.icon(
+            var icon_7f99c447de170e9a0db3406469cebdf6 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -316,37 +316,37 @@
             );
         
     
-        var popup_eb760ecac26b42dc26fc2fbd27208f50 = L.popup({
+        var popup_c5f6929792e6d262e37918121d8c9253 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_529d26a6f95be5a0894c1e6164598d26 = $(`<div id="html_529d26a6f95be5a0894c1e6164598d26" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Keputih<br><b>ID:</b> PKM058</div>`)[0];
-                popup_eb760ecac26b42dc26fc2fbd27208f50.setContent(html_529d26a6f95be5a0894c1e6164598d26);
+                var html_a09b0c648fc6fb856084fec7d61cffee = $(`<div id="html_a09b0c648fc6fb856084fec7d61cffee" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Keputih<br><b>ID:</b> PKM058</div>`)[0];
+                popup_c5f6929792e6d262e37918121d8c9253.setContent(html_a09b0c648fc6fb856084fec7d61cffee);
             
         
 
-        marker_4327da20bcdda52342f1aa6c32b9f6b6.bindPopup(popup_eb760ecac26b42dc26fc2fbd27208f50)
+        marker_28cc7a13b5b91b7ccb79e1a0ea30b9e4.bindPopup(popup_c5f6929792e6d262e37918121d8c9253)
         ;
 
         
     
     
-                marker_4327da20bcdda52342f1aa6c32b9f6b6.setIcon(icon_5486d57e86594c5f20d33acda44a9edb);
+                marker_28cc7a13b5b91b7ccb79e1a0ea30b9e4.setIcon(icon_7f99c447de170e9a0db3406469cebdf6);
             
     
-            feature_group_d015dc97db3e2fff0cb5fd2aebcedb24.addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            feature_group_0776a28faadb4be4153cce9593bb1fb8.addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var marker_1a233464a843a518e4c317f4f8d25641 = L.marker(
+            var marker_a6b8b71174b9dee5dafacfe22b3af9d0 = L.marker(
                 [-7.2899995, 112.7635253],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_e603fa01fae175ee55bc2105145db9be = L.AwesomeMarkers.icon(
+            var icon_3069f9c7819ec6c73183dc5187b7f07f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -357,34 +357,34 @@
             );
         
     
-        var popup_5b6fb80401e36522b59007fd6fa7f3a7 = L.popup({
+        var popup_0fc5cb47247c734d03d832278b19488b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_687bc2ebdb9d0aaa167ea3da41795dd4 = $(`<div id="html_687bc2ebdb9d0aaa167ea3da41795dd4" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Manyar Medical Centre<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_5b6fb80401e36522b59007fd6fa7f3a7.setContent(html_687bc2ebdb9d0aaa167ea3da41795dd4);
+                var html_7fc976eb117d4e7c60ca996e8ece8aba = $(`<div id="html_7fc976eb117d4e7c60ca996e8ece8aba" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Manyar Medical Centre<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_0fc5cb47247c734d03d832278b19488b.setContent(html_7fc976eb117d4e7c60ca996e8ece8aba);
             
         
 
-        marker_1a233464a843a518e4c317f4f8d25641.bindPopup(popup_5b6fb80401e36522b59007fd6fa7f3a7)
+        marker_a6b8b71174b9dee5dafacfe22b3af9d0.bindPopup(popup_0fc5cb47247c734d03d832278b19488b)
         ;
 
         
     
     
-                marker_1a233464a843a518e4c317f4f8d25641.setIcon(icon_e603fa01fae175ee55bc2105145db9be);
+                marker_a6b8b71174b9dee5dafacfe22b3af9d0.setIcon(icon_3069f9c7819ec6c73183dc5187b7f07f);
             
     
-            var marker_cd162125d478d4d96bcfca3f054ef53e = L.marker(
+            var marker_e89740ae51b7a55c17f22adefacf55de = L.marker(
                 [-7.299691577287922, 112.77044489084444],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_7ea19c6e94be79d3e9f282fec570eed2 = L.AwesomeMarkers.icon(
+            var icon_9e2b4ed4c1ee9aa559c0ce5edf0fb108 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -395,34 +395,34 @@
             );
         
     
-        var popup_a6ecff1629a8b30b254b6290b20c4d62 = L.popup({
+        var popup_8597f433fb0b3106dc9420b7db63e50b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_cb86665cf9ee8ff04d575066b7d42daf = $(`<div id="html_cb86665cf9ee8ff04d575066b7d42daf" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Haji Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_a6ecff1629a8b30b254b6290b20c4d62.setContent(html_cb86665cf9ee8ff04d575066b7d42daf);
+                var html_1e5dfe4ce89dd1e36216dbdc20730432 = $(`<div id="html_1e5dfe4ce89dd1e36216dbdc20730432" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Haji Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_8597f433fb0b3106dc9420b7db63e50b.setContent(html_1e5dfe4ce89dd1e36216dbdc20730432);
             
         
 
-        marker_cd162125d478d4d96bcfca3f054ef53e.bindPopup(popup_a6ecff1629a8b30b254b6290b20c4d62)
+        marker_e89740ae51b7a55c17f22adefacf55de.bindPopup(popup_8597f433fb0b3106dc9420b7db63e50b)
         ;
 
         
     
     
-                marker_cd162125d478d4d96bcfca3f054ef53e.setIcon(icon_7ea19c6e94be79d3e9f282fec570eed2);
+                marker_e89740ae51b7a55c17f22adefacf55de.setIcon(icon_9e2b4ed4c1ee9aa559c0ce5edf0fb108);
             
     
-            var marker_2cd61662b7ab825b2383d90d70e02638 = L.marker(
+            var marker_467a7162e0f406fa2ff0fb7a8cccecd2 = L.marker(
                 [-7.2908984, 112.7892866],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_7e9c4bdc3621abfe6c424b98b2030e4a = L.AwesomeMarkers.icon(
+            var icon_5a7fdf03102728088a421d07c60dfd8e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -433,34 +433,34 @@
             );
         
     
-        var popup_39ef597fed3c925545a81d83a891dd8e = L.popup({
+        var popup_a91a712251cb0bf89fa234361f830367 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_584ecd723d38720ad27378ffe53c3ac2 = $(`<div id="html_584ecd723d38720ad27378ffe53c3ac2" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Onkologi<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_39ef597fed3c925545a81d83a891dd8e.setContent(html_584ecd723d38720ad27378ffe53c3ac2);
+                var html_2e127b12316c08fa97c8fd5714137dc8 = $(`<div id="html_2e127b12316c08fa97c8fd5714137dc8" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Onkologi<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_a91a712251cb0bf89fa234361f830367.setContent(html_2e127b12316c08fa97c8fd5714137dc8);
             
         
 
-        marker_2cd61662b7ab825b2383d90d70e02638.bindPopup(popup_39ef597fed3c925545a81d83a891dd8e)
+        marker_467a7162e0f406fa2ff0fb7a8cccecd2.bindPopup(popup_a91a712251cb0bf89fa234361f830367)
         ;
 
         
     
     
-                marker_2cd61662b7ab825b2383d90d70e02638.setIcon(icon_7e9c4bdc3621abfe6c424b98b2030e4a);
+                marker_467a7162e0f406fa2ff0fb7a8cccecd2.setIcon(icon_5a7fdf03102728088a421d07c60dfd8e);
             
     
-            var marker_299060bae53e03530c6dba0222bdb018 = L.marker(
+            var marker_d465c512a2bb3b15069adb3f3c5ee875 = L.marker(
                 [-7.3048488, 112.7651381],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_087d23741914a71d5a529d822b56b3f0 = L.AwesomeMarkers.icon(
+            var icon_53181d1e70e6ba97b4346a1e2c487b5d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -471,34 +471,34 @@
             );
         
     
-        var popup_68149cf3b7824bb9ef1f41e4f96263e4 = L.popup({
+        var popup_cdea21d43d5c11a6148ff1313656a905 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d1f1037dc7e0ddbbb02dc7e392766903 = $(`<div id="html_d1f1037dc7e0ddbbb02dc7e392766903" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Premier Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_68149cf3b7824bb9ef1f41e4f96263e4.setContent(html_d1f1037dc7e0ddbbb02dc7e392766903);
+                var html_9f0042c2d0df02cad5b2ff1c7b1ff7db = $(`<div id="html_9f0042c2d0df02cad5b2ff1c7b1ff7db" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Premier Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_cdea21d43d5c11a6148ff1313656a905.setContent(html_9f0042c2d0df02cad5b2ff1c7b1ff7db);
             
         
 
-        marker_299060bae53e03530c6dba0222bdb018.bindPopup(popup_68149cf3b7824bb9ef1f41e4f96263e4)
+        marker_d465c512a2bb3b15069adb3f3c5ee875.bindPopup(popup_cdea21d43d5c11a6148ff1313656a905)
         ;
 
         
     
     
-                marker_299060bae53e03530c6dba0222bdb018.setIcon(icon_087d23741914a71d5a529d822b56b3f0);
+                marker_d465c512a2bb3b15069adb3f3c5ee875.setIcon(icon_53181d1e70e6ba97b4346a1e2c487b5d);
             
     
-            var marker_0a6f0830de477df26c81ece269836dbb = L.marker(
+            var marker_8658dfe2d363f78169e1ca826c172d58 = L.marker(
                 [-7.2909658, 112.7826754],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_0bdb73c7774eaeae591a85b014d0085f = L.AwesomeMarkers.icon(
+            var icon_2cd0e275758fd77bebe02f930ae619d6 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -509,34 +509,34 @@
             );
         
     
-        var popup_3745e72de199fd028596551e32933293 = L.popup({
+        var popup_2ae0a46c593f326930ad8563550e3de9 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_dc1ab074d31ef6509126dbf8c3e44ebe = $(`<div id="html_dc1ab074d31ef6509126dbf8c3e44ebe" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Putri Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_3745e72de199fd028596551e32933293.setContent(html_dc1ab074d31ef6509126dbf8c3e44ebe);
+                var html_355c449ab6f8a4f0973c5b2b6bf11658 = $(`<div id="html_355c449ab6f8a4f0973c5b2b6bf11658" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Putri Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_2ae0a46c593f326930ad8563550e3de9.setContent(html_355c449ab6f8a4f0973c5b2b6bf11658);
             
         
 
-        marker_0a6f0830de477df26c81ece269836dbb.bindPopup(popup_3745e72de199fd028596551e32933293)
+        marker_8658dfe2d363f78169e1ca826c172d58.bindPopup(popup_2ae0a46c593f326930ad8563550e3de9)
         ;
 
         
     
     
-                marker_0a6f0830de477df26c81ece269836dbb.setIcon(icon_0bdb73c7774eaeae591a85b014d0085f);
+                marker_8658dfe2d363f78169e1ca826c172d58.setIcon(icon_2cd0e275758fd77bebe02f930ae619d6);
             
     
-            var marker_2664fc3a5a408dbfeb92311a395ca5bd = L.marker(
+            var marker_79cd20ffa3a065c6b11dd9745a74d4b8 = L.marker(
                 [-7.3077957, 112.7875821],
                 {
 }
-            ).addTo(map_d19f0f7d90de09aa316f40c1ce1106be);
+            ).addTo(map_c4dbea480777f5a663e88f462eae42ba);
         
     
-            var icon_b90f4ebea4e36ac09369e99d8d84f282 = L.AwesomeMarkers.icon(
+            var icon_6797f0736a24b2113ee269d46b981c2e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -547,24 +547,24 @@
             );
         
     
-        var popup_6bfcfbd0f5a64b79acf6502883b29fe8 = L.popup({
+        var popup_4e8038ea7b75596ea70ae2888703c9aa = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_88551c86cc440ba1ef103d9f645c3c60 = $(`<div id="html_88551c86cc440ba1ef103d9f645c3c60" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gotong Royong<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_6bfcfbd0f5a64b79acf6502883b29fe8.setContent(html_88551c86cc440ba1ef103d9f645c3c60);
+                var html_6b61864701313be89d31811c27177799 = $(`<div id="html_6b61864701313be89d31811c27177799" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gotong Royong<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_4e8038ea7b75596ea70ae2888703c9aa.setContent(html_6b61864701313be89d31811c27177799);
             
         
 
-        marker_2664fc3a5a408dbfeb92311a395ca5bd.bindPopup(popup_6bfcfbd0f5a64b79acf6502883b29fe8)
+        marker_79cd20ffa3a065c6b11dd9745a74d4b8.bindPopup(popup_4e8038ea7b75596ea70ae2888703c9aa)
         ;
 
         
     
     
-                marker_2664fc3a5a408dbfeb92311a395ca5bd.setIcon(icon_b90f4ebea4e36ac09369e99d8d84f282);
+                marker_79cd20ffa3a065c6b11dd9745a74d4b8.setIcon(icon_6797f0736a24b2113ee269d46b981c2e);
             
 </script>
 </html>

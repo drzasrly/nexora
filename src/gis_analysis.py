@@ -102,6 +102,15 @@ def run_gis_analysis(df_rca, config):
     df_rca_std = df_rca.copy()
     df_rca_std["kecamatan"] = df_rca_std["kecamatan"].str.strip().str.upper()
     
+    # Load raw attributes from master to carry to geojson
+    master_path = os.path.join(processed_dir, "master_heal_city.csv")
+    if os.path.exists(master_path):
+        df_master = pd.read_csv(master_path)
+        df_master_std = df_master.copy()
+        df_master_std["kecamatan"] = df_master_std["kecamatan"].str.strip().str.upper()
+        cols_to_merge = ["kecamatan", "jumlah_penduduk", "kepadatan_penduduk", "jumlah_perawat", "jumlah_bidan", "jumlah_tenaga_medis", "total_tenaga_kesehatan", "total_tempat_tidur"]
+        df_rca_std = df_rca_std.merge(df_master_std[[c for c in cols_to_merge if c in df_master_std.columns]], on="kecamatan", how="left")
+    
     # Merge
     gdf_gis = merge_healthcare_data(gdf_kec_std, df_rca_std)
     

@@ -449,9 +449,19 @@ def run_preprocessing(config):
                 with open(pkm_path, "r", encoding="utf-8") as f:
                     gj_pkm = json.load(f)
                 
-                # Update faskes
+                # Map capacities
+                bed_capacity_dict = {}
+                for idx, row in df_clean_bed.iterrows():
+                    f_name = str(row.get("nama_faskes", "")).strip().lower()
+                    cap = row.get("kapasitas_tempat_tidur")
+                    if pd.notna(cap):
+                        bed_capacity_dict[f_name] = int(cap)
+
+                # Update faskes coordinates and capacity
                 for feat in gj_faskes["features"]:
                     p = feat["properties"]
+                    
+                    # Update coordinates if Puskesmas Induk
                     if p.get("jenis_faskes") == "Puskesmas Induk":
                         name = p.get("nama_puskesmas", p.get("nama_faskes", ""))
                         c_name = clean_name(name)
@@ -459,16 +469,44 @@ def run_preprocessing(config):
                             if c_name in k or k in c_name:
                                 feat["geometry"]["coordinates"] = v
                                 break
+                    
+                    # Add capacity
+                    f_name = p.get("nama_faskes", p.get("nama_puskesmas", ""))
+                    p["kapasitas_tempat_tidur"] = None
+                    if f_name:
+                        f_name_clean = str(f_name).strip().lower()
+                        if f_name_clean in bed_capacity_dict:
+                            p["kapasitas_tempat_tidur"] = bed_capacity_dict[f_name_clean]
+                        else:
+                            for k, v in bed_capacity_dict.items():
+                                if k in f_name_clean or f_name_clean in k:
+                                    p["kapasitas_tempat_tidur"] = v
+                                    break
                                 
-                # Update puskesmas
+                # Update puskesmas coordinates and capacity
                 for feat in gj_pkm["features"]:
                     p = feat["properties"]
+                    
+                    # Update coordinates
                     name = p.get("nama_puskesmas", p.get("nama_faskes", ""))
                     c_name = clean_name(name)
                     for k, v in clean_pkm_coords.items():
                         if c_name in k or k in c_name:
                             feat["geometry"]["coordinates"] = v
                             break
+                    
+                    # Add capacity
+                    f_name = p.get("nama_faskes", p.get("nama_puskesmas", ""))
+                    p["kapasitas_tempat_tidur"] = None
+                    if f_name:
+                        f_name_clean = str(f_name).strip().lower()
+                        if f_name_clean in bed_capacity_dict:
+                            p["kapasitas_tempat_tidur"] = bed_capacity_dict[f_name_clean]
+                        else:
+                            for k, v in bed_capacity_dict.items():
+                                if k in f_name_clean or f_name_clean in k:
+                                    p["kapasitas_tempat_tidur"] = v
+                                    break
                             
                 # Save
                 with open(faskes_path, "w", encoding="utf-8") as f:

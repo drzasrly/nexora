@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let mainMap, overviewMap, simMapBefore, simMapAfter;
     let mainGeojsonLayer, overviewGeojsonLayer;
     let simBeforeLayer, simAfterLayer;
-    let hospitalLayer, puskesmasLayer;
+    let hospitalLayer, puskesmasLayer, clinicLayer;
     let rawKecamatanData = null;
     let rawFacilityData = null;
     let activeKecamatanLayer = null;
@@ -97,6 +97,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (pageName === 'analytics') {
                 renderAnalyticsPage();
+            }
+
+            // Invalidate size to handle layout changes dynamically
+            if (pageName === 'map' && mainMap) {
+                mainMap.invalidateSize();
+            }
+            if (pageName === 'overview' && overviewMap) {
+                overviewMap.invalidateSize();
+            }
+            if (pageName === 'simulation') {
+                if (simMapBefore) simMapBefore.invalidateSize();
+                if (simMapAfter) simMapAfter.invalidateSize();
             }
         }, 50);
     };
@@ -307,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mainMap = createBaseMap('map', DEFAULT_ZOOM);
         hospitalLayer = L.featureGroup().addTo(mainMap);
         puskesmasLayer = L.featureGroup().addTo(mainMap);
+        clinicLayer = L.featureGroup().addTo(mainMap);
 
         renderMainKecamatanLayer();
         if (rawFacilityData) renderFacilityMarkers();
@@ -330,6 +343,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         document.getElementById('toggle-puskesmas').addEventListener('change', e => {
             e.target.checked ? mainMap.addLayer(puskesmasLayer) : mainMap.removeLayer(puskesmasLayer);
+        });
+        document.getElementById('toggle-clinics').addEventListener('change', e => {
+            e.target.checked ? mainMap.addLayer(clinicLayer) : mainMap.removeLayer(clinicLayer);
         });
 
         // Map mode toggle
@@ -398,7 +414,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderFacilityMarkers() {
         hospitalLayer.clearLayers();
         puskesmasLayer.clearLayers();
-        let hCount = 0, pkCount = 0;
+        clinicLayer.clearLayers();
+        let hCount = 0, pkCount = 0, cCount = 0;
 
         rawFacilityData.features.forEach(feature => {
             const p = feature.properties;
@@ -407,10 +424,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const coords = [g.coordinates[1], g.coordinates[0]];
             const name = p.nama_faskes || p.nama_puskesmas || 'Fasilitas Kesehatan';
             const jenis = p.jenis_faskes || '';
+            const capacityStr = p.kapasitas_tempat_tidur ? `${p.kapasitas_tempat_tidur} beds` : 'N/A';
             const popup = `<div class="popup-title">${name}</div>
                 <div class="popup-detail"><strong>Type:</strong> ${jenis}</div>
                 <div class="popup-detail"><strong>Kecamatan:</strong> ${p.kecamatan || 'N/A'}</div>
-                <div class="popup-detail"><strong>Operator:</strong> ${p.penyelenggara || 'N/A'}</div>`;
+                <div class="popup-detail"><strong>Operator:</strong> ${p.penyelenggara || 'N/A'}</div>
+                <div class="popup-detail"><strong>Capacity:</strong> ${capacityStr}</div>
+                <div class="popup-detail"><strong>Coordinates:</strong> ${coords[0].toFixed(5)}, ${coords[1].toFixed(5)}</div>`;
 
             if (jenis.includes('Rumah Sakit')) {
                 hCount++;
@@ -420,14 +440,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 pkCount++;
                 L.marker(coords, { icon: L.divIcon({ className: 'custom-marker custom-marker-puskesmas', html: '<i class="fa-solid fa-house-medical" style="font-size:10px;"></i>', iconSize: [20,20], iconAnchor: [10,10] }) })
                     .bindPopup(popup).addTo(puskesmasLayer);
+            } else if (jenis.includes('Klinik')) {
+                cCount++;
+                L.marker(coords, { icon: L.divIcon({ className: 'custom-marker custom-marker-clinic', html: '<i class="fa-solid fa-clinic-medical" style="font-size:10px;"></i>', iconSize: [20,20], iconAnchor: [10,10] }) })
+                    .bindPopup(popup).addTo(clinicLayer);
             }
         });
 
         const cRS = document.getElementById('count-rs');
         const cPKM = document.getElementById('count-pkm');
+        const cCLI = document.getElementById('count-clinics');
         if (cRS) cRS.textContent = `(${hCount})`;
         if (cPKM) cPKM.textContent = `(${pkCount})`;
-        if (document.getElementById('ov-facilities')) document.getElementById('ov-facilities').textContent = hCount + pkCount;
+        if (cCLI) cCLI.textContent = `(${cCount})`;
+        if (document.getElementById('ov-facilities')) document.getElementById('ov-facilities').textContent = hCount + pkCount + cCount;
     }
 
     // ============================================================
@@ -485,6 +511,24 @@ document.addEventListener("DOMContentLoaded", () => {
         setProgress('facility', fac, props.facility_issue);
         setProgress('demand', dem, props.demand_issue);
         setProgress('disease', dis, props.disease_issue);
+
+        // Populate Tenaga Kesehatan (Layer 3)
+        const docCount = props.jumlah_tenaga_medis !== undefined ? props.jumlah_tenaga_medis : '—';
+        const nurseCount = props.jumlah_perawat !== undefined ? props.jumlah_perawat : '—';
+        const midwifeCount = props.jumlah_bidan !== undefined ? props.jumlah_bidan : '—';
+        const totalNakes = props.total_tenaga_kesehatan !== undefined ? props.total_tenaga_kesehatan : '—';
+
+        document.getElementById('detail-doctors').textContent = docCount;
+        document.getElementById('detail-nurses').textContent = nurseCount;
+        document.getElementById('detail-midwives').textContent = midwifeCount;
+        document.getElementById('detail-total-nakes').textContent = totalNakes;
+
+        // Populate Demografi & Populasi (Layer 4)
+        const popVal = props.jumlah_penduduk !== undefined ? `${(props.jumlah_penduduk * 1000).toLocaleString('id-ID')} jiwa` : '—';
+        const densityVal = props.kepadatan_penduduk !== undefined ? `${props.kepadatan_penduduk.toLocaleString('id-ID')} /km²` : '—';
+
+        document.getElementById('detail-population').textContent = popVal;
+        document.getElementById('detail-density').textContent = densityVal;
 
         const pNode = document.getElementById('detail-cause-primary');
         pNode.textContent = (props.primary_root_cause || 'UNKNOWN').replace(/_/g, ' ');

@@ -218,6 +218,11 @@
                                     <span class="checkmark chk-puskesmas"></span>
                                     <span class="chk-label"><i class="fa-solid fa-house-medical blue-icon"></i> Puskesmas <span class="facility-count" id="count-pkm">(122)</span></span>
                                 </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="toggle-clinics" checked>
+                                    <span class="checkmark chk-clinic" style="background: var(--accent-purple); border-color: var(--accent-purple);"></span>
+                                    <span class="chk-label"><i class="fa-solid fa-clinic-medical purple-icon" style="color: var(--accent-purple);"></i> Clinics <span class="facility-count" id="count-clinics">(0)</span></span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -309,6 +314,52 @@
                                         <div class="progress-fill" id="fill-disease" style="width: 0%;"></div>
                                     </div>
                                     <span class="issue-tag" id="issue-disease">Issue tag</span>
+                                </div>
+                            </div>
+
+                            <!-- Layer 3: Tenaga Kesehatan details -->
+                            <div class="metrics-section" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-top: 12px;">
+                                <h4><i class="fa-solid fa-user-nurse"></i> Tenaga Kesehatan (Layer 3)</h4>
+                                <div class="causes-grid" style="margin-top: 8px; margin-bottom: 8px;">
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Doctors</span>
+                                        <span class="cause-val" id="detail-doctors">—</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Nurses</span>
+                                        <span class="cause-val" id="detail-nurses">—</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Midwives</span>
+                                        <span class="cause-val" id="detail-midwives">—</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Total Nakes</span>
+                                        <span class="cause-val" id="detail-total-nakes">—</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Layer 4: Demografi & Populasi details -->
+                            <div class="metrics-section" style="border-top: 1px solid var(--border-color); padding-top: 12px; margin-top: 12px; margin-bottom: 12px;">
+                                <h4><i class="fa-solid fa-users"></i> Demografi & Populasi (Layer 4)</h4>
+                                <div class="causes-grid" style="margin-top: 8px; margin-bottom: 8px;">
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Total Penduduk</span>
+                                        <span class="cause-val" id="detail-population">—</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Kepadatan (km²)</span>
+                                        <span class="cause-val" id="detail-density">—</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Lansia</span>
+                                        <span class="cause-val" id="detail-elderly">N/A</span>
+                                    </div>
+                                    <div class="cause-card" style="padding: 8px;">
+                                        <span class="cause-label">Anak-anak</span>
+                                        <span class="cause-val" id="detail-children">N/A</span>
+                                    </div>
                                 </div>
                             </div>
 
