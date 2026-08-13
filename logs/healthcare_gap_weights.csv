@@ -1,5 +1,2 @@
-component,weight
-demand_weight,0.3
-workforce_weight,0.3
-facility_weight,0.2
-disease_weight,0.2
+demand_weight,workforce_weight,facility_weight,disease_weight
+0.3,0.3,0.2,0.2

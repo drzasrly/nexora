@@ -8,6 +8,8 @@ total_tenaga_kesehatan,Capacity,nakes,Workforce absolute size
 nakes_per_1000,Capacity,nakes/1k pop,Healthcare workforce capacity ratio
 perawat_per_1000,Capacity,nurses/1k pop,Nursing labor capacity ratio
 bidan_per_1000,Capacity,midwives/1k pop,Midwife capacity ratio
+jumlah_tenaga_medis,Capacity,doctors,Physician absolute size
+doctors_per_1000,Capacity,doctors/1k pop,Physician density
 total_faskes,Capacity,facilities,Healthcare facilities absolute size
 faskes_per_100k,Capacity,faskes/100k pop,Total facility capacity ratio
 jumlah_puskesmas,Capacity,facilities,Primary care facility count

@@ -70,13 +70,14 @@ def run_root_cause_analysis(df_gap, df_feats, config):
     
     print("Running Root Cause Analysis (RCA)...")
     
-    # Merge datasets
-    df_m = pd.merge(df_gap, df_feats[[
-        "kecamatan", "jumlah_penduduk", "visits_per_1000", "nakes_per_1000", 
-        "perawat_per_1000", "bidan_per_1000", "faskes_per_100k", "puskesmas_per_100k", 
-        "pustu_per_100k", "beds_per_1000", "disease_per_1000",
-        "jenis_penyakit_dominan", "kasus_penyakit_tertinggi", "jumlah_jenis_penyakit"
-    ]], on="kecamatan", how="left")
+    # Merge datasets cleanly without clashing columns
+    scoring_cols = [
+        "kecamatan", "demand_score", "workforce_gap", "facility_gap", "disease_need_score", 
+        "accessibility_gap", "healthcare_gap_score", "priority_category", "priority_rank"
+    ]
+    df_gap_clean = df_gap[[c for c in scoring_cols if c in df_gap.columns]]
+    df_feats_clean = df_feats.drop(columns=["accessibility_gap"], errors="ignore")
+    df_m = pd.merge(df_gap_clean, df_feats_clean, on="kecamatan", how="left")
     
     rca_records = []
     

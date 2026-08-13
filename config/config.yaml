@@ -1,7 +1,7 @@
-# Project metadata
 project:
   name: HEAL-CITY
   city: Surabaya
+  baseline_year: 2024
 
 data:
   raw_excel: dataset/data smart city.xlsx
@@ -14,7 +14,6 @@ data:
   root_cause: data/processed/root_cause_analysis.csv
 
 spatial:
-  kecamatan: data/spatial/kecamatan_surabaya.geojson
   district: data/spatial/kecamatan_surabaya.geojson
   puskesmas: data/spatial/puskesmas.geojson
   facilities: data/spatial/fasilitas_kesehatan.geojson
@@ -31,41 +30,36 @@ model:
   random_state: 42
 
 gap_engine:
-  # Demand Sub-weights
-  demand_population_weight: 0.50
-  demand_service_weight: 0.50
-  demand_disease_weight: 0.00
-  
-  # Capacity Sub-weights (Workforce)
-  workforce_doctors_weight: 0.40
-  workforce_nurse_weight: 0.40
-  workforce_midwife_weight: 0.20
-  
-  # Capacity Sub-weights (Facility)
-  facility_faskes_weight: 0.30
-  facility_pkm_weight: 0.25
-  facility_pustu_weight: 0.15
-  facility_beds_weight: 0.30
-  
-  # Composite Gap weights
-  demand_weight: 0.30
-  workforce_weight: 0.30
-  facility_weight: 0.20
-  disease_weight: 0.20
+  demand:
+    population_weight: 0.50
+    service_weight: 0.50
+    disease_weight: 0.00
 
-weights:
-  demand: 0.30
-  workforce: 0.30
-  facility: 0.20
-  disease: 0.20
+  workforce:
+    doctors_weight: 0.40
+    nurses_weight: 0.40
+    midwives_weight: 0.20
+
+  facility:
+    facilities_weight: 0.30
+    puskesmas_weight: 0.25
+    pustu_weight: 0.15
+    beds_weight: 0.30
+
+  composite:
+    demand_weight: 0.30
+    workforce_weight: 0.30
+    facility_weight: 0.20
+    disease_weight: 0.20
 
 root_cause:
-  threshold_high: 0.80
-  threshold_medium: 0.60
   high_threshold: 0.80
   medium_threshold: 0.60
+  threshold_high: 0.80
+  threshold_medium: 0.60
 
 simulation:
   max_budget: 5000000000
-  random_state: 42
 
+optimizer:
+  max_iterations: 10000

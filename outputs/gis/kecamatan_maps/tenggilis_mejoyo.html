@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4d399155102b9400a2df169c60d087af {
+                #map_e4c8ef5b2fef1353cd10e21eb5321161 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">43.2</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">44.7</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Tenggilis Mejoyo memiliki Healthcare Gap Score sebesar 43.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.75), 2. Workforce Shortage Gap (0.57), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.75. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                     Kecamatan Tenggilis Mejoyo memiliki Healthcare Gap Score sebesar 44.7 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.83), 2. Workforce Shortage Gap (0.57), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.83. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_4d399155102b9400a2df169c60d087af" ></div>
+            <div class="folium-map" id="map_e4c8ef5b2fef1353cd10e21eb5321161" ></div>
         
 </body>
 <script>
     
     
-            var map_4d399155102b9400a2df169c60d087af = L.map(
-                "map_4d399155102b9400a2df169c60d087af",
+            var map_e4c8ef5b2fef1353cd10e21eb5321161 = L.map(
+                "map_e4c8ef5b2fef1353cd10e21eb5321161",
                 {
                     center: [-7.324417600109367, 112.75418443607865],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_7f72c56b6ec854ae6e4ff31a75369cff = L.tileLayer(
+            var tile_layer_8b72aeca4ba545c9625ac7c2a5a6acd3 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_7f72c56b6ec854ae6e4ff31a75369cff.addTo(map_4d399155102b9400a2df169c60d087af);
+            tile_layer_8b72aeca4ba545c9625ac7c2a5a6acd3.addTo(map_e4c8ef5b2fef1353cd10e21eb5321161);
         
     
-        function geo_json_e608520fb2cb010665c0fb7e4fed48fd_styler(feature) {
+        function geo_json_406c0e13fe649490bd908c200dfd2348_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_e608520fb2cb010665c0fb7e4fed48fd_onEachFeature(feature, layer) {
+        function geo_json_406c0e13fe649490bd908c200dfd2348_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_e608520fb2cb010665c0fb7e4fed48fd = L.geoJson(null, {
-                onEachFeature: geo_json_e608520fb2cb010665c0fb7e4fed48fd_onEachFeature,
+        var geo_json_406c0e13fe649490bd908c200dfd2348 = L.geoJson(null, {
+                onEachFeature: geo_json_406c0e13fe649490bd908c200dfd2348_onEachFeature,
             
-                style: geo_json_e608520fb2cb010665c0fb7e4fed48fd_styler,
+                style: geo_json_406c0e13fe649490bd908c200dfd2348_styler,
             ...{
 }
         });
 
-        function geo_json_e608520fb2cb010665c0fb7e4fed48fd_add (data) {
-            geo_json_e608520fb2cb010665c0fb7e4fed48fd
+        function geo_json_406c0e13fe649490bd908c200dfd2348_add (data) {
+            geo_json_406c0e13fe649490bd908c200dfd2348
                 .addData(data);
         }
-            geo_json_e608520fb2cb010665c0fb7e4fed48fd_add({"bbox": [112.7419, -7.3422, 112.771, -7.3054], "features": [{"bbox": [112.7419, -7.3422, 112.771, -7.3054], "geometry": {"coordinates": [[[[112.7548, -7.3372], [112.7535, -7.3422], [112.7419, -7.3407], [112.744, -7.3226], [112.7467, -7.3231], [112.748, -7.3175], [112.7508, -7.3181], [112.7542, -7.3153], [112.7533, -7.3116], [112.7568, -7.3123], [112.7595, -7.3088], [112.7592, -7.3054], [112.771, -7.3086], [112.7706, -7.3107], [112.7686, -7.3106], [112.7689, -7.3138], [112.7658, -7.3147], [112.7639, -7.3134], [112.7641, -7.315], [112.7617, -7.3147], [112.7648, -7.3158], [112.7548, -7.3372]]]], "type": "MultiPolygon"}, "id": "27", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.18450710723035435, "disease_issue": "Penyakit pada sistem pernafasan (7490 cases)", "disease_need_score": 0.26952828370916404, "explanation": "Kecamatan Tenggilis Mejoyo memiliki Healthcare Gap Score sebesar 43.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.75), 2. Workforce Shortage Gap (0.57), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Bed Capacity, dengan sub-skor 0.75. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7549401784928053, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 43.217976171917186, "jumlah_bidan": 84, "jumlah_penduduk": 58.9, "jumlah_perawat": 437, "jumlah_tenaga_medis": 414, "kecamatan": "TENGGILIS MEJOYO", "kepadatan_penduduk": 10143, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.1818270547938997, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 36.0, "total_tenaga_kesehatan": 1247.0, "workforce_gap": 0.5731131236989055, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_406c0e13fe649490bd908c200dfd2348_add({"bbox": [112.7419, -7.3422, 112.771, -7.3054], "features": [{"bbox": [112.7419, -7.3422, 112.771, -7.3054], "geometry": {"coordinates": [[[[112.7548, -7.3372], [112.7535, -7.3422], [112.7419, -7.3407], [112.744, -7.3226], [112.7467, -7.3231], [112.748, -7.3175], [112.7508, -7.3181], [112.7542, -7.3153], [112.7533, -7.3116], [112.7568, -7.3123], [112.7595, -7.3088], [112.7592, -7.3054], [112.771, -7.3086], [112.7706, -7.3107], [112.7686, -7.3106], [112.7689, -7.3138], [112.7658, -7.3147], [112.7639, -7.3134], [112.7641, -7.315], [112.7617, -7.3147], [112.7648, -7.3158], [112.7548, -7.3372]]]], "type": "MultiPolygon"}, "id": "27", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.18450710723035435, "disease_issue": "Penyakit pada sistem pernafasan (7490 cases)", "disease_need_score": 0.269528283709164, "explanation": "Kecamatan Tenggilis Mejoyo memiliki Healthcare Gap Score sebesar 44.7 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.83), 2. Workforce Shortage Gap (0.57), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.83. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.8299401784928051, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 44.71797617191718, "jumlah_bidan": 84, "jumlah_penduduk": 58.9, "jumlah_perawat": 437, "jumlah_tenaga_medis": 414, "kecamatan": "TENGGILIS MEJOYO", "kepadatan_penduduk": 10143, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "HIGH", "root_cause_margin": 0.25682705479389956, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 36.0, "total_tenaga_kesehatan": 1247.0, "workforce_gap": 0.5731131236989055, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_e608520fb2cb010665c0fb7e4fed48fd.bindTooltip(
+    geo_json_406c0e13fe649490bd908c200dfd2348.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,17 +213,17 @@
 });
                      
     
-            geo_json_e608520fb2cb010665c0fb7e4fed48fd.addTo(map_4d399155102b9400a2df169c60d087af);
+            geo_json_406c0e13fe649490bd908c200dfd2348.addTo(map_e4c8ef5b2fef1353cd10e21eb5321161);
         
     
-            var marker_951191e843eda47a4875dd0374a52bb9 = L.marker(
+            var marker_a7bd168e0e0ded7e22bffcb1a81295a4 = L.marker(
                 [-7.313941308508155, 112.75722767074343],
                 {
 }
-            ).addTo(map_4d399155102b9400a2df169c60d087af);
+            ).addTo(map_e4c8ef5b2fef1353cd10e21eb5321161);
         
     
-            var icon_dc8305de75755414a74db09bca827bf1 = L.AwesomeMarkers.icon(
+            var icon_e454519c512325bdb3545b08045808de = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -234,79 +234,79 @@
             );
         
     
-        var popup_6de5986c529c916010e206dc0d731270 = L.popup({
+        var popup_2ff2762380af8e6d853ad0c710820fd5 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_2d651bc95e6af008ae19dff80c080228 = $(`<div id="html_2d651bc95e6af008ae19dff80c080228" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Kendangsari Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_6de5986c529c916010e206dc0d731270.setContent(html_2d651bc95e6af008ae19dff80c080228);
+                var html_21565f02dad3c60537daa357f45fca03 = $(`<div id="html_21565f02dad3c60537daa357f45fca03" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Kendangsari Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_2ff2762380af8e6d853ad0c710820fd5.setContent(html_21565f02dad3c60537daa357f45fca03);
             
         
 
-        marker_951191e843eda47a4875dd0374a52bb9.bindPopup(popup_6de5986c529c916010e206dc0d731270)
+        marker_a7bd168e0e0ded7e22bffcb1a81295a4.bindPopup(popup_2ff2762380af8e6d853ad0c710820fd5)
         ;
 
         
     
     
-                marker_951191e843eda47a4875dd0374a52bb9.setIcon(icon_dc8305de75755414a74db09bca827bf1);
+                marker_a7bd168e0e0ded7e22bffcb1a81295a4.setIcon(icon_e454519c512325bdb3545b08045808de);
             
     
-            var feature_group_c6f8f3df9085fec69d31d65ceec32127 = L.featureGroup(
+            var feature_group_18731a67c196fb2729ec1970bd16ded3 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_6d31ecd10d840075a8db8c35d0585d27 = L.polyline(
+            var poly_line_45db9d624e7d83f891fda23ff3866e66 = L.polyline(
                 [[-7.31395895, 112.75729875], [-7.313725434075215, 112.75710866841168]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_c6f8f3df9085fec69d31d65ceec32127);
+            ).addTo(feature_group_18731a67c196fb2729ec1970bd16ded3);
         
     
-        var popup_ac54588f83470cdd938cc2c046a2a3bf = L.popup({
+        var popup_ad0af44054c566f85d3e3edfcd07edbc = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_7d2989bd56aff8f1755d51cce15cf5c8 = $(`<div id="html_7d2989bd56aff8f1755d51cce15cf5c8" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Tenggilis Mejoyo-Wiyung</div>`)[0];
-                popup_ac54588f83470cdd938cc2c046a2a3bf.setContent(html_7d2989bd56aff8f1755d51cce15cf5c8);
+                var html_232cb8dde8ca82b874df99197e70d5c7 = $(`<div id="html_232cb8dde8ca82b874df99197e70d5c7" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Tenggilis Mejoyo-Wiyung</div>`)[0];
+                popup_ad0af44054c566f85d3e3edfcd07edbc.setContent(html_232cb8dde8ca82b874df99197e70d5c7);
             
         
 
-        poly_line_6d31ecd10d840075a8db8c35d0585d27.bindPopup(popup_ac54588f83470cdd938cc2c046a2a3bf)
+        poly_line_45db9d624e7d83f891fda23ff3866e66.bindPopup(popup_ad0af44054c566f85d3e3edfcd07edbc)
         ;
 
         
     
     
-            var poly_line_8db8df12580875c40242ad880294bd34 = L.polyline(
+            var poly_line_4e2c7c03e0ddb04717f02ea82daf1aff = L.polyline(
                 [[-7.313718712510665, 112.75708790303764], [-7.313776539093807, 112.75813486598182]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_c6f8f3df9085fec69d31d65ceec32127);
+            ).addTo(feature_group_18731a67c196fb2729ec1970bd16ded3);
         
     
-        var popup_2361e723a8b49c6755a215a59d2a6f60 = L.popup({
+        var popup_a0683ab46e599b481b0d7dfc2f4a52a1 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_61b1165a402083fd078d7b6663b086a7 = $(`<div id="html_61b1165a402083fd078d7b6663b086a7" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Wonocolo-Wonokromo</div>`)[0];
-                popup_2361e723a8b49c6755a215a59d2a6f60.setContent(html_61b1165a402083fd078d7b6663b086a7);
+                var html_5f33a40b46952a133f17ca0f50117ddf = $(`<div id="html_5f33a40b46952a133f17ca0f50117ddf" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Wonocolo-Wonokromo</div>`)[0];
+                popup_a0683ab46e599b481b0d7dfc2f4a52a1.setContent(html_5f33a40b46952a133f17ca0f50117ddf);
             
         
 
-        poly_line_8db8df12580875c40242ad880294bd34.bindPopup(popup_2361e723a8b49c6755a215a59d2a6f60)
+        poly_line_4e2c7c03e0ddb04717f02ea82daf1aff.bindPopup(popup_a0683ab46e599b481b0d7dfc2f4a52a1)
         ;
 
         
     
     
-            feature_group_c6f8f3df9085fec69d31d65ceec32127.addTo(map_4d399155102b9400a2df169c60d087af);
+            feature_group_18731a67c196fb2729ec1970bd16ded3.addTo(map_e4c8ef5b2fef1353cd10e21eb5321161);
         
 </script>
 </html>

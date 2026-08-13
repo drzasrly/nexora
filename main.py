@@ -5,7 +5,7 @@ import datetime
 import pandas as pd
 from src.data_loader import load_config, load_csv
 from src.preprocessing import run_preprocessing
-from src.validation import validate_required_columns, validate_kecamatan, validate_numeric, validate_infinity
+from src.validation import validate_required_columns, validate_kecamatan, validate_numeric, validate_infinity, validate_config
 from src.feature_engineering import build_features
 from src.gap_engine import calculate_healthcare_gap, create_priority_ranking
 from src.root_cause import run_root_cause_analysis
@@ -29,22 +29,26 @@ def main():
     start_time = datetime.datetime.now()
     status = "SUCCESS"
     error_msg = ""
+    config = None
     
     try:
         # 1. Load config
         config = load_config("config/config.yaml")
         logging.info("Configuration loaded successfully.")
         
+        # 2. Validate configuration weights strictly
+        validate_config(config)
+        
         # Ensure directories exist
         os.makedirs(config["data"]["cleaned_dir"], exist_ok=True)
         os.makedirs(config["data"]["processed_dir"], exist_ok=True)
         os.makedirs(config["output"]["reports"], exist_ok=True)
         
-        # 2. Run Preprocessing
+        # 3. Run Preprocessing
         run_preprocessing(config)
         logging.info("Pre-processing complete. Intermediate datasets generated.")
         
-        # 3. Load Master and Validate
+        # 4. Load Master and Validate
         master_path = os.path.join(config["data"]["processed_dir"], "master_heal_city.csv")
         df_master = load_csv(master_path)
         
@@ -54,24 +58,36 @@ def main():
         validate_infinity(df_master)
         logging.info("Baseline master validations passed.")
         
-        # 4. Load clean disease for features
+        # Generate logs/data_quality_report.csv (Section 61)
+        dq_report = pd.DataFrame([{
+            "dataset": "master_heal_city",
+            "rows": len(df_master),
+            "columns": len(df_master.columns),
+            "missing_values": int(df_master.isna().sum().sum()),
+            "duplicate_rows": int(df_master.duplicated(subset=["kecamatan"]).sum()),
+            "year": 2024,
+            "status": "PASS" if len(df_master) == 31 else "FAIL"
+        }])
+        dq_report.to_csv("logs/data_quality_report.csv", index=False)
+        
+        # 5. Load clean disease for features
         peny_path = os.path.join(config["data"]["cleaned_dir"], "clean_penyakit.csv")
         df_peny = load_csv(peny_path)
         
-        # 5. Run Feature Engineering
+        # 6. Run Feature Engineering
         df_feats = build_features(df_master, df_peny, config)
         logging.info("Feature engineering complete.")
         
-        # 6. Run Gap Engine
+        # 7. Run Gap Engine
         df_gap_raw = calculate_healthcare_gap(df_feats, config)
         df_gap = create_priority_ranking(df_gap_raw, config)
         logging.info("Healthcare gap calculations and rankings complete.")
         
-        # 7. Run Root Cause Analysis (RCA)
+        # 8. Run Root Cause Analysis (RCA)
         df_rca = run_root_cause_analysis(df_gap, df_feats, config)
         logging.info("Root Cause Analysis (RCA) complete.")
         
-        # 8. Run GIS analysis mapping
+        # 9. Run GIS analysis mapping
         run_gis_analysis(df_rca, config)
         logging.info("GIS mapping overlays completed successfully.")
         
@@ -84,22 +100,34 @@ def main():
     end_time = datetime.datetime.now()
     duration = (end_time - start_time).total_seconds()
     
-    # 9. Output Manifest
+    # 10. Output Manifest
+    composite_weights = {
+        "demand": 0.30,
+        "workforce": 0.30,
+        "facility": 0.20,
+        "disease": 0.20
+    }
+    if config:
+        comp_cfg = config["gap_engine"]["composite"]
+        composite_weights = {
+            "demand": comp_cfg["demand_weight"],
+            "workforce": comp_cfg["workforce_weight"],
+            "facility": comp_cfg["facility_weight"],
+            "disease": comp_cfg["disease_weight"]
+        }
+        
     manifest = {
         "project": "HEAL-CITY",
         "city": "Surabaya",
+        "baseline_year": 2024,
+        "district_count": 31,
+        "pipeline_status": status,
+        "config_version": "final",
+        "random_state": 42,
         "timestamp": start_time.strftime("%Y-%m-%d %H:%M:%S"),
         "duration_seconds": duration,
-        "status": status,
         "error_message": error_msg,
-        "dataset_rows": 31,
-        "random_state": 42,
-        "weights_configured": {
-            "demand": 0.30,
-            "workforce": 0.30,
-            "facility": 0.20,
-            "disease": 0.20
-        }
+        "weights_configured": composite_weights
     }
     
     manifest_path = "outputs/reports/run_manifest.json"
@@ -112,6 +140,9 @@ def main():
     print(f"HEAL-CITY PIPELINE COMPLETED WITH STATUS: {status}")
     print(f"Execution Manifest saved to {manifest_path}")
     print("=" * 60)
+    
+    if status == "FAIL":
+        raise SystemExit("Pipeline failure detected. Execution halted.")
 
 if __name__ == "__main__":
     main()

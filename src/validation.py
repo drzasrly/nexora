@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 
@@ -40,3 +41,47 @@ def missing_report(df):
         "missing_percentage": df.isna().mean() * 100
     })
     return report.sort_values("missing_percentage", ascending=False)
+
+def validate_config(config):
+    """Assert that all composite and sub-component weights sum exactly to 1.0."""
+    composite = config["gap_engine"]["composite"]
+    total = (
+        composite["demand_weight"]
+        + composite["workforce_weight"]
+        + composite["facility_weight"]
+        + composite["disease_weight"]
+    )
+    if abs(total - 1.0) >= 1e-9:
+        raise ValueError(f"Composite weights sum is {total}, expected 1.0!")
+
+    workforce = config["gap_engine"]["workforce"]
+    workforce_total = (
+        workforce["doctors_weight"]
+        + workforce["nurses_weight"]
+        + workforce["midwives_weight"]
+    )
+    if abs(workforce_total - 1.0) >= 1e-9:
+        raise ValueError(f"Workforce weights sum is {workforce_total}, expected 1.0!")
+
+    facility = config["gap_engine"]["facility"]
+    facility_total = (
+        facility["facilities_weight"]
+        + facility["puskesmas_weight"]
+        + facility["pustu_weight"]
+        + facility["beds_weight"]
+    )
+    if abs(facility_total - 1.0) >= 1e-9:
+        raise ValueError(f"Facility weights sum is {facility_total}, expected 1.0!")
+    print("Configuration weights validation: PASS")
+    return True
+
+def evaluate_data_quality(row):
+    """Performs qualitative evaluation check for completeness on a row."""
+    checks = [
+        row.get("jumlah_penduduk", 0) > 0,
+        pd.notna(row.get("nakes_per_1000")),
+        pd.notna(row.get("perawat_per_1000")),
+        pd.notna(row.get("bidan_per_1000")),
+        pd.notna(row.get("faskes_per_100k"))
+    ]
+    return "COMPLETE" if all(checks) else "INCOMPLETE"

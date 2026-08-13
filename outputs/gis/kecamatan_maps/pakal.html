@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9b99aa6878f41e22ff983659e6a00782 {
+                #map_f8c1d65167fc58352cd8ce7e97373b46 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">49.5</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">51.0</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Pakal memiliki Healthcare Gap Score sebesar 49.5 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.87), 2. Facility Capacity Gap (0.85), 3. Disease Burden Need (0.15). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.87. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Pakal memiliki Healthcare Gap Score sebesar 51.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.92), 2. Workforce Shortage Gap (0.87), 3. Disease Burden Need (0.15). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.92. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_9b99aa6878f41e22ff983659e6a00782" ></div>
+            <div class="folium-map" id="map_f8c1d65167fc58352cd8ce7e97373b46" ></div>
         
 </body>
 <script>
     
     
-            var map_9b99aa6878f41e22ff983659e6a00782 = L.map(
-                "map_9b99aa6878f41e22ff983659e6a00782",
+            var map_f8c1d65167fc58352cd8ce7e97373b46 = L.map(
+                "map_f8c1d65167fc58352cd8ce7e97373b46",
                 {
                     center: [-7.229498498445865, 112.61610234499499],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_35ee8a4f71ea0bfab3aaff74e8bffe50 = L.tileLayer(
+            var tile_layer_e59d3f702317fb9bddb8d23eba0c568c = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_35ee8a4f71ea0bfab3aaff74e8bffe50.addTo(map_9b99aa6878f41e22ff983659e6a00782);
+            tile_layer_e59d3f702317fb9bddb8d23eba0c568c.addTo(map_f8c1d65167fc58352cd8ce7e97373b46);
         
     
-        function geo_json_c05da04591818f0dccec04c20d37615b_styler(feature) {
+        function geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_c05da04591818f0dccec04c20d37615b_onEachFeature(feature, layer) {
+        function geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_c05da04591818f0dccec04c20d37615b = L.geoJson(null, {
-                onEachFeature: geo_json_c05da04591818f0dccec04c20d37615b_onEachFeature,
+        var geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60 = L.geoJson(null, {
+                onEachFeature: geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_onEachFeature,
             
-                style: geo_json_c05da04591818f0dccec04c20d37615b_styler,
+                style: geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_styler,
             ...{
 }
         });
 
-        function geo_json_c05da04591818f0dccec04c20d37615b_add (data) {
-            geo_json_c05da04591818f0dccec04c20d37615b
+        function geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_add (data) {
+            geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60
                 .addData(data);
         }
-            geo_json_c05da04591818f0dccec04c20d37615b_add({"bbox": [112.5916, -7.2613, 112.6374, -7.2023], "features": [{"bbox": [112.5916, -7.2613, 112.6374, -7.2023], "geometry": {"coordinates": [[[[112.6198, -7.2582], [112.6172, -7.2575], [112.6179, -7.2527], [112.6142, -7.2524], [112.6146, -7.2482], [112.6065, -7.2486], [112.602, -7.2465], [112.6061, -7.2422], [112.6065, -7.2395], [112.6039, -7.2372], [112.6046, -7.2328], [112.5978, -7.2284], [112.5988, -7.2272], [112.5971, -7.2236], [112.5916, -7.2232], [112.5933, -7.2155], [112.5973, -7.222], [112.5977, -7.2191], [112.6007, -7.2168], [112.5947, -7.2147], [112.5984, -7.2125], [112.5923, -7.2071], [112.5927, -7.2023], [112.5992, -7.2032], [112.6134, -7.209], [112.6257, -7.2033], [112.6256, -7.2114], [112.628, -7.2127], [112.6272, -7.2226], [112.6339, -7.2229], [112.6355, -7.2207], [112.6374, -7.2219], [112.6344, -7.2275], [112.6343, -7.2349], [112.6356, -7.2355], [112.6346, -7.2399], [112.6335, -7.2394], [112.6318, -7.2432], [112.6343, -7.2446], [112.6305, -7.2537], [112.6322, -7.2597], [112.6262, -7.2613], [112.6198, -7.2582]]]], "type": "MultiPolygon"}, "id": "16", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.1194062347051261, "disease_issue": "Penyakit pada sistem pencernaan (7971 cases)", "disease_need_score": 0.1455947216650936, "explanation": "Kecamatan Pakal memiliki Healthcare Gap Score sebesar 49.5 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.87), 2. Facility Capacity Gap (0.85), 3. Disease Burden Need (0.15). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.87. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.848266798957192, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 49.53210184907949, "jumlah_bidan": 56, "jumlah_penduduk": 64.5, "jumlah_perawat": 150, "jumlah_tenaga_medis": 118, "kecamatan": "PAKAL", "kepadatan_penduduk": 3474, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.02082268089214101, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 144.0, "total_tenaga_kesehatan": 454.0, "workforce_gap": 0.869089479849333, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60_add({"bbox": [112.5916, -7.2613, 112.6374, -7.2023], "features": [{"bbox": [112.5916, -7.2613, 112.6374, -7.2023], "geometry": {"coordinates": [[[[112.6198, -7.2582], [112.6172, -7.2575], [112.6179, -7.2527], [112.6142, -7.2524], [112.6146, -7.2482], [112.6065, -7.2486], [112.602, -7.2465], [112.6061, -7.2422], [112.6065, -7.2395], [112.6039, -7.2372], [112.6046, -7.2328], [112.5978, -7.2284], [112.5988, -7.2272], [112.5971, -7.2236], [112.5916, -7.2232], [112.5933, -7.2155], [112.5973, -7.222], [112.5977, -7.2191], [112.6007, -7.2168], [112.5947, -7.2147], [112.5984, -7.2125], [112.5923, -7.2071], [112.5927, -7.2023], [112.5992, -7.2032], [112.6134, -7.209], [112.6257, -7.2033], [112.6256, -7.2114], [112.628, -7.2127], [112.6272, -7.2226], [112.6339, -7.2229], [112.6355, -7.2207], [112.6374, -7.2219], [112.6344, -7.2275], [112.6343, -7.2349], [112.6356, -7.2355], [112.6346, -7.2399], [112.6335, -7.2394], [112.6318, -7.2432], [112.6343, -7.2446], [112.6305, -7.2537], [112.6322, -7.2597], [112.6262, -7.2613], [112.6198, -7.2582]]]], "type": "MultiPolygon"}, "id": "16", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.1194062347051261, "disease_issue": "Penyakit pada sistem pencernaan (7971 cases)", "disease_need_score": 0.14559472166509357, "explanation": "Kecamatan Pakal memiliki Healthcare Gap Score sebesar 51.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.92), 2. Workforce Shortage Gap (0.87), 3. Disease Burden Need (0.15). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.92. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.9232667989571921, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 51.032101849079496, "jumlah_bidan": 56, "jumlah_penduduk": 64.5, "jumlah_perawat": 150, "jumlah_tenaga_medis": 118, "kecamatan": "PAKAL", "kepadatan_penduduk": 3474, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.05417731910785906, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 144.0, "total_tenaga_kesehatan": 454.0, "workforce_gap": 0.869089479849333, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_c05da04591818f0dccec04c20d37615b.bindTooltip(
+    geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_c05da04591818f0dccec04c20d37615b.addTo(map_9b99aa6878f41e22ff983659e6a00782);
+            geo_json_1a943c83d3d5fd6ef5ca3b6ba4d09d60.addTo(map_f8c1d65167fc58352cd8ce7e97373b46);
         
     
-            var feature_group_c0ea12712c048c4b4015758e67193e60 = L.featureGroup(
+            var feature_group_31e1d064eb21d1f439c626db5a0270e2 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_e02bda2a31b44831425a0f69eff95a93 = L.marker(
+            var marker_e19fc8bdcab868d69b7cdcf4032ffb0d = L.marker(
                 [-7.234803, 112.611529],
                 {
 }
-            ).addTo(feature_group_c0ea12712c048c4b4015758e67193e60);
+            ).addTo(feature_group_31e1d064eb21d1f439c626db5a0270e2);
         
     
-            var icon_2e1733d43ea871ab7d09bc4996f6c48f = L.AwesomeMarkers.icon(
+            var icon_82abb517f6d25e6fe27e24781eff74b7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,37 +240,37 @@
             );
         
     
-        var popup_241b1eb738f1964db63fa7ebc55053c1 = L.popup({
+        var popup_f69a0d33e0b2b38cd04a3aebbfdcc1b7 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a6904d47e6ed274f1d3614dc7446f151 = $(`<div id="html_a6904d47e6ed274f1d3614dc7446f151" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Benowo<br><b>ID:</b> PKM004</div>`)[0];
-                popup_241b1eb738f1964db63fa7ebc55053c1.setContent(html_a6904d47e6ed274f1d3614dc7446f151);
+                var html_0be2fa023d84573e7b5320cc5a685256 = $(`<div id="html_0be2fa023d84573e7b5320cc5a685256" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Benowo<br><b>ID:</b> PKM004</div>`)[0];
+                popup_f69a0d33e0b2b38cd04a3aebbfdcc1b7.setContent(html_0be2fa023d84573e7b5320cc5a685256);
             
         
 
-        marker_e02bda2a31b44831425a0f69eff95a93.bindPopup(popup_241b1eb738f1964db63fa7ebc55053c1)
+        marker_e19fc8bdcab868d69b7cdcf4032ffb0d.bindPopup(popup_f69a0d33e0b2b38cd04a3aebbfdcc1b7)
         ;
 
         
     
     
-                marker_e02bda2a31b44831425a0f69eff95a93.setIcon(icon_2e1733d43ea871ab7d09bc4996f6c48f);
+                marker_e19fc8bdcab868d69b7cdcf4032ffb0d.setIcon(icon_82abb517f6d25e6fe27e24781eff74b7);
             
     
-            feature_group_c0ea12712c048c4b4015758e67193e60.addTo(map_9b99aa6878f41e22ff983659e6a00782);
+            feature_group_31e1d064eb21d1f439c626db5a0270e2.addTo(map_f8c1d65167fc58352cd8ce7e97373b46);
         
     
-            var marker_1770b3e58d3199674a2a4289b3505776 = L.marker(
+            var marker_67e43eee534e363da53d9d6bcda5109a = L.marker(
                 [-7.2354639, 112.6124816],
                 {
 }
-            ).addTo(map_9b99aa6878f41e22ff983659e6a00782);
+            ).addTo(map_f8c1d65167fc58352cd8ce7e97373b46);
         
     
-            var icon_e23c1d4e21165eec491c67a539d280d6 = L.AwesomeMarkers.icon(
+            var icon_1affdbd50e1be04c29f58deb11f4c4d0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -281,56 +281,56 @@
             );
         
     
-        var popup_a8394286962e850ab623470d9d3a1bc7 = L.popup({
+        var popup_2b1e7fecc29b98cbcaac057ab5890855 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a6848926bb2b5b89163152223b669cc3 = $(`<div id="html_a6848926bb2b5b89163152223b669cc3" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Islam Darus Syifa<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_a8394286962e850ab623470d9d3a1bc7.setContent(html_a6848926bb2b5b89163152223b669cc3);
+                var html_b4ede76983fb6f2d557e8e700c0cb637 = $(`<div id="html_b4ede76983fb6f2d557e8e700c0cb637" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Islam Darus Syifa<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_2b1e7fecc29b98cbcaac057ab5890855.setContent(html_b4ede76983fb6f2d557e8e700c0cb637);
             
         
 
-        marker_1770b3e58d3199674a2a4289b3505776.bindPopup(popup_a8394286962e850ab623470d9d3a1bc7)
+        marker_67e43eee534e363da53d9d6bcda5109a.bindPopup(popup_2b1e7fecc29b98cbcaac057ab5890855)
         ;
 
         
     
     
-                marker_1770b3e58d3199674a2a4289b3505776.setIcon(icon_e23c1d4e21165eec491c67a539d280d6);
+                marker_67e43eee534e363da53d9d6bcda5109a.setIcon(icon_1affdbd50e1be04c29f58deb11f4c4d0);
             
     
-            var feature_group_5a7edd21e951825b772977abf48cff94 = L.featureGroup(
+            var feature_group_f2e8caee1ed3497bd1c5e1c57a4e5234 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_d1e2269a2cfc93dc3ed1e50c4f477b86 = L.polyline(
+            var poly_line_00a6ec748f30d778576e06a96d89f4bb = L.polyline(
                 [[-7.23999285, 112.62544555], [-7.239838279337215, 112.62514411915514]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_5a7edd21e951825b772977abf48cff94);
+            ).addTo(feature_group_f2e8caee1ed3497bd1c5e1c57a4e5234);
         
     
-        var popup_9d4a5619705e257b748a384b5a3a7824 = L.popup({
+        var popup_3721444c197fd14ec85c2930174e7551 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_6d9b1b24b9b34582d150ce11ae44e5c7 = $(`<div id="html_6d9b1b24b9b34582d150ce11ae44e5c7" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pakal-Rungkut</div>`)[0];
-                popup_9d4a5619705e257b748a384b5a3a7824.setContent(html_6d9b1b24b9b34582d150ce11ae44e5c7);
+                var html_f78c7a4503ee55e6642d5d9f93040f38 = $(`<div id="html_f78c7a4503ee55e6642d5d9f93040f38" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pakal-Rungkut</div>`)[0];
+                popup_3721444c197fd14ec85c2930174e7551.setContent(html_f78c7a4503ee55e6642d5d9f93040f38);
             
         
 
-        poly_line_d1e2269a2cfc93dc3ed1e50c4f477b86.bindPopup(popup_9d4a5619705e257b748a384b5a3a7824)
+        poly_line_00a6ec748f30d778576e06a96d89f4bb.bindPopup(popup_3721444c197fd14ec85c2930174e7551)
         ;
 
         
     
     
-            feature_group_5a7edd21e951825b772977abf48cff94.addTo(map_9b99aa6878f41e22ff983659e6a00782);
+            feature_group_f2e8caee1ed3497bd1c5e1c57a4e5234.addTo(map_f8c1d65167fc58352cd8ce7e97373b46);
         
 </script>
 </html>

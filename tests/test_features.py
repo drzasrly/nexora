@@ -11,5 +11,5 @@ def test_minmax_bounds():
 def test_minmax_constant():
     series = pd.Series([20, 20, 20])
     scaled = minmax(series)
-    # Constant values return a default middle weight of 0.5
-    assert (scaled == 0.5).all()
+    # Constant values return a default boundary of 0.0
+    assert (scaled == 0.0).all()

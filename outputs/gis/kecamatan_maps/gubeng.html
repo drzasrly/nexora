@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_944bbfbb59f6b4d67b4095fd28136921 {
+                #map_58f8423d3548ddfb1fe3b626d0ce5dd2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">36.5</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">38.0</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Gubeng memiliki Healthcare Gap Score sebesar 36.5 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.61), 2. Disease Burden Need (0.58), 3. High Demand Score (0.38). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.61. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                     Kecamatan Gubeng memiliki Healthcare Gap Score sebesar 38.0 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.68), 2. Disease Burden Need (0.58), 3. High Demand Score (0.38). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.68. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_944bbfbb59f6b4d67b4095fd28136921" ></div>
+            <div class="folium-map" id="map_58f8423d3548ddfb1fe3b626d0ce5dd2" ></div>
         
 </body>
 <script>
     
     
-            var map_944bbfbb59f6b4d67b4095fd28136921 = L.map(
-                "map_944bbfbb59f6b4d67b4095fd28136921",
+            var map_58f8423d3548ddfb1fe3b626d0ce5dd2 = L.map(
+                "map_58f8423d3548ddfb1fe3b626d0ce5dd2",
                 {
                     center: [-7.279719656693071, 112.75946515960307],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_84c2e5ef5e950dee6529651c0ae297e4 = L.tileLayer(
+            var tile_layer_acf7f73c4dd996be744c0be685a22d44 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_84c2e5ef5e950dee6529651c0ae297e4.addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            tile_layer_acf7f73c4dd996be744c0be685a22d44.addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-        function geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_styler(feature) {
+        function geo_json_8773c462250fc49f8ef5d7d82b964b72_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#eab308", "fillColor": "#eab308", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_onEachFeature(feature, layer) {
+        function geo_json_8773c462250fc49f8ef5d7d82b964b72_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_ef0b92954de8f892e7fb9f9ceb3dc194 = L.geoJson(null, {
-                onEachFeature: geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_onEachFeature,
+        var geo_json_8773c462250fc49f8ef5d7d82b964b72 = L.geoJson(null, {
+                onEachFeature: geo_json_8773c462250fc49f8ef5d7d82b964b72_onEachFeature,
             
-                style: geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_styler,
+                style: geo_json_8773c462250fc49f8ef5d7d82b964b72_styler,
             ...{
 }
         });
 
-        function geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_add (data) {
-            geo_json_ef0b92954de8f892e7fb9f9ceb3dc194
+        function geo_json_8773c462250fc49f8ef5d7d82b964b72_add (data) {
+            geo_json_8773c462250fc49f8ef5d7d82b964b72
                 .addData(data);
         }
-            geo_json_ef0b92954de8f892e7fb9f9ceb3dc194_add({"bbox": [112.7441, -7.3062, 112.7777, -7.2628], "features": [{"bbox": [112.7441, -7.3062, 112.7777, -7.2628], "geometry": {"coordinates": [[[[112.7632, -7.2875], [112.7619, -7.3062], [112.7544, -7.3042], [112.7571, -7.2936], [112.7472, -7.2911], [112.7503, -7.2773], [112.7441, -7.2772], [112.7445, -7.2731], [112.75, -7.2676], [112.7547, -7.269], [112.7565, -7.2656], [112.7626, -7.2659], [112.7642, -7.2628], [112.7763, -7.2641], [112.7777, -7.2663], [112.7759, -7.2662], [112.7741, -7.2685], [112.772, -7.2804], [112.7644, -7.2796], [112.7647, -7.2774], [112.7622, -7.2772], [112.7632, -7.2875]]]], "type": "MultiPolygon"}, "id": "7", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.380390265022883, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (29273 cases)", "disease_need_score": 0.5784471062483251, "explanation": "Kecamatan Gubeng memiliki Healthcare Gap Score sebesar 36.5 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.61), 2. Disease Burden Need (0.58), 3. High Demand Score (0.38). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.61. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6053069250881806, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 36.47274973619285, "jumlah_bidan": 284, "jumlah_penduduk": 132.4, "jumlah_perawat": 2738, "jumlah_tenaga_medis": 1884, "kecamatan": "GUBENG", "kepadatan_penduduk": 16757, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 30, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.026859818839855554, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 675.0, "total_tenaga_kesehatan": 7087.0, "workforce_gap": 0.0461987052925416, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_8773c462250fc49f8ef5d7d82b964b72_add({"bbox": [112.7441, -7.3062, 112.7777, -7.2628], "features": [{"bbox": [112.7441, -7.3062, 112.7777, -7.2628], "geometry": {"coordinates": [[[[112.7632, -7.2875], [112.7619, -7.3062], [112.7544, -7.3042], [112.7571, -7.2936], [112.7472, -7.2911], [112.7503, -7.2773], [112.7441, -7.2772], [112.7445, -7.2731], [112.75, -7.2676], [112.7547, -7.269], [112.7565, -7.2656], [112.7626, -7.2659], [112.7642, -7.2628], [112.7763, -7.2641], [112.7777, -7.2663], [112.7759, -7.2662], [112.7741, -7.2685], [112.772, -7.2804], [112.7644, -7.2796], [112.7647, -7.2774], [112.7622, -7.2772], [112.7632, -7.2875]]]], "type": "MultiPolygon"}, "id": "7", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.380390265022883, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (29273 cases)", "disease_need_score": 0.5784471062483248, "explanation": "Kecamatan Gubeng memiliki Healthcare Gap Score sebesar 38.0 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.68), 2. Disease Burden Need (0.58), 3. High Demand Score (0.38). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.68. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6803069250881806, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 37.972749736192846, "jumlah_bidan": 284, "jumlah_penduduk": 132.4, "jumlah_perawat": 2738, "jumlah_tenaga_medis": 1884, "kecamatan": "GUBENG", "kepadatan_penduduk": 16757, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 30, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.10185981883985573, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "DISEASE_BURDEN", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 675.0, "total_tenaga_kesehatan": 7087.0, "workforce_gap": 0.0461987052925416, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_ef0b92954de8f892e7fb9f9ceb3dc194.bindTooltip(
+    geo_json_8773c462250fc49f8ef5d7d82b964b72.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_ef0b92954de8f892e7fb9f9ceb3dc194.addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            geo_json_8773c462250fc49f8ef5d7d82b964b72.addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var feature_group_2e2ed05d77420dd37d56d000fc4766c5 = L.featureGroup(
+            var feature_group_ae187fad98959d94af4963dd4b55b41b = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_80ded7d4c6dc37644e94c4b2f742e562 = L.marker(
+            var marker_8dd0e65a7476713062cd7e6f6e885118 = L.marker(
                 [-7.27012, 112.770689],
                 {
 }
-            ).addTo(feature_group_2e2ed05d77420dd37d56d000fc4766c5);
+            ).addTo(feature_group_ae187fad98959d94af4963dd4b55b41b);
         
     
-            var icon_7e04594f0d609415a1356eb5070e4f4c = L.AwesomeMarkers.icon(
+            var icon_0dc006c2e9d2cbd75473fef4a49d58f2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_4e797f6c4d8434f400472a6ef2deff6d = L.popup({
+        var popup_efa57037b81fef36cb93eb51177ebaad = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_38472be1279c205bbb1c2e7fe627887f = $(`<div id="html_38472be1279c205bbb1c2e7fe627887f" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Mojo<br><b>ID:</b> PKM028</div>`)[0];
-                popup_4e797f6c4d8434f400472a6ef2deff6d.setContent(html_38472be1279c205bbb1c2e7fe627887f);
+                var html_37f868294345d6a2f32279b6c2ddd719 = $(`<div id="html_37f868294345d6a2f32279b6c2ddd719" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Mojo<br><b>ID:</b> PKM028</div>`)[0];
+                popup_efa57037b81fef36cb93eb51177ebaad.setContent(html_37f868294345d6a2f32279b6c2ddd719);
             
         
 
-        marker_80ded7d4c6dc37644e94c4b2f742e562.bindPopup(popup_4e797f6c4d8434f400472a6ef2deff6d)
+        marker_8dd0e65a7476713062cd7e6f6e885118.bindPopup(popup_efa57037b81fef36cb93eb51177ebaad)
         ;
 
         
     
     
-                marker_80ded7d4c6dc37644e94c4b2f742e562.setIcon(icon_7e04594f0d609415a1356eb5070e4f4c);
+                marker_8dd0e65a7476713062cd7e6f6e885118.setIcon(icon_0dc006c2e9d2cbd75473fef4a49d58f2);
             
     
-            var marker_14a5435d42bcb0fe9fc77848122bc2c1 = L.marker(
+            var marker_6d7f3dacfa990759d50d5567bc548aa9 = L.marker(
                 [-7.286606, 112.755574],
                 {
 }
-            ).addTo(feature_group_2e2ed05d77420dd37d56d000fc4766c5);
+            ).addTo(feature_group_ae187fad98959d94af4963dd4b55b41b);
         
     
-            var icon_505affe1e666e75f75eb7a5409780131 = L.AwesomeMarkers.icon(
+            var icon_bc6904cbb7518017385d54d87c4e7692 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,37 +278,37 @@
             );
         
     
-        var popup_f9cf437c7736533c3d997d4f7a628da5 = L.popup({
+        var popup_20607b2c169fdb875dda19aba2b6ee26 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d466e51d18a90f00e235bbb5a0706b67 = $(`<div id="html_d466e51d18a90f00e235bbb5a0706b67" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Pucangsewu<br><b>ID:</b> PKM036</div>`)[0];
-                popup_f9cf437c7736533c3d997d4f7a628da5.setContent(html_d466e51d18a90f00e235bbb5a0706b67);
+                var html_ad71b068a0a365ca0d0cccb59cf45137 = $(`<div id="html_ad71b068a0a365ca0d0cccb59cf45137" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Pucangsewu<br><b>ID:</b> PKM036</div>`)[0];
+                popup_20607b2c169fdb875dda19aba2b6ee26.setContent(html_ad71b068a0a365ca0d0cccb59cf45137);
             
         
 
-        marker_14a5435d42bcb0fe9fc77848122bc2c1.bindPopup(popup_f9cf437c7736533c3d997d4f7a628da5)
+        marker_6d7f3dacfa990759d50d5567bc548aa9.bindPopup(popup_20607b2c169fdb875dda19aba2b6ee26)
         ;
 
         
     
     
-                marker_14a5435d42bcb0fe9fc77848122bc2c1.setIcon(icon_505affe1e666e75f75eb7a5409780131);
+                marker_6d7f3dacfa990759d50d5567bc548aa9.setIcon(icon_bc6904cbb7518017385d54d87c4e7692);
             
     
-            feature_group_2e2ed05d77420dd37d56d000fc4766c5.addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            feature_group_ae187fad98959d94af4963dd4b55b41b.addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var marker_225fa2a72339bc34530b61ce48f5ceaf = L.marker(
+            var marker_61b3a6321922c46cacc19c38dd796218 = L.marker(
                 [-7.297968411115341, 112.76140525915072],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_551467c19eb51785bf4b856dc010692c = L.AwesomeMarkers.icon(
+            var icon_cb4eb1a050f9a2ad5ef174df650c4a3e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,34 +319,34 @@
             );
         
     
-        var popup_a81afaec1ff8ed0d0152bda3e7797841 = L.popup({
+        var popup_c56d2584156324e65fd46a60f023a1de = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_dda1e2f7a9e6bac43a4b147f8cadcf98 = $(`<div id="html_dda1e2f7a9e6bac43a4b147f8cadcf98" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gigi dan Mulut FKG Universitas Airlangga<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_a81afaec1ff8ed0d0152bda3e7797841.setContent(html_dda1e2f7a9e6bac43a4b147f8cadcf98);
+                var html_3f9ae0e1610569c10e24e0b2fbbeedee = $(`<div id="html_3f9ae0e1610569c10e24e0b2fbbeedee" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gigi dan Mulut FKG Universitas Airlangga<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_c56d2584156324e65fd46a60f023a1de.setContent(html_3f9ae0e1610569c10e24e0b2fbbeedee);
             
         
 
-        marker_225fa2a72339bc34530b61ce48f5ceaf.bindPopup(popup_a81afaec1ff8ed0d0152bda3e7797841)
+        marker_61b3a6321922c46cacc19c38dd796218.bindPopup(popup_c56d2584156324e65fd46a60f023a1de)
         ;
 
         
     
     
-                marker_225fa2a72339bc34530b61ce48f5ceaf.setIcon(icon_551467c19eb51785bf4b856dc010692c);
+                marker_61b3a6321922c46cacc19c38dd796218.setIcon(icon_cb4eb1a050f9a2ad5ef174df650c4a3e);
             
     
-            var marker_42a625adeeee5af85f7632d0ccd6be97 = L.marker(
+            var marker_2da96de58831532699ec1a02cd6229fa = L.marker(
                 [-7.2858883, 112.7619771],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_da506915a18145413a200c7674720a41 = L.AwesomeMarkers.icon(
+            var icon_bf374efc261ad01ee5eda74591281d8d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -357,34 +357,34 @@
             );
         
     
-        var popup_2fafac5bf275b12b1f0bfd54825881a3 = L.popup({
+        var popup_8e6630ff4749b17350a40aba53795f67 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_7601e0f676a460eba5322d22dfe6bb56 = $(`<div id="html_7601e0f676a460eba5322d22dfe6bb56" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Jiwa Menur<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_2fafac5bf275b12b1f0bfd54825881a3.setContent(html_7601e0f676a460eba5322d22dfe6bb56);
+                var html_cff66136a5393e128719775eac49e7c0 = $(`<div id="html_cff66136a5393e128719775eac49e7c0" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Jiwa Menur<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_8e6630ff4749b17350a40aba53795f67.setContent(html_cff66136a5393e128719775eac49e7c0);
             
         
 
-        marker_42a625adeeee5af85f7632d0ccd6be97.bindPopup(popup_2fafac5bf275b12b1f0bfd54825881a3)
+        marker_2da96de58831532699ec1a02cd6229fa.bindPopup(popup_8e6630ff4749b17350a40aba53795f67)
         ;
 
         
     
     
-                marker_42a625adeeee5af85f7632d0ccd6be97.setIcon(icon_da506915a18145413a200c7674720a41);
+                marker_2da96de58831532699ec1a02cd6229fa.setIcon(icon_bf374efc261ad01ee5eda74591281d8d);
             
     
-            var marker_d077a2d392849c42f2b7fe61bc01b148 = L.marker(
+            var marker_77ea09d258c6cbe5d5574bc4070c3b4c = L.marker(
                 [-7.298016792495087, 112.76137310739722],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_404b99311508d8a288886f390368c7fa = L.AwesomeMarkers.icon(
+            var icon_d4ee29f8b9f2bb8dd5b6ac31569c02e9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -395,34 +395,34 @@
             );
         
     
-        var popup_bdadc1e9ec648875d3112673e7ad60ae = L.popup({
+        var popup_72b7e3c19f9449ed107b7b883b865b8b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_0ce8136dd0ecc27b5916e99bf1ef1195 = $(`<div id="html_0ce8136dd0ecc27b5916e99bf1ef1195" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Siloam Hospitals Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_bdadc1e9ec648875d3112673e7ad60ae.setContent(html_0ce8136dd0ecc27b5916e99bf1ef1195);
+                var html_0f3b6b8709b75b3993ac0b1a2c6fa2da = $(`<div id="html_0f3b6b8709b75b3993ac0b1a2c6fa2da" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Siloam Hospitals Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_72b7e3c19f9449ed107b7b883b865b8b.setContent(html_0f3b6b8709b75b3993ac0b1a2c6fa2da);
             
         
 
-        marker_d077a2d392849c42f2b7fe61bc01b148.bindPopup(popup_bdadc1e9ec648875d3112673e7ad60ae)
+        marker_77ea09d258c6cbe5d5574bc4070c3b4c.bindPopup(popup_72b7e3c19f9449ed107b7b883b865b8b)
         ;
 
         
     
     
-                marker_d077a2d392849c42f2b7fe61bc01b148.setIcon(icon_404b99311508d8a288886f390368c7fa);
+                marker_77ea09d258c6cbe5d5574bc4070c3b4c.setIcon(icon_d4ee29f8b9f2bb8dd5b6ac31569c02e9);
             
     
-            var marker_3485b1f54dab41fba78825a5cb512f69 = L.marker(
+            var marker_c8f160b6a97d9cc9f6023241e7f8a29c = L.marker(
                 [-7.297968937382027, 112.76129572054676],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_b558450b486479022f285b2325329323 = L.AwesomeMarkers.icon(
+            var icon_91de40317dcb5fc78e760c46422d3cbf = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -433,34 +433,34 @@
             );
         
     
-        var popup_a3da77012d6d9c38d4a31b1ce6f129fe = L.popup({
+        var popup_9f76238756a07af6f0654db186ec74fb = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_27b43a19a5bc4d449e640c2f59d67187 = $(`<div id="html_27b43a19a5bc4d449e640c2f59d67187" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Pura Raharja<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_a3da77012d6d9c38d4a31b1ce6f129fe.setContent(html_27b43a19a5bc4d449e640c2f59d67187);
+                var html_562e9b8109edf93970452e6a0f5bb53a = $(`<div id="html_562e9b8109edf93970452e6a0f5bb53a" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Pura Raharja<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_9f76238756a07af6f0654db186ec74fb.setContent(html_562e9b8109edf93970452e6a0f5bb53a);
             
         
 
-        marker_3485b1f54dab41fba78825a5cb512f69.bindPopup(popup_a3da77012d6d9c38d4a31b1ce6f129fe)
+        marker_c8f160b6a97d9cc9f6023241e7f8a29c.bindPopup(popup_9f76238756a07af6f0654db186ec74fb)
         ;
 
         
     
     
-                marker_3485b1f54dab41fba78825a5cb512f69.setIcon(icon_b558450b486479022f285b2325329323);
+                marker_c8f160b6a97d9cc9f6023241e7f8a29c.setIcon(icon_91de40317dcb5fc78e760c46422d3cbf);
             
     
-            var marker_bf510292fe828fe9dd150e35d231ef37 = L.marker(
+            var marker_20bc3f41b8eb6706d31ddbd2fd008cdf = L.marker(
                 [-7.29800252690807, 112.76129783763227],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_9828af0623944ee693911b679c492276 = L.AwesomeMarkers.icon(
+            var icon_9f2ab6c0f0472e14234f62966a69d0a9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -471,34 +471,34 @@
             );
         
     
-        var popup_cc1b3466bd6d2f326e20eb3d65a52e88 = L.popup({
+        var popup_d677d2171d07961e6a16202d97d47437 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_1e80b019962adb2f90618537e29fa02e = $(`<div id="html_1e80b019962adb2f90618537e29fa02e" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Ferina<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_cc1b3466bd6d2f326e20eb3d65a52e88.setContent(html_1e80b019962adb2f90618537e29fa02e);
+                var html_d3642d54be1f34230d9503a7827a3efe = $(`<div id="html_d3642d54be1f34230d9503a7827a3efe" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Ferina<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_d677d2171d07961e6a16202d97d47437.setContent(html_d3642d54be1f34230d9503a7827a3efe);
             
         
 
-        marker_bf510292fe828fe9dd150e35d231ef37.bindPopup(popup_cc1b3466bd6d2f326e20eb3d65a52e88)
+        marker_20bc3f41b8eb6706d31ddbd2fd008cdf.bindPopup(popup_d677d2171d07961e6a16202d97d47437)
         ;
 
         
     
     
-                marker_bf510292fe828fe9dd150e35d231ef37.setIcon(icon_9828af0623944ee693911b679c492276);
+                marker_20bc3f41b8eb6706d31ddbd2fd008cdf.setIcon(icon_9f2ab6c0f0472e14234f62966a69d0a9);
             
     
-            var marker_1e1ff4e83f6a097f2fe3d5d78756c645 = L.marker(
+            var marker_cfea3e976a839542cf058bf78cb0284c = L.marker(
                 [-7.298001571545966, 112.76123811168044],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_8e95deaa73b4dd916ed80653df845459 = L.AwesomeMarkers.icon(
+            var icon_93775ad1e0c8790c2502a6cafebabef1 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -509,34 +509,34 @@
             );
         
     
-        var popup_186bdb816b1eb0865930a991078dd183 = L.popup({
+        var popup_4178608c921fe246b717d91fb20b5a57 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_7c077197178c39ca97c9620a54626e2a = $(`<div id="html_7c077197178c39ca97c9620a54626e2a" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Bantuan 05.08.05 Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_186bdb816b1eb0865930a991078dd183.setContent(html_7c077197178c39ca97c9620a54626e2a);
+                var html_17d50bc3515fbb30af3875f25bd70109 = $(`<div id="html_17d50bc3515fbb30af3875f25bd70109" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Bantuan 05.08.05 Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_4178608c921fe246b717d91fb20b5a57.setContent(html_17d50bc3515fbb30af3875f25bd70109);
             
         
 
-        marker_1e1ff4e83f6a097f2fe3d5d78756c645.bindPopup(popup_186bdb816b1eb0865930a991078dd183)
+        marker_cfea3e976a839542cf058bf78cb0284c.bindPopup(popup_4178608c921fe246b717d91fb20b5a57)
         ;
 
         
     
     
-                marker_1e1ff4e83f6a097f2fe3d5d78756c645.setIcon(icon_8e95deaa73b4dd916ed80653df845459);
+                marker_cfea3e976a839542cf058bf78cb0284c.setIcon(icon_93775ad1e0c8790c2502a6cafebabef1);
             
     
-            var marker_9759996a54a6c8bfae20cd64d23c3042 = L.marker(
+            var marker_fb0344dedf74486e45476c1273b30815 = L.marker(
                 [-7.2680296, 112.7582191],
                 {
 }
-            ).addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            ).addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
     
-            var icon_ba4239d0c2a6c059622b1602f57bb596 = L.AwesomeMarkers.icon(
+            var icon_c4e7d137830ec6c0c72996d14b6520c6 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -547,56 +547,56 @@
             );
         
     
-        var popup_f0ab9ef224ee4528bb22808fcadb32d8 = L.popup({
+        var popup_db40fd7215dd1946fda9c16764f86a42 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_64e72ffe2098ae72111bbea3cde6f4f1 = $(`<div id="html_64e72ffe2098ae72111bbea3cde6f4f1" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah Dr. Soetomo<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_f0ab9ef224ee4528bb22808fcadb32d8.setContent(html_64e72ffe2098ae72111bbea3cde6f4f1);
+                var html_b345aeb850e5f624467deddbb0b545ae = $(`<div id="html_b345aeb850e5f624467deddbb0b545ae" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah Dr. Soetomo<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_db40fd7215dd1946fda9c16764f86a42.setContent(html_b345aeb850e5f624467deddbb0b545ae);
             
         
 
-        marker_9759996a54a6c8bfae20cd64d23c3042.bindPopup(popup_f0ab9ef224ee4528bb22808fcadb32d8)
+        marker_fb0344dedf74486e45476c1273b30815.bindPopup(popup_db40fd7215dd1946fda9c16764f86a42)
         ;
 
         
     
     
-                marker_9759996a54a6c8bfae20cd64d23c3042.setIcon(icon_ba4239d0c2a6c059622b1602f57bb596);
+                marker_fb0344dedf74486e45476c1273b30815.setIcon(icon_c4e7d137830ec6c0c72996d14b6520c6);
             
     
-            var feature_group_b9088557fa470a6b28e54e977d4eda5e = L.featureGroup(
+            var feature_group_8d498a9955b290c3ccb502bed4cf19a5 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_4a3942c76da5638ed766ba3731e87058 = L.polyline(
+            var poly_line_c1247850ba3eda159cf8682eb9a5f9b2 = L.polyline(
                 [[-7.2979732, 112.76131964999999], [-7.2987864705099295, 112.76168934333157]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_b9088557fa470a6b28e54e977d4eda5e);
+            ).addTo(feature_group_8d498a9955b290c3ccb502bed4cf19a5);
         
     
-        var popup_25cd6cc679f71008ea98ebcd90eab05a = L.popup({
+        var popup_393b81aab6a7593d842db65b43a8d7cb = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_dd39298d1c309469c78c44a21bd29c87 = $(`<div id="html_dd39298d1c309469c78c44a21bd29c87" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Gubeng-Gunung Anyar</div>`)[0];
-                popup_25cd6cc679f71008ea98ebcd90eab05a.setContent(html_dd39298d1c309469c78c44a21bd29c87);
+                var html_bcaffb2e47c87982f270844f1049fa9b = $(`<div id="html_bcaffb2e47c87982f270844f1049fa9b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Gubeng-Gunung Anyar</div>`)[0];
+                popup_393b81aab6a7593d842db65b43a8d7cb.setContent(html_bcaffb2e47c87982f270844f1049fa9b);
             
         
 
-        poly_line_4a3942c76da5638ed766ba3731e87058.bindPopup(popup_25cd6cc679f71008ea98ebcd90eab05a)
+        poly_line_c1247850ba3eda159cf8682eb9a5f9b2.bindPopup(popup_393b81aab6a7593d842db65b43a8d7cb)
         ;
 
         
     
     
-            feature_group_b9088557fa470a6b28e54e977d4eda5e.addTo(map_944bbfbb59f6b4d67b4095fd28136921);
+            feature_group_8d498a9955b290c3ccb502bed4cf19a5.addTo(map_58f8423d3548ddfb1fe3b626d0ce5dd2);
         
 </script>
 </html>

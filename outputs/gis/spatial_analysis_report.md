@@ -9,24 +9,24 @@ This report summarizes the spatial healthcare gap analysis across the 31 Kecamat
 
 ## 2. Spatial Gap Hotspots (Top 5 Priority Area)
 These Kecamatan register the highest relative gaps and are highlighted as priority spatial clusters:
-1. **Kenjeran** (Score: 81.15, Priority: Kritis)
-2. **Krembangan** (Score: 73.28, Priority: Sangat Tinggi)
-3. **Semampir** (Score: 72.36, Priority: Sangat Tinggi)
-4. **Sawahan** (Score: 71.49, Priority: Sangat Tinggi)
-5. **Tandes** (Score: 70.74, Priority: Sangat Tinggi)
+1. **Kenjeran** (Score: 82.65, Priority: Kritis)
+2. **Krembangan** (Score: 74.78, Priority: Sangat Tinggi)
+3. **Semampir** (Score: 73.86, Priority: Sangat Tinggi)
+4. **Sawahan** (Score: 72.99, Priority: Sangat Tinggi)
+5. **Tandes** (Score: 72.24, Priority: Sangat Tinggi)
 
 ## 3. Spatial Gap Coldspots (Lowest 5 Areas)
 These Kecamatan register the lowest healthcare gap deficits:
-1. **Mulyorejo** (Score: 32.06, Priority: Sedang)
-2. **Gubeng** (Score: 36.47, Priority: Sedang)
-3. **Pabean Cantian** (Score: 38.91, Priority: Sedang)
-4. **Dukuh Pakis** (Score: 42.69, Priority: Tinggi)
-5. **Tenggilis Mejoyo** (Score: 43.22, Priority: Tinggi)
+1. **Mulyorejo** (Score: 33.56, Priority: Sedang)
+2. **Gubeng** (Score: 37.97, Priority: Sedang)
+3. **Pabean Cantian** (Score: 40.41, Priority: Tinggi)
+4. **Dukuh Pakis** (Score: 44.19, Priority: Tinggi)
+5. **Tenggilis Mejoyo** (Score: 44.72, Priority: Tinggi)
 
 ## 4. Geographic Distribution of Root Causes
 The primary gap drivers show clear geographical segregation:
-- **WORKFORCE_SHORTAGE:** Primary driver in **19 Kecamatan** (61.3% of districts).
-- **FACILITY_SHORTAGE:** Primary driver in **8 Kecamatan** (25.8% of districts).
+- **WORKFORCE_SHORTAGE:** Primary driver in **16 Kecamatan** (51.6% of districts).
+- **FACILITY_SHORTAGE:** Primary driver in **12 Kecamatan** (38.7% of districts).
 - **DISEASE_BURDEN:** Primary driver in **3 Kecamatan** (9.7% of districts).
 
 ## 5. Descriptive Spatial Autocorrelation (Moran's I)

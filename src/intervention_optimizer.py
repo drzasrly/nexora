@@ -10,7 +10,7 @@ def get_feasibility_status(cost, budget, resources_used, resources_available):
         return "NOT_FEASIBLE"
     
     for r_type, qty in resources_used.items():
-        avail = resources_available.get(r_type, 999)
+        avail = resources_available.get(r_type, 0) # Fallback 0 (Section 34)
         if qty > avail:
             return "NOT_FEASIBLE"
             
@@ -28,11 +28,11 @@ def optimize_interventions(df_features, district, budget, resources_available, c
     interventions_path = "data/processed/interventions.csv"
     if not os.path.exists(interventions_path):
         interventions_df = pd.DataFrame([
-            {"intervention_id": "I01", "intervention_name": "Redistribute Healthcare Workers", "target_component": "workforce", "unit": "person", "cost_per_unit": 50000000, "max_units": 20, "impact_per_unit": 0.015},
-            {"intervention_id": "I02", "intervention_name": "Add Healthcare Workers", "target_component": "workforce", "unit": "person", "cost_per_unit": 150000000, "max_units": 30, "impact_per_unit": 0.02},
-            {"intervention_id": "I03", "intervention_name": "Add Facility Capacity", "target_component": "facility", "unit": "bed", "cost_per_unit": 250000000, "max_units": 15, "impact_per_unit": 0.04},
-            {"intervention_id": "I04", "intervention_name": "Improve Accessibility", "target_component": "accessibility", "unit": "road_km", "cost_per_unit": 500000000, "max_units": 5, "impact_per_unit": 0.05},
-            {"intervention_id": "I05", "intervention_name": "Combined Intervention", "target_component": "combined", "unit": "package", "cost_per_unit": 750000000, "max_units": 4, "impact_per_unit": 0.08}
+            {"intervention_id": "I01", "intervention_name": "Redistribute Doctors", "target_component": "workforce", "resource_type": "doctors", "unit": "person", "cost_per_unit": 50000000, "max_units": 20, "impact_type": "recalculate"},
+            {"intervention_id": "I02", "intervention_name": "Redistribute Nurses", "target_component": "workforce", "resource_type": "nurses", "unit": "person", "cost_per_unit": 40000000, "max_units": 30, "impact_type": "recalculate"},
+            {"intervention_id": "I03", "intervention_name": "Redistribute Midwives", "target_component": "workforce", "resource_type": "midwives", "unit": "person", "cost_per_unit": 40000000, "max_units": 20, "impact_type": "recalculate"},
+            {"intervention_id": "I04", "intervention_name": "Add Beds", "target_component": "facility", "resource_type": "beds", "unit": "bed", "cost_per_unit": 250000000, "max_units": 100, "impact_type": "recalculate"},
+            {"intervention_id": "I05", "intervention_name": "Add Facility", "target_component": "facility", "resource_type": "facilities", "unit": "facility", "cost_per_unit": 1000000000, "max_units": 5, "impact_type": "recalculate"}
         ])
     else:
         interventions_df = pd.read_csv(interventions_path)
@@ -53,54 +53,39 @@ def optimize_interventions(df_features, district, budget, resources_available, c
         i_name = row["intervention_name"]
         cost_unit = int(row["cost_per_unit"])
         max_u = int(row["max_units"])
+        res_type = row["resource_type"]
         
-        # Check budget limit strictly (Perbaikan 7)
+        # Check budget limit strictly (Section 33 & 35)
         if budget < cost_unit:
             continue
             
         qty = min(max_u, int(budget // cost_unit))
+        
+        # Check resource constraint strictly (Section 34)
+        avail = resources_available.get(res_type, 0)
+        qty = min(qty, avail)
+        
         if qty <= 0:
             continue
             
         cost = qty * cost_unit
         
         # Map quantity to resources used and deltas
-        used_res = {}
+        used_res = {res_type: qty}
         deltas = {}
         
-        if i_id == "I01": # Redistribute Doctors
-            used_res["doctors"] = qty
+        if res_type == "doctors":
             deltas["doctors"] = qty
-        elif i_id == "I02": # Add Nurses
-            used_res["nurses"] = qty
-            deltas["perawat"] = qty
-        elif i_id == "I03": # Add Bed Capacity
-            used_res["beds"] = qty
+        elif res_type == "nurses":
+            deltas["nurses"] = qty
+        elif res_type == "midwives":
+            deltas["midwives"] = qty
+        elif res_type == "beds":
             deltas["beds"] = qty
-            deltas["faskes"] = max(1, int(qty / 5))
-        elif i_id == "I04": # Accessibility
-            deltas["accessibility_offset"] = 0.0
-        elif i_id == "I05": # Combined Package
-            used_res["doctors"] = qty * 2
-            used_res["nurses"] = qty * 4
+        elif res_type == "facilities":
+            deltas["faskes"] = qty
+            deltas["beds"] = qty * 10  # Built facility includes bed units
             used_res["beds"] = qty * 10
-            
-            deltas["doctors"] = qty * 2
-            deltas["perawat"] = qty * 4
-            deltas["beds"] = qty * 10
-            deltas["faskes"] = 1
-            deltas["accessibility_offset"] = 0.0
-            
-        # Resource availability check
-        is_feasible = True
-        for r_type, req_qty in used_res.items():
-            avail = resources_available.get(r_type, 999)
-            if req_qty > avail:
-                is_feasible = False
-                break
-                
-        if not is_feasible:
-            continue
             
         # Feasibility check
         feasibility = get_feasibility_status(cost, budget, used_res, resources_available)
@@ -112,20 +97,21 @@ def optimize_interventions(df_features, district, budget, resources_available, c
         improvement = sim_res["improvement_percent"]
         projected_gap = sim_res["after_gap"]
         
-        # Alignment check (Perbaikan 8)
+        # Alignment check (Section 39)
         aligned = False
-        if primary_rc == "WORKFORCE_SHORTAGE" and i_id in ["I01", "I02"]:
+        if primary_rc == "WORKFORCE_SHORTAGE" and i_id in ["I01", "I02", "I03"]:
             aligned = True
-        elif primary_rc == "FACILITY_SHORTAGE" and i_id == "I03":
+        elif primary_rc == "FACILITY_SHORTAGE" and i_id in ["I04", "I05"]:
             aligned = True
         elif primary_rc == "ACCESS_BARRIERS" and i_id == "I04":
             aligned = True
-        elif primary_rc in ["MULTI_FACTOR", "HIGH_DEMAND"] and i_id == "I05":
+        elif primary_rc in ["MULTI_FACTOR", "HIGH_DEMAND", "DISEASE_BURDEN"] and i_id == "I05":
             aligned = True
             
-        feas_coeff = 1.0 if feasibility == "HIGH" else (0.5 if feasibility == "MEDIUM" else 0.0)
-        align_coeff = 2.0 if aligned else 1.0
-        opt_score = improvement * align_coeff * feas_coeff
+        # Cost efficiency score = gap_reduction / cost * 1e9 (Section 39)
+        cost_eff = (improvement / cost) * 1e9 if cost > 0 else 0.0
+        align_multiplier = 2.0 if aligned else 1.0
+        opt_score = cost_eff * align_multiplier
         
         candidates.append({
             "intervention_id": i_id,

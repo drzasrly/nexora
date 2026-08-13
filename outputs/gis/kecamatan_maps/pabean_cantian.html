@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5a7ccda2053a90f44e9cd46e997932d5 {
+                #map_9a9cf1d12fe22c23f135f0ccf0d28593 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -81,21 +81,21 @@
                      Kecamatan Pabean Cantian
                  </h3>
                  <div style="margin-bottom: 12px;">
-                     <span style="background: #eab308; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
-                         Sedang
+                     <span style="background: #f97316; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px;">
+                         Tinggi
                      </span>
                      <span style="float: right; font-weight: bold; color: #9ca3af;">
                          Priority Rank: #29
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">38.9</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">40.4</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 38.9 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.70), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.25). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                     Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 40.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.77), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.25). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.77. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_5a7ccda2053a90f44e9cd46e997932d5" ></div>
+            <div class="folium-map" id="map_9a9cf1d12fe22c23f135f0ccf0d28593" ></div>
         
 </body>
 <script>
     
     
-            var map_5a7ccda2053a90f44e9cd46e997932d5 = L.map(
-                "map_5a7ccda2053a90f44e9cd46e997932d5",
+            var map_9a9cf1d12fe22c23f135f0ccf0d28593 = L.map(
+                "map_9a9cf1d12fe22c23f135f0ccf0d28593",
                 {
                     center: [-7.219628570094835, 112.7336449959962],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_76336f608841291e494e68850254cefa = L.tileLayer(
+            var tile_layer_f2b6695c73f31f0cc71aaea6e2a9e2ef = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_76336f608841291e494e68850254cefa.addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            tile_layer_f2b6695c73f31f0cc71aaea6e2a9e2ef.addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-        function geo_json_029ff7a43599b1b2b394d72c460f635d_styler(feature) {
+        function geo_json_febded2f83051cdbb1987ff19624bb9f_styler(feature) {
             switch(feature.id) {
                 default:
-                    return {"color": "#eab308", "fillColor": "#eab308", "fillOpacity": 0.15, "weight": 3.0};
+                    return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_029ff7a43599b1b2b394d72c460f635d_onEachFeature(feature, layer) {
+        function geo_json_febded2f83051cdbb1987ff19624bb9f_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_029ff7a43599b1b2b394d72c460f635d = L.geoJson(null, {
-                onEachFeature: geo_json_029ff7a43599b1b2b394d72c460f635d_onEachFeature,
+        var geo_json_febded2f83051cdbb1987ff19624bb9f = L.geoJson(null, {
+                onEachFeature: geo_json_febded2f83051cdbb1987ff19624bb9f_onEachFeature,
             
-                style: geo_json_029ff7a43599b1b2b394d72c460f635d_styler,
+                style: geo_json_febded2f83051cdbb1987ff19624bb9f_styler,
             ...{
 }
         });
 
-        function geo_json_029ff7a43599b1b2b394d72c460f635d_add (data) {
-            geo_json_029ff7a43599b1b2b394d72c460f635d
+        function geo_json_febded2f83051cdbb1987ff19624bb9f_add (data) {
+            geo_json_febded2f83051cdbb1987ff19624bb9f
                 .addData(data);
         }
-            geo_json_029ff7a43599b1b2b394d72c460f635d_add({"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "features": [{"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "geometry": {"coordinates": [[[[112.7423, -7.2475], [112.7429, -7.2444], [112.7396, -7.2431], [112.7378, -7.2388], [112.7383, -7.2316], [112.7348, -7.2307], [112.7353, -7.234], [112.7309, -7.2324], [112.7307, -7.2344], [112.7285, -7.2324], [112.7325, -7.2206], [112.7311, -7.2213], [112.7262, -7.2167], [112.7236, -7.2113], [112.7219, -7.2118], [112.7218, -7.2082], [112.7201, -7.2074], [112.7174, -7.1991], [112.7201, -7.1984], [112.7257, -7.2098], [112.7271, -7.2094], [112.7245, -7.2033], [112.7256, -7.2028], [112.7286, -7.2091], [112.7305, -7.2088], [112.7298, -7.2071], [112.7327, -7.2066], [112.7327, -7.2035], [112.7321, -7.2014], [112.7306, -7.2012], [112.7315, -7.1985], [112.7243, -7.1999], [112.7236, -7.198], [112.7349, -7.1961], [112.7375, -7.2094], [112.7381, -7.2238], [112.741, -7.2253], [112.7411, -7.2335], [112.7429, -7.2343], [112.7473, -7.2434], [112.7468, -7.2483], [112.7423, -7.2475]]]], "type": "MultiPolygon"}, "id": "15", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.2506393601154962, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (6820 cases)", "disease_need_score": 0.15990347279397957, "explanation": "Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 38.9 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.70), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.25). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6976978051222728, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 38.90511259460331, "jumlah_bidan": 142, "jumlah_penduduk": 73.9, "jumlah_perawat": 776, "jumlah_tenaga_medis": 511, "kecamatan": "PABEAN CANTIAN", "kepadatan_penduduk": 13491, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 29, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.22323426402849356, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 460.0, "total_tenaga_kesehatan": 1931.0, "workforce_gap": 0.4744635410937792, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_febded2f83051cdbb1987ff19624bb9f_add({"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "features": [{"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "geometry": {"coordinates": [[[[112.7423, -7.2475], [112.7429, -7.2444], [112.7396, -7.2431], [112.7378, -7.2388], [112.7383, -7.2316], [112.7348, -7.2307], [112.7353, -7.234], [112.7309, -7.2324], [112.7307, -7.2344], [112.7285, -7.2324], [112.7325, -7.2206], [112.7311, -7.2213], [112.7262, -7.2167], [112.7236, -7.2113], [112.7219, -7.2118], [112.7218, -7.2082], [112.7201, -7.2074], [112.7174, -7.1991], [112.7201, -7.1984], [112.7257, -7.2098], [112.7271, -7.2094], [112.7245, -7.2033], [112.7256, -7.2028], [112.7286, -7.2091], [112.7305, -7.2088], [112.7298, -7.2071], [112.7327, -7.2066], [112.7327, -7.2035], [112.7321, -7.2014], [112.7306, -7.2012], [112.7315, -7.1985], [112.7243, -7.1999], [112.7236, -7.198], [112.7349, -7.1961], [112.7375, -7.2094], [112.7381, -7.2238], [112.741, -7.2253], [112.7411, -7.2335], [112.7429, -7.2343], [112.7473, -7.2434], [112.7468, -7.2483], [112.7423, -7.2475]]]], "type": "MultiPolygon"}, "id": "15", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.2506393601154963, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (6820 cases)", "disease_need_score": 0.15990347279397954, "explanation": "Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 40.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.77), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.25). Indikator paling menonjol dalam model adalah Low Pustu Ratio, dengan sub-skor 0.77. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7726978051222727, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 40.40511259460331, "jumlah_bidan": 142, "jumlah_penduduk": 73.9, "jumlah_perawat": 776, "jumlah_tenaga_medis": 511, "kecamatan": "PABEAN CANTIAN", "kepadatan_penduduk": 13491, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 29, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.2982342640284936, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 460.0, "total_tenaga_kesehatan": 1931.0, "workforce_gap": 0.4744635410937791, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_029ff7a43599b1b2b394d72c460f635d.bindTooltip(
+    geo_json_febded2f83051cdbb1987ff19624bb9f.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_029ff7a43599b1b2b394d72c460f635d.addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            geo_json_febded2f83051cdbb1987ff19624bb9f.addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-            var feature_group_c9e90b601cf98b387461bb5b86c5e988 = L.featureGroup(
+            var feature_group_13e94e33aab36669df6469b2b292921e = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_78032f931d1a1106ddfe2a9e96bb9a6b = L.marker(
+            var marker_cd669d14c58db5f13da03f1401a3d77e = L.marker(
                 [-7.222672, 112.735452],
                 {
 }
-            ).addTo(feature_group_c9e90b601cf98b387461bb5b86c5e988);
+            ).addTo(feature_group_13e94e33aab36669df6469b2b292921e);
         
     
-            var icon_9d94676c63444efbaf617beaa330d428 = L.AwesomeMarkers.icon(
+            var icon_96fc7fbe179a1ddb521b623927ec5609 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,37 +240,37 @@
             );
         
     
-        var popup_f12a4c03372a5ada72c54451096494b4 = L.popup({
+        var popup_8cb900af518b5cd1e01d8fed3bf75bf5 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_9ff6a8fe9b1b439ee7d35f17fb48e431 = $(`<div id="html_9ff6a8fe9b1b439ee7d35f17fb48e431" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Perak Timur<br><b>ID:</b> PKM035</div>`)[0];
-                popup_f12a4c03372a5ada72c54451096494b4.setContent(html_9ff6a8fe9b1b439ee7d35f17fb48e431);
+                var html_3a30431c54483050c57a31140a784ab1 = $(`<div id="html_3a30431c54483050c57a31140a784ab1" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Perak Timur<br><b>ID:</b> PKM035</div>`)[0];
+                popup_8cb900af518b5cd1e01d8fed3bf75bf5.setContent(html_3a30431c54483050c57a31140a784ab1);
             
         
 
-        marker_78032f931d1a1106ddfe2a9e96bb9a6b.bindPopup(popup_f12a4c03372a5ada72c54451096494b4)
+        marker_cd669d14c58db5f13da03f1401a3d77e.bindPopup(popup_8cb900af518b5cd1e01d8fed3bf75bf5)
         ;
 
         
     
     
-                marker_78032f931d1a1106ddfe2a9e96bb9a6b.setIcon(icon_9d94676c63444efbaf617beaa330d428);
+                marker_cd669d14c58db5f13da03f1401a3d77e.setIcon(icon_96fc7fbe179a1ddb521b623927ec5609);
             
     
-            feature_group_c9e90b601cf98b387461bb5b86c5e988.addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            feature_group_13e94e33aab36669df6469b2b292921e.addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-            var marker_9e02abb086109b7cfcf9eb7f8e60106e = L.marker(
+            var marker_9f51a9c43c591d12f0e3cb7609397bc3 = L.marker(
                 [-7.21655919523268, 112.72903739040582],
                 {
 }
-            ).addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            ).addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-            var icon_b72d024a2b4d37df1324b469d5d3802d = L.AwesomeMarkers.icon(
+            var icon_2ae34f36612ddd075ba00ae4ff7c5cfe = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -281,34 +281,34 @@
             );
         
     
-        var popup_8cca6aa58623b8d4866e7ee52d20943e = L.popup({
+        var popup_f01ae016e15dab69a808a120093d3d15 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_2a6d7a67d9b1430824ca29501677d136 = $(`<div id="html_2a6d7a67d9b1430824ca29501677d136" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Primasatya Husada Citra (PHC) Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_8cca6aa58623b8d4866e7ee52d20943e.setContent(html_2a6d7a67d9b1430824ca29501677d136);
+                var html_eb243929e1229ebd1e4c26cb088e781d = $(`<div id="html_eb243929e1229ebd1e4c26cb088e781d" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Primasatya Husada Citra (PHC) Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_f01ae016e15dab69a808a120093d3d15.setContent(html_eb243929e1229ebd1e4c26cb088e781d);
             
         
 
-        marker_9e02abb086109b7cfcf9eb7f8e60106e.bindPopup(popup_8cca6aa58623b8d4866e7ee52d20943e)
+        marker_9f51a9c43c591d12f0e3cb7609397bc3.bindPopup(popup_f01ae016e15dab69a808a120093d3d15)
         ;
 
         
     
     
-                marker_9e02abb086109b7cfcf9eb7f8e60106e.setIcon(icon_b72d024a2b4d37df1324b469d5d3802d);
+                marker_9f51a9c43c591d12f0e3cb7609397bc3.setIcon(icon_2ae34f36612ddd075ba00ae4ff7c5cfe);
             
     
-            var marker_095ca06f65a4b7b11cc73db0e72245f3 = L.marker(
+            var marker_9922c29d7ef949dc10bf73b794f2b17b = L.marker(
                 [-7.21678, 112.73013999999999],
                 {
 }
-            ).addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            ).addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-            var icon_b3072b37c3c4f2253f4a2d3e6d7c7dd4 = L.AwesomeMarkers.icon(
+            var icon_e166a545b01899b63bbba18246f46492 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,34 +319,34 @@
             );
         
     
-        var popup_c8d3b81e8a8262e05da532742fd6e96e = L.popup({
+        var popup_d7f50c7dc52b0adfd0d96444f9518830 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_1b7716a31738dc8c579e3206c7f5a35e = $(`<div id="html_1b7716a31738dc8c579e3206c7f5a35e" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Al-Irsyad Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_c8d3b81e8a8262e05da532742fd6e96e.setContent(html_1b7716a31738dc8c579e3206c7f5a35e);
+                var html_fc71b0f79e21df078582f943c2725ae9 = $(`<div id="html_fc71b0f79e21df078582f943c2725ae9" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Al-Irsyad Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_d7f50c7dc52b0adfd0d96444f9518830.setContent(html_fc71b0f79e21df078582f943c2725ae9);
             
         
 
-        marker_095ca06f65a4b7b11cc73db0e72245f3.bindPopup(popup_c8d3b81e8a8262e05da532742fd6e96e)
+        marker_9922c29d7ef949dc10bf73b794f2b17b.bindPopup(popup_d7f50c7dc52b0adfd0d96444f9518830)
         ;
 
         
     
     
-                marker_095ca06f65a4b7b11cc73db0e72245f3.setIcon(icon_b3072b37c3c4f2253f4a2d3e6d7c7dd4);
+                marker_9922c29d7ef949dc10bf73b794f2b17b.setIcon(icon_e166a545b01899b63bbba18246f46492);
             
     
-            var marker_222cacd6add34eb0aa540c109a8812a4 = L.marker(
+            var marker_151d0dc6fe74873b9f9e9e3709952ce3 = L.marker(
                 [-7.2119412, 112.7246199],
                 {
 }
-            ).addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            ).addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
     
-            var icon_14e3b005a2ed08e2736d72f7be4b71a3 = L.AwesomeMarkers.icon(
+            var icon_35cd41778ed448f169d66b92e00ce5a6 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -357,79 +357,79 @@
             );
         
     
-        var popup_90f8cf6ef32c03e13ac21af96c3fd5f9 = L.popup({
+        var popup_660bf29bb9e10832e48236cbdab2fd38 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_5f565ecbb1f9a4aec87503810b4bb9f9 = $(`<div id="html_5f565ecbb1f9a4aec87503810b4bb9f9" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS TNI AL Dr. Oepomo<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_90f8cf6ef32c03e13ac21af96c3fd5f9.setContent(html_5f565ecbb1f9a4aec87503810b4bb9f9);
+                var html_f57a9a2104759614d4147e7448f7a774 = $(`<div id="html_f57a9a2104759614d4147e7448f7a774" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS TNI AL Dr. Oepomo<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_660bf29bb9e10832e48236cbdab2fd38.setContent(html_f57a9a2104759614d4147e7448f7a774);
             
         
 
-        marker_222cacd6add34eb0aa540c109a8812a4.bindPopup(popup_90f8cf6ef32c03e13ac21af96c3fd5f9)
+        marker_151d0dc6fe74873b9f9e9e3709952ce3.bindPopup(popup_660bf29bb9e10832e48236cbdab2fd38)
         ;
 
         
     
     
-                marker_222cacd6add34eb0aa540c109a8812a4.setIcon(icon_14e3b005a2ed08e2736d72f7be4b71a3);
+                marker_151d0dc6fe74873b9f9e9e3709952ce3.setIcon(icon_35cd41778ed448f169d66b92e00ce5a6);
             
     
-            var feature_group_92ea2980783de99f536c2ed251d9d29e = L.featureGroup(
+            var feature_group_b88bf694aa70e907a79900c9eb09f037 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_d142edceec4553ffb7c5b124574de2b0 = L.polyline(
+            var poly_line_cdcb81d687a5b4fcf87e7d11d100cfb9 = L.polyline(
                 [[-7.2167683, 112.72933795], [-7.217709408125294, 112.72851337785997]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_92ea2980783de99f536c2ed251d9d29e);
+            ).addTo(feature_group_b88bf694aa70e907a79900c9eb09f037);
         
     
-        var popup_de69e679f207ff4e3a1257bdd6f1fafc = L.popup({
+        var popup_72f5c0addab9d6b684b091f7da43cb4f = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a5877fecf3ef29e733efb1366b39b77b = $(`<div id="html_a5877fecf3ef29e733efb1366b39b77b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pabean Cantian-Pakal</div>`)[0];
-                popup_de69e679f207ff4e3a1257bdd6f1fafc.setContent(html_a5877fecf3ef29e733efb1366b39b77b);
+                var html_5ffec2fc487fa367bce2945cf04b4447 = $(`<div id="html_5ffec2fc487fa367bce2945cf04b4447" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pabean Cantian-Pakal</div>`)[0];
+                popup_72f5c0addab9d6b684b091f7da43cb4f.setContent(html_5ffec2fc487fa367bce2945cf04b4447);
             
         
 
-        poly_line_d142edceec4553ffb7c5b124574de2b0.bindPopup(popup_de69e679f207ff4e3a1257bdd6f1fafc)
+        poly_line_cdcb81d687a5b4fcf87e7d11d100cfb9.bindPopup(popup_72f5c0addab9d6b684b091f7da43cb4f)
         ;
 
         
     
     
-            var poly_line_db68484caaa36841d54cad16c1b09e00 = L.polyline(
+            var poly_line_2cef9feb5398c207653fd1227532bf2f = L.polyline(
                 [[-7.217298534041475, 112.72890390906404], [-7.216929281288107, 112.72847226260532]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_92ea2980783de99f536c2ed251d9d29e);
+            ).addTo(feature_group_b88bf694aa70e907a79900c9eb09f037);
         
     
-        var popup_97c92267eb2611eb5b7883e44266b153 = L.popup({
+        var popup_34bdb09f95c9f0bf71ad177c56c93b74 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_3959d8974933785e80bfdc67f9efed6b = $(`<div id="html_3959d8974933785e80bfdc67f9efed6b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Rungkut-Sambikerep</div>`)[0];
-                popup_97c92267eb2611eb5b7883e44266b153.setContent(html_3959d8974933785e80bfdc67f9efed6b);
+                var html_2b23a56badeedee9ec8a08a353d35ab3 = $(`<div id="html_2b23a56badeedee9ec8a08a353d35ab3" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Rungkut-Sambikerep</div>`)[0];
+                popup_34bdb09f95c9f0bf71ad177c56c93b74.setContent(html_2b23a56badeedee9ec8a08a353d35ab3);
             
         
 
-        poly_line_db68484caaa36841d54cad16c1b09e00.bindPopup(popup_97c92267eb2611eb5b7883e44266b153)
+        poly_line_2cef9feb5398c207653fd1227532bf2f.bindPopup(popup_34bdb09f95c9f0bf71ad177c56c93b74)
         ;
 
         
     
     
-            feature_group_92ea2980783de99f536c2ed251d9d29e.addTo(map_5a7ccda2053a90f44e9cd46e997932d5);
+            feature_group_b88bf694aa70e907a79900c9eb09f037.addTo(map_9a9cf1d12fe22c23f135f0ccf0d28593);
         
 </script>
 </html>

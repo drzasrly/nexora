@@ -3,12 +3,12 @@ import numpy as np
 import pandas as pd
 
 def minmax(series):
-    """Min-max scale a pandas Series to range [0, 1]."""
-    min_val = series.min()
-    max_val = series.max()
-    if max_val == min_val:
-        return pd.Series(0.5, index=series.index)
-    return (series - min_val) / (max_val - min_val)
+    """Min-max scale a pandas Series to range [0, 1] with clipping."""
+    min_value = series.min()
+    max_value = series.max()
+    if max_value == min_value:
+        return pd.Series(0.0, index=series.index)
+    return ((series - min_value) / (max_value - min_value)).clip(0.0, 1.0)
 
 def build_features(df, df_peny, config):
     """
@@ -21,31 +21,38 @@ def build_features(df, df_peny, config):
     
     print("Building healthcare features...")
     df_feat = pd.DataFrame({"kecamatan": df["kecamatan"].tolist()})
-    df_feat = pd.merge(df_feat, df[["kecamatan", "jumlah_penduduk", "kepadatan_penduduk", "total_kunjungan"]], on="kecamatan", how="left")
+    df_feat = pd.merge(df_feat, df[[
+        "kecamatan", "jumlah_penduduk", "kepadatan_penduduk", "total_kunjungan",
+        "total_tenaga_kesehatan", "jumlah_perawat", "jumlah_bidan", "jumlah_tenaga_medis",
+        "total_faskes", "jumlah_puskesmas", "jumlah_pustu", "total_tempat_tidur",
+        "total_kasus_penyakit"
+    ]], on="kecamatan", how="left")
+    
+    # Assert population is positive
+    assert (df_feat["jumlah_penduduk"] > 0).all(), "Population must be positive for all districts!"
+    
+    # Absolute population conversion to ensure multiplier accuracy
+    pop_abs = df_feat["jumlah_penduduk"] * 1000.0
     
     # 1. Demand ratios
-    df_feat["visits_per_1000"] = df_feat["total_kunjungan"] / df_feat["jumlah_penduduk"]
+    df_feat["visits_per_1000"] = (df_feat["total_kunjungan"] / pop_abs) * 1000.0
     
     # 2. Workforce ratios
-    df_feat = pd.merge(df_feat, df[["kecamatan", "total_tenaga_kesehatan", "jumlah_perawat", "jumlah_bidan", "jumlah_tenaga_medis"]], on="kecamatan", how="left")
-    df_feat["nakes_per_1000"] = df_feat["total_tenaga_kesehatan"] / df_feat["jumlah_penduduk"]
-    df_feat["perawat_per_1000"] = df_feat["jumlah_perawat"] / df_feat["jumlah_penduduk"]
-    df_feat["bidan_per_1000"] = df_feat["jumlah_bidan"] / df_feat["jumlah_penduduk"]
-    df_feat["doctors_per_1000"] = df_feat["jumlah_tenaga_medis"] / df_feat["jumlah_penduduk"]
+    df_feat["nakes_per_1000"] = (df_feat["total_tenaga_kesehatan"] / pop_abs) * 1000.0
+    df_feat["perawat_per_1000"] = (df_feat["jumlah_perawat"] / pop_abs) * 1000.0
+    df_feat["bidan_per_1000"] = (df_feat["jumlah_bidan"] / pop_abs) * 1000.0
+    df_feat["doctors_per_1000"] = (df_feat["jumlah_tenaga_medis"] / pop_abs) * 1000.0
     
     # 3. Facility ratios
-    df_feat = pd.merge(df_feat, df[["kecamatan", "total_faskes", "jumlah_puskesmas", "jumlah_pustu"]], on="kecamatan", how="left")
-    df_feat["faskes_per_100k"] = (df_feat["total_faskes"] / df_feat["jumlah_penduduk"]) * 100.0
-    df_feat["puskesmas_per_100k"] = (df_feat["jumlah_puskesmas"] / df_feat["jumlah_penduduk"]) * 100.0
-    df_feat["pustu_per_100k"] = (df_feat["jumlah_pustu"] / df_feat["jumlah_penduduk"]) * 100.0
+    df_feat["faskes_per_100k"] = (df_feat["total_faskes"] / pop_abs) * 100000.0
+    df_feat["puskesmas_per_100k"] = (df_feat["jumlah_puskesmas"] / pop_abs) * 100000.0
+    df_feat["pustu_per_100k"] = (df_feat["jumlah_pustu"] / pop_abs) * 100000.0
     
     # 4. Inpatient bed ratio
-    df_feat = pd.merge(df_feat, df[["kecamatan", "total_tempat_tidur"]], on="kecamatan", how="left")
-    df_feat["beds_per_1000"] = df_feat["total_tempat_tidur"] / df_feat["jumlah_penduduk"]
+    df_feat["beds_per_1000"] = (df_feat["total_tempat_tidur"] / pop_abs) * 1000.0
     
     # 5. Disease burden ratio
-    df_feat = pd.merge(df_feat, df[["kecamatan", "total_kasus_penyakit"]], on="kecamatan", how="left")
-    df_feat["disease_per_1000"] = df_feat["total_kasus_penyakit"] / df_feat["jumlah_penduduk"]
+    df_feat["disease_per_1000"] = (df_feat["total_kasus_penyakit"] / pop_abs) * 1000.0
     
     # 6. Extract dominant diseases
     print("Extracting dominant disease profiles...")
@@ -83,7 +90,7 @@ def build_features(df, df_peny, config):
     # Reorder columns
     final_cols = [
         "kecamatan", "jumlah_penduduk", "kepadatan_penduduk", "total_kunjungan", "visits_per_1000",
-        "total_tenaga_kesehatan", "nakes_per_1000", "perawat_per_1000", "bidan_per_1000", "jumlah_tenaga_medis", "doctors_per_1000",
+        "total_tenaga_kesehatan", "nakes_per_1000", "jumlah_perawat", "perawat_per_1000", "jumlah_bidan", "bidan_per_1000", "jumlah_tenaga_medis", "doctors_per_1000",
         "total_faskes", "faskes_per_100k", "jumlah_puskesmas", "puskesmas_per_100k", "jumlah_pustu", "pustu_per_100k",
         "total_tempat_tidur", "beds_per_1000", "total_kasus_penyakit", "disease_per_1000",
         "workforce_growth", "demand_growth", "workforce_demand_mismatch",
@@ -132,6 +139,8 @@ def build_features(df, df_peny, config):
         {"feature_name": "nakes_per_1000", "category": "Capacity", "unit": "nakes/1k pop", "purpose": "Healthcare workforce capacity ratio"},
         {"feature_name": "perawat_per_1000", "category": "Capacity", "unit": "nurses/1k pop", "purpose": "Nursing labor capacity ratio"},
         {"feature_name": "bidan_per_1000", "category": "Capacity", "unit": "midwives/1k pop", "purpose": "Midwife capacity ratio"},
+        {"feature_name": "jumlah_tenaga_medis", "category": "Capacity", "unit": "doctors", "purpose": "Physician absolute size"},
+        {"feature_name": "doctors_per_1000", "category": "Capacity", "unit": "doctors/1k pop", "purpose": "Physician density"},
         {"feature_name": "total_faskes", "category": "Capacity", "unit": "facilities", "purpose": "Healthcare facilities absolute size"},
         {"feature_name": "faskes_per_100k", "category": "Capacity", "unit": "faskes/100k pop", "purpose": "Total facility capacity ratio"},
         {"feature_name": "jumlah_puskesmas", "category": "Capacity", "unit": "facilities", "purpose": "Primary care facility count"},

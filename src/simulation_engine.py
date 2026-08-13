@@ -1,30 +1,12 @@
+import os
+import json
 import pandas as pd
 from src.gap_engine import calculate_healthcare_gap
 
 def simulate_intervention(df_features, district, deltas, config):
     """
-    Simulates changes in healthcare resources for a given district,
-    re-runs the gap engine, and returns before/after comparisons.
-    
-    Parameters:
-    -----------
-    df_features : pd.DataFrame
-        The baseline features (from heal_city_features.csv).
-    district : str
-        The name of the kecamatan to modify.
-    deltas : dict
-        Deltas to apply, e.g., {'nakes': 3, 'perawat': 5, 'bidan': 2, 'beds': 10, 'faskes': 1, 'accessibility_offset': 0.1}
-    config : dict
-        The global configuration dictionary.
-        
-    Returns:
-    --------
-    dict containing:
-        - 'before_gap': float
-        - 'after_gap': float
-        - 'improvement_absolute': float
-        - 'improvement_percent': float
-        - 'simulated_df': pd.DataFrame (the updated gap score sheet)
+    Simulates changes in healthcare resources for a given district using baseline 
+    normalization references, re-runs the gap engine, and returns before/after comparisons.
     """
     df_sim = df_features.copy()
     
@@ -34,65 +16,65 @@ def simulate_intervention(df_features, district, deltas, config):
         raise ValueError(f"District {district} not found in features.")
     
     i = idx[0]
+    pop = df_sim.at[i, "jumlah_penduduk"]
+    pop_abs = pop * 1000.0
     
     # 1. Apply additions and recalculate workforce ratios
-    pop = df_sim.at[i, "jumlah_penduduk"]
     if pop > 0:
-        # Calculate doctor changes
-        docs_added = deltas.get("doctors", 0)
-        if "doctors" not in deltas and "nakes" in deltas:
-            docs_added = max(0, deltas["nakes"] - deltas.get("perawat", 0) - deltas.get("bidan", 0))
-            
-        doc_before = df_sim.at[i, "jumlah_tenaga_medis"] if "jumlah_tenaga_medis" in df_sim.columns else (df_sim.at[i, "doctors_per_1000"] * pop if "doctors_per_1000" in df_sim.columns else 0.0)
-        doc_after = max(0.0, doc_before + docs_added)
+        # Doctors (jumlah_tenaga_medis)
+        d_docs = deltas.get("doctors", 0)
+        df_sim.at[i, "jumlah_tenaga_medis"] = max(0.0, df_sim.at[i, "jumlah_tenaga_medis"] + d_docs)
+        df_sim.at[i, "doctors_per_1000"] = (df_sim.at[i, "jumlah_tenaga_medis"] / pop_abs) * 1000.0
         
-        if "jumlah_tenaga_medis" in df_sim.columns:
-            df_sim.at[i, "jumlah_tenaga_medis"] = doc_after
-        df_sim.at[i, "doctors_per_1000"] = doc_after / pop
+        # Nurses (jumlah_perawat)
+        d_nurses = deltas.get("nurses", 0)
+        df_sim.at[i, "jumlah_perawat"] = max(0.0, df_sim.at[i, "jumlah_perawat"] + d_nurses)
+        df_sim.at[i, "perawat_per_1000"] = (df_sim.at[i, "jumlah_perawat"] / pop_abs) * 1000.0
         
-        # Calculate nurse/midwife changes
-        df_sim.at[i, "total_tenaga_kesehatan"] = max(0.0, df_sim.at[i, "total_tenaga_kesehatan"] + deltas.get("nakes", docs_added + deltas.get("perawat", 0) + deltas.get("bidan", 0)))
-        df_sim.at[i, "nakes_per_1000"] = df_sim.at[i, "total_tenaga_kesehatan"] / pop
+        # Midwives (jumlah_bidan)
+        d_midwives = deltas.get("midwives", 0)
+        df_sim.at[i, "jumlah_bidan"] = max(0.0, df_sim.at[i, "jumlah_bidan"] + d_midwives)
+        df_sim.at[i, "bidan_per_1000"] = (df_sim.at[i, "jumlah_bidan"] / pop_abs) * 1000.0
         
-        perawat_before = df_sim.at[i, "perawat_per_1000"] * pop
-        perawat_after = max(0.0, perawat_before + deltas.get("perawat", 0))
-        df_sim.at[i, "perawat_per_1000"] = perawat_after / pop
+        # Total health workers (total_tenaga_kesehatan)
+        df_sim.at[i, "total_tenaga_kesehatan"] = (
+            df_sim.at[i, "jumlah_tenaga_medis"] +
+            df_sim.at[i, "jumlah_perawat"] +
+            df_sim.at[i, "jumlah_bidan"]
+        )
+        df_sim.at[i, "nakes_per_1000"] = (df_sim.at[i, "total_tenaga_kesehatan"] / pop_abs) * 1000.0
         
-        bidan_before = df_sim.at[i, "bidan_per_1000"] * pop
-        bidan_after = max(0.0, bidan_before + deltas.get("bidan", 0))
-        df_sim.at[i, "bidan_per_1000"] = bidan_after / pop
-        
-    # 3. Apply additions to physical capacities
+    # 2. Apply additions to physical capacities
     df_sim.at[i, "total_faskes"] = max(0.0, df_sim.at[i, "total_faskes"] + deltas.get("faskes", 0))
     df_sim.at[i, "total_tempat_tidur"] = max(0.0, df_sim.at[i, "total_tempat_tidur"] + deltas.get("beds", 0))
     
-    # 4. Recalculate facility ratios
+    # 3. Recalculate facility ratios
     if pop > 0:
-        df_sim.at[i, "faskes_per_100k"] = (df_sim.at[i, "total_faskes"] / pop) * 100.0
-        df_sim.at[i, "beds_per_1000"] = df_sim.at[i, "total_tempat_tidur"] / pop
+        df_sim.at[i, "faskes_per_100k"] = (df_sim.at[i, "total_faskes"] / pop_abs) * 100000.0
+        df_sim.at[i, "beds_per_1000"] = (df_sim.at[i, "total_tempat_tidur"] / pop_abs) * 1000.0
         
-    # 5. Re-run composite gap engine
-    df_new_gaps = calculate_healthcare_gap(df_sim, config)
+    # Load baseline normalization reference (Section 31 & 32)
+    ref_path = os.path.join(config["data"]["processed_dir"], "normalization_reference.json")
+    if os.path.exists(ref_path):
+        with open(ref_path, "r") as f:
+            ref_norm = json.load(f)
+    else:
+        ref_norm = None
+        
+    # 4. Re-run composite gap engine using reference boundaries
+    df_new_gaps = calculate_healthcare_gap(df_sim, config, ref_norm=ref_norm)
+    df_orig_gaps = calculate_healthcare_gap(df_features, config, ref_norm=ref_norm)
     
-    # 6. Apply accessibility delta offset (Accessibility no longer offsets composite score in v2)
-    orig_gap_df = calculate_healthcare_gap(df_features, config)
-    before_gap = float(orig_gap_df.at[i, "healthcare_gap_score"])
+    before_gap = float(df_orig_gaps.at[i, "healthcare_gap_score"])
     after_gap = float(df_new_gaps.at[i, "healthcare_gap_score"])
     
-    # Ensure the score is updated in the df
-    df_new_gaps.at[i, "healthcare_gap_score"] = after_gap
-    
-    # Calculate improvements
+    # No arbitrary offset modification to after_gap (Section 33)
     improvement_abs = before_gap - after_gap
     improvement_pct = (improvement_abs / before_gap) * 100.0 if before_gap > 0 else 0.0
     
-    # Enforce logical validator after_gap <= before_gap
-    if after_gap > before_gap:
-        after_gap = before_gap
-        improvement_abs = 0.0
-        improvement_pct = 0.0
-        df_new_gaps.at[i, "healthcare_gap_score"] = after_gap
-        
+    # Assert monotonicity strictly (Section 32)
+    assert after_gap <= before_gap, f"Monotonicity violation! Gap increased from {before_gap} to {after_gap}."
+    
     return {
         "before_gap": before_gap,
         "after_gap": after_gap,

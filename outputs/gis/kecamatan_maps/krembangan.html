@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_acd818c306354fdd6904f4de03c85f5d {
+                #map_834940e397bbff9d433c36fac9e2957d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">73.3</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">74.8</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 73.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.77), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 74.8 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.85), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_acd818c306354fdd6904f4de03c85f5d" ></div>
+            <div class="folium-map" id="map_834940e397bbff9d433c36fac9e2957d" ></div>
         
 </body>
 <script>
     
     
-            var map_acd818c306354fdd6904f4de03c85f5d = L.map(
-                "map_acd818c306354fdd6904f4de03c85f5d",
+            var map_834940e397bbff9d433c36fac9e2957d = L.map(
+                "map_834940e397bbff9d433c36fac9e2957d",
                 {
                     center: [-7.229110765717786, 112.72162793211452],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_a71e1fc45a79ba9a91c2aa70824eecfd = L.tileLayer(
+            var tile_layer_79c42e8e18901fbd5420655100f14569 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_a71e1fc45a79ba9a91c2aa70824eecfd.addTo(map_acd818c306354fdd6904f4de03c85f5d);
+            tile_layer_79c42e8e18901fbd5420655100f14569.addTo(map_834940e397bbff9d433c36fac9e2957d);
         
     
-        function geo_json_e070569de517d42c6ee569c88c3a582b_styler(feature) {
+        function geo_json_a015e44423dd6c3d5842a86ccc319035_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_e070569de517d42c6ee569c88c3a582b_onEachFeature(feature, layer) {
+        function geo_json_a015e44423dd6c3d5842a86ccc319035_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_e070569de517d42c6ee569c88c3a582b = L.geoJson(null, {
-                onEachFeature: geo_json_e070569de517d42c6ee569c88c3a582b_onEachFeature,
+        var geo_json_a015e44423dd6c3d5842a86ccc319035 = L.geoJson(null, {
+                onEachFeature: geo_json_a015e44423dd6c3d5842a86ccc319035_onEachFeature,
             
-                style: geo_json_e070569de517d42c6ee569c88c3a582b_styler,
+                style: geo_json_a015e44423dd6c3d5842a86ccc319035_styler,
             ...{
 }
         });
 
-        function geo_json_e070569de517d42c6ee569c88c3a582b_add (data) {
-            geo_json_e070569de517d42c6ee569c88c3a582b
+        function geo_json_a015e44423dd6c3d5842a86ccc319035_add (data) {
+            geo_json_a015e44423dd6c3d5842a86ccc319035
                 .addData(data);
         }
-            geo_json_e070569de517d42c6ee569c88c3a582b_add({"bbox": [112.7066, -7.2471, 112.7422, -7.2071], "features": [{"bbox": [112.7066, -7.2471, 112.7422, -7.2071], "geometry": {"coordinates": [[[[112.7422, -7.2441], [112.7382, -7.2451], [112.7293, -7.2431], [112.7269, -7.241], [112.7264, -7.2378], [112.7206, -7.2361], [112.7209, -7.2471], [112.7171, -7.2471], [112.7169, -7.2428], [112.7139, -7.243], [112.7137, -7.2397], [112.7128, -7.2409], [112.7098, -7.2395], [112.7091, -7.2376], [112.7112, -7.2379], [112.7112, -7.2362], [112.708, -7.2363], [112.7103, -7.2321], [112.7072, -7.2304], [112.7066, -7.2233], [112.7114, -7.2219], [112.7102, -7.2175], [112.7149, -7.2156], [112.7151, -7.21], [112.7176, -7.2097], [112.7187, -7.2071], [112.7219, -7.2118], [112.7236, -7.2113], [112.7265, -7.2169], [112.7311, -7.2213], [112.7325, -7.2206], [112.7287, -7.2327], [112.7307, -7.2344], [112.7309, -7.2324], [112.7353, -7.234], [112.7348, -7.2307], [112.7382, -7.2316], [112.7379, -7.2389], [112.7396, -7.2431], [112.7422, -7.2441]]]], "type": "MultiPolygon"}, "id": "12", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5830457157984662, "disease_issue": "Penyakit pada sistem pernafasan (26794 cases)", "disease_need_score": 0.6613702893538563, "explanation": "Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 73.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.77), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7735578780319756, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 73.28443928249038, "jumlah_bidan": 62, "jumlah_penduduk": 114.9, "jumlah_perawat": 231, "jumlah_tenaga_medis": 209, "kecamatan": "KREMBANGAN", "kepadatan_penduduk": 13357, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 2, "root_cause_confidence": "HIGH", "root_cause_margin": 0.1295922706620165, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 30.0, "total_tenaga_kesehatan": 669.0, "workforce_gap": 0.9031501486939921, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_a015e44423dd6c3d5842a86ccc319035_add({"bbox": [112.7066, -7.2471, 112.7422, -7.2071], "features": [{"bbox": [112.7066, -7.2471, 112.7422, -7.2071], "geometry": {"coordinates": [[[[112.7422, -7.2441], [112.7382, -7.2451], [112.7293, -7.2431], [112.7269, -7.241], [112.7264, -7.2378], [112.7206, -7.2361], [112.7209, -7.2471], [112.7171, -7.2471], [112.7169, -7.2428], [112.7139, -7.243], [112.7137, -7.2397], [112.7128, -7.2409], [112.7098, -7.2395], [112.7091, -7.2376], [112.7112, -7.2379], [112.7112, -7.2362], [112.708, -7.2363], [112.7103, -7.2321], [112.7072, -7.2304], [112.7066, -7.2233], [112.7114, -7.2219], [112.7102, -7.2175], [112.7149, -7.2156], [112.7151, -7.21], [112.7176, -7.2097], [112.7187, -7.2071], [112.7219, -7.2118], [112.7236, -7.2113], [112.7265, -7.2169], [112.7311, -7.2213], [112.7325, -7.2206], [112.7287, -7.2327], [112.7307, -7.2344], [112.7309, -7.2324], [112.7353, -7.234], [112.7348, -7.2307], [112.7382, -7.2316], [112.7379, -7.2389], [112.7396, -7.2431], [112.7422, -7.2441]]]], "type": "MultiPolygon"}, "id": "12", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5830457157984662, "disease_issue": "Penyakit pada sistem pernafasan (26794 cases)", "disease_need_score": 0.6613702893538562, "explanation": "Kecamatan Krembangan memiliki Healthcare Gap Score sebesar 74.8 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.85), 3. Disease Burden Need (0.66). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8485578780319756, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 74.78443928249038, "jumlah_bidan": 62, "jumlah_penduduk": 114.9, "jumlah_perawat": 231, "jumlah_tenaga_medis": 209, "kecamatan": "KREMBANGAN", "kepadatan_penduduk": 13357, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 2, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.05459227066201655, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 30.0, "total_tenaga_kesehatan": 669.0, "workforce_gap": 0.9031501486939921, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_e070569de517d42c6ee569c88c3a582b.bindTooltip(
+    geo_json_a015e44423dd6c3d5842a86ccc319035.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_e070569de517d42c6ee569c88c3a582b.addTo(map_acd818c306354fdd6904f4de03c85f5d);
+            geo_json_a015e44423dd6c3d5842a86ccc319035.addTo(map_834940e397bbff9d433c36fac9e2957d);
         
     
-            var feature_group_d18138f2f92c05f40a0286a1dcce68b6 = L.featureGroup(
+            var feature_group_67a9bf05e40b09c9fca87f152d8a4699 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_68af5e987754e92c68ea03d2503310d9 = L.marker(
+            var marker_68b1055fb46d1fee8c8a2b65fe8012bf = L.marker(
                 [-7.239324, 112.717208],
                 {
 }
-            ).addTo(feature_group_d18138f2f92c05f40a0286a1dcce68b6);
+            ).addTo(feature_group_67a9bf05e40b09c9fca87f152d8a4699);
         
     
-            var icon_a66cdda6922ffda29786f07270705e76 = L.AwesomeMarkers.icon(
+            var icon_0f147acaae5764691fff85ea5d107b31 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_674eed1dcb1c3ea1c7dfa781037161f8 = L.popup({
+        var popup_67ee3bad6379a19ab3afca78edde06e6 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d6bcfda54e2d4418c5c2f9174f52dc21 = $(`<div id="html_d6bcfda54e2d4418c5c2f9174f52dc21" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Dupak<br><b>ID:</b> PKM007</div>`)[0];
-                popup_674eed1dcb1c3ea1c7dfa781037161f8.setContent(html_d6bcfda54e2d4418c5c2f9174f52dc21);
+                var html_31face5974b74350f7352dba1c702883 = $(`<div id="html_31face5974b74350f7352dba1c702883" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Dupak<br><b>ID:</b> PKM007</div>`)[0];
+                popup_67ee3bad6379a19ab3afca78edde06e6.setContent(html_31face5974b74350f7352dba1c702883);
             
         
 
-        marker_68af5e987754e92c68ea03d2503310d9.bindPopup(popup_674eed1dcb1c3ea1c7dfa781037161f8)
+        marker_68b1055fb46d1fee8c8a2b65fe8012bf.bindPopup(popup_67ee3bad6379a19ab3afca78edde06e6)
         ;
 
         
     
     
-                marker_68af5e987754e92c68ea03d2503310d9.setIcon(icon_a66cdda6922ffda29786f07270705e76);
+                marker_68b1055fb46d1fee8c8a2b65fe8012bf.setIcon(icon_0f147acaae5764691fff85ea5d107b31);
             
     
-            var marker_003fb9c034b1346c7e103646ce2101d1 = L.marker(
+            var marker_cd710791ee7a58167266c820832e6b0d = L.marker(
                 [-7.233306, 112.731864],
                 {
 }
-            ).addTo(feature_group_d18138f2f92c05f40a0286a1dcce68b6);
+            ).addTo(feature_group_67a9bf05e40b09c9fca87f152d8a4699);
         
     
-            var icon_9edfcb1b651902f83258823aed19e829 = L.AwesomeMarkers.icon(
+            var icon_0e1673e30f4ca4fca183eecb2148284d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,34 +278,34 @@
             );
         
     
-        var popup_b8b97626a818f20c093db3deb03a2ed5 = L.popup({
+        var popup_141bb844c195313074c768959ece5d90 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_e655553546ef4b7024b4653acc0bab0a = $(`<div id="html_e655553546ef4b7024b4653acc0bab0a" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Krembangan Selatan<br><b>ID:</b> PKM022</div>`)[0];
-                popup_b8b97626a818f20c093db3deb03a2ed5.setContent(html_e655553546ef4b7024b4653acc0bab0a);
+                var html_1195ca2f60df12802791c61de0e78bd9 = $(`<div id="html_1195ca2f60df12802791c61de0e78bd9" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Krembangan Selatan<br><b>ID:</b> PKM022</div>`)[0];
+                popup_141bb844c195313074c768959ece5d90.setContent(html_1195ca2f60df12802791c61de0e78bd9);
             
         
 
-        marker_003fb9c034b1346c7e103646ce2101d1.bindPopup(popup_b8b97626a818f20c093db3deb03a2ed5)
+        marker_cd710791ee7a58167266c820832e6b0d.bindPopup(popup_141bb844c195313074c768959ece5d90)
         ;
 
         
     
     
-                marker_003fb9c034b1346c7e103646ce2101d1.setIcon(icon_9edfcb1b651902f83258823aed19e829);
+                marker_cd710791ee7a58167266c820832e6b0d.setIcon(icon_0e1673e30f4ca4fca183eecb2148284d);
             
     
-            var marker_035a981c5963ff5f6a0f55cf703a058f = L.marker(
+            var marker_74a183de0d2f1c931afee09528efe311 = L.marker(
                 [-7.234739, 112.712472],
                 {
 }
-            ).addTo(feature_group_d18138f2f92c05f40a0286a1dcce68b6);
+            ).addTo(feature_group_67a9bf05e40b09c9fca87f152d8a4699);
         
     
-            var icon_94ebf94cf5f940bda988cb55d21c7410 = L.AwesomeMarkers.icon(
+            var icon_afe646b4257cf2758dd86bd2fda2a743 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -316,59 +316,59 @@
             );
         
     
-        var popup_4ca8753ea89278e8f71970cdcf5e96fb = L.popup({
+        var popup_65873caab1a03bc069b212c2b6d9886b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_51c73592cc793472ed02a45b23459621 = $(`<div id="html_51c73592cc793472ed02a45b23459621" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Morokrembangan<br><b>ID:</b> PKM059</div>`)[0];
-                popup_4ca8753ea89278e8f71970cdcf5e96fb.setContent(html_51c73592cc793472ed02a45b23459621);
+                var html_f3b301c4ca3c4be92eb173badadc657f = $(`<div id="html_f3b301c4ca3c4be92eb173badadc657f" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Morokrembangan<br><b>ID:</b> PKM059</div>`)[0];
+                popup_65873caab1a03bc069b212c2b6d9886b.setContent(html_f3b301c4ca3c4be92eb173badadc657f);
             
         
 
-        marker_035a981c5963ff5f6a0f55cf703a058f.bindPopup(popup_4ca8753ea89278e8f71970cdcf5e96fb)
+        marker_74a183de0d2f1c931afee09528efe311.bindPopup(popup_65873caab1a03bc069b212c2b6d9886b)
         ;
 
         
     
     
-                marker_035a981c5963ff5f6a0f55cf703a058f.setIcon(icon_94ebf94cf5f940bda988cb55d21c7410);
+                marker_74a183de0d2f1c931afee09528efe311.setIcon(icon_afe646b4257cf2758dd86bd2fda2a743);
             
     
-            feature_group_d18138f2f92c05f40a0286a1dcce68b6.addTo(map_acd818c306354fdd6904f4de03c85f5d);
+            feature_group_67a9bf05e40b09c9fca87f152d8a4699.addTo(map_834940e397bbff9d433c36fac9e2957d);
         
     
-            var feature_group_7ba87e88ce997f42abb02d244b45c7c5 = L.featureGroup(
+            var feature_group_e154403328d2e664e6628b193582ffff = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_fea2f541c8af342707cfa5a05d471b8f = L.polyline(
+            var poly_line_73a4d9da3cecc011d998e5209b5836e5 = L.polyline(
                 [[-7.2329093, 112.7226026], [-7.233211546462716, 112.72273446586492]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_7ba87e88ce997f42abb02d244b45c7c5);
+            ).addTo(feature_group_e154403328d2e664e6628b193582ffff);
         
     
-        var popup_e1256366995b3f9559a8bc2995010cd3 = L.popup({
+        var popup_6ab9686b3a11c953a9d26e015b458e78 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_5354ae0700f21b34a27d85936ce58bc4 = $(`<div id="html_5354ae0700f21b34a27d85936ce58bc4" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Krembangan-Lakarsantri</div>`)[0];
-                popup_e1256366995b3f9559a8bc2995010cd3.setContent(html_5354ae0700f21b34a27d85936ce58bc4);
+                var html_a249f77b16eac08b8fe7b43f2e55d377 = $(`<div id="html_a249f77b16eac08b8fe7b43f2e55d377" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Krembangan-Lakarsantri</div>`)[0];
+                popup_6ab9686b3a11c953a9d26e015b458e78.setContent(html_a249f77b16eac08b8fe7b43f2e55d377);
             
         
 
-        poly_line_fea2f541c8af342707cfa5a05d471b8f.bindPopup(popup_e1256366995b3f9559a8bc2995010cd3)
+        poly_line_73a4d9da3cecc011d998e5209b5836e5.bindPopup(popup_6ab9686b3a11c953a9d26e015b458e78)
         ;
 
         
     
     
-            feature_group_7ba87e88ce997f42abb02d244b45c7c5.addTo(map_acd818c306354fdd6904f4de03c85f5d);
+            feature_group_e154403328d2e664e6628b193582ffff.addTo(map_834940e397bbff9d433c36fac9e2957d);
         
 </script>
 </html>

@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b2b79490b42e4da7a8e90e15dde80c2a {
+                #map_ada20c57e199ceecf453d9932966cd4b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">71.5</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">73.0</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Sawahan memiliki Healthcare Gap Score sebesar 71.5 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.94), 2. Facility Capacity Gap (0.80), 3. High Demand Score (0.66). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.94. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Sawahan memiliki Healthcare Gap Score sebesar 73.0 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.94), 2. Facility Capacity Gap (0.88), 3. High Demand Score (0.66). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.94. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_b2b79490b42e4da7a8e90e15dde80c2a" ></div>
+            <div class="folium-map" id="map_ada20c57e199ceecf453d9932966cd4b" ></div>
         
 </body>
 <script>
     
     
-            var map_b2b79490b42e4da7a8e90e15dde80c2a = L.map(
-                "map_b2b79490b42e4da7a8e90e15dde80c2a",
+            var map_ada20c57e199ceecf453d9932966cd4b = L.map(
+                "map_ada20c57e199ceecf453d9932966cd4b",
                 {
                     center: [-7.272819604549965, 112.72157751425753],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_a1f71c6cfcd524454c88cf56d03e7f46 = L.tileLayer(
+            var tile_layer_542a80fcc7fb60b00ed5c3a6785ba259 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_a1f71c6cfcd524454c88cf56d03e7f46.addTo(map_b2b79490b42e4da7a8e90e15dde80c2a);
+            tile_layer_542a80fcc7fb60b00ed5c3a6785ba259.addTo(map_ada20c57e199ceecf453d9932966cd4b);
         
     
-        function geo_json_5975a609614f5549105d78314180643e_styler(feature) {
+        function geo_json_0db9066d19a2a1443e56364ce33f462f_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_5975a609614f5549105d78314180643e_onEachFeature(feature, layer) {
+        function geo_json_0db9066d19a2a1443e56364ce33f462f_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_5975a609614f5549105d78314180643e = L.geoJson(null, {
-                onEachFeature: geo_json_5975a609614f5549105d78314180643e_onEachFeature,
+        var geo_json_0db9066d19a2a1443e56364ce33f462f = L.geoJson(null, {
+                onEachFeature: geo_json_0db9066d19a2a1443e56364ce33f462f_onEachFeature,
             
-                style: geo_json_5975a609614f5549105d78314180643e_styler,
+                style: geo_json_0db9066d19a2a1443e56364ce33f462f_styler,
             ...{
 }
         });
 
-        function geo_json_5975a609614f5549105d78314180643e_add (data) {
-            geo_json_5975a609614f5549105d78314180643e
+        function geo_json_0db9066d19a2a1443e56364ce33f462f_add (data) {
+            geo_json_0db9066d19a2a1443e56364ce33f462f
                 .addData(data);
         }
-            geo_json_5975a609614f5549105d78314180643e_add({"bbox": [112.7086, -7.2925, 112.7343, -7.2551], "features": [{"bbox": [112.7086, -7.2925, 112.7343, -7.2551], "geometry": {"coordinates": [[[[112.7152, -7.2857], [112.7174, -7.2795], [112.7096, -7.2776], [112.7101, -7.2757], [112.7086, -7.2757], [112.7088, -7.273], [112.7107, -7.2731], [112.7127, -7.2671], [112.7143, -7.2561], [112.7151, -7.2551], [112.7252, -7.2571], [112.7261, -7.2558], [112.7343, -7.2559], [112.7267, -7.2747], [112.7302, -7.284], [112.7304, -7.289], [112.7287, -7.2925], [112.7134, -7.2903], [112.7152, -7.2857]]]], "type": "MultiPolygon"}, "id": "19", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.6640199018951047, "disease_issue": "Penyakit pada sistem pernafasan (25591 cases)", "disease_need_score": 0.36096317245734877, "explanation": "Kecamatan Sawahan memiliki Healthcare Gap Score sebesar 71.5 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.94), 2. Facility Capacity Gap (0.80), 3. High Demand Score (0.66). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.94. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8027007502615384, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 71.49342486057067, "jumlah_bidan": 74, "jumlah_penduduk": 198.5, "jumlah_perawat": 266, "jumlah_tenaga_medis": 271, "kecamatan": "SAWAHAN", "kepadatan_penduduk": 27648, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 4, "root_cause_confidence": "HIGH", "root_cause_margin": 0.1406175613831211, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 119.0, "total_tenaga_kesehatan": 992.0, "workforce_gap": 0.9433183116446595, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_0db9066d19a2a1443e56364ce33f462f_add({"bbox": [112.7086, -7.2925, 112.7343, -7.2551], "features": [{"bbox": [112.7086, -7.2925, 112.7343, -7.2551], "geometry": {"coordinates": [[[[112.7152, -7.2857], [112.7174, -7.2795], [112.7096, -7.2776], [112.7101, -7.2757], [112.7086, -7.2757], [112.7088, -7.273], [112.7107, -7.2731], [112.7127, -7.2671], [112.7143, -7.2561], [112.7151, -7.2551], [112.7252, -7.2571], [112.7261, -7.2558], [112.7343, -7.2559], [112.7267, -7.2747], [112.7302, -7.284], [112.7304, -7.289], [112.7287, -7.2925], [112.7134, -7.2903], [112.7152, -7.2857]]]], "type": "MultiPolygon"}, "id": "19", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Population Demand", "demand_score": 0.6640199018951047, "disease_issue": "Penyakit pada sistem pernafasan (25591 cases)", "disease_need_score": 0.36096317245734866, "explanation": "Kecamatan Sawahan memiliki Healthcare Gap Score sebesar 73.0 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.94), 2. Facility Capacity Gap (0.88), 3. High Demand Score (0.66). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.94. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8777007502615384, "facility_issue": "Low Pustu Ratio", "healthcare_gap_score": 72.99342486057068, "jumlah_bidan": 74, "jumlah_penduduk": 198.5, "jumlah_perawat": 266, "jumlah_tenaga_medis": 271, "kecamatan": "SAWAHAN", "kepadatan_penduduk": 27648, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 4, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.06561756138312114, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 119.0, "total_tenaga_kesehatan": 992.0, "workforce_gap": 0.9433183116446595, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_5975a609614f5549105d78314180643e.bindTooltip(
+    geo_json_0db9066d19a2a1443e56364ce33f462f.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_5975a609614f5549105d78314180643e.addTo(map_b2b79490b42e4da7a8e90e15dde80c2a);
+            geo_json_0db9066d19a2a1443e56364ce33f462f.addTo(map_ada20c57e199ceecf453d9932966cd4b);
         
     
-            var feature_group_fdc759a6482f99e1ccf49831aa6479b2 = L.featureGroup(
+            var feature_group_b980a8ffb85ee8d3052f02aa83183e9f = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_fcbb67fff4288e6656de49f413d0759c = L.marker(
+            var marker_a400001e16ca5a151b74df2439b45062 = L.marker(
                 [-7.271516, 112.720148],
                 {
 }
-            ).addTo(feature_group_fdc759a6482f99e1ccf49831aa6479b2);
+            ).addTo(feature_group_b980a8ffb85ee8d3052f02aa83183e9f);
         
     
-            var icon_b7c393e47c4beee6efce0ecedd0dd006 = L.AwesomeMarkers.icon(
+            var icon_e8c1856f188fc2e601ac264939530786 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_370134b258c23f25e005bcf8ba27a4c9 = L.popup({
+        var popup_bed7d237d30a78c4433cc4f583f5fe2d = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_8409b3a6d9bd9fde417ee125d5a8a20f = $(`<div id="html_8409b3a6d9bd9fde417ee125d5a8a20f" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Banyu Urip<br><b>ID:</b> PKM003</div>`)[0];
-                popup_370134b258c23f25e005bcf8ba27a4c9.setContent(html_8409b3a6d9bd9fde417ee125d5a8a20f);
+                var html_17919931dddea325cbf1665404e98bc6 = $(`<div id="html_17919931dddea325cbf1665404e98bc6" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Banyu Urip<br><b>ID:</b> PKM003</div>`)[0];
+                popup_bed7d237d30a78c4433cc4f583f5fe2d.setContent(html_17919931dddea325cbf1665404e98bc6);
             
         
 
-        marker_fcbb67fff4288e6656de49f413d0759c.bindPopup(popup_370134b258c23f25e005bcf8ba27a4c9)
+        marker_a400001e16ca5a151b74df2439b45062.bindPopup(popup_bed7d237d30a78c4433cc4f583f5fe2d)
         ;
 
         
     
     
-                marker_fcbb67fff4288e6656de49f413d0759c.setIcon(icon_b7c393e47c4beee6efce0ecedd0dd006);
+                marker_a400001e16ca5a151b74df2439b45062.setIcon(icon_e8c1856f188fc2e601ac264939530786);
             
     
-            var marker_b6a7d6c95fc368aba910cc8350da3851 = L.marker(
+            var marker_b97c17a348491946348ff39256a0d346 = L.marker(
                 [-7.28204, 112.727871],
                 {
 }
-            ).addTo(feature_group_fdc759a6482f99e1ccf49831aa6479b2);
+            ).addTo(feature_group_b980a8ffb85ee8d3052f02aa83183e9f);
         
     
-            var icon_b99e7d378fddbaa1c1701739b4fc499a = L.AwesomeMarkers.icon(
+            var icon_1dbfa2ded90db03cadd39e4833fe2a90 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,34 +278,34 @@
             );
         
     
-        var popup_97e5d105744c8f07b15fe3ef978f78c0 = L.popup({
+        var popup_857b1b82b7167768d82d55d27cfed7b0 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_068385b9619574b914114ab6d579833d = $(`<div id="html_068385b9619574b914114ab6d579833d" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Pakis<br><b>ID:</b> PKM032</div>`)[0];
-                popup_97e5d105744c8f07b15fe3ef978f78c0.setContent(html_068385b9619574b914114ab6d579833d);
+                var html_dd2186b52a5a76fb9b0cb23f5797e97f = $(`<div id="html_dd2186b52a5a76fb9b0cb23f5797e97f" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Pakis<br><b>ID:</b> PKM032</div>`)[0];
+                popup_857b1b82b7167768d82d55d27cfed7b0.setContent(html_dd2186b52a5a76fb9b0cb23f5797e97f);
             
         
 
-        marker_b6a7d6c95fc368aba910cc8350da3851.bindPopup(popup_97e5d105744c8f07b15fe3ef978f78c0)
+        marker_b97c17a348491946348ff39256a0d346.bindPopup(popup_857b1b82b7167768d82d55d27cfed7b0)
         ;
 
         
     
     
-                marker_b6a7d6c95fc368aba910cc8350da3851.setIcon(icon_b99e7d378fddbaa1c1701739b4fc499a);
+                marker_b97c17a348491946348ff39256a0d346.setIcon(icon_1dbfa2ded90db03cadd39e4833fe2a90);
             
     
-            var marker_845cb95df838f53b5ab968f6467dc4db = L.marker(
+            var marker_17d0edd85e5d395ee0f7da88a473c68f = L.marker(
                 [-7.281424, 112.722313],
                 {
 }
-            ).addTo(feature_group_fdc759a6482f99e1ccf49831aa6479b2);
+            ).addTo(feature_group_b980a8ffb85ee8d3052f02aa83183e9f);
         
     
-            var icon_db7f40a86cdd50de49fad3bd9fd28139 = L.AwesomeMarkers.icon(
+            var icon_fb2771080d273ebdea6d281218a2b982 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -316,34 +316,34 @@
             );
         
     
-        var popup_2b08e3a73110796facc7ec479ded9286 = L.popup({
+        var popup_244109cbe079033d7a3993a4a04d6ce2 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d79b8af78a0f65232d2749479ba0b137 = $(`<div id="html_d79b8af78a0f65232d2749479ba0b137" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Putat Jaya<br><b>ID:</b> PKM037</div>`)[0];
-                popup_2b08e3a73110796facc7ec479ded9286.setContent(html_d79b8af78a0f65232d2749479ba0b137);
+                var html_ebfb7bbef694504997d1d1a104ae6d0a = $(`<div id="html_ebfb7bbef694504997d1d1a104ae6d0a" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Putat Jaya<br><b>ID:</b> PKM037</div>`)[0];
+                popup_244109cbe079033d7a3993a4a04d6ce2.setContent(html_ebfb7bbef694504997d1d1a104ae6d0a);
             
         
 
-        marker_845cb95df838f53b5ab968f6467dc4db.bindPopup(popup_2b08e3a73110796facc7ec479ded9286)
+        marker_17d0edd85e5d395ee0f7da88a473c68f.bindPopup(popup_244109cbe079033d7a3993a4a04d6ce2)
         ;
 
         
     
     
-                marker_845cb95df838f53b5ab968f6467dc4db.setIcon(icon_db7f40a86cdd50de49fad3bd9fd28139);
+                marker_17d0edd85e5d395ee0f7da88a473c68f.setIcon(icon_fb2771080d273ebdea6d281218a2b982);
             
     
-            var marker_7451f211f4e549f77463a949c3c9c8ec = L.marker(
+            var marker_c1c78fc715709f7318c8e71a0f694a66 = L.marker(
                 [-7.265595, 112.727659],
                 {
 }
-            ).addTo(feature_group_fdc759a6482f99e1ccf49831aa6479b2);
+            ).addTo(feature_group_b980a8ffb85ee8d3052f02aa83183e9f);
         
     
-            var icon_4952a5f1b7ec784978fb5772fb5817d3 = L.AwesomeMarkers.icon(
+            var icon_c69f2f35385bce56b79883f29ebe5380 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -354,37 +354,37 @@
             );
         
     
-        var popup_672f79aaa4d6779578133c923fff2129 = L.popup({
+        var popup_a9643334c8f37ae5c896df9a580296bc = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_980abb69c92089ebc72830e60af707ce = $(`<div id="html_980abb69c92089ebc72830e60af707ce" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sawahan<br><b>ID:</b> PKM039</div>`)[0];
-                popup_672f79aaa4d6779578133c923fff2129.setContent(html_980abb69c92089ebc72830e60af707ce);
+                var html_d47f3b3433e36d96544e6f8ec8dff8d8 = $(`<div id="html_d47f3b3433e36d96544e6f8ec8dff8d8" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sawahan<br><b>ID:</b> PKM039</div>`)[0];
+                popup_a9643334c8f37ae5c896df9a580296bc.setContent(html_d47f3b3433e36d96544e6f8ec8dff8d8);
             
         
 
-        marker_7451f211f4e549f77463a949c3c9c8ec.bindPopup(popup_672f79aaa4d6779578133c923fff2129)
+        marker_c1c78fc715709f7318c8e71a0f694a66.bindPopup(popup_a9643334c8f37ae5c896df9a580296bc)
         ;
 
         
     
     
-                marker_7451f211f4e549f77463a949c3c9c8ec.setIcon(icon_4952a5f1b7ec784978fb5772fb5817d3);
+                marker_c1c78fc715709f7318c8e71a0f694a66.setIcon(icon_c69f2f35385bce56b79883f29ebe5380);
             
     
-            feature_group_fdc759a6482f99e1ccf49831aa6479b2.addTo(map_b2b79490b42e4da7a8e90e15dde80c2a);
+            feature_group_b980a8ffb85ee8d3052f02aa83183e9f.addTo(map_ada20c57e199ceecf453d9932966cd4b);
         
     
-            var marker_af4cc6200095ce765ca73540cd64c008 = L.marker(
+            var marker_23548eeeeb18d04dec565146df370f48 = L.marker(
                 [-7.2919594, 112.727701],
                 {
 }
-            ).addTo(map_b2b79490b42e4da7a8e90e15dde80c2a);
+            ).addTo(map_ada20c57e199ceecf453d9932966cd4b);
         
     
-            var icon_66dbfb1d87edc3b8f37978c5cb4aaea6 = L.AwesomeMarkers.icon(
+            var icon_925e34a814572448db0ded8e888982d7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -395,56 +395,56 @@
             );
         
     
-        var popup_be776c06566470897498e1b49fb8aa16 = L.popup({
+        var popup_08e96deaeb13d76d99a841bff7368343 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_450d0543f8ecf741240199d4efa33a12 = $(`<div id="html_450d0543f8ecf741240199d4efa33a12" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> Mayapada Hospital Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_be776c06566470897498e1b49fb8aa16.setContent(html_450d0543f8ecf741240199d4efa33a12);
+                var html_2ea78e209822ba45cc506a7d1bf30b48 = $(`<div id="html_2ea78e209822ba45cc506a7d1bf30b48" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> Mayapada Hospital Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_08e96deaeb13d76d99a841bff7368343.setContent(html_2ea78e209822ba45cc506a7d1bf30b48);
             
         
 
-        marker_af4cc6200095ce765ca73540cd64c008.bindPopup(popup_be776c06566470897498e1b49fb8aa16)
+        marker_23548eeeeb18d04dec565146df370f48.bindPopup(popup_08e96deaeb13d76d99a841bff7368343)
         ;
 
         
     
     
-                marker_af4cc6200095ce765ca73540cd64c008.setIcon(icon_66dbfb1d87edc3b8f37978c5cb4aaea6);
+                marker_23548eeeeb18d04dec565146df370f48.setIcon(icon_925e34a814572448db0ded8e888982d7);
             
     
-            var feature_group_75a379a62d21534d9e57cb099a24ebb0 = L.featureGroup(
+            var feature_group_3d9be24f5a1ceee5086b5eb014baa331 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_b29b2eb130de8a33fd85d93f33b90474 = L.polyline(
+            var poly_line_4f450c1cf435ad996555c3f7110668e5 = L.polyline(
                 [[-7.2840657, 112.71616485], [-7.284027149701213, 112.7154640680864]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_75a379a62d21534d9e57cb099a24ebb0);
+            ).addTo(feature_group_3d9be24f5a1ceee5086b5eb014baa331);
         
     
-        var popup_5eb11a23982181fc0cfba2c589334900 = L.popup({
+        var popup_292862dfd7781bd9019752ed46d9527b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_f78fed12060741c5e81c8d7ba7693f5a = $(`<div id="html_f78fed12060741c5e81c8d7ba7693f5a" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Sawahan-Semampir</div>`)[0];
-                popup_5eb11a23982181fc0cfba2c589334900.setContent(html_f78fed12060741c5e81c8d7ba7693f5a);
+                var html_b5297f8d2e0c41f8f0fa0bd36c0e3179 = $(`<div id="html_b5297f8d2e0c41f8f0fa0bd36c0e3179" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Sawahan-Semampir</div>`)[0];
+                popup_292862dfd7781bd9019752ed46d9527b.setContent(html_b5297f8d2e0c41f8f0fa0bd36c0e3179);
             
         
 
-        poly_line_b29b2eb130de8a33fd85d93f33b90474.bindPopup(popup_5eb11a23982181fc0cfba2c589334900)
+        poly_line_4f450c1cf435ad996555c3f7110668e5.bindPopup(popup_292862dfd7781bd9019752ed46d9527b)
         ;
 
         
     
     
-            feature_group_75a379a62d21534d9e57cb099a24ebb0.addTo(map_b2b79490b42e4da7a8e90e15dde80c2a);
+            feature_group_3d9be24f5a1ceee5086b5eb014baa331.addTo(map_ada20c57e199ceecf453d9932966cd4b);
         
 </script>
 </html>
