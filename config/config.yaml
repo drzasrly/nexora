@@ -32,19 +32,20 @@ model:
 
 gap_engine:
   # Demand Sub-weights
-  demand_population_weight: 0.30
-  demand_service_weight: 0.40
-  demand_disease_weight: 0.30
+  demand_population_weight: 0.50
+  demand_service_weight: 0.50
+  demand_disease_weight: 0.00
   
   # Capacity Sub-weights (Workforce)
-  workforce_nakes_weight: 0.40
+  workforce_doctors_weight: 0.40
   workforce_nurse_weight: 0.40
   workforce_midwife_weight: 0.20
   
   # Capacity Sub-weights (Facility)
-  facility_faskes_weight: 0.40
-  facility_pkm_weight: 0.40
-  facility_pustu_weight: 0.20
+  facility_faskes_weight: 0.30
+  facility_pkm_weight: 0.25
+  facility_pustu_weight: 0.15
+  facility_beds_weight: 0.30
   
   # Composite Gap weights
   demand_weight: 0.30

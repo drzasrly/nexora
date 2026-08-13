@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_97f2b30db54e424775e588a2286cf46e {
+                #map_74542fbf0b36349ca669e0042bcf3035 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -85,17 +85,17 @@
                          Tinggi
                      </span>
                      <span style="float: right; font-weight: bold; color: #9ca3af;">
-                         Priority Rank: #19
+                         Priority Rank: #20
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">51.4</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">50.1</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Benowo memiliki Healthcare Gap Score sebesar 51.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.73), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                     Kecamatan Benowo memiliki Healthcare Gap Score sebesar 50.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.75), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_97f2b30db54e424775e588a2286cf46e" ></div>
+            <div class="folium-map" id="map_74542fbf0b36349ca669e0042bcf3035" ></div>
         
 </body>
 <script>
     
     
-            var map_97f2b30db54e424775e588a2286cf46e = L.map(
-                "map_97f2b30db54e424775e588a2286cf46e",
+            var map_74542fbf0b36349ca669e0042bcf3035 = L.map(
+                "map_74542fbf0b36349ca669e0042bcf3035",
                 {
                     center: [-7.226751303763048, 112.64631001043648],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_99ba2a40dad96f60e48bd8703f6bcf4c = L.tileLayer(
+            var tile_layer_e5d70630b71719714a7f8858c78e7be3 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_99ba2a40dad96f60e48bd8703f6bcf4c.addTo(map_97f2b30db54e424775e588a2286cf46e);
+            tile_layer_e5d70630b71719714a7f8858c78e7be3.addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
     
-        function geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_styler(feature) {
+        function geo_json_9eefe446b57f869d602d30f998964584_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_onEachFeature(feature, layer) {
+        function geo_json_9eefe446b57f869d602d30f998964584_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4 = L.geoJson(null, {
-                onEachFeature: geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_onEachFeature,
+        var geo_json_9eefe446b57f869d602d30f998964584 = L.geoJson(null, {
+                onEachFeature: geo_json_9eefe446b57f869d602d30f998964584_onEachFeature,
             
-                style: geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_styler,
+                style: geo_json_9eefe446b57f869d602d30f998964584_styler,
             ...{
 }
         });
 
-        function geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_add (data) {
-            geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4
+        function geo_json_9eefe446b57f869d602d30f998964584_add (data) {
+            geo_json_9eefe446b57f869d602d30f998964584
                 .addData(data);
         }
-            geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4_add({"bbox": [112.6256, -7.2656, 112.6684, -7.1923], "features": [{"bbox": [112.6256, -7.2656, 112.6684, -7.1923], "geometry": {"coordinates": [[[[112.6374, -7.2219], [112.6355, -7.2207], [112.6339, -7.2229], [112.6272, -7.2226], [112.628, -7.2127], [112.6256, -7.2114], [112.6257, -7.2033], [112.6348, -7.1996], [112.6592, -7.1964], [112.6603, -7.1938], [112.6631, -7.1932], [112.6638, -7.1988], [112.6611, -7.2004], [112.66, -7.2077], [112.6622, -7.2087], [112.6684, -7.2201], [112.6664, -7.2225], [112.6641, -7.2224], [112.6638, -7.2274], [112.6612, -7.2289], [112.6629, -7.2319], [112.6624, -7.2358], [112.6604, -7.2359], [112.6592, -7.2391], [112.6575, -7.2388], [112.6545, -7.2418], [112.6544, -7.2547], [112.66, -7.2562], [112.6596, -7.2625], [112.6566, -7.263], [112.6547, -7.2656], [112.6515, -7.264], [112.6522, -7.2577], [112.6464, -7.2576], [112.6444, -7.26], [112.6398, -7.2592], [112.6362, -7.2646], [112.6328, -7.264], [112.6305, -7.2537], [112.6343, -7.2446], [112.6318, -7.2432], [112.6335, -7.2394], [112.6346, -7.2399], [112.6356, -7.2355], [112.6343, -7.2349], [112.6344, -7.2275], [112.6374, -7.2219]]], [[[112.6644, -7.1962], [112.6636, -7.1931], [112.665, -7.1923], [112.6662, -7.1962], [112.6644, -7.1962]]]], "type": "MultiPolygon"}, "id": "1", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.19849637638781195, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15690 cases)", "disease_need_score": 0.3679134903898293, "explanation": "Kecamatan Benowo memiliki Healthcare Gap Score sebesar 51.4 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.73), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.8132185997506384, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 51.35474354261422, "jumlah_bidan": 104, "jumlah_penduduk": 74.9, "jumlah_perawat": 395, "jumlah_tenaga_medis": 178, "kecamatan": "BENOWO", "kepadatan_penduduk": 2813, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 19, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.08731158481162127, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 264.0, "total_tenaga_kesehatan": 937.0, "workforce_gap": 0.7259070149390171, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_9eefe446b57f869d602d30f998964584_add({"bbox": [112.6256, -7.2656, 112.6684, -7.1923], "features": [{"bbox": [112.6256, -7.2656, 112.6684, -7.1923], "geometry": {"coordinates": [[[[112.6374, -7.2219], [112.6355, -7.2207], [112.6339, -7.2229], [112.6272, -7.2226], [112.628, -7.2127], [112.6256, -7.2114], [112.6257, -7.2033], [112.6348, -7.1996], [112.6592, -7.1964], [112.6603, -7.1938], [112.6631, -7.1932], [112.6638, -7.1988], [112.6611, -7.2004], [112.66, -7.2077], [112.6622, -7.2087], [112.6684, -7.2201], [112.6664, -7.2225], [112.6641, -7.2224], [112.6638, -7.2274], [112.6612, -7.2289], [112.6629, -7.2319], [112.6624, -7.2358], [112.6604, -7.2359], [112.6592, -7.2391], [112.6575, -7.2388], [112.6545, -7.2418], [112.6544, -7.2547], [112.66, -7.2562], [112.6596, -7.2625], [112.6566, -7.263], [112.6547, -7.2656], [112.6515, -7.264], [112.6522, -7.2577], [112.6464, -7.2576], [112.6444, -7.26], [112.6398, -7.2592], [112.6362, -7.2646], [112.6328, -7.264], [112.6305, -7.2537], [112.6343, -7.2446], [112.6318, -7.2432], [112.6335, -7.2394], [112.6346, -7.2399], [112.6356, -7.2355], [112.6343, -7.2349], [112.6344, -7.2275], [112.6374, -7.2219]]], [[[112.6644, -7.1962], [112.6636, -7.1931], [112.665, -7.1923], [112.6662, -7.1962], [112.6644, -7.1962]]]], "type": "MultiPolygon"}, "id": "1", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.13137288975451783, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (15690 cases)", "disease_need_score": 0.3679134903898293, "explanation": "Kecamatan Benowo memiliki Healthcare Gap Score sebesar 50.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.81), 2. Workforce Shortage Gap (0.75), 3. Disease Burden Need (0.37). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.81. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.8139422246465768, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 50.13708055437507, "jumlah_bidan": 104, "jumlah_penduduk": 74.9, "jumlah_perawat": 395, "jumlah_tenaga_medis": 178, "kecamatan": "BENOWO", "kepadatan_penduduk": 2813, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 20, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.0619829059461966, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 264.0, "total_tenaga_kesehatan": 937.0, "workforce_gap": 0.7519593187003802, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4.bindTooltip(
+    geo_json_9eefe446b57f869d602d30f998964584.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_2f27fa6c9c0ae00e9eb9cd206703b5b4.addTo(map_97f2b30db54e424775e588a2286cf46e);
+            geo_json_9eefe446b57f869d602d30f998964584.addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
     
-            var feature_group_94223fb89883b7674bf262f9785e96ef = L.featureGroup(
+            var feature_group_0790c549ff303244affe66be2062b32f = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_d0fb729c7186741eb58ae171ace8e7ff = L.marker(
+            var marker_78d07b4f09f5d5282071d2c9c992c22b = L.marker(
                 [-7.248427, 112.635407],
                 {
 }
-            ).addTo(feature_group_94223fb89883b7674bf262f9785e96ef);
+            ).addTo(feature_group_0790c549ff303244affe66be2062b32f);
         
     
-            var icon_39bd88b7de458f8ec63ad95c8ee86741 = L.AwesomeMarkers.icon(
+            var icon_03d566ff80a2903642a6823d679cd4b4 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,37 +240,37 @@
             );
         
     
-        var popup_10e4a91fbeb47f54e53cec84e0d07da4 = L.popup({
+        var popup_35da388db51c8fb47dd6c0a514e82226 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d306765c4c31dc45d82225df0a7ae622 = $(`<div id="html_d306765c4c31dc45d82225df0a7ae622" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sememi<br><b>ID:</b> PKM040</div>`)[0];
-                popup_10e4a91fbeb47f54e53cec84e0d07da4.setContent(html_d306765c4c31dc45d82225df0a7ae622);
+                var html_bd90d6095722589ff93f19fbae2247c3 = $(`<div id="html_bd90d6095722589ff93f19fbae2247c3" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sememi<br><b>ID:</b> PKM040</div>`)[0];
+                popup_35da388db51c8fb47dd6c0a514e82226.setContent(html_bd90d6095722589ff93f19fbae2247c3);
             
         
 
-        marker_d0fb729c7186741eb58ae171ace8e7ff.bindPopup(popup_10e4a91fbeb47f54e53cec84e0d07da4)
+        marker_78d07b4f09f5d5282071d2c9c992c22b.bindPopup(popup_35da388db51c8fb47dd6c0a514e82226)
         ;
 
         
     
     
-                marker_d0fb729c7186741eb58ae171ace8e7ff.setIcon(icon_39bd88b7de458f8ec63ad95c8ee86741);
+                marker_78d07b4f09f5d5282071d2c9c992c22b.setIcon(icon_03d566ff80a2903642a6823d679cd4b4);
             
     
-            feature_group_94223fb89883b7674bf262f9785e96ef.addTo(map_97f2b30db54e424775e588a2286cf46e);
+            feature_group_0790c549ff303244affe66be2062b32f.addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
     
-            var marker_2d847354dffe8baf5a933b0224ba4de6 = L.marker(
+            var marker_260b58805797df05b814738bad7daad1 = L.marker(
                 [-7.2487936317845065, 112.6352388872406],
                 {
 }
-            ).addTo(map_97f2b30db54e424775e588a2286cf46e);
+            ).addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
     
-            var icon_9a9f7bac258ca4d5f1f74597d44671e3 = L.AwesomeMarkers.icon(
+            var icon_836ae38978aca4b2ea1831a8bc88c8ea = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -281,34 +281,34 @@
             );
         
     
-        var popup_9b0b3dc170b42f9818c374628066a8f9 = L.popup({
+        var popup_2a20757d32bb82dacdb6610ed50919e9 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_7a594c2931ea34c027632fecbe07de0c = $(`<div id="html_7a594c2931ea34c027632fecbe07de0c" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah Bhakti Dharma Husada<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_9b0b3dc170b42f9818c374628066a8f9.setContent(html_7a594c2931ea34c027632fecbe07de0c);
+                var html_07a981555a60ae6fb76be3ecfac962b9 = $(`<div id="html_07a981555a60ae6fb76be3ecfac962b9" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah Bhakti Dharma Husada<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_2a20757d32bb82dacdb6610ed50919e9.setContent(html_07a981555a60ae6fb76be3ecfac962b9);
             
         
 
-        marker_2d847354dffe8baf5a933b0224ba4de6.bindPopup(popup_9b0b3dc170b42f9818c374628066a8f9)
+        marker_260b58805797df05b814738bad7daad1.bindPopup(popup_2a20757d32bb82dacdb6610ed50919e9)
         ;
 
         
     
     
-                marker_2d847354dffe8baf5a933b0224ba4de6.setIcon(icon_9a9f7bac258ca4d5f1f74597d44671e3);
+                marker_260b58805797df05b814738bad7daad1.setIcon(icon_836ae38978aca4b2ea1831a8bc88c8ea);
             
     
-            var marker_8a4ad3cd1bc272704f35a205d86fb627 = L.marker(
+            var marker_9772722d5bade5ae64e89f7a4f0bab3a = L.marker(
                 [-7.248661729839947, 112.63531232593105],
                 {
 }
-            ).addTo(map_97f2b30db54e424775e588a2286cf46e);
+            ).addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
     
-            var icon_c778fdb2db1fc3cf8d62a108565b905a = L.AwesomeMarkers.icon(
+            var icon_9cdab2ed8112c5ff9b7fa37f7aa253ba = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,56 +319,56 @@
             );
         
     
-        var popup_f1c29150cd57909ba01d5f80bd4b7697 = L.popup({
+        var popup_2e4aa6848ca78e06ef88d901b845f2ad = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_9e3d054dd5708060bca0def54ad577bb = $(`<div id="html_9e3d054dd5708060bca0def54ad577bb" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bunda<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_f1c29150cd57909ba01d5f80bd4b7697.setContent(html_9e3d054dd5708060bca0def54ad577bb);
+                var html_1d50e0c561097f219d2b7cec3eb30ec0 = $(`<div id="html_1d50e0c561097f219d2b7cec3eb30ec0" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bunda<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_2e4aa6848ca78e06ef88d901b845f2ad.setContent(html_1d50e0c561097f219d2b7cec3eb30ec0);
             
         
 
-        marker_8a4ad3cd1bc272704f35a205d86fb627.bindPopup(popup_f1c29150cd57909ba01d5f80bd4b7697)
+        marker_9772722d5bade5ae64e89f7a4f0bab3a.bindPopup(popup_2e4aa6848ca78e06ef88d901b845f2ad)
         ;
 
         
     
     
-                marker_8a4ad3cd1bc272704f35a205d86fb627.setIcon(icon_c778fdb2db1fc3cf8d62a108565b905a);
+                marker_9772722d5bade5ae64e89f7a4f0bab3a.setIcon(icon_9cdab2ed8112c5ff9b7fa37f7aa253ba);
             
     
-            var feature_group_7a55b133d86cff3be5efb23513f6c2c6 = L.featureGroup(
+            var feature_group_596d5bfa450737c741f6fdac84a99a76 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_866d1f2bfd67d6711d2ac698f9072666 = L.polyline(
+            var poly_line_261b3f3a480b82041625d459604a195b = L.polyline(
                 [[-7.24878885, 112.6354085], [-7.248532298951449, 112.63492409027036]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_7a55b133d86cff3be5efb23513f6c2c6);
+            ).addTo(feature_group_596d5bfa450737c741f6fdac84a99a76);
         
     
-        var popup_c741800e9212088c4c9b77a249eadfa8 = L.popup({
+        var popup_81bee134f97bea2fee528c8153a7ab39 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_8f51376d2f56e07d98f095f8c6e41744 = $(`<div id="html_8f51376d2f56e07d98f095f8c6e41744" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Benowo-Bubutan</div>`)[0];
-                popup_c741800e9212088c4c9b77a249eadfa8.setContent(html_8f51376d2f56e07d98f095f8c6e41744);
+                var html_69b454a98f04131aacbf4face17d9575 = $(`<div id="html_69b454a98f04131aacbf4face17d9575" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Benowo-Bubutan</div>`)[0];
+                popup_81bee134f97bea2fee528c8153a7ab39.setContent(html_69b454a98f04131aacbf4face17d9575);
             
         
 
-        poly_line_866d1f2bfd67d6711d2ac698f9072666.bindPopup(popup_c741800e9212088c4c9b77a249eadfa8)
+        poly_line_261b3f3a480b82041625d459604a195b.bindPopup(popup_81bee134f97bea2fee528c8153a7ab39)
         ;
 
         
     
     
-            feature_group_7a55b133d86cff3be5efb23513f6c2c6.addTo(map_97f2b30db54e424775e588a2286cf46e);
+            feature_group_596d5bfa450737c741f6fdac84a99a76.addTo(map_74542fbf0b36349ca669e0042bcf3035);
         
 </script>
 </html>

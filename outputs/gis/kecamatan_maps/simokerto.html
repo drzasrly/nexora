@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ea0c015758086573f1ecd26443f5c4e2 {
+                #map_8194579bfe8209aea4764336126dafe8 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -85,17 +85,17 @@
                          Tinggi
                      </span>
                      <span style="float: right; font-weight: bold; color: #9ca3af;">
-                         Priority Rank: #17
+                         Priority Rank: #22
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">52.3</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">48.2</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Facility Shortage</span>
+                     <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 52.3 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.59), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Faskes Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.
+                     Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 48.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.63), 2. Facility Capacity Gap (0.50), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.63. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_ea0c015758086573f1ecd26443f5c4e2" ></div>
+            <div class="folium-map" id="map_8194579bfe8209aea4764336126dafe8" ></div>
         
 </body>
 <script>
     
     
-            var map_ea0c015758086573f1ecd26443f5c4e2 = L.map(
-                "map_ea0c015758086573f1ecd26443f5c4e2",
+            var map_8194579bfe8209aea4764336126dafe8 = L.map(
+                "map_8194579bfe8209aea4764336126dafe8",
                 {
                     center: [-7.239688620471408, 112.75345981897071],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_f306c282841c5030cc626c0ab7c78814 = L.tileLayer(
+            var tile_layer_0a3bd463db76a050ef4f84ebfcf99d20 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_f306c282841c5030cc626c0ab7c78814.addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            tile_layer_0a3bd463db76a050ef4f84ebfcf99d20.addTo(map_8194579bfe8209aea4764336126dafe8);
         
     
-        function geo_json_49f6e5dab80f9a835c44bc8b5142865a_styler(feature) {
+        function geo_json_3d05b0a48d55ae3c896bd746520abfc2_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_49f6e5dab80f9a835c44bc8b5142865a_onEachFeature(feature, layer) {
+        function geo_json_3d05b0a48d55ae3c896bd746520abfc2_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_49f6e5dab80f9a835c44bc8b5142865a = L.geoJson(null, {
-                onEachFeature: geo_json_49f6e5dab80f9a835c44bc8b5142865a_onEachFeature,
+        var geo_json_3d05b0a48d55ae3c896bd746520abfc2 = L.geoJson(null, {
+                onEachFeature: geo_json_3d05b0a48d55ae3c896bd746520abfc2_onEachFeature,
             
-                style: geo_json_49f6e5dab80f9a835c44bc8b5142865a_styler,
+                style: geo_json_3d05b0a48d55ae3c896bd746520abfc2_styler,
             ...{
 }
         });
 
-        function geo_json_49f6e5dab80f9a835c44bc8b5142865a_add (data) {
-            geo_json_49f6e5dab80f9a835c44bc8b5142865a
+        function geo_json_3d05b0a48d55ae3c896bd746520abfc2_add (data) {
+            geo_json_3d05b0a48d55ae3c896bd746520abfc2
                 .addData(data);
         }
-            geo_json_49f6e5dab80f9a835c44bc8b5142865a_add({"bbox": [112.743, -7.249, 112.7641, -7.2301], "features": [{"bbox": [112.743, -7.249, 112.7641, -7.2301], "geometry": {"coordinates": [[[[112.7533, -7.2483], [112.7519, -7.2448], [112.7473, -7.2435], [112.7433, -7.236], [112.743, -7.2335], [112.7455, -7.2301], [112.7468, -7.2321], [112.7577, -7.2353], [112.7641, -7.2355], [112.7593, -7.249], [112.7533, -7.2483]]]], "type": "MultiPolygon"}, "id": "21", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.38865391111706193, "disease_issue": "Penyakit pada sistem pernafasan (15444 cases)", "disease_need_score": 0.4330704646156655, "explanation": "Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 52.3 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.59), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Faskes Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7111041986887711, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 52.2651502154146, "jumlah_bidan": 163, "jumlah_penduduk": 92.1, "jumlah_perawat": 765, "jumlah_tenaga_medis": 315, "kecamatan": "SIMOKERTO", "kepadatan_penduduk": 35271, "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 17, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.12036954482830431, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 2109.0, "total_tenaga_kesehatan": 1678.0, "workforce_gap": 0.5907346538604668, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_3d05b0a48d55ae3c896bd746520abfc2_add({"bbox": [112.743, -7.249, 112.7641, -7.2301], "features": [{"bbox": [112.743, -7.249, 112.7641, -7.2301], "geometry": {"coordinates": [[[[112.7533, -7.2483], [112.7519, -7.2448], [112.7473, -7.2435], [112.7433, -7.236], [112.743, -7.2335], [112.7455, -7.2301], [112.7468, -7.2321], [112.7577, -7.2353], [112.7641, -7.2355], [112.7593, -7.249], [112.7533, -7.2483]]]], "type": "MultiPolygon"}, "id": "21", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.3563717506916537, "disease_issue": "Penyakit pada sistem pernafasan (15444 cases)", "disease_need_score": 0.4330704646156655, "explanation": "Kecamatan Simokerto memiliki Healthcare Gap Score sebesar 48.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.63), 2. Facility Capacity Gap (0.50), 3. Disease Burden Need (0.43). Indikator paling menonjol dalam model adalah Low Nakes Ratio, dengan sub-skor 0.63. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.49623067936693094, "facility_issue": "Low Faskes Ratio", "healthcare_gap_score": 48.194487763367675, "jumlah_bidan": 163, "jumlah_penduduk": 92.1, "jumlah_perawat": 765, "jumlah_tenaga_medis": 315, "kecamatan": "SIMOKERTO", "kepadatan_penduduk": 35271, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 22, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.13434639939860699, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 2109.0, "total_tenaga_kesehatan": 1678.0, "workforce_gap": 0.6305770787655379, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_49f6e5dab80f9a835c44bc8b5142865a.bindTooltip(
+    geo_json_3d05b0a48d55ae3c896bd746520abfc2.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_49f6e5dab80f9a835c44bc8b5142865a.addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            geo_json_3d05b0a48d55ae3c896bd746520abfc2.addTo(map_8194579bfe8209aea4764336126dafe8);
         
     
-            var feature_group_2a90c7d59a73c9f2da1e802997b01d42 = L.featureGroup(
+            var feature_group_669cc57c6e530f770c4c799fb5a48c48 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_2108fb9187f1afa2b277945cd62ef5f1 = L.marker(
+            var marker_4718549b964fc790704d69ee961eb5f3 = L.marker(
                 [-7.233551, 112.747129],
                 {
 }
-            ).addTo(feature_group_2a90c7d59a73c9f2da1e802997b01d42);
+            ).addTo(feature_group_669cc57c6e530f770c4c799fb5a48c48);
         
     
-            var icon_e9b2174e2784556fe849d98f11aaafc5 = L.AwesomeMarkers.icon(
+            var icon_9edffa682db331cbf1a729074b10d6f5 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_6321d81eae792b80f046a2252e37d3ad = L.popup({
+        var popup_18825288aa1f993d66c3fe6d1486f36f = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_c0300e1979f6703f6754745b86cf81b6 = $(`<div id="html_c0300e1979f6703f6754745b86cf81b6" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sidotopo<br><b>ID:</b> PKM042</div>`)[0];
-                popup_6321d81eae792b80f046a2252e37d3ad.setContent(html_c0300e1979f6703f6754745b86cf81b6);
+                var html_bf015661b26259568b50dfd0b939c7f5 = $(`<div id="html_bf015661b26259568b50dfd0b939c7f5" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sidotopo<br><b>ID:</b> PKM042</div>`)[0];
+                popup_18825288aa1f993d66c3fe6d1486f36f.setContent(html_bf015661b26259568b50dfd0b939c7f5);
             
         
 
-        marker_2108fb9187f1afa2b277945cd62ef5f1.bindPopup(popup_6321d81eae792b80f046a2252e37d3ad)
+        marker_4718549b964fc790704d69ee961eb5f3.bindPopup(popup_18825288aa1f993d66c3fe6d1486f36f)
         ;
 
         
     
     
-                marker_2108fb9187f1afa2b277945cd62ef5f1.setIcon(icon_e9b2174e2784556fe849d98f11aaafc5);
+                marker_4718549b964fc790704d69ee961eb5f3.setIcon(icon_9edffa682db331cbf1a729074b10d6f5);
             
     
-            var marker_12c0f5d8eb134a35cef7f4d4bf1f74da = L.marker(
+            var marker_97ea37f938e09ec3952c019e7aefc057 = L.marker(
                 [-7.234689, 112.751128],
                 {
 }
-            ).addTo(feature_group_2a90c7d59a73c9f2da1e802997b01d42);
+            ).addTo(feature_group_669cc57c6e530f770c4c799fb5a48c48);
         
     
-            var icon_ec5b694e7f0902782287fa605ed6f7e8 = L.AwesomeMarkers.icon(
+            var icon_c766d3bd93d83001f89ddbed4b36b0a9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,37 +278,37 @@
             );
         
     
-        var popup_9da91b927957103d56bbfe6062c6b4ce = L.popup({
+        var popup_889e988ccbf1d097abde6b511ecc86e5 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_ed78d03a96770957823efc7d0d7b6b7e = $(`<div id="html_ed78d03a96770957823efc7d0d7b6b7e" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Simolawang<br><b>ID:</b> PKM044</div>`)[0];
-                popup_9da91b927957103d56bbfe6062c6b4ce.setContent(html_ed78d03a96770957823efc7d0d7b6b7e);
+                var html_cf848c2d1bd0f57b1bf97d7075b1dca0 = $(`<div id="html_cf848c2d1bd0f57b1bf97d7075b1dca0" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Simolawang<br><b>ID:</b> PKM044</div>`)[0];
+                popup_889e988ccbf1d097abde6b511ecc86e5.setContent(html_cf848c2d1bd0f57b1bf97d7075b1dca0);
             
         
 
-        marker_12c0f5d8eb134a35cef7f4d4bf1f74da.bindPopup(popup_9da91b927957103d56bbfe6062c6b4ce)
+        marker_97ea37f938e09ec3952c019e7aefc057.bindPopup(popup_889e988ccbf1d097abde6b511ecc86e5)
         ;
 
         
     
     
-                marker_12c0f5d8eb134a35cef7f4d4bf1f74da.setIcon(icon_ec5b694e7f0902782287fa605ed6f7e8);
+                marker_97ea37f938e09ec3952c019e7aefc057.setIcon(icon_c766d3bd93d83001f89ddbed4b36b0a9);
             
     
-            feature_group_2a90c7d59a73c9f2da1e802997b01d42.addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            feature_group_669cc57c6e530f770c4c799fb5a48c48.addTo(map_8194579bfe8209aea4764336126dafe8);
         
     
-            var marker_b50a9c484aaf91207916ca48e1b774f6 = L.marker(
+            var marker_490b6fef9dff0fb458e9012d044e3aa9 = L.marker(
                 [-7.243802785055385, 112.75788659235765],
                 {
 }
-            ).addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            ).addTo(map_8194579bfe8209aea4764336126dafe8);
         
     
-            var icon_87e8ec151cedb850532a46e8c346aed2 = L.AwesomeMarkers.icon(
+            var icon_ba7b4f09fe126095587892a042667dcc = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,34 +319,34 @@
             );
         
     
-        var popup_1d3c273eae70ec52d8a6645e43a0e247 = L.popup({
+        var popup_cc76f401898d3ae72979d12b31c566ec = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_3862fe7c0fa435c94ccf88ecf0942345 = $(`<div id="html_3862fe7c0fa435c94ccf88ecf0942345" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah dr. Mohamad Soewandhie<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_1d3c273eae70ec52d8a6645e43a0e247.setContent(html_3862fe7c0fa435c94ccf88ecf0942345);
+                var html_353fbc56f85d59f05907503e420bc5f3 = $(`<div id="html_353fbc56f85d59f05907503e420bc5f3" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Daerah dr. Mohamad Soewandhie<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_cc76f401898d3ae72979d12b31c566ec.setContent(html_353fbc56f85d59f05907503e420bc5f3);
             
         
 
-        marker_b50a9c484aaf91207916ca48e1b774f6.bindPopup(popup_1d3c273eae70ec52d8a6645e43a0e247)
+        marker_490b6fef9dff0fb458e9012d044e3aa9.bindPopup(popup_cc76f401898d3ae72979d12b31c566ec)
         ;
 
         
     
     
-                marker_b50a9c484aaf91207916ca48e1b774f6.setIcon(icon_87e8ec151cedb850532a46e8c346aed2);
+                marker_490b6fef9dff0fb458e9012d044e3aa9.setIcon(icon_ba7b4f09fe126095587892a042667dcc);
             
     
-            var marker_feb288652a8d8be0feaf75fb4d401134 = L.marker(
+            var marker_ed03280f1310186ea4b39273b75b9db3 = L.marker(
                 [-7.243781201071284, 112.75803999735854],
                 {
 }
-            ).addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            ).addTo(map_8194579bfe8209aea4764336126dafe8);
         
     
-            var icon_803ca96c41b0b4e13dc606d94c9e0867 = L.AwesomeMarkers.icon(
+            var icon_d3255193b9bd100146a62da8c5575fb7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -357,79 +357,79 @@
             );
         
     
-        var popup_9d3ba5846bf2a9902fa8bc87ac2034dd = L.popup({
+        var popup_7f342926cb68405e9c2f366e78eb378d = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_0a2fc7e27cb50556b8b8a8687f3746da = $(`<div id="html_0a2fc7e27cb50556b8b8a8687f3746da" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Adi Husada Kapasari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_9d3ba5846bf2a9902fa8bc87ac2034dd.setContent(html_0a2fc7e27cb50556b8b8a8687f3746da);
+                var html_aee57a66db72df9cd04a82df53afd2dd = $(`<div id="html_aee57a66db72df9cd04a82df53afd2dd" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Adi Husada Kapasari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_7f342926cb68405e9c2f366e78eb378d.setContent(html_aee57a66db72df9cd04a82df53afd2dd);
             
         
 
-        marker_feb288652a8d8be0feaf75fb4d401134.bindPopup(popup_9d3ba5846bf2a9902fa8bc87ac2034dd)
+        marker_ed03280f1310186ea4b39273b75b9db3.bindPopup(popup_7f342926cb68405e9c2f366e78eb378d)
         ;
 
         
     
     
-                marker_feb288652a8d8be0feaf75fb4d401134.setIcon(icon_803ca96c41b0b4e13dc606d94c9e0867);
+                marker_ed03280f1310186ea4b39273b75b9db3.setIcon(icon_d3255193b9bd100146a62da8c5575fb7);
             
     
-            var feature_group_03c6f9e999e68574d4ad72286259a409 = L.featureGroup(
+            var feature_group_e563fa689388006aacebb5a4e972558d = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_1b30e0f626488da4bc547a7576c2b5d1 = L.polyline(
+            var poly_line_cb31cec332e7e62995ffbe281967ebe9 = L.polyline(
                 [[-7.24375495, 112.75790144999999], [-7.243614841331616, 112.75811632665885]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_03c6f9e999e68574d4ad72286259a409);
+            ).addTo(feature_group_e563fa689388006aacebb5a4e972558d);
         
     
-        var popup_5949655779f3e90d238e372390f88f70 = L.popup({
+        var popup_121b53f5af696fe534ba7f66e19010f9 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_17febbad337a6f259831deaed58fdd21 = $(`<div id="html_17febbad337a6f259831deaed58fdd21" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Simokerto-Suko Manunggal</div>`)[0];
-                popup_5949655779f3e90d238e372390f88f70.setContent(html_17febbad337a6f259831deaed58fdd21);
+                var html_a9eef64fb1c69ca16f1feac5a8732871 = $(`<div id="html_a9eef64fb1c69ca16f1feac5a8732871" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Simokerto-Suko Manunggal</div>`)[0];
+                popup_121b53f5af696fe534ba7f66e19010f9.setContent(html_a9eef64fb1c69ca16f1feac5a8732871);
             
         
 
-        poly_line_1b30e0f626488da4bc547a7576c2b5d1.bindPopup(popup_5949655779f3e90d238e372390f88f70)
+        poly_line_cb31cec332e7e62995ffbe281967ebe9.bindPopup(popup_121b53f5af696fe534ba7f66e19010f9)
         ;
 
         
     
     
-            var poly_line_aa85afa909af3e5d935610f3d3339dd9 = L.polyline(
+            var poly_line_28dce619eb2ad0cab2f01bca18aae329 = L.polyline(
                 [[-7.243969817782419, 112.75765333029078], [-7.24459249176186, 112.75703186096116]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_03c6f9e999e68574d4ad72286259a409);
+            ).addTo(feature_group_e563fa689388006aacebb5a4e972558d);
         
     
-        var popup_6735004e5d15c561cba3efb9772c21c6 = L.popup({
+        var popup_93113e594abef688e2a1b1b04cca378f = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_9bd5d3cc435646f10155d0654e3233f5 = $(`<div id="html_9bd5d3cc435646f10155d0654e3233f5" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Sukolilo-Tambaksari</div>`)[0];
-                popup_6735004e5d15c561cba3efb9772c21c6.setContent(html_9bd5d3cc435646f10155d0654e3233f5);
+                var html_c43b94e420d4941cd5c46f60a935de53 = $(`<div id="html_c43b94e420d4941cd5c46f60a935de53" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Sukolilo-Tambaksari</div>`)[0];
+                popup_93113e594abef688e2a1b1b04cca378f.setContent(html_c43b94e420d4941cd5c46f60a935de53);
             
         
 
-        poly_line_aa85afa909af3e5d935610f3d3339dd9.bindPopup(popup_6735004e5d15c561cba3efb9772c21c6)
+        poly_line_28dce619eb2ad0cab2f01bca18aae329.bindPopup(popup_93113e594abef688e2a1b1b04cca378f)
         ;
 
         
     
     
-            feature_group_03c6f9e999e68574d4ad72286259a409.addTo(map_ea0c015758086573f1ecd26443f5c4e2);
+            feature_group_e563fa689388006aacebb5a4e972558d.addTo(map_8194579bfe8209aea4764336126dafe8);
         
 </script>
 </html>

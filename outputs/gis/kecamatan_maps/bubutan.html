@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8eb872bfcd10ec7b9b6ea7b2efbc5892 {
+                #map_1b0f4fba12d08d5a11059ce3e4f8d042 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">60.7</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">61.3</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Bubutan memiliki Healthcare Gap Score sebesar 60.7 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.75), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Bubutan memiliki Healthcare Gap Score sebesar 61.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_8eb872bfcd10ec7b9b6ea7b2efbc5892" ></div>
+            <div class="folium-map" id="map_1b0f4fba12d08d5a11059ce3e4f8d042" ></div>
         
 </body>
 <script>
     
     
-            var map_8eb872bfcd10ec7b9b6ea7b2efbc5892 = L.map(
-                "map_8eb872bfcd10ec7b9b6ea7b2efbc5892",
+            var map_1b0f4fba12d08d5a11059ce3e4f8d042 = L.map(
+                "map_1b0f4fba12d08d5a11059ce3e4f8d042",
                 {
                     center: [-7.248739216056178, 112.72784870198608],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_a357cbc94f0dd93bd75e70d9e74fb438 = L.tileLayer(
+            var tile_layer_b560996b94b068662cd5d80c69eba168 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_a357cbc94f0dd93bd75e70d9e74fb438.addTo(map_8eb872bfcd10ec7b9b6ea7b2efbc5892);
+            tile_layer_b560996b94b068662cd5d80c69eba168.addTo(map_1b0f4fba12d08d5a11059ce3e4f8d042);
         
     
-        function geo_json_1941f2254b2faf226a21db56454d8614_styler(feature) {
+        function geo_json_58dbedf021792e003270b6a07e05ab25_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_1941f2254b2faf226a21db56454d8614_onEachFeature(feature, layer) {
+        function geo_json_58dbedf021792e003270b6a07e05ab25_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_1941f2254b2faf226a21db56454d8614 = L.geoJson(null, {
-                onEachFeature: geo_json_1941f2254b2faf226a21db56454d8614_onEachFeature,
+        var geo_json_58dbedf021792e003270b6a07e05ab25 = L.geoJson(null, {
+                onEachFeature: geo_json_58dbedf021792e003270b6a07e05ab25_onEachFeature,
             
-                style: geo_json_1941f2254b2faf226a21db56454d8614_styler,
+                style: geo_json_58dbedf021792e003270b6a07e05ab25_styler,
             ...{
 }
         });
 
-        function geo_json_1941f2254b2faf226a21db56454d8614_add (data) {
-            geo_json_1941f2254b2faf226a21db56454d8614
+        function geo_json_58dbedf021792e003270b6a07e05ab25_add (data) {
+            geo_json_58dbedf021792e003270b6a07e05ab25
                 .addData(data);
         }
-            geo_json_1941f2254b2faf226a21db56454d8614_add({"bbox": [112.7151, -7.2571, 112.7429, -7.2361], "features": [{"bbox": [112.7151, -7.2571, 112.7429, -7.2361], "geometry": {"coordinates": [[[[112.7337, -7.256], [112.7261, -7.2558], [112.7252, -7.2571], [112.7151, -7.2551], [112.7171, -7.2471], [112.7209, -7.2471], [112.7206, -7.2361], [112.7264, -7.2378], [112.7269, -7.241], [112.729, -7.243], [112.7382, -7.2451], [112.7429, -7.2444], [112.7417, -7.2487], [112.7372, -7.2525], [112.7381, -7.2555], [112.7427, -7.2559], [112.7337, -7.256]]]], "type": "MultiPolygon"}, "id": "2", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.31957924002615035, "disease_issue": "Penyakit pada sistem pernafasan (14858 cases)", "disease_need_score": 0.3871488687893865, "explanation": "Kecamatan Bubutan memiliki Healthcare Gap Score sebesar 60.7 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.75), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7451892816953024, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 60.67386178995369, "jumlah_bidan": 70, "jumlah_penduduk": 96.7, "jumlah_perawat": 47, "jumlah_tenaga_medis": 60, "kecamatan": "BUBUTAN", "kepadatan_penduduk": 24860, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 11, "root_cause_confidence": "HIGH", "root_cause_margin": 0.20280143762054437, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 36.0, "total_tenaga_kesehatan": 295.0, "workforce_gap": 0.9479907193158468, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_58dbedf021792e003270b6a07e05ab25_add({"bbox": [112.7151, -7.2571, 112.7429, -7.2361], "features": [{"bbox": [112.7151, -7.2571, 112.7429, -7.2361], "geometry": {"coordinates": [[[[112.7337, -7.256], [112.7261, -7.2558], [112.7252, -7.2571], [112.7151, -7.2551], [112.7171, -7.2471], [112.7209, -7.2471], [112.7206, -7.2361], [112.7264, -7.2378], [112.7269, -7.241], [112.729, -7.243], [112.7382, -7.2451], [112.7429, -7.2444], [112.7417, -7.2487], [112.7372, -7.2525], [112.7381, -7.2555], [112.7427, -7.2559], [112.7337, -7.256]]]], "type": "MultiPolygon"}, "id": "2", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.2903876565510785, "disease_issue": "Penyakit pada sistem pernafasan (14858 cases)", "disease_need_score": 0.3871488687893865, "explanation": "Kecamatan Bubutan memiliki Healthcare Gap Score sebesar 61.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.95), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.95. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8153490786269837, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 61.32055082605534, "jumlah_bidan": 70, "jumlah_penduduk": 96.7, "jumlah_perawat": 47, "jumlah_tenaga_medis": 60, "kecamatan": "BUBUTAN", "kepadatan_penduduk": 24860, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 11, "root_cause_confidence": "HIGH", "root_cause_margin": 0.1366163274128691, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 36.0, "total_tenaga_kesehatan": 295.0, "workforce_gap": 0.9519654060398528, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_1941f2254b2faf226a21db56454d8614.bindTooltip(
+    geo_json_58dbedf021792e003270b6a07e05ab25.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_1941f2254b2faf226a21db56454d8614.addTo(map_8eb872bfcd10ec7b9b6ea7b2efbc5892);
+            geo_json_58dbedf021792e003270b6a07e05ab25.addTo(map_1b0f4fba12d08d5a11059ce3e4f8d042);
         
     
-            var feature_group_1d63ad458f248325b1a18982c933dd9b = L.featureGroup(
+            var feature_group_40caa26064735506a29153e3a4605782 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_dc55beeac3f414ea62fe20dc1c1dfd8e = L.marker(
+            var marker_304daafcfc3de040d0ba410a1da33f76 = L.marker(
                 [-7.247166, 112.725256],
                 {
 }
-            ).addTo(feature_group_1d63ad458f248325b1a18982c933dd9b);
+            ).addTo(feature_group_40caa26064735506a29153e3a4605782);
         
     
-            var icon_808fdbe6cc17e17b62b1029530a80b52 = L.AwesomeMarkers.icon(
+            var icon_cab057ed73536a68db0065e5b1e73601 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_f65b87f530ec7938d975952e3454b347 = L.popup({
+        var popup_0ee744ebf6aaa3ce25e9988bc7752234 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_626e8fd4178336415db74ca100628e6f = $(`<div id="html_626e8fd4178336415db74ca100628e6f" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Gundih<br><b>ID:</b> PKM010</div>`)[0];
-                popup_f65b87f530ec7938d975952e3454b347.setContent(html_626e8fd4178336415db74ca100628e6f);
+                var html_e9d1b6dcce1740b81c0c5f0c21b8af0c = $(`<div id="html_e9d1b6dcce1740b81c0c5f0c21b8af0c" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Gundih<br><b>ID:</b> PKM010</div>`)[0];
+                popup_0ee744ebf6aaa3ce25e9988bc7752234.setContent(html_e9d1b6dcce1740b81c0c5f0c21b8af0c);
             
         
 
-        marker_dc55beeac3f414ea62fe20dc1c1dfd8e.bindPopup(popup_f65b87f530ec7938d975952e3454b347)
+        marker_304daafcfc3de040d0ba410a1da33f76.bindPopup(popup_0ee744ebf6aaa3ce25e9988bc7752234)
         ;
 
         
     
     
-                marker_dc55beeac3f414ea62fe20dc1c1dfd8e.setIcon(icon_808fdbe6cc17e17b62b1029530a80b52);
+                marker_304daafcfc3de040d0ba410a1da33f76.setIcon(icon_cab057ed73536a68db0065e5b1e73601);
             
     
-            var marker_a761b149548eb6c7a99ac0423f1dba77 = L.marker(
+            var marker_a02460c4699d9ad60a305abbcc0318c7 = L.marker(
                 [-7.254629, 112.719178],
                 {
 }
-            ).addTo(feature_group_1d63ad458f248325b1a18982c933dd9b);
+            ).addTo(feature_group_40caa26064735506a29153e3a4605782);
         
     
-            var icon_d0012a7890dd5096adf38ae0b0e5fc75 = L.AwesomeMarkers.icon(
+            var icon_876e1a8ba738df032a123e44e105643a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,37 +278,37 @@
             );
         
     
-        var popup_faecd3e7ff3251c09eeb37ad46e08350 = L.popup({
+        var popup_4bfc4dc010006388f5e8dd3bb40b00ec = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_49265149f75764f720633db3bd0f9e27 = $(`<div id="html_49265149f75764f720633db3bd0f9e27" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Tembok Dukuh<br><b>ID:</b> PKM049</div>`)[0];
-                popup_faecd3e7ff3251c09eeb37ad46e08350.setContent(html_49265149f75764f720633db3bd0f9e27);
+                var html_340b172b5396b7fbe5efc6c99159f227 = $(`<div id="html_340b172b5396b7fbe5efc6c99159f227" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Tembok Dukuh<br><b>ID:</b> PKM049</div>`)[0];
+                popup_4bfc4dc010006388f5e8dd3bb40b00ec.setContent(html_340b172b5396b7fbe5efc6c99159f227);
             
         
 
-        marker_a761b149548eb6c7a99ac0423f1dba77.bindPopup(popup_faecd3e7ff3251c09eeb37ad46e08350)
+        marker_a02460c4699d9ad60a305abbcc0318c7.bindPopup(popup_4bfc4dc010006388f5e8dd3bb40b00ec)
         ;
 
         
     
     
-                marker_a761b149548eb6c7a99ac0423f1dba77.setIcon(icon_d0012a7890dd5096adf38ae0b0e5fc75);
+                marker_a02460c4699d9ad60a305abbcc0318c7.setIcon(icon_876e1a8ba738df032a123e44e105643a);
             
     
-            feature_group_1d63ad458f248325b1a18982c933dd9b.addTo(map_8eb872bfcd10ec7b9b6ea7b2efbc5892);
+            feature_group_40caa26064735506a29153e3a4605782.addTo(map_1b0f4fba12d08d5a11059ce3e4f8d042);
         
     
-            var marker_86cace6e85bea96c88f38ff79a946ed4 = L.marker(
+            var marker_c64da29e569e305aabb7f92826ab7328 = L.marker(
                 [-7.2452732, 112.7277205],
                 {
 }
-            ).addTo(map_8eb872bfcd10ec7b9b6ea7b2efbc5892);
+            ).addTo(map_1b0f4fba12d08d5a11059ce3e4f8d042);
         
     
-            var icon_76de82f55f8c7151a94dc50f4e9d4817 = L.AwesomeMarkers.icon(
+            var icon_7d82a722ad43568d4e5d62d462ccea5a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,79 +319,79 @@
             );
         
     
-        var popup_7f73e7912e6deb4bc459fa1fb1b575c7 = L.popup({
+        var popup_9712b02cef65ce2fcb2bfd6f10a79ead = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_44b1a456743a88c1fc323882a1ff50b4 = $(`<div id="html_44b1a456743a88c1fc323882a1ff50b4" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak IBI Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_7f73e7912e6deb4bc459fa1fb1b575c7.setContent(html_44b1a456743a88c1fc323882a1ff50b4);
+                var html_25dde900ea6cafdccf42320ca287c319 = $(`<div id="html_25dde900ea6cafdccf42320ca287c319" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak IBI Surabaya<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_9712b02cef65ce2fcb2bfd6f10a79ead.setContent(html_25dde900ea6cafdccf42320ca287c319);
             
         
 
-        marker_86cace6e85bea96c88f38ff79a946ed4.bindPopup(popup_7f73e7912e6deb4bc459fa1fb1b575c7)
+        marker_c64da29e569e305aabb7f92826ab7328.bindPopup(popup_9712b02cef65ce2fcb2bfd6f10a79ead)
         ;
 
         
     
     
-                marker_86cace6e85bea96c88f38ff79a946ed4.setIcon(icon_76de82f55f8c7151a94dc50f4e9d4817);
+                marker_c64da29e569e305aabb7f92826ab7328.setIcon(icon_7d82a722ad43568d4e5d62d462ccea5a);
             
     
-            var feature_group_9ab0bdb54cc62195750f9b2e81f37650 = L.featureGroup(
+            var feature_group_d293351a9c8bbb5580a5b7e67773ebc9 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_6fc95968896d482c6fa8ebf216a34663 = L.polyline(
+            var poly_line_e50d96c3f9b947c544d1699530bfca4f = L.polyline(
                 [[-7.252032450000001, 112.71525804999999], [-7.252445538814555, 112.71613354113384]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_9ab0bdb54cc62195750f9b2e81f37650);
+            ).addTo(feature_group_d293351a9c8bbb5580a5b7e67773ebc9);
         
     
-        var popup_1e1cf4f12150aba5ff7b4896b02b567f = L.popup({
+        var popup_dce36847f4a2009b838959d506efb556 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_e6ae48df362929d04754059636ae2bb6 = $(`<div id="html_e6ae48df362929d04754059636ae2bb6" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Asemrowo-Benowo</div>`)[0];
-                popup_1e1cf4f12150aba5ff7b4896b02b567f.setContent(html_e6ae48df362929d04754059636ae2bb6);
+                var html_44b47e45252b013d705ec520b7bdc5bd = $(`<div id="html_44b47e45252b013d705ec520b7bdc5bd" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Asemrowo-Benowo</div>`)[0];
+                popup_dce36847f4a2009b838959d506efb556.setContent(html_44b47e45252b013d705ec520b7bdc5bd);
             
         
 
-        poly_line_6fc95968896d482c6fa8ebf216a34663.bindPopup(popup_1e1cf4f12150aba5ff7b4896b02b567f)
+        poly_line_e50d96c3f9b947c544d1699530bfca4f.bindPopup(popup_dce36847f4a2009b838959d506efb556)
         ;
 
         
     
     
-            var poly_line_3fa65ea645d15e9834d08b3d3bb44339 = L.polyline(
+            var poly_line_06eb4d4b949d535119736fd041beedbd = L.polyline(
                 [[-7.251396479108736, 112.73431351304598], [-7.251037463210675, 112.7344157306835]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_9ab0bdb54cc62195750f9b2e81f37650);
+            ).addTo(feature_group_d293351a9c8bbb5580a5b7e67773ebc9);
         
     
-        var popup_340b65fb0838d9cbbf300506b752fcea = L.popup({
+        var popup_1ac2a0f62042b90ec5ac54928a8b5e38 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_28825810c71f98689cda2036d7038d8c = $(`<div id="html_28825810c71f98689cda2036d7038d8c" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Bubutan-Bulak</div>`)[0];
-                popup_340b65fb0838d9cbbf300506b752fcea.setContent(html_28825810c71f98689cda2036d7038d8c);
+                var html_463aa299385f7fc400a01051d44f1e71 = $(`<div id="html_463aa299385f7fc400a01051d44f1e71" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Bubutan-Bulak</div>`)[0];
+                popup_1ac2a0f62042b90ec5ac54928a8b5e38.setContent(html_463aa299385f7fc400a01051d44f1e71);
             
         
 
-        poly_line_3fa65ea645d15e9834d08b3d3bb44339.bindPopup(popup_340b65fb0838d9cbbf300506b752fcea)
+        poly_line_06eb4d4b949d535119736fd041beedbd.bindPopup(popup_1ac2a0f62042b90ec5ac54928a8b5e38)
         ;
 
         
     
     
-            feature_group_9ab0bdb54cc62195750f9b2e81f37650.addTo(map_8eb872bfcd10ec7b9b6ea7b2efbc5892);
+            feature_group_d293351a9c8bbb5580a5b7e67773ebc9.addTo(map_1b0f4fba12d08d5a11059ce3e4f8d042);
         
 </script>
 </html>

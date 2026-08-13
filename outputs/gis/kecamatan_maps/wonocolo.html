@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9989d10a6201e53d89598edffc2e3bb9 {
+                #map_b8e83332dc721d961b4e49a2308e96ab {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -85,17 +85,17 @@
                          Sangat Tinggi
                      </span>
                      <span style="float: right; font-weight: bold; color: #9ca3af;">
-                         Priority Rank: #10
+                         Priority Rank: #9
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">62.3</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">63.4</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Disease Burden</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 62.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.68), 3. High Demand Score (0.67). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.
+                     Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.69), 3. High Demand Score (0.60). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_9989d10a6201e53d89598edffc2e3bb9" ></div>
+            <div class="folium-map" id="map_b8e83332dc721d961b4e49a2308e96ab" ></div>
         
 </body>
 <script>
     
     
-            var map_9989d10a6201e53d89598edffc2e3bb9 = L.map(
-                "map_9989d10a6201e53d89598edffc2e3bb9",
+            var map_b8e83332dc721d961b4e49a2308e96ab = L.map(
+                "map_b8e83332dc721d961b4e49a2308e96ab",
                 {
                     center: [-7.322040376166424, 112.74181057279597],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_00701088f1866d0a29e379c50e24d10e = L.tileLayer(
+            var tile_layer_6c37cc702273fcb3843c456ce48a2c82 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_00701088f1866d0a29e379c50e24d10e.addTo(map_9989d10a6201e53d89598edffc2e3bb9);
+            tile_layer_6c37cc702273fcb3843c456ce48a2c82.addTo(map_b8e83332dc721d961b4e49a2308e96ab);
         
     
-        function geo_json_e850fe0fc1129fcc1e1b131c51f2e016_styler(feature) {
+        function geo_json_80395233224520a63e47c69cd36f2b5b_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_e850fe0fc1129fcc1e1b131c51f2e016_onEachFeature(feature, layer) {
+        function geo_json_80395233224520a63e47c69cd36f2b5b_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_e850fe0fc1129fcc1e1b131c51f2e016 = L.geoJson(null, {
-                onEachFeature: geo_json_e850fe0fc1129fcc1e1b131c51f2e016_onEachFeature,
+        var geo_json_80395233224520a63e47c69cd36f2b5b = L.geoJson(null, {
+                onEachFeature: geo_json_80395233224520a63e47c69cd36f2b5b_onEachFeature,
             
-                style: geo_json_e850fe0fc1129fcc1e1b131c51f2e016_styler,
+                style: geo_json_80395233224520a63e47c69cd36f2b5b_styler,
             ...{
 }
         });
 
-        function geo_json_e850fe0fc1129fcc1e1b131c51f2e016_add (data) {
-            geo_json_e850fe0fc1129fcc1e1b131c51f2e016
+        function geo_json_80395233224520a63e47c69cd36f2b5b_add (data) {
+            geo_json_80395233224520a63e47c69cd36f2b5b
                 .addData(data);
         }
-            geo_json_e850fe0fc1129fcc1e1b131c51f2e016_add({"bbox": [112.7293, -7.3452, 112.7595, -7.3054], "features": [{"bbox": [112.7293, -7.3452, 112.7595, -7.3054], "geometry": {"coordinates": [[[[112.7429, -7.341], [112.742, -7.3452], [112.7378, -7.3449], [112.7378, -7.3405], [112.7293, -7.3395], [112.7352, -7.3112], [112.7406, -7.311], [112.7417, -7.3059], [112.7592, -7.3054], [112.7595, -7.3088], [112.7568, -7.3123], [112.7533, -7.3116], [112.7542, -7.3153], [112.7508, -7.3181], [112.748, -7.3175], [112.7467, -7.3231], [112.744, -7.3226], [112.742, -7.3387], [112.7429, -7.341]]]], "type": "MultiPolygon"}, "id": "29", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.6703267673588551, "disease_issue": "Penyakit pada sistem pernafasan (18158 cases)", "disease_need_score": 0.703490971254408, "explanation": "Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 62.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.68), 3. High Demand Score (0.67). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.385923525479702, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 62.31903500571049, "jumlah_bidan": 105, "jumlah_penduduk": 80.0, "jumlah_perawat": 474, "jumlah_tenaga_medis": 338, "kecamatan": "WONOCOLO", "kepadatan_penduduk": 12256, "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Sangat Tinggi", "priority_rank": 10, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.022792902912319946, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 295.0, "total_tenaga_kesehatan": 1406.0, "workforce_gap": 0.680698068342088, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_80395233224520a63e47c69cd36f2b5b_add({"bbox": [112.7293, -7.3452, 112.7595, -7.3054], "features": [{"bbox": [112.7293, -7.3452, 112.7595, -7.3054], "geometry": {"coordinates": [[[[112.7429, -7.341], [112.742, -7.3452], [112.7378, -7.3449], [112.7378, -7.3405], [112.7293, -7.3395], [112.7352, -7.3112], [112.7406, -7.311], [112.7417, -7.3059], [112.7592, -7.3054], [112.7595, -7.3088], [112.7568, -7.3123], [112.7533, -7.3116], [112.7542, -7.3153], [112.7508, -7.3181], [112.748, -7.3175], [112.7467, -7.3231], [112.744, -7.3226], [112.742, -7.3387], [112.7429, -7.341]]]], "type": "MultiPolygon"}, "id": "29", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5987991266375546, "disease_issue": "Penyakit pada sistem pernafasan (18158 cases)", "disease_need_score": 0.703490971254408, "explanation": "Kecamatan Wonocolo memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (0.70), 2. Workforce Shortage Gap (0.69), 3. High Demand Score (0.60). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 0.70. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.5279961482718332, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 63.36801937696316, "jumlah_bidan": 105, "jumlah_penduduk": 80.0, "jumlah_perawat": 474, "jumlah_tenaga_medis": 338, "kecamatan": "WONOCOLO", "kepadatan_penduduk": 12256, "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.011014198344018178, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "total_tempat_tidur": 295.0, "total_tenaga_kesehatan": 1406.0, "workforce_gap": 0.6924767729103898, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_e850fe0fc1129fcc1e1b131c51f2e016.bindTooltip(
+    geo_json_80395233224520a63e47c69cd36f2b5b.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_e850fe0fc1129fcc1e1b131c51f2e016.addTo(map_9989d10a6201e53d89598edffc2e3bb9);
+            geo_json_80395233224520a63e47c69cd36f2b5b.addTo(map_b8e83332dc721d961b4e49a2308e96ab);
         
     
-            var feature_group_90371143e0c4dfa60f1a22bf9c480a98 = L.featureGroup(
+            var feature_group_38136609d080520458266c1ada507a56 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_641406acaafc3eab77f474e743660512 = L.marker(
+            var marker_8902f7089af9fe220136e3bb05f5b062 = L.marker(
                 [-7.326185, 112.740257],
                 {
 }
-            ).addTo(feature_group_90371143e0c4dfa60f1a22bf9c480a98);
+            ).addTo(feature_group_38136609d080520458266c1ada507a56);
         
     
-            var icon_0ebd0814f811a3b767b1e2be45d9a2d6 = L.AwesomeMarkers.icon(
+            var icon_7a6eb0d139973e7eb6d24f97e4df1c2e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_0dc730a94d512e755e5333fd46e23114 = L.popup({
+        var popup_693fdfee8274678ba1654bc65be486cb = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_cee451acc9499afe7b68b0345239f458 = $(`<div id="html_cee451acc9499afe7b68b0345239f458" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Jemursari<br><b>ID:</b> PKM013</div>`)[0];
-                popup_0dc730a94d512e755e5333fd46e23114.setContent(html_cee451acc9499afe7b68b0345239f458);
+                var html_437f0c853b57fa6c758977bfc4113cbf = $(`<div id="html_437f0c853b57fa6c758977bfc4113cbf" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Jemursari<br><b>ID:</b> PKM013</div>`)[0];
+                popup_693fdfee8274678ba1654bc65be486cb.setContent(html_437f0c853b57fa6c758977bfc4113cbf);
             
         
 
-        marker_641406acaafc3eab77f474e743660512.bindPopup(popup_0dc730a94d512e755e5333fd46e23114)
+        marker_8902f7089af9fe220136e3bb05f5b062.bindPopup(popup_693fdfee8274678ba1654bc65be486cb)
         ;
 
         
     
     
-                marker_641406acaafc3eab77f474e743660512.setIcon(icon_0ebd0814f811a3b767b1e2be45d9a2d6);
+                marker_8902f7089af9fe220136e3bb05f5b062.setIcon(icon_7a6eb0d139973e7eb6d24f97e4df1c2e);
             
     
-            var marker_0d3983cd2dccdb4868d777e220b2f91c = L.marker(
+            var marker_001014e099503157efc4bce9fe737df6 = L.marker(
                 [-7.307359, 112.755811],
                 {
 }
-            ).addTo(feature_group_90371143e0c4dfa60f1a22bf9c480a98);
+            ).addTo(feature_group_38136609d080520458266c1ada507a56);
         
     
-            var icon_4ecbbff60842f649132c09680ce93613 = L.AwesomeMarkers.icon(
+            var icon_703793370b04de60d8d13a6d86774998 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,37 +278,37 @@
             );
         
     
-        var popup_7748bec2a625f409db3383df1d2f6742 = L.popup({
+        var popup_b063f0a298f6011d000d5e94444a9259 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_060ac9c33991fcc73143fbfcb6d65492 = $(`<div id="html_060ac9c33991fcc73143fbfcb6d65492" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sidosermo<br><b>ID:</b> PKM041</div>`)[0];
-                popup_7748bec2a625f409db3383df1d2f6742.setContent(html_060ac9c33991fcc73143fbfcb6d65492);
+                var html_ec49295a903e7807ef8567f948c656c3 = $(`<div id="html_ec49295a903e7807ef8567f948c656c3" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Sidosermo<br><b>ID:</b> PKM041</div>`)[0];
+                popup_b063f0a298f6011d000d5e94444a9259.setContent(html_ec49295a903e7807ef8567f948c656c3);
             
         
 
-        marker_0d3983cd2dccdb4868d777e220b2f91c.bindPopup(popup_7748bec2a625f409db3383df1d2f6742)
+        marker_001014e099503157efc4bce9fe737df6.bindPopup(popup_b063f0a298f6011d000d5e94444a9259)
         ;
 
         
     
     
-                marker_0d3983cd2dccdb4868d777e220b2f91c.setIcon(icon_4ecbbff60842f649132c09680ce93613);
+                marker_001014e099503157efc4bce9fe737df6.setIcon(icon_703793370b04de60d8d13a6d86774998);
             
     
-            feature_group_90371143e0c4dfa60f1a22bf9c480a98.addTo(map_9989d10a6201e53d89598edffc2e3bb9);
+            feature_group_38136609d080520458266c1ada507a56.addTo(map_b8e83332dc721d961b4e49a2308e96ab);
         
     
-            var marker_7f3e92b09b3b582cc0f94e9d4bfc6da5 = L.marker(
+            var marker_a08eb4fa8f202370e04b48c8244cd85d = L.marker(
                 [-7.320292399804641, 112.74132224810411],
                 {
 }
-            ).addTo(map_9989d10a6201e53d89598edffc2e3bb9);
+            ).addTo(map_b8e83332dc721d961b4e49a2308e96ab);
         
     
-            var icon_34f9bf6012af0a009a4395581b26abba = L.AwesomeMarkers.icon(
+            var icon_c4989d4d59cf71605cdb0f063ed43605 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,34 +319,34 @@
             );
         
     
-        var popup_45a11bc4210a50ce20960609d54cc4bd = L.popup({
+        var popup_4ee6d83421646254e4bad141e5702933 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_40f3917ef46d042c97519a797c06ff71 = $(`<div id="html_40f3917ef46d042c97519a797c06ff71" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Islam Surabaya Jemursari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_45a11bc4210a50ce20960609d54cc4bd.setContent(html_40f3917ef46d042c97519a797c06ff71);
+                var html_687b8be55bfd2fb7eb19dd9e015daf70 = $(`<div id="html_687b8be55bfd2fb7eb19dd9e015daf70" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Islam Surabaya Jemursari<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_4ee6d83421646254e4bad141e5702933.setContent(html_687b8be55bfd2fb7eb19dd9e015daf70);
             
         
 
-        marker_7f3e92b09b3b582cc0f94e9d4bfc6da5.bindPopup(popup_45a11bc4210a50ce20960609d54cc4bd)
+        marker_a08eb4fa8f202370e04b48c8244cd85d.bindPopup(popup_4ee6d83421646254e4bad141e5702933)
         ;
 
         
     
     
-                marker_7f3e92b09b3b582cc0f94e9d4bfc6da5.setIcon(icon_34f9bf6012af0a009a4395581b26abba);
+                marker_a08eb4fa8f202370e04b48c8244cd85d.setIcon(icon_c4989d4d59cf71605cdb0f063ed43605);
             
     
-            var marker_5850afce6d10a4d591cf61e582866f37 = L.marker(
+            var marker_24cf6daa2a1943582a4463ee2e028dc1 = L.marker(
                 [-7.320100462405127, 112.74113276315514],
                 {
 }
-            ).addTo(map_9989d10a6201e53d89598edffc2e3bb9);
+            ).addTo(map_b8e83332dc721d961b4e49a2308e96ab);
         
     
-            var icon_998ed870f8bf78d445a09ec8efa3df1e = L.AwesomeMarkers.icon(
+            var icon_8391cc65526dd98d46398d5524d764e3 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -357,24 +357,24 @@
             );
         
     
-        var popup_7e5216f3e8586248f2e9bb062adf2db9 = L.popup({
+        var popup_e5949a4a06bed8faa55a4604d5c9e821 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_6e4f140485924b6b0c246c81bded9eea = $(`<div id="html_6e4f140485924b6b0c246c81bded9eea" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Perdana Medica<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_7e5216f3e8586248f2e9bb062adf2db9.setContent(html_6e4f140485924b6b0c246c81bded9eea);
+                var html_395cdc14a88eb989699cfb5026bb9ce6 = $(`<div id="html_395cdc14a88eb989699cfb5026bb9ce6" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Perdana Medica<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_e5949a4a06bed8faa55a4604d5c9e821.setContent(html_395cdc14a88eb989699cfb5026bb9ce6);
             
         
 
-        marker_5850afce6d10a4d591cf61e582866f37.bindPopup(popup_7e5216f3e8586248f2e9bb062adf2db9)
+        marker_24cf6daa2a1943582a4463ee2e028dc1.bindPopup(popup_e5949a4a06bed8faa55a4604d5c9e821)
         ;
 
         
     
     
-                marker_5850afce6d10a4d591cf61e582866f37.setIcon(icon_998ed870f8bf78d445a09ec8efa3df1e);
+                marker_24cf6daa2a1943582a4463ee2e028dc1.setIcon(icon_8391cc65526dd98d46398d5524d764e3);
             
 </script>
 </html>

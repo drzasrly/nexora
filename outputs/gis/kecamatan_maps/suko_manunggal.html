@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_72016db67277c6519433ee41561ab35c {
+                #map_6c9081a928bfe8ab2534310e6c8056ce {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,13 +89,13 @@
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">59.0</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">59.1</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.82), 2. Facility Capacity Gap (0.72), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.82. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.80), 2. Facility Capacity Gap (0.77), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.80. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_72016db67277c6519433ee41561ab35c" ></div>
+            <div class="folium-map" id="map_6c9081a928bfe8ab2534310e6c8056ce" ></div>
         
 </body>
 <script>
     
     
-            var map_72016db67277c6519433ee41561ab35c = L.map(
-                "map_72016db67277c6519433ee41561ab35c",
+            var map_6c9081a928bfe8ab2534310e6c8056ce = L.map(
+                "map_6c9081a928bfe8ab2534310e6c8056ce",
                 {
                     center: [-7.268616522578217, 112.6997003413252],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_ecbf2b89b7ba3e4848bb5ee49d3568a0 = L.tileLayer(
+            var tile_layer_1af0dedc6c532ad2f93269b922a1c914 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_ecbf2b89b7ba3e4848bb5ee49d3568a0.addTo(map_72016db67277c6519433ee41561ab35c);
+            tile_layer_1af0dedc6c532ad2f93269b922a1c914.addTo(map_6c9081a928bfe8ab2534310e6c8056ce);
         
     
-        function geo_json_6355a8a29eabe6d241bef49884731f3a_styler(feature) {
+        function geo_json_98b68018390cb1a81425fda025c457c0_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_6355a8a29eabe6d241bef49884731f3a_onEachFeature(feature, layer) {
+        function geo_json_98b68018390cb1a81425fda025c457c0_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_6355a8a29eabe6d241bef49884731f3a = L.geoJson(null, {
-                onEachFeature: geo_json_6355a8a29eabe6d241bef49884731f3a_onEachFeature,
+        var geo_json_98b68018390cb1a81425fda025c457c0 = L.geoJson(null, {
+                onEachFeature: geo_json_98b68018390cb1a81425fda025c457c0_onEachFeature,
             
-                style: geo_json_6355a8a29eabe6d241bef49884731f3a_styler,
+                style: geo_json_98b68018390cb1a81425fda025c457c0_styler,
             ...{
 }
         });
 
-        function geo_json_6355a8a29eabe6d241bef49884731f3a_add (data) {
-            geo_json_6355a8a29eabe6d241bef49884731f3a
+        function geo_json_98b68018390cb1a81425fda025c457c0_add (data) {
+            geo_json_98b68018390cb1a81425fda025c457c0
                 .addData(data);
         }
-            geo_json_6355a8a29eabe6d241bef49884731f3a_add({"bbox": [112.6845, -7.2931, 112.7143, -7.2479], "features": [{"bbox": [112.6845, -7.2931, 112.7143, -7.2479], "geometry": {"coordinates": [[[[112.7012, -7.2841], [112.7044, -7.2828], [112.7081, -7.2838], [112.7069, -7.2897], [112.7056, -7.2895], [112.7034, -7.2931], [112.6941, -7.2897], [112.6949, -7.2864], [112.6967, -7.2855], [112.6944, -7.2843], [112.6972, -7.2807], [112.6954, -7.2785], [112.6899, -7.2778], [112.6871, -7.2791], [112.6845, -7.275], [112.686, -7.2667], [112.6875, -7.2664], [112.6879, -7.2622], [112.6923, -7.2516], [112.6956, -7.2495], [112.6952, -7.2479], [112.6979, -7.2514], [112.6983, -7.2495], [112.7014, -7.2489], [112.7001, -7.2504], [112.7022, -7.255], [112.711, -7.2522], [112.7143, -7.2561], [112.7127, -7.2671], [112.7107, -7.2731], [112.7088, -7.273], [112.708, -7.2791], [112.7049, -7.2772], [112.6995, -7.2821], [112.7012, -7.2841]]]], "type": "MultiPolygon"}, "id": "22", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.3948261301754178, "disease_issue": "Penyakit pada sistem pernafasan (14969 cases)", "disease_need_score": 0.4109389249100609, "explanation": "Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.0 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.82), 2. Facility Capacity Gap (0.72), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.82. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7158515805985569, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.00097019187951, "jumlah_bidan": 65, "jumlah_penduduk": 104.2, "jumlah_perawat": 436, "jumlah_tenaga_medis": 368, "kecamatan": "SUKO MANUNGGAL", "kepadatan_penduduk": 11237, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 13, "root_cause_confidence": "HIGH", "root_cause_margin": 0.10482762528293021, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 220.0, "total_tenaga_kesehatan": 1178.0, "workforce_gap": 0.8206792058814871, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_98b68018390cb1a81425fda025c457c0_add({"bbox": [112.6845, -7.2931, 112.7143, -7.2479], "features": [{"bbox": [112.6845, -7.2931, 112.7143, -7.2479], "geometry": {"coordinates": [[[[112.7012, -7.2841], [112.7044, -7.2828], [112.7081, -7.2838], [112.7069, -7.2897], [112.7056, -7.2895], [112.7034, -7.2931], [112.6941, -7.2897], [112.6949, -7.2864], [112.6967, -7.2855], [112.6944, -7.2843], [112.6972, -7.2807], [112.6954, -7.2785], [112.6899, -7.2778], [112.6871, -7.2791], [112.6845, -7.275], [112.686, -7.2667], [112.6875, -7.2664], [112.6879, -7.2622], [112.6923, -7.2516], [112.6956, -7.2495], [112.6952, -7.2479], [112.6979, -7.2514], [112.6983, -7.2495], [112.7014, -7.2489], [112.7001, -7.2504], [112.7022, -7.255], [112.711, -7.2522], [112.7143, -7.2561], [112.7127, -7.2671], [112.7107, -7.2731], [112.7088, -7.273], [112.708, -7.2791], [112.7049, -7.2772], [112.6995, -7.2821], [112.7012, -7.2841]]]], "type": "MultiPolygon"}, "id": "22", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.3806423562710125, "disease_issue": "Penyakit pada sistem pernafasan (14969 cases)", "disease_need_score": 0.4109389249100609, "explanation": "Kecamatan Suko Manunggal memiliki Healthcare Gap Score sebesar 59.1 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.80), 2. Facility Capacity Gap (0.77), 3. Disease Burden Need (0.41). Indikator paling menonjol dalam model adalah Low Midwife Ratio, dengan sub-skor 0.80. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7683028607898084, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.13321362685494, "jumlah_bidan": 65, "jumlah_penduduk": 104.2, "jumlah_perawat": 436, "jumlah_tenaga_medis": 368, "kecamatan": "SUKO MANUNGGAL", "kepadatan_penduduk": 11237, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 13, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.036000713367764225, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 220.0, "total_tenaga_kesehatan": 1178.0, "workforce_gap": 0.8043035741575726, "workforce_issue": "Low Midwife Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_6355a8a29eabe6d241bef49884731f3a.bindTooltip(
+    geo_json_98b68018390cb1a81425fda025c457c0.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_6355a8a29eabe6d241bef49884731f3a.addTo(map_72016db67277c6519433ee41561ab35c);
+            geo_json_98b68018390cb1a81425fda025c457c0.addTo(map_6c9081a928bfe8ab2534310e6c8056ce);
         
     
-            var feature_group_94947e429264147a349cb9e1c1d30446 = L.featureGroup(
+            var feature_group_8a76a388e484d6cd1303ed057d3ae078 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_bbc4494d6625a351dfa8f044888d7bd1 = L.marker(
+            var marker_fd41f7b4934a7cc21ecb8e4094b46aa0 = L.marker(
                 [-7.262425, 112.71169],
                 {
 }
-            ).addTo(feature_group_94947e429264147a349cb9e1c1d30446);
+            ).addTo(feature_group_8a76a388e484d6cd1303ed057d3ae078);
         
     
-            var icon_c57f4b178f79c18fc530b2afac234dc7 = L.AwesomeMarkers.icon(
+            var icon_77f16056977d7c07cd0fb55d388ea28b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,34 +240,34 @@
             );
         
     
-        var popup_6d813cdde065bc64e66da8f2e9eb6cbd = L.popup({
+        var popup_735a127c74707bc69f92d106af04de33 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_9b09fd40f310bfd6e8ce1dda7d4c0785 = $(`<div id="html_9b09fd40f310bfd6e8ce1dda7d4c0785" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Simomulyo<br><b>ID:</b> PKM045</div>`)[0];
-                popup_6d813cdde065bc64e66da8f2e9eb6cbd.setContent(html_9b09fd40f310bfd6e8ce1dda7d4c0785);
+                var html_45ba4d7d1ea71763cc92fbab2830ded2 = $(`<div id="html_45ba4d7d1ea71763cc92fbab2830ded2" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Simomulyo<br><b>ID:</b> PKM045</div>`)[0];
+                popup_735a127c74707bc69f92d106af04de33.setContent(html_45ba4d7d1ea71763cc92fbab2830ded2);
             
         
 
-        marker_bbc4494d6625a351dfa8f044888d7bd1.bindPopup(popup_6d813cdde065bc64e66da8f2e9eb6cbd)
+        marker_fd41f7b4934a7cc21ecb8e4094b46aa0.bindPopup(popup_735a127c74707bc69f92d106af04de33)
         ;
 
         
     
     
-                marker_bbc4494d6625a351dfa8f044888d7bd1.setIcon(icon_c57f4b178f79c18fc530b2afac234dc7);
+                marker_fd41f7b4934a7cc21ecb8e4094b46aa0.setIcon(icon_77f16056977d7c07cd0fb55d388ea28b);
             
     
-            var marker_dd7ccb4b26ea90513eb9b51755c12281 = L.marker(
+            var marker_794c62c4dd96b0e6fa0495f2449a2511 = L.marker(
                 [-7.259723, 112.68927],
                 {
 }
-            ).addTo(feature_group_94947e429264147a349cb9e1c1d30446);
+            ).addTo(feature_group_8a76a388e484d6cd1303ed057d3ae078);
         
     
-            var icon_b1be45e905ab0e5222d243cbfa495dcb = L.AwesomeMarkers.icon(
+            var icon_03abf2857963db1f5ff5d19fde8523ec = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -278,37 +278,37 @@
             );
         
     
-        var popup_fe2df0c6c2956022499fd012967015e8 = L.popup({
+        var popup_104ad5ab807982d8413b1af8163fd137 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_c191f9005410d0b71bb558ec34d6357c = $(`<div id="html_c191f9005410d0b71bb558ec34d6357c" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Tanjungsari<br><b>ID:</b> PKM048</div>`)[0];
-                popup_fe2df0c6c2956022499fd012967015e8.setContent(html_c191f9005410d0b71bb558ec34d6357c);
+                var html_1a38c19b427ace93230a89caf7958c51 = $(`<div id="html_1a38c19b427ace93230a89caf7958c51" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Tanjungsari<br><b>ID:</b> PKM048</div>`)[0];
+                popup_104ad5ab807982d8413b1af8163fd137.setContent(html_1a38c19b427ace93230a89caf7958c51);
             
         
 
-        marker_dd7ccb4b26ea90513eb9b51755c12281.bindPopup(popup_fe2df0c6c2956022499fd012967015e8)
+        marker_794c62c4dd96b0e6fa0495f2449a2511.bindPopup(popup_104ad5ab807982d8413b1af8163fd137)
         ;
 
         
     
     
-                marker_dd7ccb4b26ea90513eb9b51755c12281.setIcon(icon_b1be45e905ab0e5222d243cbfa495dcb);
+                marker_794c62c4dd96b0e6fa0495f2449a2511.setIcon(icon_03abf2857963db1f5ff5d19fde8523ec);
             
     
-            feature_group_94947e429264147a349cb9e1c1d30446.addTo(map_72016db67277c6519433ee41561ab35c);
+            feature_group_8a76a388e484d6cd1303ed057d3ae078.addTo(map_6c9081a928bfe8ab2534310e6c8056ce);
         
     
-            var marker_e4b56cae9cf7939dbc89daa74676ae4d = L.marker(
+            var marker_019ccea35b8fecf469964130e9907174 = L.marker(
                 [-7.260860232042402, 112.71227901994288],
                 {
 }
-            ).addTo(map_72016db67277c6519433ee41561ab35c);
+            ).addTo(map_6c9081a928bfe8ab2534310e6c8056ce);
         
     
-            var icon_a8e3dbd74e669208cf1bab3f982baba4 = L.AwesomeMarkers.icon(
+            var icon_5743ba7922e7d7791fe93562e984cb07 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -319,56 +319,56 @@
             );
         
     
-        var popup_f2099b3fafeb334c70b39b1e6b40e93d = L.popup({
+        var popup_0adc87078e9cd0fc94e89c569f9bc623 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_64313861c49395a56a5ea03783438419 = $(`<div id="html_64313861c49395a56a5ea03783438419" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Mitra Keluarga Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_f2099b3fafeb334c70b39b1e6b40e93d.setContent(html_64313861c49395a56a5ea03783438419);
+                var html_ff3357856a269f1c9bc1e5dcb2b78bb1 = $(`<div id="html_ff3357856a269f1c9bc1e5dcb2b78bb1" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Mitra Keluarga Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_0adc87078e9cd0fc94e89c569f9bc623.setContent(html_ff3357856a269f1c9bc1e5dcb2b78bb1);
             
         
 
-        marker_e4b56cae9cf7939dbc89daa74676ae4d.bindPopup(popup_f2099b3fafeb334c70b39b1e6b40e93d)
+        marker_019ccea35b8fecf469964130e9907174.bindPopup(popup_0adc87078e9cd0fc94e89c569f9bc623)
         ;
 
         
     
     
-                marker_e4b56cae9cf7939dbc89daa74676ae4d.setIcon(icon_a8e3dbd74e669208cf1bab3f982baba4);
+                marker_019ccea35b8fecf469964130e9907174.setIcon(icon_5743ba7922e7d7791fe93562e984cb07);
             
     
-            var feature_group_f892aca2197db967d11cdbff8597c87a = L.featureGroup(
+            var feature_group_27e68fec15ec21585e9aeeffdf839e60 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_85fa270e999219a39f0cf4637c4c95fc = L.polyline(
+            var poly_line_d41093e2cf2e120979b65350b407b4bb = L.polyline(
                 [[-7.260940649999999, 112.71228439999999], [-7.25992382215478, 112.71204599359612]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_f892aca2197db967d11cdbff8597c87a);
+            ).addTo(feature_group_27e68fec15ec21585e9aeeffdf839e60);
         
     
-        var popup_6faa2f14a30a694750c6abca29725445 = L.popup({
+        var popup_e0bc38c28eb42c8894726e15d184c957 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_1ba1973cf90e72cc2f3b0891297ff18b = $(`<div id="html_1ba1973cf90e72cc2f3b0891297ff18b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Suko Manunggal-Sukolilo</div>`)[0];
-                popup_6faa2f14a30a694750c6abca29725445.setContent(html_1ba1973cf90e72cc2f3b0891297ff18b);
+                var html_ccd29a6254419b6153a93e549c14e4fc = $(`<div id="html_ccd29a6254419b6153a93e549c14e4fc" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Suko Manunggal-Sukolilo</div>`)[0];
+                popup_e0bc38c28eb42c8894726e15d184c957.setContent(html_ccd29a6254419b6153a93e549c14e4fc);
             
         
 
-        poly_line_85fa270e999219a39f0cf4637c4c95fc.bindPopup(popup_6faa2f14a30a694750c6abca29725445)
+        poly_line_d41093e2cf2e120979b65350b407b4bb.bindPopup(popup_e0bc38c28eb42c8894726e15d184c957)
         ;
 
         
     
     
-            feature_group_f892aca2197db967d11cdbff8597c87a.addTo(map_72016db67277c6519433ee41561ab35c);
+            feature_group_27e68fec15ec21585e9aeeffdf839e60.addTo(map_6c9081a928bfe8ab2534310e6c8056ce);
         
 </script>
 </html>

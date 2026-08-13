@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'FACILITY_SHORTAGE':  COLORS.blue,
         'DISEASE_BURDEN':     COLORS.purple,
         'HIGH_DEMAND':        COLORS.amber,
+        'ACCESS_BARRIERS':    COLORS.green,
         'MULTI_FACTOR':       COLORS.yellow
     };
 

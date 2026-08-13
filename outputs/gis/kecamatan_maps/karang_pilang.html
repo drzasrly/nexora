@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e563eb13022063790f7ea9717ab0bbaa {
+                #map_98ae2f187a34622a93a4f5e8a4752c21 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -85,17 +85,17 @@
                          Sangat Tinggi
                      </span>
                      <span style="float: right; font-weight: bold; color: #9ca3af;">
-                         Priority Rank: #9
+                         Priority Rank: #10
                      </span>
                  </div>
                  <div style="margin-bottom: 8px;">
-                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">63.4</span> / 100
+                     <strong>Healthcare Gap Score:</strong> <span style="font-size: 15px; font-weight: bold; color: #f87171;">61.3</span> / 100
                  </div>
                  <div style="margin-bottom: 8px;">
                      <strong>Primary Driver:</strong> <span style="color: #60a5fa; font-weight: bold;">Workforce Shortage</span>
                  </div>
                  <div style="margin-bottom: 12px; font-size: 12px; color: #d1d5db; line-height: 1.4; max-height: 120px; overflow-y: auto;">
-                     Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
+                     Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 61.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.97), 2. Facility Capacity Gap (0.86), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.97. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
@@ -106,14 +106,14 @@
              </div>
              
     
-            <div class="folium-map" id="map_e563eb13022063790f7ea9717ab0bbaa" ></div>
+            <div class="folium-map" id="map_98ae2f187a34622a93a4f5e8a4752c21" ></div>
         
 </body>
 <script>
     
     
-            var map_e563eb13022063790f7ea9717ab0bbaa = L.map(
-                "map_e563eb13022063790f7ea9717ab0bbaa",
+            var map_98ae2f187a34622a93a4f5e8a4752c21 = L.map(
+                "map_98ae2f187a34622a93a4f5e8a4752c21",
                 {
                     center: [-7.33516602779119, 112.6886198913255],
                     crs: L.CRS.EPSG3857,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_5253da446c793519298e852a08f0e72f = L.tileLayer(
+            var tile_layer_3ecbf41ff528c6a397c96c8b312b36db = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_5253da446c793519298e852a08f0e72f.addTo(map_e563eb13022063790f7ea9717ab0bbaa);
+            tile_layer_3ecbf41ff528c6a397c96c8b312b36db.addTo(map_98ae2f187a34622a93a4f5e8a4752c21);
         
     
-        function geo_json_dac6ed0eab6b516560c5d3a0646b32c8_styler(feature) {
+        function geo_json_6918b795b61dfaffb38b21f112079549_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_dac6ed0eab6b516560c5d3a0646b32c8_onEachFeature(feature, layer) {
+        function geo_json_6918b795b61dfaffb38b21f112079549_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_dac6ed0eab6b516560c5d3a0646b32c8 = L.geoJson(null, {
-                onEachFeature: geo_json_dac6ed0eab6b516560c5d3a0646b32c8_onEachFeature,
+        var geo_json_6918b795b61dfaffb38b21f112079549 = L.geoJson(null, {
+                onEachFeature: geo_json_6918b795b61dfaffb38b21f112079549_onEachFeature,
             
-                style: geo_json_dac6ed0eab6b516560c5d3a0646b32c8_styler,
+                style: geo_json_6918b795b61dfaffb38b21f112079549_styler,
             ...{
 }
         });
 
-        function geo_json_dac6ed0eab6b516560c5d3a0646b32c8_add (data) {
-            geo_json_dac6ed0eab6b516560c5d3a0646b32c8
+        function geo_json_6918b795b61dfaffb38b21f112079549_add (data) {
+            geo_json_6918b795b61dfaffb38b21f112079549
                 .addData(data);
         }
-            geo_json_dac6ed0eab6b516560c5d3a0646b32c8_add({"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "features": [{"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "geometry": {"coordinates": [[[[112.6698, -7.3512], [112.6646, -7.3514], [112.6653, -7.3404], [112.6615, -7.3372], [112.6617, -7.3348], [112.6651, -7.336], [112.6681, -7.335], [112.6713, -7.3366], [112.6716, -7.3342], [112.6795, -7.3339], [112.6845, -7.3316], [112.6955, -7.3344], [112.6953, -7.3264], [112.6903, -7.3243], [112.6908, -7.3224], [112.6976, -7.3238], [112.7017, -7.3153], [112.7048, -7.3131], [112.7113, -7.3127], [112.7105, -7.3286], [112.7038, -7.3371], [112.6917, -7.3449], [112.6765, -7.351], [112.6698, -7.3512]]]], "type": "MultiPolygon"}, "id": "10", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.27153885243559417, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8154350343632506, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 63.385980255825494, "jumlah_bidan": 34, "jumlah_penduduk": 75.5, "jumlah_perawat": 26, "jumlah_tenaga_medis": 68, "kecamatan": "KARANG PILANG", "kepadatan_penduduk": 8041, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16198486758339636, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 9.0, "total_tenaga_kesehatan": 194.0, "workforce_gap": 0.977419901946647, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_6918b795b61dfaffb38b21f112079549_add({"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "features": [{"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "geometry": {"coordinates": [[[[112.6698, -7.3512], [112.6646, -7.3514], [112.6653, -7.3404], [112.6615, -7.3372], [112.6617, -7.3348], [112.6651, -7.336], [112.6681, -7.335], [112.6713, -7.3366], [112.6716, -7.3342], [112.6795, -7.3339], [112.6845, -7.3316], [112.6955, -7.3344], [112.6953, -7.3264], [112.6903, -7.3243], [112.6908, -7.3224], [112.6976, -7.3238], [112.7017, -7.3153], [112.7048, -7.3131], [112.7113, -7.3127], [112.7105, -7.3286], [112.7038, -7.3371], [112.6917, -7.3449], [112.6765, -7.351], [112.6698, -7.3512]]]], "type": "MultiPolygon"}, "id": "10", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.18089323978622135, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 61.3 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.97), 2. Facility Capacity Gap (0.86), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.97. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8600588540480141, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 61.326148009607174, "jumlah_bidan": 34, "jumlah_penduduk": 75.5, "jumlah_perawat": 26, "jumlah_tenaga_medis": 68, "kecamatan": "KARANG PILANG", "kepadatan_penduduk": 8041, "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 10, "root_cause_confidence": "HIGH", "root_cause_margin": 0.10959637255088617, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "total_tempat_tidur": 9.0, "total_tenaga_kesehatan": 194.0, "workforce_gap": 0.9696552265989002, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_dac6ed0eab6b516560c5d3a0646b32c8.bindTooltip(
+    geo_json_6918b795b61dfaffb38b21f112079549.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,23 +213,23 @@
 });
                      
     
-            geo_json_dac6ed0eab6b516560c5d3a0646b32c8.addTo(map_e563eb13022063790f7ea9717ab0bbaa);
+            geo_json_6918b795b61dfaffb38b21f112079549.addTo(map_98ae2f187a34622a93a4f5e8a4752c21);
         
     
-            var feature_group_45ec863d3d99007136ba9dcae74f2add = L.featureGroup(
+            var feature_group_88f6a04e3847bc3f2fc71234cd3abca8 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_b764f8d8beeaf88845dcbc0b22037804 = L.marker(
+            var marker_a5e4bd8967ab46c6d68706db1b2bde43 = L.marker(
                 [-7.319732, 112.709615],
                 {
 }
-            ).addTo(feature_group_45ec863d3d99007136ba9dcae74f2add);
+            ).addTo(feature_group_88f6a04e3847bc3f2fc71234cd3abca8);
         
     
-            var icon_2d67a3b833ba01ac231956e5ded88f3f = L.AwesomeMarkers.icon(
+            var icon_3821842aa23fe4eeec905ac5624b85bc = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -240,59 +240,59 @@
             );
         
     
-        var popup_4a8b96dda9ebed8daf602ef598f6be2a = L.popup({
+        var popup_4f7d3eca9a146961cbeffb08650eaec5 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_317b997c90bde0c079a15d1051282828 = $(`<div id="html_317b997c90bde0c079a15d1051282828" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Kedurus<br><b>ID:</b> PKM018</div>`)[0];
-                popup_4a8b96dda9ebed8daf602ef598f6be2a.setContent(html_317b997c90bde0c079a15d1051282828);
+                var html_33429e305b0f76204415cbe268bab32b = $(`<div id="html_33429e305b0f76204415cbe268bab32b" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Kedurus<br><b>ID:</b> PKM018</div>`)[0];
+                popup_4f7d3eca9a146961cbeffb08650eaec5.setContent(html_33429e305b0f76204415cbe268bab32b);
             
         
 
-        marker_b764f8d8beeaf88845dcbc0b22037804.bindPopup(popup_4a8b96dda9ebed8daf602ef598f6be2a)
+        marker_a5e4bd8967ab46c6d68706db1b2bde43.bindPopup(popup_4f7d3eca9a146961cbeffb08650eaec5)
         ;
 
         
     
     
-                marker_b764f8d8beeaf88845dcbc0b22037804.setIcon(icon_2d67a3b833ba01ac231956e5ded88f3f);
+                marker_a5e4bd8967ab46c6d68706db1b2bde43.setIcon(icon_3821842aa23fe4eeec905ac5624b85bc);
             
     
-            feature_group_45ec863d3d99007136ba9dcae74f2add.addTo(map_e563eb13022063790f7ea9717ab0bbaa);
+            feature_group_88f6a04e3847bc3f2fc71234cd3abca8.addTo(map_98ae2f187a34622a93a4f5e8a4752c21);
         
     
-            var feature_group_542b0416494eb78a364ff8a81818fa33 = L.featureGroup(
+            var feature_group_f41eb4645f15d0c390960e6843099dc2 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_d4cd9a70dc97c45e64458b99f124d3cd = L.polyline(
+            var poly_line_f0b07b6bbec42df8e4b30247b43789ca = L.polyline(
                 [[-7.3333987, 112.69938429999999], [-7.33356448372812, 112.69854218026197]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_542b0416494eb78a364ff8a81818fa33);
+            ).addTo(feature_group_f41eb4645f15d0c390960e6843099dc2);
         
     
-        var popup_6f997d28c1fb5d39abc634227711728e = L.popup({
+        var popup_53bc2849f5a999bec1d6686fcd5757d4 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_afb2f8acb33712d49a5b7a5a20b7fa9b = $(`<div id="html_afb2f8acb33712d49a5b7a5a20b7fa9b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Karang Pilang-Kenjeran</div>`)[0];
-                popup_6f997d28c1fb5d39abc634227711728e.setContent(html_afb2f8acb33712d49a5b7a5a20b7fa9b);
+                var html_3f1954494016ae65f5e4ab50eae54cb8 = $(`<div id="html_3f1954494016ae65f5e4ab50eae54cb8" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Karang Pilang-Kenjeran</div>`)[0];
+                popup_53bc2849f5a999bec1d6686fcd5757d4.setContent(html_3f1954494016ae65f5e4ab50eae54cb8);
             
         
 
-        poly_line_d4cd9a70dc97c45e64458b99f124d3cd.bindPopup(popup_6f997d28c1fb5d39abc634227711728e)
+        poly_line_f0b07b6bbec42df8e4b30247b43789ca.bindPopup(popup_53bc2849f5a999bec1d6686fcd5757d4)
         ;
 
         
     
     
-            feature_group_542b0416494eb78a364ff8a81818fa33.addTo(map_e563eb13022063790f7ea9717ab0bbaa);
+            feature_group_f41eb4645f15d0c390960e6843099dc2.addTo(map_98ae2f187a34622a93a4f5e8a4752c21);
         
 </script>
 </html>

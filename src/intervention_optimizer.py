@@ -7,7 +7,7 @@ def get_feasibility_status(cost, budget, resources_used, resources_available):
     Determines qualitative feasibility.
     """
     if cost > budget:
-        return "LOW"
+        return "NOT_FEASIBLE"
     
     for r_type, qty in resources_used.items():
         avail = resources_available.get(r_type, 999)
@@ -27,7 +27,6 @@ def optimize_interventions(df_features, district, budget, resources_available, c
     # Load interventions database
     interventions_path = "data/processed/interventions.csv"
     if not os.path.exists(interventions_path):
-        # Create default in-memory dataframe if file missing (defensive)
         interventions_df = pd.DataFrame([
             {"intervention_id": "I01", "intervention_name": "Redistribute Healthcare Workers", "target_component": "workforce", "unit": "person", "cost_per_unit": 50000000, "max_units": 20, "impact_per_unit": 0.015},
             {"intervention_id": "I02", "intervention_name": "Add Healthcare Workers", "target_component": "workforce", "unit": "person", "cost_per_unit": 150000000, "max_units": 30, "impact_per_unit": 0.02},
@@ -49,70 +48,81 @@ def optimize_interventions(df_features, district, budget, resources_available, c
             
     candidates = []
     
-    # Let's generate options:
-    # Option 1: Workforce focus (I01 + I02)
-    # Option 2: Facility capacity focus (I03)
-    # Option 3: Accessibility focus (I04)
-    # Option 4: Combined Package (I05)
-    
     for idx, row in interventions_df.iterrows():
         i_id = row["intervention_id"]
         i_name = row["intervention_name"]
         cost_unit = int(row["cost_per_unit"])
         max_u = int(row["max_units"])
         
-        # Calculate how many units we can afford
+        # Check budget limit strictly (Perbaikan 7)
+        if budget < cost_unit:
+            continue
+            
         qty = min(max_u, int(budget // cost_unit))
-        if qty == 0:
-            qty = 1 # try at least 1 unit to show potential impact
+        if qty <= 0:
+            continue
             
         cost = qty * cost_unit
         
-        # Map quantity to resources used
+        # Map quantity to resources used and deltas
         used_res = {}
         deltas = {}
-        if i_id in ["I01", "I02"]:
-            # nakes / perawat / bidan
-            used_res["nakes"] = qty
-            deltas["nakes"] = qty
-            deltas["perawat"] = int(qty * 0.6)
-            deltas["bidan"] = int(qty * 0.4)
-        elif i_id == "I03":
+        
+        if i_id == "I01": # Redistribute Doctors
+            used_res["doctors"] = qty
+            deltas["doctors"] = qty
+        elif i_id == "I02": # Add Nurses
+            used_res["nurses"] = qty
+            deltas["perawat"] = qty
+        elif i_id == "I03": # Add Bed Capacity
             used_res["beds"] = qty
             deltas["beds"] = qty
             deltas["faskes"] = max(1, int(qty / 5))
-        elif i_id == "I04":
-            deltas["accessibility_offset"] = qty * 0.05
-        elif i_id == "I05":
-            used_res["nakes"] = qty * 2
-            used_res["beds"] = qty * 3
-            deltas["nakes"] = qty * 2
-            deltas["perawat"] = qty * 2
-            deltas["beds"] = qty * 3
+        elif i_id == "I04": # Accessibility
+            deltas["accessibility_offset"] = 0.0
+        elif i_id == "I05": # Combined Package
+            used_res["doctors"] = qty * 2
+            used_res["nurses"] = qty * 4
+            used_res["beds"] = qty * 10
+            
+            deltas["doctors"] = qty * 2
+            deltas["perawat"] = qty * 4
+            deltas["beds"] = qty * 10
             deltas["faskes"] = 1
-            deltas["accessibility_offset"] = qty * 0.02
+            deltas["accessibility_offset"] = 0.0
+            
+        # Resource availability check
+        is_feasible = True
+        for r_type, req_qty in used_res.items():
+            avail = resources_available.get(r_type, 999)
+            if req_qty > avail:
+                is_feasible = False
+                break
+                
+        if not is_feasible:
+            continue
+            
+        # Feasibility check
+        feasibility = get_feasibility_status(cost, budget, used_res, resources_available)
+        if feasibility == "NOT_FEASIBLE":
+            continue
             
         # Run simulation
         sim_res = simulate_intervention(df_features, district, deltas, config)
         improvement = sim_res["improvement_percent"]
         projected_gap = sim_res["after_gap"]
         
-        # Feasibility check
-        feasibility = get_feasibility_status(cost, budget, used_res, resources_available)
-        
-        # Alignment check
+        # Alignment check (Perbaikan 8)
         aligned = False
         if primary_rc == "WORKFORCE_SHORTAGE" and i_id in ["I01", "I02"]:
             aligned = True
-        elif primary_rc == "FACILITY_LIMITS" and i_id == "I03":
+        elif primary_rc == "FACILITY_SHORTAGE" and i_id == "I03":
             aligned = True
         elif primary_rc == "ACCESS_BARRIERS" and i_id == "I04":
             aligned = True
-        elif primary_rc in ["MULTI_FACTOR", "DEMAND_PRESSURE"] and i_id == "I05":
+        elif primary_rc in ["MULTI_FACTOR", "HIGH_DEMAND"] and i_id == "I05":
             aligned = True
             
-        # Scoring model (Section 35)
-        # Score = Impact (%) * (2.0 if aligned else 1.0) * (1.0 if HIGH else (0.5 if MEDIUM else 0.0))
         feas_coeff = 1.0 if feasibility == "HIGH" else (0.5 if feasibility == "MEDIUM" else 0.0)
         align_coeff = 2.0 if aligned else 1.0
         opt_score = improvement * align_coeff * feas_coeff

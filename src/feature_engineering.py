@@ -27,10 +27,11 @@ def build_features(df, df_peny, config):
     df_feat["visits_per_1000"] = df_feat["total_kunjungan"] / df_feat["jumlah_penduduk"]
     
     # 2. Workforce ratios
-    df_feat = pd.merge(df_feat, df[["kecamatan", "total_tenaga_kesehatan", "jumlah_perawat", "jumlah_bidan"]], on="kecamatan", how="left")
+    df_feat = pd.merge(df_feat, df[["kecamatan", "total_tenaga_kesehatan", "jumlah_perawat", "jumlah_bidan", "jumlah_tenaga_medis"]], on="kecamatan", how="left")
     df_feat["nakes_per_1000"] = df_feat["total_tenaga_kesehatan"] / df_feat["jumlah_penduduk"]
     df_feat["perawat_per_1000"] = df_feat["jumlah_perawat"] / df_feat["jumlah_penduduk"]
     df_feat["bidan_per_1000"] = df_feat["jumlah_bidan"] / df_feat["jumlah_penduduk"]
+    df_feat["doctors_per_1000"] = df_feat["jumlah_tenaga_medis"] / df_feat["jumlah_penduduk"]
     
     # 3. Facility ratios
     df_feat = pd.merge(df_feat, df[["kecamatan", "total_faskes", "jumlah_puskesmas", "jumlah_pustu"]], on="kecamatan", how="left")
@@ -82,7 +83,7 @@ def build_features(df, df_peny, config):
     # Reorder columns
     final_cols = [
         "kecamatan", "jumlah_penduduk", "kepadatan_penduduk", "total_kunjungan", "visits_per_1000",
-        "total_tenaga_kesehatan", "nakes_per_1000", "perawat_per_1000", "bidan_per_1000",
+        "total_tenaga_kesehatan", "nakes_per_1000", "perawat_per_1000", "bidan_per_1000", "jumlah_tenaga_medis", "doctors_per_1000",
         "total_faskes", "faskes_per_100k", "jumlah_puskesmas", "puskesmas_per_100k", "jumlah_pustu", "pustu_per_100k",
         "total_tempat_tidur", "beds_per_1000", "total_kasus_penyakit", "disease_per_1000",
         "workforce_growth", "demand_growth", "workforce_demand_mismatch",

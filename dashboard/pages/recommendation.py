@@ -45,7 +45,7 @@ def show_page(df_gap, df_rca, df_features):
                     "alignment": "HIGH",
                     "resources_used": {"nakes": 10, "perawat": 6, "bidan": 4}
                 }
-            elif primary_rc == "FACILITY_LIMITS":
+            elif primary_rc == "FACILITY_SHORTAGE":
                 top_cand = {
                     "intervention_id": "I03",
                     "intervention_name": "Add Facility Capacity",

@@ -14,7 +14,7 @@ def determine_primary_root_cause(row):
         "DISEASE_BURDEN": row["disease_need_score"]
     }
     if "accessibility_gap" in row.index and pd.notna(row["accessibility_gap"]):
-        values["ACCESSIBILITY"] = row["accessibility_gap"]
+        values["ACCESS_BARRIERS"] = row["accessibility_gap"]
     return max(values, key=values.get)
 
 def rank_root_causes(row):
@@ -26,7 +26,7 @@ def rank_root_causes(row):
         "DISEASE_BURDEN": row["disease_need_score"]
     }
     if "accessibility_gap" in row.index and pd.notna(row["accessibility_gap"]):
-        values["ACCESSIBILITY"] = row["accessibility_gap"]
+        values["ACCESS_BARRIERS"] = row["accessibility_gap"]
     
     ranking = sorted(values.items(), key=lambda x: x[1], reverse=True)
     return ranking
@@ -145,19 +145,22 @@ def run_root_cause_analysis(df_gap, df_feats, config):
             "HIGH_DEMAND": "High Demand Score",
             "WORKFORCE_SHORTAGE": "Workforce Shortage Gap",
             "FACILITY_SHORTAGE": "Facility Capacity Gap",
-            "DISEASE_BURDEN": "Disease Burden Need"
+            "DISEASE_BURDEN": "Disease Burden Need",
+            "ACCESS_BARRIERS": "Access Barriers Gap"
         }
         indicator_map = {
             "HIGH_DEMAND": dem_issue,
             "WORKFORCE_SHORTAGE": work_issue,
             "FACILITY_SHORTAGE": fac_issue,
-            "DISEASE_BURDEN": f"High caseload of {row['jenis_penyakit_dominan']}"
+            "DISEASE_BURDEN": f"High caseload of {row['jenis_penyakit_dominan']}",
+            "ACCESS_BARRIERS": "distance/travel time to facilities"
         }
         interpretation_map = {
             "HIGH_DEMAND": "tingginya volume populasi atau jumlah kunjungan puskesmas yang memberikan tekanan berat pada fasilitas setempat",
             "WORKFORCE_SHORTAGE": "keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat",
             "FACILITY_SHORTAGE": "kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap",
-            "DISEASE_BURDEN": "besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif"
+            "DISEASE_BURDEN": "besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif",
+            "ACCESS_BARRIERS": "keterbatasan aksesibilitas fisik dan transportasi menuju fasilitas kesehatan terdekat"
         }
         
         # Check priority category (handles keys properly)
