@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_04ef7d29ffc2083314482b2eede85291 {
+                #map_9487708367d6f924584a8667fd410a19 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
-                     🔴 Hospitals: 1<br>
+                     🏥 Puskesmas: 1<br>
+                     🔴 Hospitals: 3<br>
                      🛣️ Road network segments: 2
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_04ef7d29ffc2083314482b2eede85291" ></div>
+            <div class="folium-map" id="map_9487708367d6f924584a8667fd410a19" ></div>
         
 </body>
 <script>
     
     
-            var map_04ef7d29ffc2083314482b2eede85291 = L.map(
-                "map_04ef7d29ffc2083314482b2eede85291",
+            var map_9487708367d6f924584a8667fd410a19 = L.map(
+                "map_9487708367d6f924584a8667fd410a19",
                 {
-                    center: [-7.321903875782391, 112.71388458805214],
+                    center: [-7.323093702435861, 112.71588095500564],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_fbaf6a4b0501d615420d6df872756b40 = L.tileLayer(
+            var tile_layer_0f8f05318a815225697c2e387e9469d9 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_fbaf6a4b0501d615420d6df872756b40.addTo(map_04ef7d29ffc2083314482b2eede85291);
+            tile_layer_0f8f05318a815225697c2e387e9469d9.addTo(map_9487708367d6f924584a8667fd410a19);
         
     
-        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_styler(feature) {
+        function geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_onEachFeature(feature, layer) {
+        function geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_fdea84e404e3480b4c75e0af4b3e97c1 = L.geoJson(null, {
-                onEachFeature: geo_json_fdea84e404e3480b4c75e0af4b3e97c1_onEachFeature,
+        var geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4 = L.geoJson(null, {
+                onEachFeature: geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_onEachFeature,
             
-                style: geo_json_fdea84e404e3480b4c75e0af4b3e97c1_styler,
+                style: geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_styler,
             ...{
 }
         });
 
-        function geo_json_fdea84e404e3480b4c75e0af4b3e97c1_add (data) {
-            geo_json_fdea84e404e3480b4c75e0af4b3e97c1
+        function geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_add (data) {
+            geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4
                 .addData(data);
         }
-            geo_json_fdea84e404e3480b4c75e0af4b3e97c1_add({"bbox": [112.7137032, -7.3220738, 112.714066, -7.321734], "features": [{"bbox": [112.7137032, -7.3220738, 112.714066, -7.321734], "geometry": {"coordinates": [[[112.7137032, -7.3219679], [112.7139725, -7.3220738], [112.714066, -7.3218398], [112.7137966, -7.321734], [112.7137032, -7.3219679]]], "type": "Polygon"}, "id": "9", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.21959302339564915, "disease_issue": "Penyakit pada sistem pencernaan (5315 cases)", "disease_need_score": 0.11557884539152101, "explanation": "Kecamatan Jambangan memiliki Healthcare Gap Score sebesar 50.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.72), 3. High Demand Score (0.22). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7161926518743044, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.17480408166324, "kecamatan": "JAMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "HIGH", "root_cause_margin": 0.18219346260827107, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.8983861144825754, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4_add({"bbox": [112.7047, -7.3404, 112.7265, -7.3076], "features": [{"bbox": [112.7047, -7.3404, 112.7265, -7.3076], "geometry": {"coordinates": [[[[112.7151, -7.3396], [112.7047, -7.3361], [112.7105, -7.3286], [112.7122, -7.3091], [112.7148, -7.3076], [112.7233, -7.3077], [112.7222, -7.3163], [112.7265, -7.3179], [112.718, -7.3285], [112.7197, -7.3288], [112.7188, -7.3357], [112.7168, -7.3353], [112.7174, -7.3404], [112.7151, -7.3396]]]], "type": "MultiPolygon"}, "id": "9", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.21959302339564915, "disease_issue": "Penyakit pada sistem pencernaan (5315 cases)", "disease_need_score": 0.11557884539152101, "explanation": "Kecamatan Jambangan memiliki Healthcare Gap Score sebesar 50.2 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.90), 2. Facility Capacity Gap (0.72), 3. High Demand Score (0.22). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.90. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7161926518743044, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 50.17480408166324, "kecamatan": "JAMBANGAN", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 21, "root_cause_confidence": "HIGH", "root_cause_margin": 0.18219346260827107, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.8983861144825754, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_fdea84e404e3480b4c75e0af4b3e97c1.bindTooltip(
+    geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,17 +213,64 @@
 });
                      
     
-            geo_json_fdea84e404e3480b4c75e0af4b3e97c1.addTo(map_04ef7d29ffc2083314482b2eede85291);
+            geo_json_cb5c81b1112c4f2306fb7f0ef0e091a4.addTo(map_9487708367d6f924584a8667fd410a19);
         
     
-            var marker_6a31c7aa0a6fce289c653dd00b15ec91 = L.marker(
-                [-7.3218583964999455, 112.71381153468342],
+            var feature_group_2d3b5045a9876262c621b8d5187bac7c = L.featureGroup(
                 {
 }
-            ).addTo(map_04ef7d29ffc2083314482b2eede85291);
+            );
         
     
-            var icon_a0142e28e6449fef96f6a079363ac7ae = L.AwesomeMarkers.icon(
+            var marker_da50d23b3d563e7e351aad5ff3656dc5 = L.marker(
+                [-7.32823, 112.714299],
+                {
+}
+            ).addTo(feature_group_2d3b5045a9876262c621b8d5187bac7c);
+        
+    
+            var icon_f066b4dd51f55f6ad74a3e052bcff00c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd770ccc686ce34ff9dc29d62f60f157 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ca07f67036c9c0ec77e472eaf78af3a3 = $(`<div id="html_ca07f67036c9c0ec77e472eaf78af3a3" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Kebonsari<br><b>ID:</b> PKM016</div>`)[0];
+                popup_fd770ccc686ce34ff9dc29d62f60f157.setContent(html_ca07f67036c9c0ec77e472eaf78af3a3);
+            
+        
+
+        marker_da50d23b3d563e7e351aad5ff3656dc5.bindPopup(popup_fd770ccc686ce34ff9dc29d62f60f157)
+        ;
+
+        
+    
+    
+                marker_da50d23b3d563e7e351aad5ff3656dc5.setIcon(icon_f066b4dd51f55f6ad74a3e052bcff00c);
+            
+    
+            feature_group_2d3b5045a9876262c621b8d5187bac7c.addTo(map_9487708367d6f924584a8667fd410a19);
+        
+    
+            var marker_1ec1c882f56652ec47ecb241c12466f6 = L.marker(
+                [-7.337949879171968, 112.7165723579634],
+                {
+}
+            ).addTo(map_9487708367d6f924584a8667fd410a19);
+        
+    
+            var icon_3693a69bc7d67c18fd90872174c169db = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -234,79 +281,155 @@
             );
         
     
-        var popup_e68bb12269f6909c22e5af1e32b29883 = L.popup({
+        var popup_5b6f2d135034f75325e0e46977170c6e = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_db9aec79c776254f1869ee220bbec6ab = $(`<div id="html_db9aec79c776254f1869ee220bbec6ab" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Cempaka Putih Permata<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_e68bb12269f6909c22e5af1e32b29883.setContent(html_db9aec79c776254f1869ee220bbec6ab);
+                var html_c794c82bc9a6d7898012314ff3fd097d = $(`<div id="html_c794c82bc9a6d7898012314ff3fd097d" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bhakti Rahayu<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_5b6f2d135034f75325e0e46977170c6e.setContent(html_c794c82bc9a6d7898012314ff3fd097d);
             
         
 
-        marker_6a31c7aa0a6fce289c653dd00b15ec91.bindPopup(popup_e68bb12269f6909c22e5af1e32b29883)
+        marker_1ec1c882f56652ec47ecb241c12466f6.bindPopup(popup_5b6f2d135034f75325e0e46977170c6e)
         ;
 
         
     
     
-                marker_6a31c7aa0a6fce289c653dd00b15ec91.setIcon(icon_a0142e28e6449fef96f6a079363ac7ae);
+                marker_1ec1c882f56652ec47ecb241c12466f6.setIcon(icon_3693a69bc7d67c18fd90872174c169db);
             
     
-            var feature_group_d1cea94cff149c7f49b36659794ea894 = L.featureGroup(
+            var marker_9c61e4649f9a87bf8e6ee622d84933aa = L.marker(
+                [-7.337894293350593, 112.7165632192388],
+                {
+}
+            ).addTo(map_9487708367d6f924584a8667fd410a19);
+        
+    
+            var icon_58bba60047756b59da6378161aba3c18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9645aad33227bed4f56fb15179ecb45 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_94724a1ca2b433039dfe7363849a61f6 = $(`<div id="html_94724a1ca2b433039dfe7363849a61f6" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Bhayangkara TK II HS. Samsoeri Mertojoso<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_c9645aad33227bed4f56fb15179ecb45.setContent(html_94724a1ca2b433039dfe7363849a61f6);
+            
+        
+
+        marker_9c61e4649f9a87bf8e6ee622d84933aa.bindPopup(popup_c9645aad33227bed4f56fb15179ecb45)
+        ;
+
+        
+    
+    
+                marker_9c61e4649f9a87bf8e6ee622d84933aa.setIcon(icon_58bba60047756b59da6378161aba3c18);
+            
+    
+            var marker_f20f272f429f181a89d11b53d69004a5 = L.marker(
+                [-7.3218583964999455, 112.71381153468342],
+                {
+}
+            ).addTo(map_9487708367d6f924584a8667fd410a19);
+        
+    
+            var icon_b64e2c2ef3be7e52826a9b5e2e9db8dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09193320ce73bd9302189d28bc122fdc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_477a0bc3a011151145be16337e822f47 = $(`<div id="html_477a0bc3a011151145be16337e822f47" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Cempaka Putih Permata<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_09193320ce73bd9302189d28bc122fdc.setContent(html_477a0bc3a011151145be16337e822f47);
+            
+        
+
+        marker_f20f272f429f181a89d11b53d69004a5.bindPopup(popup_09193320ce73bd9302189d28bc122fdc)
+        ;
+
+        
+    
+    
+                marker_f20f272f429f181a89d11b53d69004a5.setIcon(icon_b64e2c2ef3be7e52826a9b5e2e9db8dd);
+            
+    
+            var feature_group_91cd24b4ab8795dfeeca6c354ddc664f = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_088d7cff59dd333014fa01cd4028c007 = L.polyline(
+            var poly_line_dd7d45990cd78b1b33e20c13cce23863 = L.polyline(
                 [[-7.3219039, 112.7138846], [-7.321984533009334, 112.71416078516732]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_d1cea94cff149c7f49b36659794ea894);
+            ).addTo(feature_group_91cd24b4ab8795dfeeca6c354ddc664f);
         
     
-        var popup_faccc0a5867c5589997d23bffa9f86bb = L.popup({
+        var popup_f50873cad42d28e0840dc61b0c847407 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_67013e8712e9ab298fc5ed3fd7d81f4e = $(`<div id="html_67013e8712e9ab298fc5ed3fd7d81f4e" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Jambangan-Karang Pilang</div>`)[0];
-                popup_faccc0a5867c5589997d23bffa9f86bb.setContent(html_67013e8712e9ab298fc5ed3fd7d81f4e);
+                var html_70fd9f1e10668fc17c5f12da64a85499 = $(`<div id="html_70fd9f1e10668fc17c5f12da64a85499" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Jambangan-Karang Pilang</div>`)[0];
+                popup_f50873cad42d28e0840dc61b0c847407.setContent(html_70fd9f1e10668fc17c5f12da64a85499);
             
         
 
-        poly_line_088d7cff59dd333014fa01cd4028c007.bindPopup(popup_faccc0a5867c5589997d23bffa9f86bb)
+        poly_line_dd7d45990cd78b1b33e20c13cce23863.bindPopup(popup_f50873cad42d28e0840dc61b0c847407)
         ;
 
         
     
     
-            var poly_line_5ca32452d560f7f6cae14e9eea2e4fac = L.polyline(
+            var poly_line_00f3f43445bcbba252e485df8abc7a6f = L.polyline(
                 [[-7.322820771923497, 112.71409818629667], [-7.320915665204842, 112.71322146148631]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_d1cea94cff149c7f49b36659794ea894);
+            ).addTo(feature_group_91cd24b4ab8795dfeeca6c354ddc664f);
         
     
-        var popup_90493e4aec414be2ba00260c2d4d10f3 = L.popup({
+        var popup_5d9cf622c85495ea023d798bc289b556 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_3d2e19bbf7d05672b0448cae5136e3bc = $(`<div id="html_3d2e19bbf7d05672b0448cae5136e3bc" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Kenjeran-Krembangan</div>`)[0];
-                popup_90493e4aec414be2ba00260c2d4d10f3.setContent(html_3d2e19bbf7d05672b0448cae5136e3bc);
+                var html_be151ff4b49311a40afd08c3528ed0d1 = $(`<div id="html_be151ff4b49311a40afd08c3528ed0d1" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Kenjeran-Krembangan</div>`)[0];
+                popup_5d9cf622c85495ea023d798bc289b556.setContent(html_be151ff4b49311a40afd08c3528ed0d1);
             
         
 
-        poly_line_5ca32452d560f7f6cae14e9eea2e4fac.bindPopup(popup_90493e4aec414be2ba00260c2d4d10f3)
+        poly_line_00f3f43445bcbba252e485df8abc7a6f.bindPopup(popup_5d9cf622c85495ea023d798bc289b556)
         ;
 
         
     
     
-            feature_group_d1cea94cff149c7f49b36659794ea894.addTo(map_04ef7d29ffc2083314482b2eede85291);
+            feature_group_91cd24b4ab8795dfeeca6c354ddc664f.addTo(map_9487708367d6f924584a8667fd410a19);
         
 </script>
 </html>

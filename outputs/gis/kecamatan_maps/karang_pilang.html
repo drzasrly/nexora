@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_19acf03e587edb0b08ac3bc5c98026c6 {
+                #map_0e600e1a9e7cd71842d0449df1db0f38 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
+                     🏥 Puskesmas: 1<br>
                      🔴 Hospitals: 0<br>
                      🛣️ Road network segments: 1
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_19acf03e587edb0b08ac3bc5c98026c6" ></div>
+            <div class="folium-map" id="map_0e600e1a9e7cd71842d0449df1db0f38" ></div>
         
 </body>
 <script>
     
     
-            var map_19acf03e587edb0b08ac3bc5c98026c6 = L.map(
-                "map_19acf03e587edb0b08ac3bc5c98026c6",
+            var map_0e600e1a9e7cd71842d0449df1db0f38 = L.map(
+                "map_0e600e1a9e7cd71842d0449df1db0f38",
                 {
-                    center: [-7.333398709988485, 112.69938428414059],
+                    center: [-7.33516602779119, 112.6886198913255],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_739794734aff43efa38b871ae4ad1660 = L.tileLayer(
+            var tile_layer_ecfec69b89647db4d8802910492fdec5 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_739794734aff43efa38b871ae4ad1660.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+            tile_layer_ecfec69b89647db4d8802910492fdec5.addTo(map_0e600e1a9e7cd71842d0449df1db0f38);
         
     
-        function geo_json_4ee8224846d16adca7a515781d3e65dc_styler(feature) {
+        function geo_json_7250b9d6242847f0696a25ef97fe35ea_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_4ee8224846d16adca7a515781d3e65dc_onEachFeature(feature, layer) {
+        function geo_json_7250b9d6242847f0696a25ef97fe35ea_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_4ee8224846d16adca7a515781d3e65dc = L.geoJson(null, {
-                onEachFeature: geo_json_4ee8224846d16adca7a515781d3e65dc_onEachFeature,
+        var geo_json_7250b9d6242847f0696a25ef97fe35ea = L.geoJson(null, {
+                onEachFeature: geo_json_7250b9d6242847f0696a25ef97fe35ea_onEachFeature,
             
-                style: geo_json_4ee8224846d16adca7a515781d3e65dc_styler,
+                style: geo_json_7250b9d6242847f0696a25ef97fe35ea_styler,
             ...{
 }
         });
 
-        function geo_json_4ee8224846d16adca7a515781d3e65dc_add (data) {
-            geo_json_4ee8224846d16adca7a515781d3e65dc
+        function geo_json_7250b9d6242847f0696a25ef97fe35ea_add (data) {
+            geo_json_7250b9d6242847f0696a25ef97fe35ea
                 .addData(data);
         }
-            geo_json_4ee8224846d16adca7a515781d3e65dc_add({"bbox": [112.6991756, -7.3336521, 112.699593, -7.3331453], "features": [{"bbox": [112.6991756, -7.3336521, 112.699593, -7.3331453], "geometry": {"coordinates": [[[112.6991756, -7.3335556], [112.6994417, -7.3336521], [112.699593, -7.3332419], [112.6993269, -7.3331453], [112.6992928, -7.3332376], [112.6991756, -7.3335556]]], "type": "Polygon"}, "id": "10", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.27153885243559417, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8154350343632506, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 63.385980255825494, "kecamatan": "KARANG PILANG", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16198486758339636, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.977419901946647, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_7250b9d6242847f0696a25ef97fe35ea_add({"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "features": [{"bbox": [112.6615, -7.3514, 112.7113, -7.3127], "geometry": {"coordinates": [[[[112.6698, -7.3512], [112.6646, -7.3514], [112.6653, -7.3404], [112.6615, -7.3372], [112.6617, -7.3348], [112.6651, -7.336], [112.6681, -7.335], [112.6713, -7.3366], [112.6716, -7.3342], [112.6795, -7.3339], [112.6845, -7.3316], [112.6955, -7.3344], [112.6953, -7.3264], [112.6903, -7.3243], [112.6908, -7.3224], [112.6976, -7.3238], [112.7017, -7.3153], [112.7048, -7.3131], [112.7113, -7.3127], [112.7105, -7.3286], [112.7038, -7.3371], [112.6917, -7.3449], [112.6765, -7.351], [112.6698, -7.3512]]]], "type": "MultiPolygon"}, "id": "10", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.27153885243559417, "disease_issue": "Penyakit pada sistem pernafasan (11682 cases)", "disease_need_score": 0.48042584685466255, "explanation": "Kecamatan Karang Pilang memiliki Healthcare Gap Score sebesar 63.4 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.98), 2. Facility Capacity Gap (0.82), 3. Disease Burden Need (0.48). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.98. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.8154350343632506, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 63.385980255825494, "kecamatan": "KARANG PILANG", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 9, "root_cause_confidence": "HIGH", "root_cause_margin": 0.16198486758339636, "root_cause_type": "MULTI_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.977419901946647, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_4ee8224846d16adca7a515781d3e65dc.bindTooltip(
+    geo_json_7250b9d6242847f0696a25ef97fe35ea.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,39 +213,86 @@
 });
                      
     
-            geo_json_4ee8224846d16adca7a515781d3e65dc.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+            geo_json_7250b9d6242847f0696a25ef97fe35ea.addTo(map_0e600e1a9e7cd71842d0449df1db0f38);
         
     
-            var feature_group_6ef8939ea88f9082eeccf6a4e4b921f0 = L.featureGroup(
+            var feature_group_e3355f53b9f5b26f79cbc77a74a27ece = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_58b5f2da3315013cf58e992b674e9d57 = L.polyline(
-                [[-7.3333987, 112.69938429999999], [-7.33356448372812, 112.69854218026197]],
-                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_6ef8939ea88f9082eeccf6a4e4b921f0);
+            var marker_a902b39116940b4ef49e869af2743cbc = L.marker(
+                [-7.319732, 112.709615],
+                {
+}
+            ).addTo(feature_group_e3355f53b9f5b26f79cbc77a74a27ece);
         
     
-        var popup_582089d3a39535196c2d3364fce5e348 = L.popup({
+            var icon_2acdab7c6a23fb868902e9e394efee58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1293ca952e6ec9c99e4c53d328624214 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_ffb8295278b246177ebf7c173feb27ca = $(`<div id="html_ffb8295278b246177ebf7c173feb27ca" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Karang Pilang-Kenjeran</div>`)[0];
-                popup_582089d3a39535196c2d3364fce5e348.setContent(html_ffb8295278b246177ebf7c173feb27ca);
+                var html_ac027017bd7a07f2ceac401e63f9a6db = $(`<div id="html_ac027017bd7a07f2ceac401e63f9a6db" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Kedurus<br><b>ID:</b> PKM018</div>`)[0];
+                popup_1293ca952e6ec9c99e4c53d328624214.setContent(html_ac027017bd7a07f2ceac401e63f9a6db);
             
         
 
-        poly_line_58b5f2da3315013cf58e992b674e9d57.bindPopup(popup_582089d3a39535196c2d3364fce5e348)
+        marker_a902b39116940b4ef49e869af2743cbc.bindPopup(popup_1293ca952e6ec9c99e4c53d328624214)
         ;
 
         
     
     
-            feature_group_6ef8939ea88f9082eeccf6a4e4b921f0.addTo(map_19acf03e587edb0b08ac3bc5c98026c6);
+                marker_a902b39116940b4ef49e869af2743cbc.setIcon(icon_2acdab7c6a23fb868902e9e394efee58);
+            
+    
+            feature_group_e3355f53b9f5b26f79cbc77a74a27ece.addTo(map_0e600e1a9e7cd71842d0449df1db0f38);
+        
+    
+            var feature_group_727376a0552e32f396c698c834961970 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_b27edbcb8f9a78482e8fb987b2edb77a = L.polyline(
+                [[-7.3333987, 112.69938429999999], [-7.33356448372812, 112.69854218026197]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_727376a0552e32f396c698c834961970);
+        
+    
+        var popup_06ed62bc62b33f701f85010872d7b6bb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6f1dc24ec4e4efc3b046e338f2afae07 = $(`<div id="html_6f1dc24ec4e4efc3b046e338f2afae07" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Karang Pilang-Kenjeran</div>`)[0];
+                popup_06ed62bc62b33f701f85010872d7b6bb.setContent(html_6f1dc24ec4e4efc3b046e338f2afae07);
+            
+        
+
+        poly_line_b27edbcb8f9a78482e8fb987b2edb77a.bindPopup(popup_06ed62bc62b33f701f85010872d7b6bb)
+        ;
+
+        
+    
+    
+            feature_group_727376a0552e32f396c698c834961970.addTo(map_0e600e1a9e7cd71842d0449df1db0f38);
         
 </script>
 </html>

@@ -62,13 +62,40 @@ def run_gis_analysis(df_rca, config):
     
     print("Running GIS mapping analysis...")
     
-    # 1. Load bounds and point layers
+    # 1. Load bounds: prefer existing real-boundary GeoJSON (GADM) if it has many coords,
+    #    fallback to base kecamatan file.
     kec_path = os.path.join(spatial_dir, "kecamatan_surabaya.geojson")
     pkm_path = os.path.join(spatial_dir, "puskesmas.geojson")
     fask_path = os.path.join(spatial_dir, "fasilitas_kesehatan.geojson")
     road_path = os.path.join(spatial_dir, "roads.geojson")
-    
-    gdf_kec = load_spatial_data(kec_path)
+
+    # Detect if existing output GeoJSON has real boundaries (>10 coords per polygon)
+    real_boundaries_path = None
+    if os.path.exists(geojson_output):
+        import json
+        with open(geojson_output, "r", encoding="utf-8") as _f:
+            _gj = json.load(_f)
+        if _gj.get("features"):
+            _geom = _gj["features"][0].get("geometry", {})
+            _type = _geom.get("type", "")
+            if _type == "MultiPolygon":
+                _npts = sum(len(ring) for poly in _geom.get("coordinates", []) for ring in poly)
+            elif _type == "Polygon":
+                _npts = sum(len(ring) for ring in _geom.get("coordinates", []))
+            else:
+                _npts = 0
+            if _npts > 10:
+                real_boundaries_path = geojson_output
+                print(f"  Using existing real boundaries from: {geojson_output} ({_npts} pts on first feature)")
+
+    if real_boundaries_path:
+        # Load from existing real output, only update analytics properties
+        gdf_kec = gpd.read_file(real_boundaries_path)
+        # Keep geometry, drop old analytics columns (except kecamatan)
+        geo_cols = [c for c in gdf_kec.columns if c != "geometry"]
+        gdf_kec = gdf_kec[["kecamatan", "geometry"]]
+    else:
+        gdf_kec = load_spatial_data(kec_path)
     
     # Standardize casing to match uppercase merge rules in specification (Section 37)
     gdf_kec_std = standardize_kecamatan(gdf_kec)
@@ -81,7 +108,7 @@ def run_gis_analysis(df_rca, config):
     # Validate
     validate_gis(gdf_gis)
     
-    # Export merged geojson
+    # Export merged geojson (preserves real boundaries + new analytics)
     export_geojson(gdf_gis, geojson_output)
     
     # Export csv with centroid coordinates
@@ -93,6 +120,7 @@ def run_gis_analysis(df_rca, config):
     # Restore kecamatan names to title case for cleaner reading
     df_gis_csv["kecamatan"] = df_gis_csv["kecamatan"].str.title()
     df_gis_csv.to_csv(os.path.join(processed_dir, "heal_city_gis.csv"), index=False)
+
     
     # Load support files
     gdf_pkm = load_spatial_data(pkm_path) if os.path.exists(pkm_path) else None

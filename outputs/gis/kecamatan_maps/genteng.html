@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d8a9f5a380d28abce221ee3487ea05b7 {
+                #map_d71515483a59830cdc6cc4534310996e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
-                     🔴 Hospitals: 0<br>
+                     🏥 Puskesmas: 2<br>
+                     🔴 Hospitals: 2<br>
                      🛣️ Road network segments: 1
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_d8a9f5a380d28abce221ee3487ea05b7" ></div>
+            <div class="folium-map" id="map_d71515483a59830cdc6cc4534310996e" ></div>
         
 </body>
 <script>
     
     
-            var map_d8a9f5a380d28abce221ee3487ea05b7 = L.map(
-                "map_d8a9f5a380d28abce221ee3487ea05b7",
+            var map_d71515483a59830cdc6cc4534310996e = L.map(
+                "map_d71515483a59830cdc6cc4534310996e",
                 {
-                    center: [-7.266840002892593, 112.74246601609258],
+                    center: [-7.259215096378251, 112.74484044140951],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_d959f2305041951a141276ae5299f6f0 = L.tileLayer(
+            var tile_layer_68f9d11227686784b0869c377b1c4f2a = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_d959f2305041951a141276ae5299f6f0.addTo(map_d8a9f5a380d28abce221ee3487ea05b7);
+            tile_layer_68f9d11227686784b0869c377b1c4f2a.addTo(map_d71515483a59830cdc6cc4534310996e);
         
     
-        function geo_json_d0a7fbced4652d77d3ce07d7776d5db3_styler(feature) {
+        function geo_json_3a6cab48855b91072a079f2f57b2bc2d_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_d0a7fbced4652d77d3ce07d7776d5db3_onEachFeature(feature, layer) {
+        function geo_json_3a6cab48855b91072a079f2f57b2bc2d_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_d0a7fbced4652d77d3ce07d7776d5db3 = L.geoJson(null, {
-                onEachFeature: geo_json_d0a7fbced4652d77d3ce07d7776d5db3_onEachFeature,
+        var geo_json_3a6cab48855b91072a079f2f57b2bc2d = L.geoJson(null, {
+                onEachFeature: geo_json_3a6cab48855b91072a079f2f57b2bc2d_onEachFeature,
             
-                style: geo_json_d0a7fbced4652d77d3ce07d7776d5db3_styler,
+                style: geo_json_3a6cab48855b91072a079f2f57b2bc2d_styler,
             ...{
 }
         });
 
-        function geo_json_d0a7fbced4652d77d3ce07d7776d5db3_add (data) {
-            geo_json_d0a7fbced4652d77d3ce07d7776d5db3
+        function geo_json_3a6cab48855b91072a079f2f57b2bc2d_add (data) {
+            geo_json_3a6cab48855b91072a079f2f57b2bc2d
                 .addData(data);
         }
-            geo_json_d0a7fbced4652d77d3ce07d7776d5db3_add({"bbox": [112.7424056, -7.2668997, 112.7425285, -7.2667818], "features": [{"bbox": [112.7424056, -7.2668997, 112.7425285, -7.2667818], "geometry": {"coordinates": [[[112.7424056, -7.2668428], [112.7424267, -7.2668514], [112.7424196, -7.2668686], [112.7424961, -7.2668997], [112.7425285, -7.2668215], [112.7424308, -7.2667818], [112.7424056, -7.2668428]]], "type": "Polygon"}, "id": "6", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.7055417411935954, "disease_issue": "Penyakit pada sistem pernafasan (16565 cases)", "disease_need_score": 1.0, "explanation": "Kecamatan Genteng memiliki Healthcare Gap Score sebesar 59.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (1.00), 2. High Demand Score (0.71), 3. Workforce Shortage Gap (0.40). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 1.00. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.3389029487931825, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.85690447198707, "kecamatan": "GENTENG", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Tinggi", "priority_rank": 12, "root_cause_confidence": "HIGH", "root_cause_margin": 0.29445825880640464, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.39708644201051857, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_3a6cab48855b91072a079f2f57b2bc2d_add({"bbox": [112.7332, -7.2773, 112.7533, -7.2435], "features": [{"bbox": [112.7332, -7.2773, 112.7533, -7.2435], "geometry": {"coordinates": [[[[112.7498, -7.2678], [112.7439, -7.2743], [112.7423, -7.2733], [112.7413, -7.2773], [112.7378, -7.2765], [112.7384, -7.2739], [112.7406, -7.2732], [112.7383, -7.2709], [112.7389, -7.2686], [112.7414, -7.269], [112.7409, -7.2629], [112.7332, -7.2584], [112.7343, -7.2559], [112.7426, -7.256], [112.7381, -7.2555], [112.7373, -7.2521], [112.7422, -7.2477], [112.7468, -7.2483], [112.7473, -7.2435], [112.7517, -7.2446], [112.7533, -7.2477], [112.7531, -7.2514], [112.7497, -7.2514], [112.7505, -7.256], [112.7528, -7.2561], [112.7522, -7.2642], [112.751, -7.268], [112.7498, -7.2678]]]], "type": "MultiPolygon"}, "id": "6", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.7055417411935954, "disease_issue": "Penyakit pada sistem pernafasan (16565 cases)", "disease_need_score": 1.0, "explanation": "Kecamatan Genteng memiliki Healthcare Gap Score sebesar 59.9 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Disease Burden Need (1.00), 2. High Demand Score (0.71), 3. Workforce Shortage Gap (0.40). Indikator paling menonjol dalam model adalah High caseload of Penyakit pada sistem pernafasan, dengan sub-skor 1.00. Temuan ini menunjukkan adanya indikasi besarnya prevalensi kasus penyakit masyarakat (terutama ISPA) yang memerlukan intervensi preventif dan promotif.", "facility_gap": 0.3389029487931825, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 59.85690447198707, "kecamatan": "GENTENG", "primary_root_cause": "DISEASE_BURDEN", "priority_category": "Tinggi", "priority_rank": 12, "root_cause_confidence": "HIGH", "root_cause_margin": 0.29445825880640464, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "WORKFORCE_SHORTAGE", "workforce_gap": 0.39708644201051857, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_d0a7fbced4652d77d3ce07d7776d5db3.bindTooltip(
+    geo_json_3a6cab48855b91072a079f2f57b2bc2d.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,39 +213,200 @@
 });
                      
     
-            geo_json_d0a7fbced4652d77d3ce07d7776d5db3.addTo(map_d8a9f5a380d28abce221ee3487ea05b7);
+            geo_json_3a6cab48855b91072a079f2f57b2bc2d.addTo(map_d71515483a59830cdc6cc4534310996e);
         
     
-            var feature_group_23485a670e01ce56f7090af3ed40a045 = L.featureGroup(
+            var feature_group_0da93e49893297450570fe183f792189 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_f2f554645c63e786afa45bec7031a6f4 = L.polyline(
-                [[-7.26684075, 112.74246705], [-7.2669710181251475, 112.74295789186347]],
-                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_23485a670e01ce56f7090af3ed40a045);
+            var marker_57f5bd1f85f605653692e0bf62bddfc1 = L.marker(
+                [-7.258045, 112.746783],
+                {
+}
+            ).addTo(feature_group_0da93e49893297450570fe183f792189);
         
     
-        var popup_7d0bd0b5492c0557badfac75e05ba1f9 = L.popup({
+            var icon_8f7be7a343bc2e1f0f6d6b1375561157 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d8793f8d7021bc7e5dcedf3f74776c9 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_856c0066ff7db003ea45546aaf011345 = $(`<div id="html_856c0066ff7db003ea45546aaf011345" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Genteng-Gubeng</div>`)[0];
-                popup_7d0bd0b5492c0557badfac75e05ba1f9.setContent(html_856c0066ff7db003ea45546aaf011345);
+                var html_d3576606d4088d26f742eca690bdfb7d = $(`<div id="html_d3576606d4088d26f742eca690bdfb7d" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Ketabang<br><b>ID:</b> PKM020</div>`)[0];
+                popup_7d8793f8d7021bc7e5dcedf3f74776c9.setContent(html_d3576606d4088d26f742eca690bdfb7d);
             
         
 
-        poly_line_f2f554645c63e786afa45bec7031a6f4.bindPopup(popup_7d0bd0b5492c0557badfac75e05ba1f9)
+        marker_57f5bd1f85f605653692e0bf62bddfc1.bindPopup(popup_7d8793f8d7021bc7e5dcedf3f74776c9)
         ;
 
         
     
     
-            feature_group_23485a670e01ce56f7090af3ed40a045.addTo(map_d8a9f5a380d28abce221ee3487ea05b7);
+                marker_57f5bd1f85f605653692e0bf62bddfc1.setIcon(icon_8f7be7a343bc2e1f0f6d6b1375561157);
+            
+    
+            var marker_9210a79c5e71e34d0db9a6eb6ad438de = L.marker(
+                [-7.252205, 112.740907],
+                {
+}
+            ).addTo(feature_group_0da93e49893297450570fe183f792189);
+        
+    
+            var icon_4edb10a07f8fcc9fdfc52eb6b48e7522 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_53b8802e5543c5b274236a2ee4583a08 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3a341658487fee180b8af0dc0214e551 = $(`<div id="html_3a341658487fee180b8af0dc0214e551" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Peneleh<br><b>ID:</b> PKM034</div>`)[0];
+                popup_53b8802e5543c5b274236a2ee4583a08.setContent(html_3a341658487fee180b8af0dc0214e551);
+            
+        
+
+        marker_9210a79c5e71e34d0db9a6eb6ad438de.bindPopup(popup_53b8802e5543c5b274236a2ee4583a08)
+        ;
+
+        
+    
+    
+                marker_9210a79c5e71e34d0db9a6eb6ad438de.setIcon(icon_4edb10a07f8fcc9fdfc52eb6b48e7522);
+            
+    
+            feature_group_0da93e49893297450570fe183f792189.addTo(map_d71515483a59830cdc6cc4534310996e);
+        
+    
+            var marker_b23a3fecf7bd46486a5ba5197810965a = L.marker(
+                [-7.2516488, 112.7451431],
+                {
+}
+            ).addTo(map_d71515483a59830cdc6cc4534310996e);
+        
+    
+            var icon_7cc93177ee4a0f0bacbaef5c5800533a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36eedde1681942f4e71e43114da46e11 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2a8dbeb86bcf5f978efc9b874c1e73bf = $(`<div id="html_2a8dbeb86bcf5f978efc9b874c1e73bf" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Adi Husada Undaan<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_36eedde1681942f4e71e43114da46e11.setContent(html_2a8dbeb86bcf5f978efc9b874c1e73bf);
+            
+        
+
+        marker_b23a3fecf7bd46486a5ba5197810965a.bindPopup(popup_36eedde1681942f4e71e43114da46e11)
+        ;
+
+        
+    
+    
+                marker_b23a3fecf7bd46486a5ba5197810965a.setIcon(icon_7cc93177ee4a0f0bacbaef5c5800533a);
+            
+    
+            var marker_37404aa84d536e8033bed518ba5e177f = L.marker(
+                [-7.2539788, 112.7434607],
+                {
+}
+            ).addTo(map_d71515483a59830cdc6cc4534310996e);
+        
+    
+            var icon_e1664484a82f6eec6e36d166537e028a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_754b063c3ca34a9478444f87423f86da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_47663dfd626190689849de28edc5a986 = $(`<div id="html_47663dfd626190689849de28edc5a986" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Mata Undaan<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_754b063c3ca34a9478444f87423f86da.setContent(html_47663dfd626190689849de28edc5a986);
+            
+        
+
+        marker_37404aa84d536e8033bed518ba5e177f.bindPopup(popup_754b063c3ca34a9478444f87423f86da)
+        ;
+
+        
+    
+    
+                marker_37404aa84d536e8033bed518ba5e177f.setIcon(icon_e1664484a82f6eec6e36d166537e028a);
+            
+    
+            var feature_group_e14f86c2fde536e2a0c95e97b99dc4fa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_563cd0ce318ac54b49f64f6ad485a75e = L.polyline(
+                [[-7.26684075, 112.74246705], [-7.2669710181251475, 112.74295789186347]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_e14f86c2fde536e2a0c95e97b99dc4fa);
+        
+    
+        var popup_e0320f058ee7b0d623406825f554bfdb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0e747f99d85086a0ecc2814b14a7402b = $(`<div id="html_0e747f99d85086a0ecc2814b14a7402b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Genteng-Gubeng</div>`)[0];
+                popup_e0320f058ee7b0d623406825f554bfdb.setContent(html_0e747f99d85086a0ecc2814b14a7402b);
+            
+        
+
+        poly_line_563cd0ce318ac54b49f64f6ad485a75e.bindPopup(popup_e0320f058ee7b0d623406825f554bfdb)
+        ;
+
+        
+    
+    
+            feature_group_e14f86c2fde536e2a0c95e97b99dc4fa.addTo(map_d71515483a59830cdc6cc4534310996e);
         
 </script>
 </html>

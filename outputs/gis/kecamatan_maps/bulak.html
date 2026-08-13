@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_3108d1dec4898250fa34fb4509bbb3c1 {
+                #map_3bbf2cb0444b43290d2b01a7d14a8b1e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
+                     🏥 Puskesmas: 1<br>
                      🔴 Hospitals: 0<br>
-                     🛣️ Road network segments: 1
+                     🛣️ Road network segments: 2
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_3108d1dec4898250fa34fb4509bbb3c1" ></div>
+            <div class="folium-map" id="map_3bbf2cb0444b43290d2b01a7d14a8b1e" ></div>
         
 </body>
 <script>
     
     
-            var map_3108d1dec4898250fa34fb4509bbb3c1 = L.map(
-                "map_3108d1dec4898250fa34fb4509bbb3c1",
+            var map_3bbf2cb0444b43290d2b01a7d14a8b1e = L.map(
+                "map_3bbf2cb0444b43290d2b01a7d14a8b1e",
                 {
-                    center: [-7.231637954813782, 112.78549351436219],
+                    center: [-7.238764361856334, 112.79010166328433],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_8b2e5887c00186c0a2e2ba23258fb331 = L.tileLayer(
+            var tile_layer_c20360cf8c233d7fe3d6ba60c6016013 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_8b2e5887c00186c0a2e2ba23258fb331.addTo(map_3108d1dec4898250fa34fb4509bbb3c1);
+            tile_layer_c20360cf8c233d7fe3d6ba60c6016013.addTo(map_3bbf2cb0444b43290d2b01a7d14a8b1e);
         
     
-        function geo_json_a880ca94a5e06bb14ec7161dfa64527c_styler(feature) {
+        function geo_json_711b99974fc61b53027033ea235f4aca_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_a880ca94a5e06bb14ec7161dfa64527c_onEachFeature(feature, layer) {
+        function geo_json_711b99974fc61b53027033ea235f4aca_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_a880ca94a5e06bb14ec7161dfa64527c = L.geoJson(null, {
-                onEachFeature: geo_json_a880ca94a5e06bb14ec7161dfa64527c_onEachFeature,
+        var geo_json_711b99974fc61b53027033ea235f4aca = L.geoJson(null, {
+                onEachFeature: geo_json_711b99974fc61b53027033ea235f4aca_onEachFeature,
             
-                style: geo_json_a880ca94a5e06bb14ec7161dfa64527c_styler,
+                style: geo_json_711b99974fc61b53027033ea235f4aca_styler,
             ...{
 }
         });
 
-        function geo_json_a880ca94a5e06bb14ec7161dfa64527c_add (data) {
-            geo_json_a880ca94a5e06bb14ec7161dfa64527c
+        function geo_json_711b99974fc61b53027033ea235f4aca_add (data) {
+            geo_json_711b99974fc61b53027033ea235f4aca
                 .addData(data);
         }
-            geo_json_a880ca94a5e06bb14ec7161dfa64527c_add({"bbox": [112.7851963, -7.2319714, 112.7857919, -7.2312997], "features": [{"bbox": [112.7851963, -7.2319714, 112.7857919, -7.2312997], "geometry": {"coordinates": [[[112.7851963, -7.2318474], [112.7856174, -7.2319714], [112.7857919, -7.2314357], [112.7853708, -7.2312997], [112.7851963, -7.2318474]]], "type": "Polygon"}, "id": "3", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.13024992102563587, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (5902 cases)", "disease_need_score": 0.26975677606494536, "explanation": "Kecamatan Bulak memiliki Healthcare Gap Score sebesar 51.7 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.93), 2. Facility Capacity Gap (0.73), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.93. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7304348140652591, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 51.68150591971501, "kecamatan": "BULAK", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 18, "root_cause_confidence": "HIGH", "root_cause_margin": 0.195237735479469, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9256725495447281, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_711b99974fc61b53027033ea235f4aca_add({"bbox": [112.7706, -7.2557, 112.807, -7.2134], "features": [{"bbox": [112.7706, -7.2557, 112.807, -7.2134], "geometry": {"coordinates": [[[[112.7914, -7.2512], [112.7926, -7.2512], [112.7928, -7.2483], [112.7828, -7.2473], [112.784, -7.2351], [112.7804, -7.2357], [112.7795, -7.233], [112.7779, -7.233], [112.7752, -7.2368], [112.7706, -7.2357], [112.7713, -7.233], [112.7749, -7.2322], [112.7775, -7.2288], [112.781, -7.2288], [112.7812, -7.2306], [112.7837, -7.2315], [112.7842, -7.228], [112.7827, -7.227], [112.7839, -7.2253], [112.7862, -7.2261], [112.7869, -7.2234], [112.7841, -7.2229], [112.7841, -7.2216], [112.787, -7.2212], [112.784, -7.216], [112.7874, -7.2193], [112.7887, -7.2258], [112.7914, -7.227], [112.7972, -7.236], [112.7976, -7.2404], [112.7999, -7.2427], [112.8014, -7.2423], [112.8041, -7.2519], [112.807, -7.2522], [112.8065, -7.2557], [112.7914, -7.2512]]], [[[112.7787, -7.2194], [112.7771, -7.2189], [112.7787, -7.2134], [112.7801, -7.2136], [112.7787, -7.2194]]]], "type": "MultiPolygon"}, "id": "3", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Disease Burden", "demand_score": 0.13024992102563587, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (5902 cases)", "disease_need_score": 0.26975677606494536, "explanation": "Kecamatan Bulak memiliki Healthcare Gap Score sebesar 51.7 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.93), 2. Facility Capacity Gap (0.73), 3. Disease Burden Need (0.27). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.93. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.7304348140652591, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 51.68150591971501, "kecamatan": "BULAK", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 18, "root_cause_confidence": "HIGH", "root_cause_margin": 0.195237735479469, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9256725495447281, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_a880ca94a5e06bb14ec7161dfa64527c.bindTooltip(
+    geo_json_711b99974fc61b53027033ea235f4aca.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,39 +213,109 @@
 });
                      
     
-            geo_json_a880ca94a5e06bb14ec7161dfa64527c.addTo(map_3108d1dec4898250fa34fb4509bbb3c1);
+            geo_json_711b99974fc61b53027033ea235f4aca.addTo(map_3bbf2cb0444b43290d2b01a7d14a8b1e);
         
     
-            var feature_group_9b1c9dca03f845aa20b908219895d9e6 = L.featureGroup(
+            var feature_group_81d7f49e720911d8708ac66a994038e7 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_f92de6b371a6f88e328df42f2d44b662 = L.polyline(
-                [[-7.23163555, 112.7854941], [-7.2318669160348295, 112.7854022637797]],
-                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_9b1c9dca03f845aa20b908219895d9e6);
+            var marker_40a19751e3291a3e1e65a28d4f88cfb6 = L.marker(
+                [-7.241062, 112.795153],
+                {
+}
+            ).addTo(feature_group_81d7f49e720911d8708ac66a994038e7);
         
     
-        var popup_b31d2184e7c3dbb78f928b228fbf33d2 = L.popup({
+            var icon_115da6db61dfe9c987d8b50e58837523 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e59eff863189ef61d75519521517df0 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_0183bb2fe186bdc98d6484e3ed9b760e = $(`<div id="html_0183bb2fe186bdc98d6484e3ed9b760e" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Bulak-Dukuh Pakis</div>`)[0];
-                popup_b31d2184e7c3dbb78f928b228fbf33d2.setContent(html_0183bb2fe186bdc98d6484e3ed9b760e);
+                var html_1436422376baaf6ea883805a0228b166 = $(`<div id="html_1436422376baaf6ea883805a0228b166" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Kenjeran<br><b>ID:</b> PKM019</div>`)[0];
+                popup_8e59eff863189ef61d75519521517df0.setContent(html_1436422376baaf6ea883805a0228b166);
             
         
 
-        poly_line_f92de6b371a6f88e328df42f2d44b662.bindPopup(popup_b31d2184e7c3dbb78f928b228fbf33d2)
+        marker_40a19751e3291a3e1e65a28d4f88cfb6.bindPopup(popup_8e59eff863189ef61d75519521517df0)
         ;
 
         
     
     
-            feature_group_9b1c9dca03f845aa20b908219895d9e6.addTo(map_3108d1dec4898250fa34fb4509bbb3c1);
+                marker_40a19751e3291a3e1e65a28d4f88cfb6.setIcon(icon_115da6db61dfe9c987d8b50e58837523);
+            
+    
+            feature_group_81d7f49e720911d8708ac66a994038e7.addTo(map_3bbf2cb0444b43290d2b01a7d14a8b1e);
+        
+    
+            var feature_group_18a3a293d5faa3240547e76d7cb2c4f9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_3a1e98d42c96dabd8784aedbab5ef08a = L.polyline(
+                [[-7.23163555, 112.7854941], [-7.2318669160348295, 112.7854022637797]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_18a3a293d5faa3240547e76d7cb2c4f9);
+        
+    
+        var popup_bcd1ce05efabfbbd6b0cf1bfd10d00f6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_13b3754df96bb6c45094dc15bde4e923 = $(`<div id="html_13b3754df96bb6c45094dc15bde4e923" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Bulak-Dukuh Pakis</div>`)[0];
+                popup_bcd1ce05efabfbbd6b0cf1bfd10d00f6.setContent(html_13b3754df96bb6c45094dc15bde4e923);
+            
+        
+
+        poly_line_3a1e98d42c96dabd8784aedbab5ef08a.bindPopup(popup_bcd1ce05efabfbbd6b0cf1bfd10d00f6)
+        ;
+
+        
+    
+    
+            var poly_line_985dda7915100eba6fd5a70ca9a57ee3 = L.polyline(
+                [[-7.23185048388541, 112.78618565222655], [-7.232486241964489, 112.78574492964965]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_18a3a293d5faa3240547e76d7cb2c4f9);
+        
+    
+        var popup_7830e44eb311b44439f4be86b760c804 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_20fd1edcabdb57ee8eebadee80a6af2c = $(`<div id="html_20fd1edcabdb57ee8eebadee80a6af2c" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Gayungan-Genteng</div>`)[0];
+                popup_7830e44eb311b44439f4be86b760c804.setContent(html_20fd1edcabdb57ee8eebadee80a6af2c);
+            
+        
+
+        poly_line_985dda7915100eba6fd5a70ca9a57ee3.bindPopup(popup_7830e44eb311b44439f4be86b760c804)
+        ;
+
+        
+    
+    
+            feature_group_18a3a293d5faa3240547e76d7cb2c4f9.addTo(map_3bbf2cb0444b43290d2b01a7d14a8b1e);
         
 </script>
 </html>

@@ -1,5 +1,6 @@
 import os
 import datetime
+import json
 import numpy as np
 import pandas as pd
 
@@ -411,3 +412,70 @@ def run_preprocessing(config):
     # Save master
     df_master.to_csv(os.path.join(processed_dir, "master_heal_city.csv"), index=False)
     print("Master compilation complete.")
+    
+    # -------------------------------------------------------------------------
+    # DYNAMIC SPATIAL COORDINATES UPDATE FROM EXCEL
+    # -------------------------------------------------------------------------
+    try:
+        faskes_path = os.path.join(config["data"]["spatial_dir"], "fasilitas_kesehatan.geojson")
+        pkm_path = os.path.join(config["data"]["spatial_dir"], "puskesmas.geojson")
+        
+        if os.path.exists(faskes_path) and os.path.exists(pkm_path):
+            print("Applying coordinates from Excel puskemas sheet to GeoJSON files...")
+            pkm_coords = {}
+            for idx, row in df_raw_pkm.iterrows():
+                name = str(row.get("Puskesmas", "")).strip()
+                coord_str = str(row.get("Koordinat", "")).strip()
+                if "," in coord_str:
+                    try:
+                        parts = coord_str.split(",")
+                        lat = float(parts[0].strip())
+                        lon = float(parts[1].strip())
+                        pkm_coords[name.lower()] = [lon, lat]
+                    except ValueError:
+                        pass
+            
+            if pkm_coords:
+                import re
+                def clean_name(n):
+                    n = n.lower().replace("puskesmas", "").replace("pustu", "").strip()
+                    return re.sub(r'[^a-z0-9]', '', n)
+                
+                clean_pkm_coords = {clean_name(k): v for k, v in pkm_coords.items()}
+                
+                # Update files
+                with open(faskes_path, "r", encoding="utf-8") as f:
+                    gj_faskes = json.load(f)
+                with open(pkm_path, "r", encoding="utf-8") as f:
+                    gj_pkm = json.load(f)
+                
+                # Update faskes
+                for feat in gj_faskes["features"]:
+                    p = feat["properties"]
+                    if p.get("jenis_faskes") == "Puskesmas Induk":
+                        name = p.get("nama_puskesmas", p.get("nama_faskes", ""))
+                        c_name = clean_name(name)
+                        for k, v in clean_pkm_coords.items():
+                            if c_name in k or k in c_name:
+                                feat["geometry"]["coordinates"] = v
+                                break
+                                
+                # Update puskesmas
+                for feat in gj_pkm["features"]:
+                    p = feat["properties"]
+                    name = p.get("nama_puskesmas", p.get("nama_faskes", ""))
+                    c_name = clean_name(name)
+                    for k, v in clean_pkm_coords.items():
+                        if c_name in k or k in c_name:
+                            feat["geometry"]["coordinates"] = v
+                            break
+                            
+                # Save
+                with open(faskes_path, "w", encoding="utf-8") as f:
+                    json.dump(gj_faskes, f, indent=2)
+                with open(pkm_path, "w", encoding="utf-8") as f:
+                    json.dump(gj_pkm, f, indent=2)
+                print("Successfully updated GeoJSON coordinates from Excel sheet 'puskemas'.")
+    except Exception as e:
+        print(f"Warning: Failed to apply Excel coordinates to GeoJSON files: {e}")
+

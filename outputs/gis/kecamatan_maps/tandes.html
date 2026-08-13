@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_3c1a95d4821af46c65016bbe072a7a4f {
+                #map_c56ae666db1febbc67ed4edb10743e9e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
-                     🔴 Hospitals: 0<br>
+                     🏥 Puskesmas: 2<br>
+                     🔴 Hospitals: 1<br>
                      🛣️ Road network segments: 1
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_3c1a95d4821af46c65016bbe072a7a4f" ></div>
+            <div class="folium-map" id="map_c56ae666db1febbc67ed4edb10743e9e" ></div>
         
 </body>
 <script>
     
     
-            var map_3c1a95d4821af46c65016bbe072a7a4f = L.map(
-                "map_3c1a95d4821af46c65016bbe072a7a4f",
+            var map_c56ae666db1febbc67ed4edb10743e9e = L.map(
+                "map_c56ae666db1febbc67ed4edb10743e9e",
                 {
-                    center: [-7.2590454499999995, 112.67804355000001],
+                    center: [-7.255581001594608, 112.67125895043823],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_c20c8f9dc6deea99968f8ea9aa8ac2c3 = L.tileLayer(
+            var tile_layer_9e2c37c79feb7a30e6b2e9eed678524b = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_c20c8f9dc6deea99968f8ea9aa8ac2c3.addTo(map_3c1a95d4821af46c65016bbe072a7a4f);
+            tile_layer_9e2c37c79feb7a30e6b2e9eed678524b.addTo(map_c56ae666db1febbc67ed4edb10743e9e);
         
     
-        function geo_json_8af3d036dc836eaa623bbd8e24d65e99_styler(feature) {
+        function geo_json_3769775932d95b11bc556e4085f5cc01_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#ef4444", "fillColor": "#ef4444", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_8af3d036dc836eaa623bbd8e24d65e99_onEachFeature(feature, layer) {
+        function geo_json_3769775932d95b11bc556e4085f5cc01_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_8af3d036dc836eaa623bbd8e24d65e99 = L.geoJson(null, {
-                onEachFeature: geo_json_8af3d036dc836eaa623bbd8e24d65e99_onEachFeature,
+        var geo_json_3769775932d95b11bc556e4085f5cc01 = L.geoJson(null, {
+                onEachFeature: geo_json_3769775932d95b11bc556e4085f5cc01_onEachFeature,
             
-                style: geo_json_8af3d036dc836eaa623bbd8e24d65e99_styler,
+                style: geo_json_3769775932d95b11bc556e4085f5cc01_styler,
             ...{
 }
         });
 
-        function geo_json_8af3d036dc836eaa623bbd8e24d65e99_add (data) {
-            geo_json_8af3d036dc836eaa623bbd8e24d65e99
+        function geo_json_3769775932d95b11bc556e4085f5cc01_add (data) {
+            geo_json_3769775932d95b11bc556e4085f5cc01
                 .addData(data);
         }
-            geo_json_8af3d036dc836eaa623bbd8e24d65e99_add({"bbox": [112.6779582, -7.2591267, 112.6781289, -7.2589642], "features": [{"bbox": [112.6779582, -7.2591267, 112.6781289, -7.2589642], "geometry": {"coordinates": [[[112.6779582, -7.2591092], [112.6781121, -7.2591267], [112.6781289, -7.2589817], [112.677975, -7.2589642], [112.6779582, -7.2591092]]], "type": "Polygon"}, "id": "24", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5672533560599609, "disease_issue": "Penyakit pada sistem pernafasan (14979 cases)", "disease_need_score": 0.6152163725782765, "explanation": "Kecamatan Tandes memiliki Healthcare Gap Score sebesar 70.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.92), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.62). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.92. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6762347561967095, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 70.56631087915024, "kecamatan": "TANDES", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 3, "root_cause_confidence": "HIGH", "root_cause_margin": 0.24775483119834685, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9239895873950563, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_3769775932d95b11bc556e4085f5cc01_add({"bbox": [112.6544, -7.2769, 112.6921, -7.2371], "features": [{"bbox": [112.6544, -7.2769, 112.6921, -7.2371], "geometry": {"coordinates": [[[[112.6843, -7.2764], [112.683, -7.2755], [112.6812, -7.2769], [112.678, -7.2719], [112.6728, -7.2711], [112.6733, -7.2673], [112.6768, -7.267], [112.6757, -7.262], [112.6715, -7.2624], [112.6713, -7.2636], [112.6672, -7.2632], [112.6661, -7.2682], [112.6698, -7.2691], [112.6681, -7.2717], [112.6661, -7.2722], [112.6622, -7.2695], [112.6631, -7.265], [112.6588, -7.2611], [112.66, -7.2562], [112.6544, -7.2547], [112.6545, -7.2417], [112.66, -7.2371], [112.6652, -7.2396], [112.6666, -7.2424], [112.6697, -7.2419], [112.6716, -7.2373], [112.6755, -7.2378], [112.6739, -7.245], [112.6778, -7.2462], [112.6769, -7.249], [112.6822, -7.2499], [112.6813, -7.2556], [112.6861, -7.2572], [112.6863, -7.2531], [112.6921, -7.2528], [112.6879, -7.2622], [112.6875, -7.2664], [112.686, -7.2667], [112.6843, -7.2764]]]], "type": "MultiPolygon"}, "id": "25", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5672533560599609, "disease_issue": "Penyakit pada sistem pernafasan (14979 cases)", "disease_need_score": 0.6152163725782765, "explanation": "Kecamatan Tandes memiliki Healthcare Gap Score sebesar 70.6 dan termasuk kategori Sangat Tinggi. Faktor kontributor utama adalah: 1. Workforce Shortage Gap (0.92), 2. Facility Capacity Gap (0.68), 3. Disease Burden Need (0.62). Indikator paling menonjol dalam model adalah Low Nurse Ratio, dengan sub-skor 0.92. Temuan ini menunjukkan adanya indikasi keterbatasan jumlah tenaga kesehatan medis, terutama perawat, dibandingkan dengan kepadatan penduduk setempat.", "facility_gap": 0.6762347561967095, "facility_issue": "Low Bed Capacity", "healthcare_gap_score": 70.56631087915024, "kecamatan": "TANDES", "primary_root_cause": "WORKFORCE_SHORTAGE", "priority_category": "Sangat Tinggi", "priority_rank": 3, "root_cause_confidence": "HIGH", "root_cause_margin": 0.24775483119834685, "root_cause_type": "SINGLE_FACTOR", "secondary_root_cause": "FACILITY_SHORTAGE", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.9239895873950563, "workforce_issue": "Low Nurse Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_8af3d036dc836eaa623bbd8e24d65e99.bindTooltip(
+    geo_json_3769775932d95b11bc556e4085f5cc01.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,39 +213,162 @@
 });
                      
     
-            geo_json_8af3d036dc836eaa623bbd8e24d65e99.addTo(map_3c1a95d4821af46c65016bbe072a7a4f);
+            geo_json_3769775932d95b11bc556e4085f5cc01.addTo(map_c56ae666db1febbc67ed4edb10743e9e);
         
     
-            var feature_group_6bc6bc840a2507382461897712ebf5aa = L.featureGroup(
+            var feature_group_9df16fd447f4cff2a3ffe8d5d2ec6759 = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_31ccd020864bbb1c0139db5b6de97f2c = L.polyline(
-                [[-7.25904545, 112.67804355000001], [-7.258759687837091, 112.67799538683279]],
-                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_6bc6bc840a2507382461897712ebf5aa);
+            var marker_8b375c946e056c49781501f1e99085cb = L.marker(
+                [-7.259292, 112.678373],
+                {
+}
+            ).addTo(feature_group_9df16fd447f4cff2a3ffe8d5d2ec6759);
         
     
-        var popup_bb2907577fd115cc0c3389196f20a884 = L.popup({
+            var icon_d823f842b0d58dc273e36d284e853075 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2311b25b72542f3ec7572b0bf0a6ef40 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_ff0e12bab239957fa8559f274967d54b = $(`<div id="html_ff0e12bab239957fa8559f274967d54b" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Tandes-Tegalsari</div>`)[0];
-                popup_bb2907577fd115cc0c3389196f20a884.setContent(html_ff0e12bab239957fa8559f274967d54b);
+                var html_9aed0d7c24be212b9eba0f7d25e232bd = $(`<div id="html_9aed0d7c24be212b9eba0f7d25e232bd" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Balongsari<br><b>ID:</b> PKM002</div>`)[0];
+                popup_2311b25b72542f3ec7572b0bf0a6ef40.setContent(html_9aed0d7c24be212b9eba0f7d25e232bd);
             
         
 
-        poly_line_31ccd020864bbb1c0139db5b6de97f2c.bindPopup(popup_bb2907577fd115cc0c3389196f20a884)
+        marker_8b375c946e056c49781501f1e99085cb.bindPopup(popup_2311b25b72542f3ec7572b0bf0a6ef40)
         ;
 
         
     
     
-            feature_group_6bc6bc840a2507382461897712ebf5aa.addTo(map_3c1a95d4821af46c65016bbe072a7a4f);
+                marker_8b375c946e056c49781501f1e99085cb.setIcon(icon_d823f842b0d58dc273e36d284e853075);
+            
+    
+            var marker_3d3baf1fbd793a094fe2ea8f3432e234 = L.marker(
+                [-7.262909, 112.668889],
+                {
+}
+            ).addTo(feature_group_9df16fd447f4cff2a3ffe8d5d2ec6759);
+        
+    
+            var icon_23328e3d5179a081c2b4550e95ff6c00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfa6d0ab6ab20dbcc8dbc88482e1a648 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_12c84b70c19ca4ec53f0bcd699d75d84 = $(`<div id="html_12c84b70c19ca4ec53f0bcd699d75d84" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Manukan Kulon<br><b>ID:</b> PKM025</div>`)[0];
+                popup_cfa6d0ab6ab20dbcc8dbc88482e1a648.setContent(html_12c84b70c19ca4ec53f0bcd699d75d84);
+            
+        
+
+        marker_3d3baf1fbd793a094fe2ea8f3432e234.bindPopup(popup_cfa6d0ab6ab20dbcc8dbc88482e1a648)
+        ;
+
+        
+    
+    
+                marker_3d3baf1fbd793a094fe2ea8f3432e234.setIcon(icon_23328e3d5179a081c2b4550e95ff6c00);
+            
+    
+            feature_group_9df16fd447f4cff2a3ffe8d5d2ec6759.addTo(map_c56ae666db1febbc67ed4edb10743e9e);
+        
+    
+            var marker_f4083aa35de2758fb0cab67aa5077d15 = L.marker(
+                [-7.2569951, 112.6708708],
+                {
+}
+            ).addTo(map_c56ae666db1febbc67ed4edb10743e9e);
+        
+    
+            var icon_56d1cda95d9b97e63c174e548de36203 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2f5ebd61cc568a2389d9e64a06ce3f7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fa07048827fd533754c88a10ee7d3fc2 = $(`<div id="html_fa07048827fd533754c88a10ee7d3fc2" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Muji Rahayu<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_d2f5ebd61cc568a2389d9e64a06ce3f7.setContent(html_fa07048827fd533754c88a10ee7d3fc2);
+            
+        
+
+        marker_f4083aa35de2758fb0cab67aa5077d15.bindPopup(popup_d2f5ebd61cc568a2389d9e64a06ce3f7)
+        ;
+
+        
+    
+    
+                marker_f4083aa35de2758fb0cab67aa5077d15.setIcon(icon_56d1cda95d9b97e63c174e548de36203);
+            
+    
+            var feature_group_7fa0e8da959a908b1d61065e608714b9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_95114b79dd24430c14230c5880e38cab = L.polyline(
+                [[-7.25904545, 112.67804355000001], [-7.258759687837091, 112.67799538683279]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_7fa0e8da959a908b1d61065e608714b9);
+        
+    
+        var popup_4e4ac42e56524e948dd22caf105364f6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9cb9650b8dddf1d1c9e84003680a04af = $(`<div id="html_9cb9650b8dddf1d1c9e84003680a04af" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Tandes-Tegalsari</div>`)[0];
+                popup_4e4ac42e56524e948dd22caf105364f6.setContent(html_9cb9650b8dddf1d1c9e84003680a04af);
+            
+        
+
+        poly_line_95114b79dd24430c14230c5880e38cab.bindPopup(popup_4e4ac42e56524e948dd22caf105364f6)
+        ;
+
+        
+    
+    
+            feature_group_7fa0e8da959a908b1d61065e608714b9.addTo(map_c56ae666db1febbc67ed4edb10743e9e);
         
 </script>
 </html>

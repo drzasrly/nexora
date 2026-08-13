@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4a00edd514393473c00a5ed5e44e868c {
+                #map_7bd7c370fe73b845ee961cb73ca8c20b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
-                     🔴 Hospitals: 5<br>
+                     🏥 Puskesmas: 3<br>
+                     🔴 Hospitals: 8<br>
                      🛣️ Road network segments: 0
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_4a00edd514393473c00a5ed5e44e868c" ></div>
+            <div class="folium-map" id="map_7bd7c370fe73b845ee961cb73ca8c20b" ></div>
         
 </body>
 <script>
     
     
-            var map_4a00edd514393473c00a5ed5e44e868c = L.map(
-                "map_4a00edd514393473c00a5ed5e44e868c",
+            var map_7bd7c370fe73b845ee961cb73ca8c20b = L.map(
+                "map_7bd7c370fe73b845ee961cb73ca8c20b",
                 {
-                    center: [-7.291577170235624, 112.7320364222299],
+                    center: [-7.297730577019125, 112.73793587395087],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_62f1c7334c269b07a0cd6025557901de = L.tileLayer(
+            var tile_layer_0bb3f70ee3c20f7c3312feab8e6a06fd = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_62f1c7334c269b07a0cd6025557901de.addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            tile_layer_0bb3f70ee3c20f7c3312feab8e6a06fd.addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_styler(feature) {
+        function geo_json_573f734a456b3d94200ff693245ed897_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#f97316", "fillColor": "#f97316", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_onEachFeature(feature, layer) {
+        function geo_json_573f734a456b3d94200ff693245ed897_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_c0ade0ae8d4759df91d35d50ea7364b2 = L.geoJson(null, {
-                onEachFeature: geo_json_c0ade0ae8d4759df91d35d50ea7364b2_onEachFeature,
+        var geo_json_573f734a456b3d94200ff693245ed897 = L.geoJson(null, {
+                onEachFeature: geo_json_573f734a456b3d94200ff693245ed897_onEachFeature,
             
-                style: geo_json_c0ade0ae8d4759df91d35d50ea7364b2_styler,
+                style: geo_json_573f734a456b3d94200ff693245ed897_styler,
             ...{
 }
         });
 
-        function geo_json_c0ade0ae8d4759df91d35d50ea7364b2_add (data) {
-            geo_json_c0ade0ae8d4759df91d35d50ea7364b2
+        function geo_json_573f734a456b3d94200ff693245ed897_add (data) {
+            geo_json_573f734a456b3d94200ff693245ed897
                 .addData(data);
         }
-            geo_json_c0ade0ae8d4759df91d35d50ea7364b2_add({"bbox": [112.7318964, -7.2917117, 112.7321764, -7.2914426], "features": [{"bbox": [112.7318964, -7.2917117, 112.7321764, -7.2914426], "geometry": {"coordinates": [[[112.7318964, -7.2916222], [112.7319793, -7.2917117], [112.7321764, -7.2915322], [112.7320936, -7.2914426], [112.7318964, -7.2916222]]], "type": "Polygon"}, "id": "29", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5599074669253064, "disease_issue": "Penyakit pada sistem pencernaan (19746 cases)", "disease_need_score": 0.3915121082304355, "explanation": "Kecamatan Wonokromo memiliki Healthcare Gap Score sebesar 41.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.66), 2. High Demand Score (0.56), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.66. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6573234185733988, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 41.79133082319709, "kecamatan": "WONOKROMO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.09741595164809247, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.13391320931204065, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_573f734a456b3d94200ff693245ed897_add({"bbox": [112.7195, -7.312, 112.7571, -7.2765], "features": [{"bbox": [112.7195, -7.312, 112.7571, -7.2765], "geometry": {"coordinates": [[[[112.7353, -7.3106], [112.7195, -7.3071], [112.7211, -7.2958], [112.7246, -7.2939], [112.725, -7.2922], [112.7287, -7.2925], [112.7304, -7.289], [112.7275, -7.2765], [112.7316, -7.281], [112.7359, -7.2897], [112.7428, -7.2903], [112.7472, -7.2847], [112.7441, -7.2772], [112.7503, -7.2773], [112.7472, -7.2911], [112.7571, -7.2936], [112.7544, -7.304], [112.7568, -7.3047], [112.7566, -7.306], [112.7417, -7.3059], [112.7406, -7.311], [112.739, -7.312], [112.7353, -7.3106]]]], "type": "MultiPolygon"}, "id": "30", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.5599074669253064, "disease_issue": "Penyakit pada sistem pencernaan (19746 cases)", "disease_need_score": 0.3915121082304355, "explanation": "Kecamatan Wonokromo memiliki Healthcare Gap Score sebesar 41.8 dan termasuk kategori Tinggi. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.66), 2. High Demand Score (0.56), 3. Disease Burden Need (0.39). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.66. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.6573234185733988, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 41.79133082319709, "kecamatan": "WONOKROMO", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Tinggi", "priority_rank": 27, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.09741595164809247, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "HIGH_DEMAND", "tertiary_root_cause": "DISEASE_BURDEN", "workforce_gap": 0.13391320931204065, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_c0ade0ae8d4759df91d35d50ea7364b2.bindTooltip(
+    geo_json_573f734a456b3d94200ff693245ed897.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,17 +213,140 @@
 });
                      
     
-            geo_json_c0ade0ae8d4759df91d35d50ea7364b2.addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            geo_json_573f734a456b3d94200ff693245ed897.addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-            var marker_3eb19819da36c750a73afff63de72cdc = L.marker(
-                [-7.291517504904925, 112.7320180023667],
+            var feature_group_664256653b496564b76449d3a7e90b6c = L.featureGroup(
                 {
 }
-            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            );
         
     
-            var icon_f2395229ddc57256cb23e14eaf5e9a04 = L.AwesomeMarkers.icon(
+            var marker_0c4951b35222b233ab5c0232149bdd7e = L.marker(
+                [-7.305668, 112.73771],
+                {
+}
+            ).addTo(feature_group_664256653b496564b76449d3a7e90b6c);
+        
+    
+            var icon_233b40759f171ce54513215c07bca0b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_220d42b8d42470d916e54b36987f02b9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_246f81a7ea7ea6a344e7fd3a52f9c5a0 = $(`<div id="html_246f81a7ea7ea6a344e7fd3a52f9c5a0" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Jagir<br><b>ID:</b> PKM012</div>`)[0];
+                popup_220d42b8d42470d916e54b36987f02b9.setContent(html_246f81a7ea7ea6a344e7fd3a52f9c5a0);
+            
+        
+
+        marker_0c4951b35222b233ab5c0232149bdd7e.bindPopup(popup_220d42b8d42470d916e54b36987f02b9)
+        ;
+
+        
+    
+    
+                marker_0c4951b35222b233ab5c0232149bdd7e.setIcon(icon_233b40759f171ce54513215c07bca0b0);
+            
+    
+            var marker_4831dd3f0a0adc9b9a0bc114689504b4 = L.marker(
+                [-7.292991, 112.748771],
+                {
+}
+            ).addTo(feature_group_664256653b496564b76449d3a7e90b6c);
+        
+    
+            var icon_85abfee4a7fd3e0c2866c497c7e4a6ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a55cb5804af5757d3e9f34d6299c8bb5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_86908e886ba6a8ed88665be900b147bd = $(`<div id="html_86908e886ba6a8ed88665be900b147bd" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Ngagel Rejo<br><b>ID:</b> PKM030</div>`)[0];
+                popup_a55cb5804af5757d3e9f34d6299c8bb5.setContent(html_86908e886ba6a8ed88665be900b147bd);
+            
+        
+
+        marker_4831dd3f0a0adc9b9a0bc114689504b4.bindPopup(popup_a55cb5804af5757d3e9f34d6299c8bb5)
+        ;
+
+        
+    
+    
+                marker_4831dd3f0a0adc9b9a0bc114689504b4.setIcon(icon_85abfee4a7fd3e0c2866c497c7e4a6ee);
+            
+    
+            var marker_5520229fcd9354f4d00a0c5a7b746a5a = L.marker(
+                [-7.303206, 112.730409],
+                {
+}
+            ).addTo(feature_group_664256653b496564b76449d3a7e90b6c);
+        
+    
+            var icon_1a09c6af83c3042c26d3a783cd8f0978 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2a43c0a4e21b79f6b8b088928ade0fa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d157fcb074709c40ca7fd58aaded718c = $(`<div id="html_d157fcb074709c40ca7fd58aaded718c" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Wonokromo<br><b>ID:</b> PKM052</div>`)[0];
+                popup_a2a43c0a4e21b79f6b8b088928ade0fa.setContent(html_d157fcb074709c40ca7fd58aaded718c);
+            
+        
+
+        marker_5520229fcd9354f4d00a0c5a7b746a5a.bindPopup(popup_a2a43c0a4e21b79f6b8b088928ade0fa)
+        ;
+
+        
+    
+    
+                marker_5520229fcd9354f4d00a0c5a7b746a5a.setIcon(icon_1a09c6af83c3042c26d3a783cd8f0978);
+            
+    
+            feature_group_664256653b496564b76449d3a7e90b6c.addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
+        
+    
+            var marker_5de3d8c73b7a3a9a11d5318661be841b = L.marker(
+                [-7.29152, 112.73282],
+                {
+}
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
+        
+    
+            var icon_05be50916ba225054c73ac5b20f47ede = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -234,34 +357,110 @@
             );
         
     
-        var popup_33e92c673d7adc0da10a6e1fb31e475d = L.popup({
+        var popup_773d124517f51bf459c9722083f15f5e = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_009186e13f9be03cb9d7603d3d4bf68c = $(`<div id="html_009186e13f9be03cb9d7603d3d4bf68c" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Katholik Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_33e92c673d7adc0da10a6e1fb31e475d.setContent(html_009186e13f9be03cb9d7603d3d4bf68c);
+                var html_2d7f53cda63e1e5b648cd7b755e23ebc = $(`<div id="html_2d7f53cda63e1e5b648cd7b755e23ebc" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Katholik Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_773d124517f51bf459c9722083f15f5e.setContent(html_2d7f53cda63e1e5b648cd7b755e23ebc);
             
         
 
-        marker_3eb19819da36c750a73afff63de72cdc.bindPopup(popup_33e92c673d7adc0da10a6e1fb31e475d)
+        marker_5de3d8c73b7a3a9a11d5318661be841b.bindPopup(popup_773d124517f51bf459c9722083f15f5e)
         ;
 
         
     
     
-                marker_3eb19819da36c750a73afff63de72cdc.setIcon(icon_f2395229ddc57256cb23e14eaf5e9a04);
+                marker_5de3d8c73b7a3a9a11d5318661be841b.setIcon(icon_05be50916ba225054c73ac5b20f47ede);
             
     
-            var marker_77337c8aec22b9cf366864846cf3ade8 = L.marker(
+            var marker_f9e5c7204db3e28d88151761d103127e = L.marker(
+                [-7.2911589, 112.7373234],
+                {
+}
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
+        
+    
+            var icon_b85ef279362ee0b1b79ab277d2b9f17b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93bda10f2e83a92e630fdcf9e64caddf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3d02eca82ae99e7fc1a22d287cc505c6 = $(`<div id="html_3d02eca82ae99e7fc1a22d287cc505c6" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS William Booth Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_93bda10f2e83a92e630fdcf9e64caddf.setContent(html_3d02eca82ae99e7fc1a22d287cc505c6);
+            
+        
+
+        marker_f9e5c7204db3e28d88151761d103127e.bindPopup(popup_93bda10f2e83a92e630fdcf9e64caddf)
+        ;
+
+        
+    
+    
+                marker_f9e5c7204db3e28d88151761d103127e.setIcon(icon_b85ef279362ee0b1b79ab277d2b9f17b);
+            
+    
+            var marker_1de0ab1782548d69259e83b787f652e3 = L.marker(
+                [-7.3062932, 112.7348641],
+                {
+}
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
+        
+    
+            var icon_489f782359865e0c5c86fa6cbc76d807 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca1041db6f6c581095ecaab02d489631 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d2ca5ff143a087512d95c47b290fe783 = $(`<div id="html_d2ca5ff143a087512d95c47b290fe783" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Islam Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_ca1041db6f6c581095ecaab02d489631.setContent(html_d2ca5ff143a087512d95c47b290fe783);
+            
+        
+
+        marker_1de0ab1782548d69259e83b787f652e3.bindPopup(popup_ca1041db6f6c581095ecaab02d489631)
+        ;
+
+        
+    
+    
+                marker_1de0ab1782548d69259e83b787f652e3.setIcon(icon_489f782359865e0c5c86fa6cbc76d807);
+            
+    
+            var marker_31a71f41d991f2f04100dc6e76bc7187 = L.marker(
                 [-7.29155663211284, 112.73200977214546],
                 {
 }
-            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-            var icon_18a6667d93df8dbb1bcaf2f3087d7871 = L.AwesomeMarkers.icon(
+            var icon_88edd18d287897f34bfac7853d0908f0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -272,34 +471,34 @@
             );
         
     
-        var popup_0c7dff18e0a6dbd5fee9389bb7a82e8a = L.popup({
+        var popup_e3c85b6668b1aca8fc82074f103c7cdc = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_01091e21e802e5be6c1a6aa122b04381 = $(`<div id="html_01091e21e802e5be6c1a6aa122b04381" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Lombok Dua Dua<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_0c7dff18e0a6dbd5fee9389bb7a82e8a.setContent(html_01091e21e802e5be6c1a6aa122b04381);
+                var html_ba7a31faa31320e0ae9bc8f8ec172054 = $(`<div id="html_ba7a31faa31320e0ae9bc8f8ec172054" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Ibu dan Anak Lombok Dua Dua<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_e3c85b6668b1aca8fc82074f103c7cdc.setContent(html_ba7a31faa31320e0ae9bc8f8ec172054);
             
         
 
-        marker_77337c8aec22b9cf366864846cf3ade8.bindPopup(popup_0c7dff18e0a6dbd5fee9389bb7a82e8a)
+        marker_31a71f41d991f2f04100dc6e76bc7187.bindPopup(popup_e3c85b6668b1aca8fc82074f103c7cdc)
         ;
 
         
     
     
-                marker_77337c8aec22b9cf366864846cf3ade8.setIcon(icon_18a6667d93df8dbb1bcaf2f3087d7871);
+                marker_31a71f41d991f2f04100dc6e76bc7187.setIcon(icon_88edd18d287897f34bfac7853d0908f0);
             
     
-            var marker_d32ab58be0b93ced3a892ef0c3fe3543 = L.marker(
+            var marker_e1673fb4cd73eabec846bc7ced2dbccb = L.marker(
                 [-7.291556861237603, 112.7320714184932],
                 {
 }
-            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-            var icon_ae769e0d41c6be5fa8c7d364b9bc70a3 = L.AwesomeMarkers.icon(
+            var icon_f0faed38b1701ec4b170905e283b661e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -310,34 +509,34 @@
             );
         
     
-        var popup_718fe60c00f5157b1de0380e014fff1e = L.popup({
+        var popup_a4fce7f41f9f13a7bb52c3a09694b5a4 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_91868381a486457051876549453d69ee = $(`<div id="html_91868381a486457051876549453d69ee" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gigi dan Mulut Nala Husada<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
-                popup_718fe60c00f5157b1de0380e014fff1e.setContent(html_91868381a486457051876549453d69ee);
+                var html_1efb112d42c64499966a3ed349a4c66a = $(`<div id="html_1efb112d42c64499966a3ed349a4c66a" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Gigi dan Mulut Nala Husada<br><b>Tipe:</b> Rumah Sakit Khusus</div>`)[0];
+                popup_a4fce7f41f9f13a7bb52c3a09694b5a4.setContent(html_1efb112d42c64499966a3ed349a4c66a);
             
         
 
-        marker_d32ab58be0b93ced3a892ef0c3fe3543.bindPopup(popup_718fe60c00f5157b1de0380e014fff1e)
+        marker_e1673fb4cd73eabec846bc7ced2dbccb.bindPopup(popup_a4fce7f41f9f13a7bb52c3a09694b5a4)
         ;
 
         
     
     
-                marker_d32ab58be0b93ced3a892ef0c3fe3543.setIcon(icon_ae769e0d41c6be5fa8c7d364b9bc70a3);
+                marker_e1673fb4cd73eabec846bc7ced2dbccb.setIcon(icon_f0faed38b1701ec4b170905e283b661e);
             
     
-            var marker_a6a404703a5a46d5c4dac330c1228e7e = L.marker(
+            var marker_672a7e0e4c0e1b7847e48a933c86da25 = L.marker(
                 [-7.291549173240386, 112.7320741359202],
                 {
 }
-            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-            var icon_5b349095a673b5de36565c0d939ddbfe = L.AwesomeMarkers.icon(
+            var icon_accc2d1e129db7338de67e31d05c977d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -348,34 +547,72 @@
             );
         
     
-        var popup_b670cd1fee5ebabd6deeb5220f29edc8 = L.popup({
+        var popup_c45a634e3965f2da27ef482b4d842869 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d686d0773e619c0694f0eee0dd916efb = $(`<div id="html_d686d0773e619c0694f0eee0dd916efb" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Soemitro Lanud Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_b670cd1fee5ebabd6deeb5220f29edc8.setContent(html_d686d0773e619c0694f0eee0dd916efb);
+                var html_d23b246b4e6e79fd9bbb4b3efaf31343 = $(`<div id="html_d23b246b4e6e79fd9bbb4b3efaf31343" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Soemitro Lanud Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_c45a634e3965f2da27ef482b4d842869.setContent(html_d23b246b4e6e79fd9bbb4b3efaf31343);
             
         
 
-        marker_a6a404703a5a46d5c4dac330c1228e7e.bindPopup(popup_b670cd1fee5ebabd6deeb5220f29edc8)
+        marker_672a7e0e4c0e1b7847e48a933c86da25.bindPopup(popup_c45a634e3965f2da27ef482b4d842869)
         ;
 
         
     
     
-                marker_a6a404703a5a46d5c4dac330c1228e7e.setIcon(icon_5b349095a673b5de36565c0d939ddbfe);
+                marker_672a7e0e4c0e1b7847e48a933c86da25.setIcon(icon_accc2d1e129db7338de67e31d05c977d);
             
     
-            var marker_3b7655b81b4d12d61c9ab5fef878a837 = L.marker(
+            var marker_69b2e40cd0802785921012253b1e1e74 = L.marker(
+                [-7.309579, 112.7384042],
+                {
+}
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
+        
+    
+            var icon_fc0683c344fcd40355760cb384b6cc7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f9058e30d93378c4df00d690cb9a41b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_33af67fc53ff921a296d92762b3c6d68 = $(`<div id="html_33af67fc53ff921a296d92762b3c6d68" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS dr. Ramelan<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_9f9058e30d93378c4df00d690cb9a41b.setContent(html_33af67fc53ff921a296d92762b3c6d68);
+            
+        
+
+        marker_69b2e40cd0802785921012253b1e1e74.bindPopup(popup_9f9058e30d93378c4df00d690cb9a41b)
+        ;
+
+        
+    
+    
+                marker_69b2e40cd0802785921012253b1e1e74.setIcon(icon_fc0683c344fcd40355760cb384b6cc7f);
+            
+    
+            var marker_34ca0c4f81e89353b7658e0f67d57703 = L.marker(
                 [-7.2915400427901425, 112.7320989915865],
                 {
 }
-            ).addTo(map_4a00edd514393473c00a5ed5e44e868c);
+            ).addTo(map_7bd7c370fe73b845ee961cb73ca8c20b);
         
     
-            var icon_f7d36b65730d2cd082f999729502c7d5 = L.AwesomeMarkers.icon(
+            var icon_cd77cea928d86f8c2c420da1b99df071 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -386,24 +623,24 @@
             );
         
     
-        var popup_05b0bd088e8ee28b46abdda8d6b40854 = L.popup({
+        var popup_40fcbaf4dd93a16216ca5a7ab783c09b = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_5343a03c9b82feb85e3c2339075e3982 = $(`<div id="html_5343a03c9b82feb85e3c2339075e3982" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Tk. III Brawijaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_05b0bd088e8ee28b46abdda8d6b40854.setContent(html_5343a03c9b82feb85e3c2339075e3982);
+                var html_726be07c8bc54806f5f067b197715d0a = $(`<div id="html_726be07c8bc54806f5f067b197715d0a" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Tk. III Brawijaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_40fcbaf4dd93a16216ca5a7ab783c09b.setContent(html_726be07c8bc54806f5f067b197715d0a);
             
         
 
-        marker_3b7655b81b4d12d61c9ab5fef878a837.bindPopup(popup_05b0bd088e8ee28b46abdda8d6b40854)
+        marker_34ca0c4f81e89353b7658e0f67d57703.bindPopup(popup_40fcbaf4dd93a16216ca5a7ab783c09b)
         ;
 
         
     
     
-                marker_3b7655b81b4d12d61c9ab5fef878a837.setIcon(icon_f7d36b65730d2cd082f999729502c7d5);
+                marker_34ca0c4f81e89353b7658e0f67d57703.setIcon(icon_cd77cea928d86f8c2c420da1b99df071);
             
 </script>
 </html>

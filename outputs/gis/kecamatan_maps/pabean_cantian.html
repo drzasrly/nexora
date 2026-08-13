@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8b3361a6ae527fa2594ab9df9643a5ff {
+                #map_d7a4328546448481e6062206ac15c46a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -99,23 +99,23 @@
                  </div>
                  <div style="font-size: 11px; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px;">
                      <b>Local Infrastructures:</b><br>
-                     🏥 Puskesmas: 0<br>
-                     🔴 Hospitals: 1<br>
-                     🛣️ Road network segments: 1
+                     🏥 Puskesmas: 1<br>
+                     🔴 Hospitals: 3<br>
+                     🛣️ Road network segments: 2
                  </div>
              </div>
              
     
-            <div class="folium-map" id="map_8b3361a6ae527fa2594ab9df9643a5ff" ></div>
+            <div class="folium-map" id="map_d7a4328546448481e6062206ac15c46a" ></div>
         
 </body>
 <script>
     
     
-            var map_8b3361a6ae527fa2594ab9df9643a5ff = L.map(
-                "map_8b3361a6ae527fa2594ab9df9643a5ff",
+            var map_d7a4328546448481e6062206ac15c46a = L.map(
+                "map_d7a4328546448481e6062206ac15c46a",
                 {
-                    center: [-7.216768282130591, 112.72933794882209],
+                    center: [-7.219628570094835, 112.7336449959962],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 13,
@@ -130,7 +130,7 @@
 
         
     
-            var tile_layer_9313668b405fadf465e3416dd00aa507 = L.tileLayer(
+            var tile_layer_f0318ee20d855f9bc10546887a6443c5 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -147,38 +147,38 @@
             );
         
     
-            tile_layer_9313668b405fadf465e3416dd00aa507.addTo(map_8b3361a6ae527fa2594ab9df9643a5ff);
+            tile_layer_f0318ee20d855f9bc10546887a6443c5.addTo(map_d7a4328546448481e6062206ac15c46a);
         
     
-        function geo_json_cac8d19785ce32694ecf170381c4ec68_styler(feature) {
+        function geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "#eab308", "fillColor": "#eab308", "fillOpacity": 0.15, "weight": 3.0};
             }
         }
 
-        function geo_json_cac8d19785ce32694ecf170381c4ec68_onEachFeature(feature, layer) {
+        function geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_cac8d19785ce32694ecf170381c4ec68 = L.geoJson(null, {
-                onEachFeature: geo_json_cac8d19785ce32694ecf170381c4ec68_onEachFeature,
+        var geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429 = L.geoJson(null, {
+                onEachFeature: geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_onEachFeature,
             
-                style: geo_json_cac8d19785ce32694ecf170381c4ec68_styler,
+                style: geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_styler,
             ...{
 }
         });
 
-        function geo_json_cac8d19785ce32694ecf170381c4ec68_add (data) {
-            geo_json_cac8d19785ce32694ecf170381c4ec68
+        function geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_add (data) {
+            geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429
                 .addData(data);
         }
-            geo_json_cac8d19785ce32694ecf170381c4ec68_add({"bbox": [112.7292478, -7.2168963, 112.7294281, -7.2166403], "features": [{"bbox": [112.7292478, -7.2168963, 112.7294281, -7.2166403], "geometry": {"coordinates": [[[112.7292478, -7.2166762], [112.7293282, -7.2168963], [112.7294281, -7.2168603], [112.7293477, -7.2166403], [112.7292478, -7.2166762]]], "type": "Polygon"}, "id": "15", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.232052398926224, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (6820 cases)", "disease_need_score": 0.15990347279397957, "explanation": "Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 38.5 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.23). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7050227054341729, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 38.49117741831966, "kecamatan": "PABEAN CANTIAN", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 29, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.23065330923517668, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.4743693961989962, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429_add({"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "features": [{"bbox": [112.7174, -7.2483, 112.7473, -7.1961], "geometry": {"coordinates": [[[[112.7423, -7.2475], [112.7429, -7.2444], [112.7396, -7.2431], [112.7378, -7.2388], [112.7383, -7.2316], [112.7348, -7.2307], [112.7353, -7.234], [112.7309, -7.2324], [112.7307, -7.2344], [112.7285, -7.2324], [112.7325, -7.2206], [112.7311, -7.2213], [112.7262, -7.2167], [112.7236, -7.2113], [112.7219, -7.2118], [112.7218, -7.2082], [112.7201, -7.2074], [112.7174, -7.1991], [112.7201, -7.1984], [112.7257, -7.2098], [112.7271, -7.2094], [112.7245, -7.2033], [112.7256, -7.2028], [112.7286, -7.2091], [112.7305, -7.2088], [112.7298, -7.2071], [112.7327, -7.2066], [112.7327, -7.2035], [112.7321, -7.2014], [112.7306, -7.2012], [112.7315, -7.1985], [112.7243, -7.1999], [112.7236, -7.198], [112.7349, -7.1961], [112.7375, -7.2094], [112.7381, -7.2238], [112.741, -7.2253], [112.7411, -7.2335], [112.7429, -7.2343], [112.7473, -7.2434], [112.7468, -7.2483], [112.7423, -7.2475]]]], "type": "MultiPolygon"}, "id": "15", "properties": {"accessibility_gap": 0.0, "accessibility_issue": "NOT_AVAILABLE", "data_quality_status": "COMPLETE", "demand_issue": "High Service Pressure", "demand_score": 0.232052398926224, "disease_issue": "Faktor-faktor yang mempengaruhi status kesehatan dan hubungannya dengan jasa kesehatan (6820 cases)", "disease_need_score": 0.15990347279397957, "explanation": "Kecamatan Pabean Cantian memiliki Healthcare Gap Score sebesar 38.5 dan termasuk kategori Sedang. Faktor kontributor utama adalah: 1. Facility Capacity Gap (0.71), 2. Workforce Shortage Gap (0.47), 3. High Demand Score (0.23). Indikator paling menonjol dalam model adalah Low Puskesmas Ratio, dengan sub-skor 0.71. Temuan ini menunjukkan adanya indikasi kurangnya ketersediaan fasilitas pelayanan kesehatan tingkat pertama (Puskesmas/Pustu) atau kapasitas tempat tidur rawat inap.", "facility_gap": 0.7050227054341729, "facility_issue": "Low Puskesmas Ratio", "healthcare_gap_score": 38.49117741831966, "kecamatan": "PABEAN CANTIAN", "primary_root_cause": "FACILITY_SHORTAGE", "priority_category": "Sedang", "priority_rank": 29, "root_cause_confidence": "MEDIUM", "root_cause_margin": 0.23065330923517668, "root_cause_type": "NO_DOMINANT_ROOT_CAUSE", "secondary_root_cause": "WORKFORCE_SHORTAGE", "tertiary_root_cause": "HIGH_DEMAND", "workforce_gap": 0.4743693961989962, "workforce_issue": "Low Nakes Ratio"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_cac8d19785ce32694ecf170381c4ec68.bindTooltip(
+    geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -213,17 +213,64 @@
 });
                      
     
-            geo_json_cac8d19785ce32694ecf170381c4ec68.addTo(map_8b3361a6ae527fa2594ab9df9643a5ff);
+            geo_json_8dd6e7bb962da1fd9ffa9ca674e8b429.addTo(map_d7a4328546448481e6062206ac15c46a);
         
     
-            var marker_fb156bdfc1424b94415716c2b974543b = L.marker(
-                [-7.216775250132811, 112.72934085074051],
+            var feature_group_24e99d8e69b315296bc174d26d152310 = L.featureGroup(
                 {
 }
-            ).addTo(map_8b3361a6ae527fa2594ab9df9643a5ff);
+            );
         
     
-            var icon_c826e0b0d694f8a860162e193c100482 = L.AwesomeMarkers.icon(
+            var marker_f90a27ced8f59871990b5dc0e1a04d20 = L.marker(
+                [-7.222672, 112.735452],
+                {
+}
+            ).addTo(feature_group_24e99d8e69b315296bc174d26d152310);
+        
+    
+            var icon_a940936c61699291b867a05f89150841 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6863f6c8ce5f9d321b4bc934f3bbda4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_63d8145e218dd159b2f65ccb0bd7fdbe = $(`<div id="html_63d8145e218dd159b2f65ccb0bd7fdbe" style="width: 100.0%; height: 100.0%;"><b>Puskesmas:</b> Perak Timur<br><b>ID:</b> PKM035</div>`)[0];
+                popup_a6863f6c8ce5f9d321b4bc934f3bbda4.setContent(html_63d8145e218dd159b2f65ccb0bd7fdbe);
+            
+        
+
+        marker_f90a27ced8f59871990b5dc0e1a04d20.bindPopup(popup_a6863f6c8ce5f9d321b4bc934f3bbda4)
+        ;
+
+        
+    
+    
+                marker_f90a27ced8f59871990b5dc0e1a04d20.setIcon(icon_a940936c61699291b867a05f89150841);
+            
+    
+            feature_group_24e99d8e69b315296bc174d26d152310.addTo(map_d7a4328546448481e6062206ac15c46a);
+        
+    
+            var marker_94b26ebf59506b930f138995fe53bb90 = L.marker(
+                [-7.21655919523268, 112.72903739040582],
+                {
+}
+            ).addTo(map_d7a4328546448481e6062206ac15c46a);
+        
+    
+            var icon_28c3d02594cc01e9c01ac471155febf6 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -234,56 +281,155 @@
             );
         
     
-        var popup_e07330bb5f982f640e434ca54242ddf4 = L.popup({
+        var popup_8610834a6605d51141cdba0177639263 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_7f6c836b2d221902213af07cdfba7f1e = $(`<div id="html_7f6c836b2d221902213af07cdfba7f1e" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Al-Irsyad Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
-                popup_e07330bb5f982f640e434ca54242ddf4.setContent(html_7f6c836b2d221902213af07cdfba7f1e);
+                var html_76d27838d0c11f2a5c4feffe8d8b1e6c = $(`<div id="html_76d27838d0c11f2a5c4feffe8d8b1e6c" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Primasatya Husada Citra (PHC) Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_8610834a6605d51141cdba0177639263.setContent(html_76d27838d0c11f2a5c4feffe8d8b1e6c);
             
         
 
-        marker_fb156bdfc1424b94415716c2b974543b.bindPopup(popup_e07330bb5f982f640e434ca54242ddf4)
+        marker_94b26ebf59506b930f138995fe53bb90.bindPopup(popup_8610834a6605d51141cdba0177639263)
         ;
 
         
     
     
-                marker_fb156bdfc1424b94415716c2b974543b.setIcon(icon_c826e0b0d694f8a860162e193c100482);
+                marker_94b26ebf59506b930f138995fe53bb90.setIcon(icon_28c3d02594cc01e9c01ac471155febf6);
             
     
-            var feature_group_a21edf60a4f71b36ff068ba310f084a3 = L.featureGroup(
+            var marker_79b0379559045cff88c1ec5bf6f565e9 = L.marker(
+                [-7.21678, 112.73013999999999],
+                {
+}
+            ).addTo(map_d7a4328546448481e6062206ac15c46a);
+        
+    
+            var icon_0cf7c59579acd25b983fb22a4f50a3ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b19ce01c1aeea341d85b96eec1386429 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_29f0c1a3d877ad3df0a9c5a3d877f0ad = $(`<div id="html_29f0c1a3d877ad3df0a9c5a3d877f0ad" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS Umum Al-Irsyad Surabaya<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_b19ce01c1aeea341d85b96eec1386429.setContent(html_29f0c1a3d877ad3df0a9c5a3d877f0ad);
+            
+        
+
+        marker_79b0379559045cff88c1ec5bf6f565e9.bindPopup(popup_b19ce01c1aeea341d85b96eec1386429)
+        ;
+
+        
+    
+    
+                marker_79b0379559045cff88c1ec5bf6f565e9.setIcon(icon_0cf7c59579acd25b983fb22a4f50a3ce);
+            
+    
+            var marker_f55a5d892240401679578e5eb748d8ba = L.marker(
+                [-7.2119412, 112.7246199],
+                {
+}
+            ).addTo(map_d7a4328546448481e6062206ac15c46a);
+        
+    
+            var icon_214aa4d788a8229b70e01a2152878c2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98bb0924959381f08c473c9838b6539e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b22065e164f7bc84bf72925e605b308c = $(`<div id="html_b22065e164f7bc84bf72925e605b308c" style="width: 100.0%; height: 100.0%;"><b>Rumah Sakit:</b> RS TNI AL Dr. Oepomo<br><b>Tipe:</b> Rumah Sakit Umum</div>`)[0];
+                popup_98bb0924959381f08c473c9838b6539e.setContent(html_b22065e164f7bc84bf72925e605b308c);
+            
+        
+
+        marker_f55a5d892240401679578e5eb748d8ba.bindPopup(popup_98bb0924959381f08c473c9838b6539e)
+        ;
+
+        
+    
+    
+                marker_f55a5d892240401679578e5eb748d8ba.setIcon(icon_214aa4d788a8229b70e01a2152878c2d);
+            
+    
+            var feature_group_128dc4ba17212338976400ea3b2404bf = L.featureGroup(
                 {
 }
             );
         
     
-            var poly_line_fcac45522ca04e2a56f993994d2d6884 = L.polyline(
+            var poly_line_e96ade714e78465deb0edbc1aea6a1f0 = L.polyline(
                 [[-7.2167683, 112.72933795], [-7.217709408125294, 112.72851337785997]],
                 {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
-            ).addTo(feature_group_a21edf60a4f71b36ff068ba310f084a3);
+            ).addTo(feature_group_128dc4ba17212338976400ea3b2404bf);
         
     
-        var popup_c5921309f74314643cc594dcf4548c5b = L.popup({
+        var popup_80afff42b268eb5e2475836a356d886d = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_d6ddae9381d909ad5d6165e33d4bdf0e = $(`<div id="html_d6ddae9381d909ad5d6165e33d4bdf0e" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pabean Cantian-Pakal</div>`)[0];
-                popup_c5921309f74314643cc594dcf4548c5b.setContent(html_d6ddae9381d909ad5d6165e33d4bdf0e);
+                var html_664413c2261b7fa975a8ffc034b75c20 = $(`<div id="html_664413c2261b7fa975a8ffc034b75c20" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Pabean Cantian-Pakal</div>`)[0];
+                popup_80afff42b268eb5e2475836a356d886d.setContent(html_664413c2261b7fa975a8ffc034b75c20);
             
         
 
-        poly_line_fcac45522ca04e2a56f993994d2d6884.bindPopup(popup_c5921309f74314643cc594dcf4548c5b)
+        poly_line_e96ade714e78465deb0edbc1aea6a1f0.bindPopup(popup_80afff42b268eb5e2475836a356d886d)
         ;
 
         
     
     
-            feature_group_a21edf60a4f71b36ff068ba310f084a3.addTo(map_8b3361a6ae527fa2594ab9df9643a5ff);
+            var poly_line_06a20b3082f3c21d5d68dbe78ff72321 = L.polyline(
+                [[-7.217298534041475, 112.72890390906404], [-7.216929281288107, 112.72847226260532]],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.0}
+            ).addTo(feature_group_128dc4ba17212338976400ea3b2404bf);
+        
+    
+        var popup_41c156debc61aa6116dc03b10be8673f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_388e73df703da7c4a6348194f93ad5e8 = $(`<div id="html_388e73df703da7c4a6348194f93ad5e8" style="width: 100.0%; height: 100.0%;"><b>Road:</b> Jalan Penghubung Rungkut-Sambikerep</div>`)[0];
+                popup_41c156debc61aa6116dc03b10be8673f.setContent(html_388e73df703da7c4a6348194f93ad5e8);
+            
+        
+
+        poly_line_06a20b3082f3c21d5d68dbe78ff72321.bindPopup(popup_41c156debc61aa6116dc03b10be8673f)
+        ;
+
+        
+    
+    
+            feature_group_128dc4ba17212338976400ea3b2404bf.addTo(map_d7a4328546448481e6062206ac15c46a);
         
 </script>
 </html>
