@@ -255,8 +255,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             layer.bindTooltip(`
                 <div style="font-family:Inter,sans-serif;">
-                    <strong style="color:#fff;">Kec. ${titleCase(p.kecamatan)}</strong><br/>
-                    <span style="color:#e2e8f0;">Gap Score: <strong>${p.healthcare_gap_score.toFixed(1)}</strong></span><br/>
+                    <strong style="color:#0f172a;">Kec. ${titleCase(p.kecamatan)}</strong><br/>
+                    <span style="color:#475569;">Gap Score: <strong>${p.healthcare_gap_score.toFixed(1)}</strong></span><br/>
                     <span style="color:${PRIORITY_MAP_COLORS[p.priority_category]}">● ${p.priority_category}</span>
                 </div>`, { className: 'leaflet-tooltip-own', sticky: true, direction: 'right' });
         }
@@ -490,7 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     data: Object.values(counts),
                     backgroundColor: ['#dc2626', '#ea580c', '#ca8a04', '#16a34a'],
                     borderWidth: 1,
-                    borderColor: '#111827',
+                    borderColor: '#ffffff',
                     hoverOffset: 4
                 }]
             },
@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 plugins: {
                     legend: {
                         position: 'right',
-                        labels: { color: '#9ca3af', font: { size: 9 }, padding: 6, boxWidth: 8 }
+                        labels: { color: '#475569', font: { size: 9 }, padding: 6, boxWidth: 8 }
                     }
                 },
                 cutout: '60%'
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
             zoomSnap: 0.1, zoomDelta: 0.5, attributionControl: false
         }).setView(SURABAYA_CENTER, zoom);
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(m);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(m);
         return m;
     }
 
@@ -663,13 +663,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const p = feature.properties;
                 layer.bindTooltip(`
                     <div style="font-family:Inter,sans-serif;">
-                        <strong style="color:#fff;">${titleCase(p.kecamatan)}</strong><br/>
-                        <span style="color:#9ca3af;">Gap Score: <strong>${p.healthcare_gap_score.toFixed(1)}</strong></span><br/>
+                        <strong style="color:#0f172a;">${titleCase(p.kecamatan)}</strong><br/>
+                        <span style="color:#475569;">Gap Score: <strong>${p.healthcare_gap_score.toFixed(1)}</strong></span><br/>
                         <span style="color:${PRIORITY_MAP_COLORS[p.priority_category]}">● ${p.priority_category}</span>
                     </div>`, { className: 'leaflet-tooltip-own', sticky: true, direction: 'right' });
 
                 layer.on({
-                    mouseover: e => { if (e.target !== activeKecamatanLayer) e.target.setStyle({ weight: 3, color: '#fff', fillOpacity: 0.85 }); },
+                    mouseover: e => { if (e.target !== activeKecamatanLayer) e.target.setStyle({ weight: 3, color: '#1e293b', fillOpacity: 0.85 }); },
                     mouseout: e => { if (e.target !== activeKecamatanLayer) mainGeojsonLayer.resetStyle(e.target); },
                     click: e => selectKecamatan(e.target, p)
                 });
@@ -897,12 +897,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 type: 'bar',
                 data: {
                     labels: sorted.map(f => titleCase(f.properties.kecamatan)),
-                    datasets: [{ label: 'Healthcare Gap Score', data: sorted.map(f => f.properties.healthcare_gap_score), backgroundColor: sorted.map(f => getPriorityColor(f.properties.priority_category)), borderRadius: 3, hoverBackgroundColor: '#818cf8' }]
+                    datasets: [{ label: 'Healthcare Gap Score', data: sorted.map(f => f.properties.healthcare_gap_score), backgroundColor: sorted.map(f => getPriorityColor(f.properties.priority_category)), borderRadius: 3, hoverBackgroundColor: '#3b82f6' }]
                 },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` Score: ${ctx.raw.toFixed(1)}/100` } } },
-                    scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', font: { size: 10 } }, min: 0, max: 100 }, x: { grid: { display: false }, ticks: { color: '#9ca3af', font: { size: 8 }, maxRotation: 75, minRotation: 45 } } },
+                    scales: { y: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { color: '#475569', font: { size: 10 } }, min: 0, max: 100 }, x: { grid: { display: false }, ticks: { color: '#475569', font: { size: 8 }, maxRotation: 75, minRotation: 45 } } },
                     onClick: (e, els) => { if (els.length > 0) zoomToKecamatanByName(sorted[els[0].index].properties.kecamatan); }
                 }
             });
@@ -919,8 +919,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (charts.driver) charts.driver.destroy();
             charts.driver = new Chart(ctx2.getContext('2d'), {
                 type: 'doughnut',
-                data: { labels: Object.keys(causeCounts).map(c => c.replace(/_/g,' ')), datasets: [{ data: Object.values(causeCounts), backgroundColor: Object.keys(causeCounts).map(c => ROOT_CAUSE_COLORS[c] || COLORS.slate), borderWidth: 1, borderColor: '#111827', hoverOffset: 4 }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { color: '#9ca3af', font: { size: 9 }, padding: 8, boxWidth: 10 } }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} Kecamatan` } } }, cutout: '65%' }
+                data: { labels: Object.keys(causeCounts).map(c => c.replace(/_/g,' ')), datasets: [{ data: Object.values(causeCounts), backgroundColor: Object.keys(causeCounts).map(c => ROOT_CAUSE_COLORS[c] || COLORS.slate), borderWidth: 1, borderColor: '#ffffff', hoverOffset: 4 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { color: '#475569', font: { size: 9 }, padding: 8, boxWidth: 10 } }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} Kecamatan` } } }, cutout: '65%' }
             });
         }
     }
@@ -961,8 +961,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <td class="gap-score-cell" style="color:${PRIORITY_MAP_COLORS[p.priority_category]}">${p.healthcare_gap_score.toFixed(1)}</td>
                 <td><span class="badge ${getPriorityClass(p.priority_category)}">${p.priority_category}</span></td>
                 <td><span class="driver-badge">${(p.primary_root_cause||'').replace(/_/g,' ')}</span></td>
-                <td style="color:#f87171">${(p.workforce_gap||0).toFixed(2)}</td>
-                <td style="color:#fb923c">${(p.facility_gap||0).toFixed(2)}</td>
+                <td style="color:#dc2626">${(p.workforce_gap||0).toFixed(2)}</td>
+                <td style="color:#ea580c">${(p.facility_gap||0).toFixed(2)}</td>
                 <td><button class="btn-secondary" onclick="switchPage('optimizer');setTimeout(()=>prefillOptimizer('${p.kecamatan}'),300);">Optimize →</button></td>
             `;
             tbody.appendChild(tr);
@@ -995,7 +995,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 labels: Object.keys(causeCounts).map(c => c.replace(/_/g,' ')),
                 datasets: [{ data: Object.values(causeCounts), backgroundColor: Object.keys(causeCounts).map(c => ROOT_CAUSE_COLORS[c] || COLORS.slate), borderRadius: 4 }]
             },
-            options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', font: { size: 10 } } }, y: { grid: { display: false }, ticks: { color: '#9ca3af', font: { size: 10 } } } } }
+            options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { color: '#475569', font: { size: 10 } } }, y: { grid: { display: false }, ticks: { color: '#475569', font: { size: 10 } } } } }
         });
     }
 
@@ -1012,8 +1012,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (charts.analyticsDist) charts.analyticsDist.destroy();
         charts.analyticsDist = new Chart(ctx.getContext('2d'), {
             type: 'bar',
-            data: { labels, datasets: [{ label: 'Districts', data: counts, backgroundColor: 'rgba(99,102,241,0.6)', borderRadius: 4, hoverBackgroundColor: '#818cf8' }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', font: { size: 10 } } }, x: { grid: { display: false }, ticks: { color: '#9ca3af', font: { size: 10 } } } } }
+            data: { labels, datasets: [{ label: 'Districts', data: counts, backgroundColor: 'rgba(29,78,216,0.6)', borderRadius: 4, hoverBackgroundColor: '#3b82f6' }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(0,0,0,0.06)' }, ticks: { color: '#475569', font: { size: 10 } } }, x: { grid: { display: false }, ticks: { color: '#475569', font: { size: 10 } } } } }
         });
     }
 
@@ -1248,12 +1248,12 @@ document.addEventListener("DOMContentLoaded", () => {
             tr.innerHTML = `
                 <td><span class="rank-num">#${a.rank}</span></td>
                 <td class="kec-name-cell">${a.kecamatan}</td>
-                <td style="color:#f87171;font-weight:700;">${a.currentGap}</td>
-                <td style="color:#60a5fa;font-weight:600;">${a.doctors > 0 ? '+'+a.doctors : '—'}</td>
-                <td style="color:#a78bfa;font-weight:600;">${a.nurses > 0 ? '+'+a.nurses : '—'}</td>
-                <td style="color:#9ca3af;">Rp ${a.cost}</td>
-                <td style="color:#4ade80;font-weight:700;">${a.projectedGap}</td>
-                <td style="color:#34d399;font-weight:700;">↓${a.improvement}</td>
+                <td style="color:#dc2626;font-weight:700;">${a.currentGap}</td>
+                <td style="color:#2563eb;font-weight:600;">${a.doctors > 0 ? '+'+a.doctors : '—'}</td>
+                <td style="color:#7c3aed;font-weight:600;">${a.nurses > 0 ? '+'+a.nurses : '—'}</td>
+                <td style="color:#64748b;">Rp ${a.cost}</td>
+                <td style="color:#16a34a;font-weight:700;">${a.projectedGap}</td>
+                <td style="color:#059669;font-weight:700;">↓${a.improvement}</td>
             `;
             tbody.appendChild(tr);
         });
