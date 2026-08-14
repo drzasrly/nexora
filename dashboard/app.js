@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // GLOBAL STATE
     // ============================================================
     let mainMap, overviewMap, simMapBefore, simMapAfter;
+    let analyticsMap = null, analyticsGeojsonLayer = null;
     let mainGeojsonLayer, overviewGeojsonLayer;
     let simBeforeLayer, simAfterLayer;
     let hospitalLayer, puskesmasLayer, clinicLayer;
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentMapMode = 'gap'; // 'gap' or 'priority'
     let currentSelectedKec = null;
     let charts = {};
-    let mapsInitialized = { main: false, overview: false, simBefore: false, simAfter: false };
+    let mapsInitialized = { main: false, overview: false, simBefore: false, simAfter: false, analytics: false };
+    let isRanked = false;
 
     const SURABAYA_CENTER = [-7.265, 112.74];
     const DEFAULT_ZOOM = 11.5;
@@ -97,7 +99,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 mapsInitialized.overview = true;
             }
             if (pageName === 'analytics') {
-                renderAnalyticsPage();
+                const layout = document.getElementById('analytics-layout-container');
+                if (!isRanked) {
+                    if (layout) {
+                        layout.classList.add('state-unranked');
+                        layout.classList.remove('state-ranked');
+                    }
+                    document.getElementById('panel-before-ranking').classList.remove('hidden');
+                    document.getElementById('panel-after-ranking-table').classList.add('hidden');
+                    document.getElementById('panel-after-ranking-charts').classList.add('hidden');
+                    document.getElementById('analytics-map-legend').classList.add('hidden');
+                    document.getElementById('analytics-map-title').innerHTML = '<i class="fa-solid fa-map"></i> Peta Wilayah Surabaya (Sebelum Perangkingan)';
+                    document.getElementById('analytics-map-status-badge').className = 'badge badge-sedang';
+                    document.getElementById('analytics-map-status-badge').textContent = 'Menunggu Kalkulasi';
+                } else {
+                    if (layout) {
+                        layout.classList.remove('state-unranked');
+                        layout.classList.add('state-ranked');
+                    }
+                    document.getElementById('panel-before-ranking').classList.add('hidden');
+                    document.getElementById('panel-after-ranking-table').classList.remove('hidden');
+                    document.getElementById('panel-after-ranking-charts').classList.remove('hidden');
+                    document.getElementById('analytics-map-legend').classList.remove('hidden');
+                    document.getElementById('analytics-map-title').innerHTML = '<i class="fa-solid fa-ranking-star"></i> Peta Hasil Prioritas Kesenjangan';
+                    document.getElementById('analytics-map-status-badge').className = 'badge badge-sangat-tinggi';
+                    document.getElementById('analytics-map-status-badge').textContent = 'Kalkulasi Selesai';
+                    renderAnalyticsPage();
+                }
+
+                if (!mapsInitialized.analytics) {
+                    initAnalyticsMap();
+                    mapsInitialized.analytics = true;
+                }
+                setTimeout(() => {
+                    if (analyticsMap) analyticsMap.invalidateSize();
+                }, 100);
             }
 
             // Invalidate size to handle layout changes dynamically
@@ -110,6 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (pageName === 'simulation') {
                 if (simMapBefore) simMapBefore.invalidateSize();
                 if (simMapAfter) simMapAfter.invalidateSize();
+            }
+            if (pageName === 'analytics') {
+                if (analyticsMap) analyticsMap.invalidateSize();
             }
         }, 50);
     };
@@ -159,6 +198,254 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // ============================================================
+    // RANKING MAPS (SHARED MAP & ANIMATION SCANNER)
+    // ============================================================
+    function initAnalyticsMap() {
+        if (!rawKecamatanData) return;
+        analyticsMap = createBaseMap('analytics-map', 11);
+
+        analyticsGeojsonLayer = L.geoJSON(rawKecamatanData, {
+            style: () => ({
+                fillColor: '#1e293b',
+                weight: 1.5,
+                opacity: 0.8,
+                color: '#475569',
+                fillOpacity: 0.75
+            }),
+            onEachFeature: (feature, layer) => {
+                const p = feature.properties;
+                updateAnalyticsMapTooltip(layer, p);
+
+                layer.on({
+                    mouseover: e => {
+                        e.target.setStyle({ weight: 3, color: '#fff', fillOpacity: 0.9 });
+                    },
+                    mouseout: e => {
+                        if (!isRanked) {
+                            e.target.setStyle({
+                                fillColor: '#1e293b',
+                                weight: 1.5,
+                                color: '#475569',
+                                fillOpacity: 0.75
+                            });
+                        } else {
+                            analyticsGeojsonLayer.resetStyle(e.target);
+                        }
+                    },
+                    click: e => {
+                        if (isRanked) {
+                            switchPage('map');
+                            setTimeout(() => zoomToKecamatanByName(p.kecamatan), 300);
+                        }
+                    }
+                });
+            }
+        }).addTo(analyticsMap);
+
+        setTimeout(() => analyticsMap.invalidateSize(), 150);
+    }
+
+    function updateAnalyticsMapTooltip(layer, p) {
+        if (!isRanked) {
+            layer.bindTooltip(`<strong>Kec. ${titleCase(p.kecamatan)}</strong><br/><span style="color:var(--accent-indigo);font-weight:500;">Belum dihitung (klik tombol kalkulasi)</span>`, {
+                className: 'leaflet-tooltip-own', sticky: true
+            });
+        } else {
+            layer.bindTooltip(`
+                <div style="font-family:Inter,sans-serif;">
+                    <strong style="color:#fff;">Kec. ${titleCase(p.kecamatan)}</strong><br/>
+                    <span style="color:#e2e8f0;">Gap Score: <strong>${p.healthcare_gap_score.toFixed(1)}</strong></span><br/>
+                    <span style="color:${PRIORITY_MAP_COLORS[p.priority_category]}">● ${p.priority_category}</span>
+                </div>`, { className: 'leaflet-tooltip-own', sticky: true, direction: 'right' });
+        }
+    }
+
+    function applyAnalyticsMapStyles() {
+        if (!analyticsGeojsonLayer) return;
+        analyticsGeojsonLayer.eachLayer(layer => {
+            const p = layer.feature.properties;
+            layer.setStyle(getPriorityStyle(p.priority_category));
+            updateAnalyticsMapTooltip(layer, p);
+        });
+    }
+
+    function resetAnalyticsMapStyles() {
+        if (!analyticsGeojsonLayer) return;
+        analyticsGeojsonLayer.eachLayer(layer => {
+            const p = layer.feature.properties;
+            layer.setStyle({
+                fillColor: '#1e293b',
+                weight: 1.5,
+                opacity: 0.8,
+                color: '#475569',
+                fillOpacity: 0.75
+            });
+            updateAnalyticsMapTooltip(layer, p);
+        });
+    }
+
+    // Trigger ranking engine progress logs + map scan animation
+    document.addEventListener('click', e => {
+        if (e.target && e.target.id === 'btn-run-ranking') {
+            const btn = document.getElementById('btn-run-ranking');
+            const progressContainer = document.getElementById('ranking-progress-container');
+            const progressBarFill = document.getElementById('ranking-progress-fill');
+            const progressStatus = document.getElementById('ranking-progress-status');
+
+            if (!btn || !progressContainer || !progressBarFill || !progressStatus) return;
+
+            btn.disabled = true;
+            progressContainer.style.display = 'block';
+
+            // Gather all map layers for scanner animation
+            const layers = [];
+            if (analyticsGeojsonLayer) {
+                analyticsGeojsonLayer.eachLayer(layer => {
+                    layers.push(layer);
+                    // Reset to grey base styling before scanning
+                    layer.setStyle({
+                        fillColor: '#1e293b',
+                        weight: 1.5,
+                        color: '#475569',
+                        fillOpacity: 0.6
+                    });
+                });
+            }
+
+            // Shuffle layers for organic sweep feel
+            const shuffledLayers = layers.sort(() => Math.random() - 0.5);
+            let layerIndex = 0;
+            const totalLayers = shuffledLayers.length;
+            const animationDuration = 2200; // total animation time in ms
+            const intervalTime = animationDuration / totalLayers;
+
+            const interval = setInterval(() => {
+                if (layerIndex >= totalLayers) {
+                    clearInterval(interval);
+                    
+                    // Final transition to ranked layout
+                    setTimeout(() => {
+                        isRanked = true;
+                        
+                        // Switch layout state classes
+                        const layout = document.getElementById('analytics-layout-container');
+                        if (layout) {
+                            layout.classList.remove('state-unranked');
+                            layout.classList.add('state-ranked');
+                        }
+                        document.getElementById('panel-before-ranking').classList.add('hidden');
+                        document.getElementById('panel-after-ranking-table').classList.remove('hidden');
+                        document.getElementById('panel-after-ranking-charts').classList.remove('hidden');
+                        document.getElementById('analytics-map-legend').classList.remove('hidden');
+                        document.getElementById('analytics-map-title').innerHTML = '<i class="fa-solid fa-ranking-star"></i> Peta Hasil Prioritas Kesenjangan';
+                        document.getElementById('analytics-map-status-badge').className = 'badge badge-sangat-tinggi';
+                        document.getElementById('analytics-map-status-badge').textContent = 'Kalkulasi Selesai';
+
+                        // Apply actual final colors to all districts
+                        applyAnalyticsMapStyles();
+                        
+                        if (analyticsMap) {
+                            analyticsMap.invalidateSize();
+                        }
+
+                        // Populate and render tables/charts
+                        renderAnalyticsPage();
+
+                        btn.disabled = false;
+                        progressContainer.style.display = 'none';
+                        progressBarFill.style.width = '0%';
+                    }, 400);
+                    return;
+                }
+
+                // Process one layer
+                const layer = shuffledLayers[layerIndex];
+                const p = layer.feature.properties;
+
+                // Glowing border flash highlight on the shared map
+                layer.setStyle({
+                    fillColor: getPriorityStyle(p.priority_category).fillColor,
+                    weight: 3,
+                    color: '#ffffff',
+                    fillOpacity: 0.95
+                });
+
+                // Update text
+                progressStatus.textContent = `⚙️ Mengkalkulasi indeks prioritas Kec. ${titleCase(p.kecamatan)}...`;
+                progressBarFill.style.width = `${Math.min(95, ((layerIndex + 1) / totalLayers) * 100)}%`;
+
+                // Restore soft border outline after a brief flash
+                setTimeout(() => {
+                    layer.setStyle({
+                        weight: 1.5,
+                        color: '#1e293b',
+                        fillOpacity: 0.75
+                    });
+                }, 250);
+
+                layerIndex++;
+            }, intervalTime);
+        }
+
+        if (e.target && (e.target.id === 'btn-reset-ranking' || e.target.closest('#btn-reset-ranking'))) {
+            isRanked = false;
+            
+            const layout = document.getElementById('analytics-layout-container');
+            if (layout) {
+                layout.classList.add('state-unranked');
+                layout.classList.remove('state-ranked');
+            }
+            document.getElementById('panel-before-ranking').classList.remove('hidden');
+            document.getElementById('panel-after-ranking-table').classList.add('hidden');
+            document.getElementById('panel-after-ranking-charts').classList.add('hidden');
+            document.getElementById('analytics-map-legend').classList.add('hidden');
+            document.getElementById('analytics-map-title').innerHTML = '<i class="fa-solid fa-map"></i> Peta Wilayah Surabaya (Sebelum Perangkingan)';
+            document.getElementById('analytics-map-status-badge').className = 'badge badge-sedang';
+            document.getElementById('analytics-map-status-badge').textContent = 'Menunggu Kalkulasi';
+
+            // Reset styles on existing map
+            resetAnalyticsMapStyles();
+
+            if (analyticsMap) {
+                analyticsMap.invalidateSize();
+            }
+        }
+
+        if (e.target && (e.target.id === 'btn-download-csv' || e.target.closest('#btn-download-csv'))) {
+            if (!rawKecamatanData) return;
+
+            const features = rawKecamatanData.features;
+            const sorted = [...features].sort((a,b) => a.properties.priority_rank - b.properties.priority_rank);
+
+            let csvContent = "Rank,Kecamatan,Gap Score,Priority Category,Primary Driver,Workforce Gap,Facility Gap\n";
+
+            sorted.forEach(f => {
+                const p = f.properties;
+                const row = [
+                    p.priority_rank,
+                    `"${titleCase(p.kecamatan)}"`,
+                    p.healthcare_gap_score.toFixed(2),
+                    `"${p.priority_category}"`,
+                    `"${(p.primary_root_cause || '').replace(/_/g, ' ')}"`,
+                    (p.workforce_gap || 0).toFixed(4),
+                    (p.facility_gap || 0).toFixed(4)
+                ].join(",");
+                csvContent += row + "\n";
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", "heal-city-surabaya-prioritas-2024.csv");
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    });
 
     // ============================================================
     // OVERVIEW PAGE

@@ -6,8 +6,8 @@
   "pipeline_status": "SUCCESS",
   "config_version": "final",
   "random_state": 42,
-  "timestamp": "2026-08-13 11:46:23",
-  "duration_seconds": 21.013723,
+  "timestamp": "2026-08-14 06:42:55",
+  "duration_seconds": 10.138532,
   "error_message": "",
   "weights_configured": {
     "demand": 0.3,

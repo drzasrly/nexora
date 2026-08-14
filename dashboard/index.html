@@ -34,19 +34,19 @@
             <!-- TAB NAVIGATION -->
             <nav class="tab-nav" id="tab-nav">
                 <button class="tab-btn active" data-page="overview" id="tab-overview">
-                    <i class="fa-solid fa-city"></i> Overview
+                    <i class="fa-solid fa-city"></i> Ringkasan (Overview)
                 </button>
                 <button class="tab-btn" data-page="map" id="tab-map">
-                    <i class="fa-solid fa-map-location-dot"></i> GIS Map
+                    <i class="fa-solid fa-map-location-dot"></i> Peta GIS (Map)
                 </button>
                 <button class="tab-btn" data-page="analytics" id="tab-analytics">
-                    <i class="fa-solid fa-chart-bar"></i> Analytics
+                    <i class="fa-solid fa-ranking-star"></i> Perangkingan (Ranking)
                 </button>
                 <button class="tab-btn" data-page="simulation" id="tab-simulation">
-                    <i class="fa-solid fa-flask"></i> Simulation
+                    <i class="fa-solid fa-flask"></i> Simulasi What-If
                 </button>
                 <button class="tab-btn" data-page="optimizer" id="tab-optimizer">
-                    <i class="fa-solid fa-brain"></i> AI Optimizer
+                    <i class="fa-solid fa-brain"></i> Optimasi AI (Optimizer)
                 </button>
             </nav>
             <div class="header-stats">
@@ -442,15 +442,71 @@
         <!-- PAGE: ANALYTICS (Priority Ranking + RCA)                      -->
         <!-- ============================================================ -->
         <main class="page-content hidden" id="page-analytics">
-            <div class="analytics-grid">
-                <!-- Full Priority Ranking Table -->
-                <div class="card analytics-table-card">
+            <div class="analytics-layout-grid state-unranked" id="analytics-layout-container">
+                
+                <!-- COLUMN 1: PETA WILAYAH (Shared Map Card) -->
+                <div class="card analytics-map-card">
                     <div class="card-title-row">
-                        <h3 class="card-title"><i class="fa-solid fa-ranking-star"></i> Priority Ranking — All 31 Kecamatan</h3>
+                        <h3 class="card-title" id="analytics-map-title">
+                            <i class="fa-solid fa-map"></i> Peta Wilayah Surabaya (Sebelum Perangkingan)
+                        </h3>
+                        <span class="badge badge-sedang" id="analytics-map-status-badge">Menunggu Kalkulasi</span>
+                    </div>
+                    <div class="map-body-wrapper">
+                        <div id="analytics-map" class="shared-analytics-map"></div>
+                        <div class="map-legend-analytics hidden" id="analytics-map-legend">
+                            <span class="legend-p-item"><span class="l-dot" style="background:#ef4444;"></span> Sangat Tinggi</span>
+                            <span class="legend-p-item"><span class="l-dot" style="background:#f97316;"></span> Tinggi</span>
+                            <span class="legend-p-item"><span class="l-dot" style="background:#eab308;"></span> Sedang</span>
+                            <span class="legend-p-item"><span class="l-dot" style="background:#22c55e;"></span> Rendah</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: CONTROL PANEL (Before/During Ranking) -->
+                <div class="card analytics-control-panel-card" id="panel-before-ranking">
+                    <div class="intro-action-panel" style="border-left: none;">
+                        <div class="logo-area-large">
+                            <i class="fa-solid fa-square-poll-vertical logo-icon-large"></i>
+                            <h2>NEXORA HEAL-CITY</h2>
+                            <span class="badge-engine">MCDA GAP ENGINE V1.0</span>
+                        </div>
+                        
+                        <div class="engine-explanation">
+                            <h3>Kriteria Perangkingan & Pembobotan Gaps</h3>
+                            <p>Sistem pendukung keputusan HEAL-CITY melakukan kompilasi data spasial dan numerik untuk mengukur kesenjangan (gaps) aksesibilitas kesehatan berdasarkan 4 dimensi utama:</p>
+                            
+                            <ul class="dimension-list">
+                                <li><i class="fa-solid fa-users text-blue"></i> <span><strong>Kebutuhan Demografis (30%):</strong> Kepadatan penduduk & jumlah kelompok rentan.</span></li>
+                                <li><i class="fa-solid fa-user-nurse text-rose"></i> <span><strong>Defisit Tenaga Medis (30%):</strong> Rasio ketersediaan dokter, perawat, & bidan.</span></li>
+                                <li><i class="fa-solid fa-hospital text-purple"></i> <span><strong>Defisit Fasilitas Kesehatan (20%):</strong> Jumlah puskesmas/pustu & kapasitas bed.</span></li>
+                                <li><i class="fa-solid fa-triangle-exclamation text-amber"></i> <span><strong>Beban Penyakit (20%):</strong> Tingkat prevalensi sebaran penyakit di daerah.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- RUN RANKING BUTTON -->
+                        <button class="btn-primary btn-large btn-glow-pulse" id="btn-run-ranking">
+                            <i class="fa-solid fa-gears"></i> JALANKAN PROSES PERANGKINGAN
+                        </button>
+                        
+                        <!-- Loading Progress (Hidden initially) -->
+                        <div class="ranking-progress-container" id="ranking-progress-container" style="display: none;">
+                            <div class="progress-bar-wrapper">
+                                <div class="progress-bar-fill" id="ranking-progress-fill" style="width: 0%;"></div>
+                            </div>
+                            <div class="progress-status-text" id="ranking-progress-status">Menghubungkan ke data engine...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 3: RESULTS TABLE (After Ranking) -->
+                <div class="card analytics-table-card hidden" id="panel-after-ranking-table">
+                    <div class="card-title-row">
+                        <h3 class="card-title"><i class="fa-solid fa-ranking-star"></i> Hasil Perangkingan Prioritas Kesenjangan Kesehatan</h3>
                         <div class="analytics-filter-row">
-                            <input type="text" class="analytics-search" id="analytics-search" placeholder="Search district...">
+                            <input type="text" class="analytics-search" id="analytics-search" placeholder="Cari kecamatan...">
                             <select id="analytics-filter-priority" class="analytics-select">
-                                <option value="ALL">All Priority</option>
+                                <option value="ALL">Semua Prioritas</option>
                                 <option value="Sangat Tinggi">Sangat Tinggi</option>
                                 <option value="Tinggi">Tinggi</option>
                                 <option value="Sedang">Sedang</option>
@@ -458,6 +514,7 @@
                             </select>
                         </div>
                     </div>
+                    
                     <div class="analytics-table-wrapper">
                         <table class="full-ranking-table" id="full-ranking-table">
                             <thead>
@@ -465,25 +522,38 @@
                                     <th>Rank</th>
                                     <th>Kecamatan</th>
                                     <th>Gap Score</th>
-                                    <th>Priority</th>
-                                    <th>Primary Driver</th>
-                                    <th>Workforce Gap</th>
-                                    <th>Facility Gap</th>
-                                    <th>Action</th>
+                                    <th>Prioritas</th>
+                                    <th>Faktor Utama</th>
+                                    <th>Gap Nakes</th>
+                                    <th>Gap Faskes</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody id="full-ranking-body">
-                                <tr><td colspan="8" class="table-loading">Loading data...</td></tr>
+                                <tr><td colspan="8" class="table-loading">Memuat data prioritas...</td></tr>
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Action buttons at the bottom -->
+                    <div class="ranking-action-buttons-row">
+                        <button class="btn-secondary btn-icon-text" id="btn-reset-ranking">
+                            <i class="fa-solid fa-rotate-left"></i> Ulangi Perangkingan
+                        </button>
+                        <button class="btn-primary btn-icon-text" onclick="switchPage('optimizer');">
+                            <i class="fa-solid fa-brain"></i> Buka AI Recommendation
+                        </button>
+                        <button class="btn-secondary btn-icon-text" id="btn-download-csv">
+                            <i class="fa-solid fa-download"></i> Unduh Data (.csv)
+                        </button>
+                    </div>
                 </div>
 
-                <!-- RCA Summary Charts -->
-                <div class="analytics-charts-col">
+                <!-- COLUMN 4: CHARTS (After Ranking) -->
+                <div class="analytics-charts-col hidden" id="panel-after-ranking-charts">
                     <div class="card analytics-chart-card">
                         <div class="card-title-row">
-                            <h3 class="card-title"><i class="fa-solid fa-magnifying-glass-chart"></i> Root Cause Analysis</h3>
+                            <h3 class="card-title"><i class="fa-solid fa-magnifying-glass-chart"></i> Analisis Faktor Utama (RCA)</h3>
                         </div>
                         <div class="rca-chart-wrapper">
                             <canvas id="analytics-rca-chart"></canvas>
@@ -491,13 +561,14 @@
                     </div>
                     <div class="card analytics-chart-card">
                         <div class="card-title-row">
-                            <h3 class="card-title"><i class="fa-solid fa-chart-area"></i> Gap Score Distribution</h3>
+                            <h3 class="card-title"><i class="fa-solid fa-chart-area"></i> Distribusi Nilai Kesenjangan</h3>
                         </div>
                         <div class="rca-chart-wrapper">
                             <canvas id="analytics-dist-chart"></canvas>
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
 
